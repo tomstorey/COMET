@@ -122,9 +122,6 @@
     (path "/35201f99-817e-41df-8daa-bfe6ad38e23c/42baba08-bc45-4488-a2e8-ea47b8e99bb3"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
-    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/449d802b-e779-4e49-a64f-16dbf0b5cde4"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
     (path "/411c4c35-9377-45bc-88d1-5633618ebe78/4a609249-a3e8-4e1c-9296-c467950c0f15"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
@@ -141,6 +138,9 @@
       (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/35201f99-817e-41df-8daa-bfe6ad38e23c/53c13cb4-50a9-4780-9a08-962c5ead3d18"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/54447fa8-87dc-43a6-845e-7eb66c14437b"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/411c4c35-9377-45bc-88d1-5633618ebe78/5e9a0636-6e29-49db-b366-ca25a02df02d"
@@ -371,11 +371,11 @@
     (path "/411c4c35-9377-45bc-88d1-5633618ebe78/0c54f040-0589-430f-85fd-1022b04a714a"
       (reference "U?") (unit 1) (value "LXT901") (footprint "Package_LCC:PLCC-44")
     )
-    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/27421959-15a1-47c8-a2c0-26476188e9ee"
-      (reference "U?") (unit 1) (value "74x257") (footprint "COMET_footprints:SO16")
-    )
     (path "/411c4c35-9377-45bc-88d1-5633618ebe78/29d61b7f-2cd5-48d4-9fbe-0900097b351d"
       (reference "U?") (unit 1) (value "74LS573") (footprint "")
+    )
+    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/38e85b17-462b-45a1-bc9a-ca4690d25f63"
+      (reference "U?") (unit 1) (value "74x257") (footprint "")
     )
     (path "/35201f99-817e-41df-8daa-bfe6ad38e23c/584ca111-a32c-4cb3-89b1-92a1ac9ff90e"
       (reference "U?") (unit 1) (value "MAX232") (footprint "COMET_footprints:SO16")
@@ -392,32 +392,32 @@
     (path "/411c4c35-9377-45bc-88d1-5633618ebe78/95d5324a-5719-422e-8e16-eabc7146c44d"
       (reference "U?") (unit 1) (value "74LS573") (footprint "")
     )
-    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/c2d55653-6088-4fd2-a14e-fb9c4247b989"
-      (reference "U?") (unit 1) (value "74x257") (footprint "COMET_footprints:SO16")
+    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/a5aea1da-19f9-4faa-905c-4c07b6a564de"
+      (reference "U?") (unit 1) (value "74x257") (footprint "")
+    )
+    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/bab70b10-4669-4a4a-aa2a-d14f37ea5d1a"
+      (reference "U?") (unit 1) (value "74x257") (footprint "")
     )
     (path "/411c4c35-9377-45bc-88d1-5633618ebe78/c8a6cade-54d4-47c6-a8ab-b9ee2832dc44"
       (reference "U?") (unit 1) (value "Am79C90J") (footprint "Package_LCC:PLCC-68")
     )
-    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/de750cf6-e8a5-4939-a8f4-37e56fc6ab29"
-      (reference "U?") (unit 1) (value "74x257") (footprint "COMET_footprints:SO16")
-    )
     (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/118bf7a2-a724-4b24-b2f2-c98b5e6baefd"
       (reference "U?") (unit 2) (value "TC5118180AJ") (footprint "COMET_footprints:SOJ-42")
+    )
+    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/1544a480-77c0-41f6-a6a9-3e245c924f7f"
+      (reference "U?") (unit 2) (value "74x257") (footprint "")
     )
     (path "/35201f99-817e-41df-8daa-bfe6ad38e23c/4debfcad-affd-4a96-9ed2-fb4966da77ea"
       (reference "U?") (unit 2) (value "SC16C550BIA44") (footprint "COMET_footprints:PLCC-44")
     )
-    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/5013418f-56a6-45cf-af9e-df68ac542dc7"
-      (reference "U?") (unit 2) (value "74x257") (footprint "")
-    )
-    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/6ac93f9d-95bc-4651-bc78-14c47a8ef37f"
-      (reference "U?") (unit 2) (value "74x257") (footprint "")
-    )
-    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/94cc1699-b8ef-4494-b55b-aa79df45c216"
+    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/9044505a-393a-4e71-82f9-29f1e2c26730"
       (reference "U?") (unit 2) (value "74x257") (footprint "")
     )
     (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/9e542219-f1d1-4e3d-9577-1b6744cdd89c"
       (reference "U?") (unit 2) (value "TC5118180AJ") (footprint "COMET_footprints:SOJ-42")
+    )
+    (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/ceb0ebad-3d7b-42ef-a00f-224a377c6303"
+      (reference "U?") (unit 2) (value "74x257") (footprint "")
     )
     (path "/35201f99-817e-41df-8daa-bfe6ad38e23c/517b82ce-3beb-43ec-830f-0a1bb5bba6e8"
       (reference "X?") (unit 1) (value "CXO_DIP14") (footprint "Oscillator:Oscillator_DIP-14")
