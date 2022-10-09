@@ -2213,7 +2213,7 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "UART_IRQ" (shape input) (at 322.58 236.22 0) (fields_autoplaced)
+  (global_label "UART_IRQ" (shape output) (at 322.58 236.22 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid ede2db1a-3134-4d8b-b2f3-fdeb008083cd)
     (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 333.8226 236.1406 0)
