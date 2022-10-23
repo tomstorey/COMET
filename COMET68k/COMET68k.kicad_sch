@@ -121,6 +121,18 @@
     )
   )
 
+  (sheet (at 223.52 68.58) (size 40.64 25.4) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid e7a43ff0-c8a3-41d6-a6e8-946e3ef0dada)
+    (property "Sheet name" "ROM" (id 0) (at 223.52 67.8684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "rom.kicad_sch" (id 1) (at 223.52 94.5646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
     (path "/57559259-8b14-4145-a7f4-f0c42602466b" (page "2"))
@@ -132,6 +144,7 @@
     (path "/bf0f0a9e-8d37-41a3-8601-84bdd1a27af0" (page "8"))
     (path "/1a51c36d-5fc7-4e4f-a986-f54a0de0198f" (page "9"))
     (path "/bd1526a3-4b0b-4984-b8c7-32015efe7cc3" (page "10"))
+    (path "/e7a43ff0-c8a3-41d6-a6e8-946e3ef0dada" (page "11"))
   )
 
   (symbol_instances
@@ -609,6 +622,9 @@
     (path "/a0cae943-fdd1-48fc-b313-ea0d094f6d53/76104abb-affd-4cd8-bac9-8853e54dab08"
       (reference "U?") (unit 1) (value "MC68000FN") (footprint "Package_LCC:PLCC-68")
     )
+    (path "/bf0f0a9e-8d37-41a3-8601-84bdd1a27af0/78cb5503-7237-492a-bcba-ecc0481c8512"
+      (reference "U?") (unit 1) (value "PCH") (footprint "")
+    )
     (path "/bd1526a3-4b0b-4984-b8c7-32015efe7cc3/7e911389-c169-4576-9c06-24e629a57cc1"
       (reference "U?") (unit 1) (value "74x245") (footprint "")
     )
@@ -642,6 +658,9 @@
     (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/1544a480-77c0-41f6-a6a9-3e245c924f7f"
       (reference "U?") (unit 2) (value "74x257") (footprint "")
     )
+    (path "/bf0f0a9e-8d37-41a3-8601-84bdd1a27af0/1706e7dc-9f78-40d5-bc6f-25c49902657e"
+      (reference "U?") (unit 2) (value "PCH") (footprint "")
+    )
     (path "/1a51c36d-5fc7-4e4f-a986-f54a0de0198f/24888c9d-0cda-4319-b39b-9819d4b9893f"
       (reference "U?") (unit 2) (value "74x139") (footprint "")
     )
@@ -672,8 +691,14 @@
     (path "/718914b0-7c53-4971-a520-e4d5bf31f2ae/ceb0ebad-3d7b-42ef-a00f-224a377c6303"
       (reference "U?") (unit 2) (value "74x257") (footprint "")
     )
+    (path "/bf0f0a9e-8d37-41a3-8601-84bdd1a27af0/b2cceca0-5789-47bf-a90e-f28ed95bfca0"
+      (reference "U?") (unit 3) (value "PCH") (footprint "")
+    )
     (path "/1a51c36d-5fc7-4e4f-a986-f54a0de0198f/fae9a834-22df-4dd0-bec2-9d9c81f4558a"
       (reference "U?") (unit 3) (value "74x139") (footprint "")
+    )
+    (path "/bf0f0a9e-8d37-41a3-8601-84bdd1a27af0/3d1a140f-96fc-4154-9969-457756c8db69"
+      (reference "X?") (unit 1) (value "40MHz") (footprint "Oscillator:Oscillator_SMD_EuroQuartz_XO91-4Pin_7.0x5.0mm")
     )
     (path "/92532d4c-47b6-436f-8fb1-521989723bf0/3c0c1e71-c076-4c9a-9bc6-ce1d5d82fa09"
       (reference "Y?") (unit 1) (value "32.768KHz") (footprint "COMET_footprints:Crystal_SMD_THT_HC49")
