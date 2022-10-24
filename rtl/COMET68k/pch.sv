@@ -356,8 +356,7 @@ module mem_mach
     output n_ras1,
     output n_ucas,
     output n_lcas,
-    output reg n_ras_mux,
-    output reg n_cas_mux,
+    output reg masel,
     
     output reg n_rom_cs,
     output reg n_io_cs,
@@ -534,8 +533,7 @@ module mem_mach
             n_mm_ras1 <= 1'b1;
             n_mm_ucas <= 1'b1;
             n_mm_lcas <= 1'b1;
-            n_ras_mux <= 1'b1;
-            n_cas_mux <= 1'b1;
+            masel <= 1'b1;
             n_rom_cs <= 1'b1;
             n_io_cs <= 1'b1;
             n_uart_cs <= 1'b1;
@@ -574,7 +572,7 @@ module mem_mach
                                 dtack_asserted <= 1'b1;
                                 
                                 /* Present row to DRAMs */
-                                n_ras_mux <= 1'b0;
+                                masel <= 1'b1;
                                 
                                 /* Accessing DRAM, prevents the refresher from trying to assert DRAM
                                  * control signals at the same time */
@@ -760,8 +758,7 @@ module mem_mach
                             end
                             
                             /* Swap from row to column address */
-                            n_ras_mux <= 1'b1;
-                            n_cas_mux <= 1'b0;
+                            masel <= 1'b0;
                             
                             /* For RMW cycles, (re)assert DTACK */
                             dtack_asserted <= 1'b1;
@@ -782,7 +779,6 @@ module mem_mach
                         n_mm_ras1 <= 1'b1;
                         n_mm_ucas <= 1'b1;
                         n_mm_lcas <= 1'b1;
-                        n_cas_mux <= 1'b1;
                         
                         dtack_asserted <= 1'b0;
                         
@@ -791,7 +787,7 @@ module mem_mach
                         mm_state <= MM_DRAM_PRECHARGE;
                     end
                     else if (n_uds && n_lds) begin
-                        /* Must negate DTACK to end this portion of the RMW cycle */
+                        /* RMW cycle, must negate DTACK to end this portion of the cycle */
                         dtack_asserted <= 1'b0;
                         
                         mm_state <= MM_DRAM_RAS;
@@ -978,8 +974,7 @@ module COMETPCH (
     output n_ras1,
     output n_ucas,
     output n_lcas,
-    output n_ras_mux,
-    output n_cas_mux,
+    output masel,
     
     /* Address decoding and XDATA control signals */
     output n_rom_cs,
@@ -1060,8 +1055,7 @@ module COMETPCH (
         .n_ras1(n_ras1),
         .n_ucas(n_ucas),
         .n_lcas(n_lcas),
-        .n_ras_mux(n_ras_mux),
-        .n_cas_mux(n_cas_mux),
+        .masel(masel),
         .n_rom_cs(n_rom_cs),
         .n_io_cs(n_io_cs),
         .n_uart_cs(n_uart_cs),
@@ -1080,6 +1074,7 @@ module COMETPCH (
         .n_berr(n_wdog_berr)
     );
     
+    /* The memory machine and the bus watchdog can assert BERR */
     assign n_berr = (n_mm_berr & n_wdog_berr) ? 1'bZ : 1'b0;
 endmodule
 
