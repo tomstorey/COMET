@@ -92,7 +92,7 @@
     (property "Sheet name" "CPU" (id 0) (at 78.74 29.7684 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheet file" "CPU.kicad_sch" (id 1) (at 78.74 56.4646 0)
+    (property "Sheet file" "cpu.kicad_sch" (id 1) (at 78.74 56.4646 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
   )
@@ -121,6 +121,18 @@
     )
   )
 
+  (sheet (at 30.48 68.58) (size 40.64 25.4) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid df841545-9bb1-425d-8b64-d9b0b6949511)
+    (property "Sheet name" "Power" (id 0) (at 30.48 67.8684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "power.kicad_sch" (id 1) (at 30.48 94.5646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
   (sheet (at 223.52 68.58) (size 40.64 25.4) (fields_autoplaced)
     (stroke (width 0.1524) (type solid) (color 0 0 0 0))
     (fill (color 0 0 0 0.0000))
@@ -145,6 +157,7 @@
     (path "/1a51c36d-5fc7-4e4f-a986-f54a0de0198f" (page "9"))
     (path "/bd1526a3-4b0b-4984-b8c7-32015efe7cc3" (page "10"))
     (path "/e7a43ff0-c8a3-41d6-a6e8-946e3ef0dada" (page "11"))
+    (path "/df841545-9bb1-425d-8b64-d9b0b6949511" (page "12"))
   )
 
   (symbol_instances
