@@ -109,9 +109,9 @@
   (pad "82" smd rect (at 3.81 -14.2125) (size 0.6492 1.925) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 78b7b70d-2880-4915-b578-92d4abf01218))
   (pad "83" smd rect (at 2.54 -14.2125) (size 0.6492 1.925) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp eb0f5f73-2c54-4c9c-a836-c3cbfd669b80))
   (pad "84" smd rect (at 1.27 -14.2125) (size 0.6492 1.925) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 299ff150-47fd-4db8-b711-9ebe0a138ee9))
-  (model "${KICAD6_3DMODEL_DIR}/Package_LCC.3dshapes/PLCC-84.wrl"
-    (offset (xyz 0 0 0))
+  (model "../3dmodels/plcc84_p1-27_l29-41_w29-41.stp"
+    (offset (xyz 0.16 -0.16 2.9))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
+    (rotate (xyz -90 0 180))
   )
 )

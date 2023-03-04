@@ -75,4 +75,9 @@
   (pad "50" smd rect (at 3.81 -9.1325) (size 0.6492 1.925) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 9a90a57a-44c3-4eed-8c7b-a7c134f86696))
   (pad "51" smd rect (at 2.54 -9.1325) (size 0.6492 1.925) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 8cb4738b-2c36-436f-b4b6-78fabcacb393))
   (pad "52" smd rect (at 1.27 -9.1325) (size 0.6492 1.925) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 6095db4e-8459-4ce1-bfec-360e0e835e72))
+  (model "../3dmodels/plcc52_p1-27_l19-2_w19-2.stp"
+    (offset (xyz 0.16 -0.16 2.9))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 -180))
+  )
 )
