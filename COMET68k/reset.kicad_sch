@@ -1664,6 +1664,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 1dc3bc1f-1f5b-49a0-885f-73ba3504e04a)
   )
+  (text "RESET CAUSE TRUTH TABLE\n\nPOR	 WDTO	CAUSE\n0	 0		SOFTWARE\n0	 1		WATCHDOG TIMEOUT\n1	 0		POWER ON RESET OR BROWNOUT\n1	 1		INVALID COMBINATION"
+    (at 337.82 142.24 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 6fc6ab3b-d71f-4aaf-a2ff-b47b3efb34cf)
+  )
   (text "22K OVER 10K PRODUCES\n1.25V AT 4V INPUT" (at 170.18 121.92 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a310be28-3fa8-4781-a1dc-8df414b3abf5)
