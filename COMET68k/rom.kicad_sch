@@ -6,8 +6,8 @@
 
   (title_block
     (title "ROM SOCKETS")
-    (date "2023-04-27")
-    (rev "1")
+    (date "2023-06-03")
+    (rev "2")
     (company "(C) TOM STOREY")
     (comment 1 "FREE FOR NON-COMMERCIAL USE")
   )
@@ -1716,7 +1716,7 @@
   (symbol (lib_id "power:+5V") (at 101.6 231.14 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 50da92c0-a462-49db-8f6e-47e097b81214)
-    (property "Reference" "#PWR0130" (id 0) (at 101.6 234.95 0)
+    (property "Reference" "#PWR0135" (id 0) (at 101.6 234.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (id 1) (at 101.6 226.06 0))
@@ -1732,7 +1732,7 @@
   (symbol (lib_id "power:GND") (at 154.94 261.62 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 7e0a2c08-f23e-464d-8757-e0e51be7847f)
-    (property "Reference" "#PWR0131" (id 0) (at 154.94 267.97 0)
+    (property "Reference" "#PWR0136" (id 0) (at 154.94 267.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 154.94 266.7 0))
