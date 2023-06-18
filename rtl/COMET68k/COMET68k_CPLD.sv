@@ -4,7 +4,8 @@
 `define INCLUDE_DRAM_MACHINE
 `define INCLUDE_XBUS_MACHINE
 `define INCLUDE_INTERRUPT_CONTROLLER
-//`define INCLUDE_BUS_ARBITER
+`define INCLUDE_BUS_ARBITER
+`define INCLUDE_ETHERNET_MACHINE
 
 /* Top module */
 module COMET68k_CPLD(
@@ -44,16 +45,16 @@ module COMET68k_CPLD(
     output logic masel,
     
     /* X-bus machine */
-    output xa0,
-    output n_xd_lreg_le,
-    output n_xd_lreg_oe,
-    output n_xd_ubuf_oe,
-    output n_xd_lbuf_oe,
-    output n_rom0_cs,
-    output n_rom1_cs,
-    output n_io_cs,
-    output n_uart_cs,
-    output n_timer_cs,
+    output logic xa0,
+    output logic n_xd_lreg_le,
+    output logic n_xd_lreg_oe,
+    output logic n_xd_ubuf_oe,
+    output logic n_xd_lbuf_oe,
+    output logic n_rom0_cs,
+    output logic n_rom1_cs,
+    output logic n_io_cs,
+    output logic n_uart_cs,
+    output logic n_timer_cs,
     
     /* Expansion bus signals */
     output logic own,
@@ -63,7 +64,7 @@ module COMET68k_CPLD(
     
     /* Ethernet machine */
     output logic n_eth_cs,
-    output logic n_eth_das,
+    inout n_eth_das,
     inout n_eth_ready,
     
     /* Interrupt controller signals */
@@ -118,15 +119,6 @@ module COMET68k_CPLD(
         n_timer_cs = 1'b1;
 `endif
         
-        /* Expansion bus */
-        own = 1'b1;
-        ddir = 1'b1;
-        n_dben = 1'b1;
-        
-        /* Ethernet machine */
-        n_eth_cs = 1'b1;
-        n_eth_das = 1'b1;
-        
 `ifndef INCLUDE_INTERRUPT_CONTROLLER
         /* Interrupt controller */
         n_ipl = 3'b111;
@@ -141,6 +133,18 @@ module COMET68k_CPLD(
         n_bg0 = 1'b1;
         n_bg1 = 1'b1;
 `endif
+        
+`ifndef INCLUDE_ETHERNET_MACHINE
+        /* Ethernet machine */
+        n_eth_cs = 1'b1;
+        n_eth_das = 1'bZ;
+        n_eth_ready = 1'bZ;
+`endif
+        
+        /* Expansion bus */
+        own = 1'b1;
+        ddir = 1'b1;
+        n_dben = 1'b1;
     end
     
     /* Clock divider */
@@ -243,14 +247,53 @@ module COMET68k_CPLD(
         .n_irq2(n_irq2),
         .n_irq1(n_irq1),
         .n_timer_irq(n_timer_irq),
+        .n_autovec(n_autovec),
         .n_ipl(n_ipl),
         .n_vpa(n_vpa),
         .n_iack_out(n_iack_out)
     );
 `endif /* INCLUDE_INTERRUPT_CONTROLLER */
+
+    /* Bus arbiter */
+`ifdef INCLUDE_BUS_ARBITER
+    bus_arbiter bus_arbiter(
+        .osc_40mhz(osc_40mhz),
+        .n_reset(n_reset),
+        .n_br(n_br),
+        .n_bg(n_bg),
+        .n_eth_br(n_eth_br),
+        .n_eth_bg(n_eth_bg),
+        .n_br0(n_br0),
+        .n_bg0(n_bg0),
+        .n_br1(n_br1),
+        .n_bg1(n_bg1)
+    );
+`endif /* INCLUDE_BUS_ARBITER */
+
+    /* Ethernet machine */
+`ifdef INCLUDE_ETHERNET_MACHINE
+    wire n_eth_dtack;
+    
+    ethernet_machine ethernet_machine(
+        .osc_40mhz(osc_40mhz),
+        .n_reset(n_reset),
+        .addr(addr),
+        .n_as(n_as),
+        .n_uds(n_uds),
+        .n_lds(n_lds),
+        .n_eth_bg(n_eth_bg),
+        .n_dtack_in(n_dtack),
+        .n_eth_das(n_eth_das),
+        .n_eth_ready(n_eth_ready),
+        .n_eth_cs(n_eth_cs),
+        .n_dtack(n_eth_dtack)
+    );
+`else
+    wire n_eth_dtack = 1'b1;
+`endif /* INCLUDE_ETHERNET_MACHINE */
     
     /* Composite signals */
-    assign n_dtack_drv = (n_xb_dtack && n_dram_dtack);
+    assign n_dtack_drv = (n_xb_dtack && n_dram_dtack && n_eth_dtack);
     assign n_berr_drv = n_wd_berr;
     
     assign debug1 = 1'b0;
@@ -258,7 +301,7 @@ module COMET68k_CPLD(
 endmodule
 
 
-/* Clock Divider                                                                                 5mc
+/* Clock Divider
  *
  * Divides the incomming 40MHz oscillator into several sub clocks:
  *
@@ -296,7 +339,7 @@ module clock_divider(
 endmodule /* clock_divider */
 
 `ifdef INCLUDE_BUS_WATCHDOG
-/* Bus Watchdog                                                                                  5mc
+/* Bus Watchdog
  *
  * The bus watchdog monitors the AS/ signal, and when ever it is asserted, a countdown timer is
  * started. If that timer reaches zero while AS/ is still asserted, the watchdog will assert BERR/
@@ -419,12 +462,6 @@ module xbus_machine
         n_xd_lreg_oe = 1'b1;
         n_xd_ubuf_oe = 1'b1;
         n_xd_lbuf_oe = 1'b1;
-        n_rom0_cs = 1'b1;
-        n_rom1_cs = 1'b1;
-        n_io_cs = 1'b1;
-        n_uart_cs = 1'b1;
-        n_timer_cs = 1'b1;
-        n_dtack = 1'b1;
         boot_ff = 1'b0;
     end
     
@@ -550,7 +587,7 @@ endmodule /* xbus_machine */
 `endif /* INCLUDE_XBUS_MACHINE */
 
 `ifdef INCLUDE_DRAM_MACHINE
-/* DRAM Machine                                                                                  Xmc
+/* DRAM Machine
  *
  * Implements a state machine that refreshes the DRAM modules, as well as sequencing reads and
  * writes.
@@ -619,11 +656,12 @@ module dram_machine
     end
     
     always @(negedge osc_40mhz) begin
-        /* DRAMs require a minimum of 200uS delay prior to starting refresh cycles, after which 8
-         * refresh cycles are required to achieve proper operation. Use boot_ff going high for the
-         * very first time as an initial power on delay. Software should then implement a delay loop
-         * to satisfy the initial 8 refresh cycles. por_delay should not be reset during normal
-         * operation to maintain DRAM contents between subsequent CPU resets. */
+        /* The DRAM modules used in COMET require a minimum of 200uS delay prior to starting refresh
+         * cycles, after which 8 refresh cycles are then required to achieve proper operation. Use
+         * boot_ff going high for the very first time as an initial power on delay. Software should
+         * then implement a delay loop to satisfy the initial 8 refresh cycles prior to making reads
+         * or writes. por_delay should not be reset thereafter to allow refreshes to continue, and
+         * thus maintain DRAM contents between CPU resets. */
         if (!por_delay && boot_ff) begin
             por_delay <= 1'b1;
         end
@@ -750,7 +788,7 @@ endmodule /* dram_machine */
 `endif /* INCLUDE_DRAM_MACHINE */
 
 `ifdef INCLUDE_INTERRUPT_CONTROLLER
-/* Interrupt Controller                                                                         11mc
+/* Interrupt Controller
  *
  * The interrupt controller prioritises and pends interrupt requests to the CPU.
  *
@@ -836,49 +874,47 @@ module interrupt_controller(
     wire external_irq = (ext_irq7 || level6 || ext_irq5 || ext_irq4 || level3 || level2 || level1);
     
     /* Priority encoder for IPLx */
-    always_latch begin
-        if (cpu_clk) begin
-            /* Default to no pending interrupt */
-            n_ipl = ~3'd0;
-            
-            if (boot_ff) begin
-                /* Interrupts other than NMI are only pended to the CPU once it has fetched the
-                 * reset vector and begun executing code from its run-time address map */
-                if (!n_irq1 || !n_timer_irq) begin
-                    /* IPL 1: external IRQ 1 or on-board timer/RTC */
-                    n_ipl = ~3'd1;
-                end
-                
-                if (!n_irq2) begin
-                    /* IPL 2: external IRQ 2 */
-                    n_ipl = ~3'd2;
-                end
-                
-                if (!n_irq3) begin
-                    /* IPL 3: external IRQ 3 */
-                    n_ipl = ~3'd3;
-                end
-                
-                if (!n_eth_irq || !n_irq4) begin
-                    /* IPL 4: on-board Ethernet controller or external IRQ 4 */
-                    n_ipl = ~3'd4;
-                end
-                
-                if (uart_irq || !n_irq5) begin
-                    /* IPL 5: on-board UART or external IRQ 5 */
-                    n_ipl = ~3'd5;
-                end
-                
-                if (!n_irq6) begin
-                    /* IPL 6: external IRQ 6 */
-                    n_ipl = ~3'd6;
-                end
+    always_comb begin
+        /* Default to no pending interrupt */
+        n_ipl = ~3'd0;
+        
+        if (boot_ff) begin
+            /* Interrupts other than NMI are only pended to the CPU once it has fetched the reset
+             * vector and begun executing code from its run-time address map */
+            if (!n_irq1 || !n_timer_irq) begin
+                /* IPL 1: external IRQ 1 or on-board timer/RTC */
+                n_ipl = ~3'd1;
             end
             
-            if ((nmi && !nmi_acked) || !n_irq7) begin
-                /* IPL 7: on-board NMI button or external IRQ 7 */
-                n_ipl = ~3'd7;
+            if (!n_irq2) begin
+                /* IPL 2: external IRQ 2 */
+                n_ipl = ~3'd2;
             end
+            
+            if (!n_irq3) begin
+                /* IPL 3: external IRQ 3 */
+                n_ipl = ~3'd3;
+            end
+            
+            if (!n_eth_irq || !n_irq4) begin
+                /* IPL 4: on-board Ethernet controller or external IRQ 4 */
+                n_ipl = ~3'd4;
+            end
+            
+            if (uart_irq || !n_irq5) begin
+                /* IPL 5: on-board UART or external IRQ 5 */
+                n_ipl = ~3'd5;
+            end
+            
+            if (!n_irq6) begin
+                /* IPL 6: external IRQ 6 */
+                n_ipl = ~3'd6;
+            end
+        end
+        
+        if ((nmi && !nmi_acked) || !n_irq7) begin
+            /* IPL 7: on-board NMI button or external IRQ 7 */
+            n_ipl = ~3'd7;
         end
     end
     
@@ -899,30 +935,32 @@ module interrupt_controller(
             case (m_state)
                 M_IDLE:
                     begin
-                        /* If NMI is asserted and the CPU acknowledges a level 7 interrupt, set the
-                         * nmi_ack flag to mask the NMI until it is negated */
-                        if (iack && nmi_ack) begin
-                            nmi_acked <= 1'b1;
-                        end
-                        
-                        if (iack && onboard_irq) begin
-                            /* Autovector all on-board interrupt sources */
-                            n_vpa <= 1'b0;
-                            
-                            m_state <= M_ACKNOWLEDGED;
-                        end
-                        else if (iack && external_irq) begin
-                            /* Assert IACK out to allow an external interruptor to either generate
-                             * a vectored or autovectored interrupt */
-                            n_iack_out <= 1'b0;
-                            
-                            m_state <= M_EXTERNAL;
+                        if (iack) begin
+                            if (onboard_irq) begin
+                                /* Autovector all on-board interrupt sources */
+                                n_vpa <= 1'b0;
+                                
+                                /* If NMI is asserted, set the nmi_ack flag to mask NMI until it is
+                                 * negated */
+                                if (nmi_ack) begin
+                                    nmi_acked <= 1'b1;
+                                end
+                                
+                                m_state <= M_ACKNOWLEDGED;
+                            end
+                            else begin
+                                /* Assert IACK out to allow an external interruptor to either
+                                 * generate a vectored or autovectored interrupt */
+                                n_iack_out <= 1'b0;
+                                
+                                m_state <= M_EXTERNAL;
+                            end
                         end
                     end
                 
                 /* Wait for the IACK cycle to end */
                 M_ACKNOWLEDGED:
-                    if (!iack) begin
+                    if (n_as) begin
                         n_vpa <= 1'b1;
                         
                         m_state <= M_IDLE;
@@ -932,7 +970,7 @@ module interrupt_controller(
                  * VPA to allow external interruptors to autovector if required. Alternatively they
                  * may vector an interrupt. */
                 M_EXTERNAL:
-                    if (!iack) begin
+                    if (n_as) begin
                         n_vpa <= 1'b1;
                         n_iack_out <= 1'b1;
                         
@@ -946,5 +984,218 @@ module interrupt_controller(
     end
 endmodule /* interrupt_controller */
 `endif /* INCLUDE_INTERRUPT_CONTROLLER */
+
+
+`ifdef INCLUDE_BUS_ARBITER
+/* Bus Arbiter
+ *
+ * Manages access to the system busses, prioritising requests between the following sources:
+ *
+ * Highest: On-board Ethernet controller
+ *          External request level 0
+ *  Lowest: External request level 1
+ */
+module bus_arbiter(
+    input osc_40mhz,
+    input n_reset,
+    output logic n_br,
+    input n_bg,
+    input n_eth_br,
+    output logic n_eth_bg,
+    input n_br0,
+    output logic n_bg0,
+    input n_br1,
+    output logic n_bg1
+);
+    /* Bus arbiter state machine */
+    reg [1:0] m_state;
+    
+    localparam
+        M_IDLE = 'd0,
+        M_WAIT_CPU_ASSERT_GRANT = 'd1,
+        M_WAIT_REQUEST_COMPLETE = 'd2,
+        M_WAIT_CPU_NEGATE_GRANT = 'd3;
+    
+    /* Register defaults */
+    initial begin
+        m_state = M_IDLE;
+        n_br = 1'b1;
+        n_eth_bg = 1'b1;
+        n_bg0 = 1'b1;
+        n_bg1 = 1'b1;
+    end
+    
+    always @(negedge osc_40mhz or negedge n_reset) begin
+        if (!n_reset) begin
+            /* Resetting */
+            m_state <= M_IDLE;
+            n_br <= 1'b1;
+            n_eth_bg <= 1'b1;
+            n_bg0 <= 1'b1;
+            n_bg1 <= 1'b1;
+        end
+        else begin
+            case (m_state)
+                /* The idle state waits for a request to be received from either the on-board
+                 * Ethernet controller, or one of the two external request signals */
+                M_IDLE:
+                    if (!n_eth_br || !n_br0 || !n_br1) begin
+                        /* Request bus from CPU */
+                        n_br <= 1'b0;
+                        
+                        /* Wait for CPU to grant the bus */
+                        m_state <= M_WAIT_CPU_ASSERT_GRANT;
+                    end
+                
+                /* Wait for the CPU to grant access to the bus */
+                M_WAIT_CPU_ASSERT_GRANT:
+                    if (!n_bg) begin
+                        /* Assert appropriate bus grant */
+                        n_eth_bg <= n_eth_br;
+                        n_bg0 <= !(n_eth_br && !n_br0);
+                        n_bg1 <= !(n_eth_br && n_br0 && !n_br1);
+                        
+                        /* Wait for requestor to finish its request */
+                        m_state <= M_WAIT_REQUEST_COMPLETE;
+                    end
+                
+                /* Wait for the requesting device to hand the bus back */
+                M_WAIT_REQUEST_COMPLETE:
+                    if ((!n_eth_bg && n_eth_br) || (!n_bg0 && n_br0) || (!n_bg1 && n_br1)) begin
+                        /* Withdraw grant to requesting device and then wait for the CPU to regain
+                         * control of the bus before granting any further requests */
+                        n_br <= 1'b1;
+                        
+                        n_eth_bg <= 1'b1;
+                        n_bg0 <= 1'b1;
+                        n_bg1 <= 1'b1;
+                        
+                        m_state <= M_WAIT_CPU_NEGATE_GRANT;
+                    end
+                
+                /* Wait for the CPU to regain the bus */
+                M_WAIT_CPU_NEGATE_GRANT:
+                    if (n_bg) begin
+                        m_state <= M_IDLE;
+                    end
+            endcase
+        end
+    end
+endmodule /* bus_arbiter */
+`endif /* INCLUDE_BUS_ARBITER */
+
+`ifdef INCLUDE_ETHERNET_MACHINE
+/* Ethernet Machine
+ *
+ * The Ethernet machine is responsible for decoding accesses to the Ethernet controller, as well as
+ * sequencing accesses to and from it through the use of the DAS and READY signals.
+ *
+ * The Ethernet controller is decoded in the address space 0xC4XXXX.
+ */
+module ethernet_machine(
+    input osc_40mhz,
+    input n_reset,
+    input [23:16] addr,
+    input n_as,
+    input n_uds,
+    input n_lds,
+    input n_eth_bg,
+    input n_dtack_in,
+    output logic n_eth_das,
+    output logic n_eth_ready,
+    output logic n_eth_cs,
+    output logic n_dtack
+);
+    /* Ethernet machine state machine */
+    reg [1:0] m_state;
+    
+    localparam
+        M_IDLE = 'd0,
+        M_SLAVE_CYCLE = 'd1,
+        M_MASTER_CYCLE = 'd2;
+    
+    /* Register defaults */
+    initial begin
+        m_state = M_IDLE;
+        n_eth_cs = 1'b1;
+        n_dtack = 1'b1;
+        n_eth_das = 1'bZ;
+        n_eth_ready = 1'bZ;
+    end
+    
+    /* Access to the Ethernet controller is by word only */
+    wire eth_decoded = (!n_as && !n_uds && !n_lds && (addr[23:16] == 8'hC4));
+    
+    always @(negedge osc_40mhz or negedge n_reset) begin
+        if (!n_reset) begin
+            /* Resetting */
+            m_state <= M_IDLE;
+            n_eth_cs <= 1'b1;
+            n_dtack <= 1'b1;
+            n_eth_das <= 1'bZ;
+            n_eth_ready <= 1'bZ;
+        end
+        else begin
+            case (m_state)
+                M_IDLE:
+                    if (n_eth_bg) begin
+                        /* Bus slave cycles */
+                        if (eth_decoded) begin
+                            n_eth_cs <= 1'b0;
+                            n_eth_das <= 1'b0;
+                            
+                            m_state <= M_SLAVE_CYCLE;
+                        end
+                    end
+                    else begin
+                        /* Bus master cycles */
+                        if (!n_eth_das) begin
+                            m_state <= M_MASTER_CYCLE;
+                        end
+                    end
+                
+                /* In this state we are waiting for the Ethernet controller to assert its READY/
+                 * signal, which indicates that it has accepted data during a write or presented
+                 * data during a read. This is then relayed to the CPU, and we wait for AS/ to go
+                 * high to indicate the bus cycle is complete. */
+                M_SLAVE_CYCLE:
+                    if (!n_eth_ready) begin
+                        /* When the Ethernet controller signals that it is ready, relay this to the
+                         * CPU */
+                        n_dtack <= 1'b0;
+                        
+                        if (n_as) begin
+                            /* Once the CPU ends the bus cycle, negate our signals to the Ethernet
+                             * controller */
+                            n_eth_cs <= 1'b1;
+                            n_dtack <= 1'b1;
+                            n_eth_das <= 1'bZ;
+                            
+                            m_state <= M_IDLE;
+                        end
+                    end
+                
+                /* When the Ethernet controller is a master, we only need relay the state of DTACK/
+                 * to it so that it knows when it can end its own bus cycles. This is done by
+                 * mirroring our DTACK/ input to the n_eth_ready signal once it is asserted, and
+                 * until AS/ is negated. */
+                M_MASTER_CYCLE:
+                    begin
+                        if (!n_dtack_in) begin
+                            n_eth_ready <= 1'b0;
+                        end
+                        
+                        if (n_as) begin
+                            n_eth_ready <= 1'bZ;
+                            
+                            m_state <= M_IDLE;
+                        end
+                    end
+            endcase
+        end
+    end
+endmodule /* ethernet_machine */
+`endif /* INCLUDE_ETHERNET_MACHINE */
+
 
 /* END */
