@@ -189,6 +189,7 @@ module COMET68k_CPLD(
         .n_xd_lbuf_oe(n_xd_lbuf_oe),
         .n_rom0_cs(n_rom0_cs),
         .n_rom1_cs(n_rom1_cs),
+        .n_debug_cs(n_debug_cs),
         .n_io_cs(n_io_cs),
         .n_uart_cs(n_uart_cs),
         .n_timer_cs(n_timer_cs),
@@ -292,12 +293,54 @@ module COMET68k_CPLD(
     wire n_eth_dtack = 1'b1;
 `endif /* INCLUDE_ETHERNET_MACHINE */
     
-    /* Composite signals */
-    assign n_dtack_drv = (n_xb_dtack && n_dram_dtack && n_eth_dtack);
-    assign n_berr_drv = n_wd_berr;
+    wire onboard_decodes = n_rom0_cs && n_rom1_cs && n_io_cs && n_uart_cs && n_timer_cs && n_eth_cs;
+    wire onboard_others = n_eth_bg && n_ras0 && n_ras1;
+    wire onboard_accesses = (onboard_decodes || onboard_others);
     
-    assign debug1 = 1'b0;
-    assign debug2 = boot_ff;
+    always_comb begin
+        /* Composite signals */
+        n_dtack_drv = (n_xb_dtack && n_dram_dtack && n_eth_dtack);
+        n_berr_drv = n_wd_berr;
+    
+        /* Expansion bus control signals
+         *
+         * own indicates whether an on-board device is currently the bus master. This is determined
+         * simply by both external bus grants being negated. When the bus is mastered by an on-board
+         * device, control signals are propagated outwards to the expansion bus. When the bus is
+         * mastered by an external device, control signals are propagated inwards from the expansion
+         * bus.
+         *
+         * ddir determines in which direction the data bus buffers will be configured for reads and
+         * writes. The direction is dependent on whether the bus is mastered by an on-board or
+         * external device. Using the nomenclature of the expansion bus buffers, A side pins are
+         * facing the on-board direction, and B side pins are facing the external direction.
+         *
+         * Master     Operation   Direction
+         * ------     ---------   ---------
+         * On-board   Read        B->A
+         * On-board   Write       A->B
+         * External   Read        A->B
+         * External   Write       B->A
+         *
+         * n_dben enables the data bus buffers for read and write operations according to the
+         * following table.
+         *
+         * Master     Accessing   dben
+         * ------     ---------   ----
+         * On-board   On-board    Disable
+         * On-board   External    Enable
+         * External   External    Disable
+         * External   On-board    Enable
+         *
+         */
+        own = n_bg0 && n_bg1;
+        ddir = own ^ n_write;
+//        n_dben = !own || (own && !n_as && onboard_decodes && onboard_others) // needs work
+        
+        /* Debug signals */
+        debug1 = 1'b0;
+        debug2 = boot_ff;
+    end
 endmodule
 
 
@@ -311,14 +354,19 @@ endmodule
  *
  * No reset is implemented, all of the sub clocks are produced continuously.
  */
-module clock_divider(
+module clock_divider
+#(parameter BITS=6,
+            ETH_CLK_TAP=0,
+            CPU_CLK_TAP=1,
+            TIMER_CLK_TAP=5)
+(
     input osc_40mhz,
     output logic eth_clk,
     output logic cpu_clk,
     output logic timer_clk
 );
-    /* A 6 bit counter to act as the divider */
-    reg [5:0] divider;
+    /* A n bit counter to act as the divider */
+    reg [BITS-1:0] divider;
     
     /* Start the counter at 0 */
     initial begin
@@ -332,9 +380,9 @@ module clock_divider(
 
     /* Assign clock outputs */
     always_comb begin
-        eth_clk = divider[0];
-        cpu_clk = divider[1];
-        timer_clk = divider[5];
+        eth_clk = divider[ETH_CLK_TAP];
+        cpu_clk = divider[CPU_CLK_TAP];
+        timer_clk = divider[TIMER_CLK_TAP];
     end
 endmodule /* clock_divider */
 
@@ -410,6 +458,7 @@ endmodule /* bus_watchdog */
  * The following address map is implemented in this machine:
  *
  * 0xCXXXXX     On-board peripherals
+ *    0XXXX         Debug display - always decoded and assumed to exist
  *    1XXXX         On-board IO (LEDs, configuration jumpers, etc)
  *    2XXXX         TL16C2552 dual UART
  *    3XXXX         DP8570A timer/RTC
@@ -434,6 +483,7 @@ module xbus_machine
     output logic n_xd_lbuf_oe,
     output logic n_rom0_cs,
     output logic n_rom1_cs,
+    output logic n_debug_cs,
     output logic n_io_cs,
     output logic n_uart_cs,
     output logic n_timer_cs,
@@ -466,9 +516,10 @@ module xbus_machine
     end
     
     wire mem_cycle = (!n_as && (!n_uds || !n_lds) && (fc[2:0] != 3'b111));
-    wire rom_reset_decoded = (mem_cycle && !boot_ff && (addr[23:20] == 4'h0));
-    wire rom_booted_decoded = (mem_cycle && (addr[23:20] == 4'hF));
-    wire rom_decoded = (rom_reset_decoded || rom_booted_decoded);
+    wire rom_decoded_reset = (mem_cycle && !boot_ff && (addr[23:20] == 4'h0));
+    wire rom_decoded_booted = (mem_cycle && boot_ff && (addr[23:20] == 4'hF));
+    wire rom_decoded = (rom_decoded_reset || rom_decoded_booted);
+    wire debug_decoded = (mem_cycle && (addr[23:16] == 8'hC0));
     wire io_decoded = (mem_cycle && (addr[23:16] == 8'hC1));
     wire uart_decoded = (mem_cycle && (addr[23:16] == 8'hC2));
     wire timer_decoded = (mem_cycle && (addr[23:16] == 8'hC3));
@@ -476,17 +527,18 @@ module xbus_machine
     
     /* Assert chip selects and DTACK */
     always_comb begin
-        n_rom0_cs = !(rom_decoded && !addr[19]) || n_as;
-        n_rom1_cs = !(rom_decoded && addr[19]) || n_as;
-        n_io_cs = !(io_decoded && (m_state == M_WAIT_AS_NEGATE)) || n_as;
-        n_uart_cs = !(uart_decoded && (m_state == M_WAIT_AS_NEGATE)) || n_as;
-        n_timer_cs = !(timer_decoded && (m_state == M_WAIT_AS_NEGATE)) || n_as;
+        n_rom0_cs = !(rom_decoded_booted && !addr[19]);
+        n_rom1_cs = !((rom_decoded_booted && addr[19]) || rom_decoded_reset);
+        n_debug_cs = !(debug_decoded && (m_state == M_WAIT_AS_NEGATE));
+        n_io_cs = !(io_decoded && (m_state == M_WAIT_AS_NEGATE));
+        n_uart_cs = !(uart_decoded && (m_state == M_WAIT_AS_NEGATE));
+        n_timer_cs = !(timer_decoded && (m_state == M_WAIT_AS_NEGATE));
         
         /* The X-bus operates with 0 wait states, so assert DTACK immediately */
-        n_dtack = (n_rom0_cs && n_rom1_cs && n_io_cs && n_uart_cs && n_timer_cs);
+        n_dtack = (n_rom0_cs && n_rom1_cs && n_debug_cs && n_io_cs && n_uart_cs && n_timer_cs);
     end
     
-    always @(negedge osc_40mhz) begin
+    always_ff @(negedge osc_40mhz) begin
         if (!n_reset) begin
             /* Clear boot_ff any time the CPU is reset */
             boot_ff <= 1'b0;
@@ -494,7 +546,18 @@ module xbus_machine
         
         case (m_state)
             M_IDLE:
-                if (mem_cycle) begin
+                begin
+                    if (mem_cycle && !boot_ff && (addr[23:19] == 5'h1F)) begin
+                        /* Set boot_ff on the first access to the address space of ROM1. This means
+                         * that boot code must be stored in ROM1, which takes the upper most 512KB
+                         * of the CPU address space.
+                         *
+                         * The first access to this space indicates that the CPU has begun executing
+                         * code, and RAM can thus be enabled and become accessible from address 0.
+                         */
+                        boot_ff <= 1'b1;
+                    end
+                    
                     if (rom_decoded) begin
                         /* Setup for latching lower byte - whether or not a byte or word is being
                          * accessed, always load a word out of the ROM. The CPU will pick which bits
@@ -502,12 +565,6 @@ module xbus_machine
                         xa0 <= 1'b1;
                         n_xd_lreg_le <= 1'b0;
                         n_xd_lreg_oe <= 1'b0;
-                        
-                        if (rom_booted_decoded) begin
-                            /* Set boot_ff any time access is made to the 0xFXXXXX address space.
-                             * This enables RAM to be accessed from address 0. */
-                            boot_ff <= 1'b1;
-                        end
                         
                         /* ROM access delay before latching */
                         delay <= ROM_WAIT_STATES;
@@ -655,7 +712,7 @@ module dram_machine
         n_dtack = !(m_state == M_ACCESS_CAS);
     end
     
-    always @(negedge osc_40mhz) begin
+    always_ff @(negedge osc_40mhz) begin
         /* The DRAM modules used in COMET require a minimum of 200uS delay prior to starting refresh
          * cycles, after which 8 refresh cycles are then required to achieve proper operation. Use
          * boot_ff going high for the very first time as an initial power on delay. Software should
@@ -673,7 +730,7 @@ module dram_machine
         end
         else begin
             if (por_delay) begin
-                dram_refresh_timer <= dram_refresh_timer - 'd1;
+                dram_refresh_timer <= dram_refresh_timer + -'d1;
             end
         end
         
@@ -918,7 +975,7 @@ module interrupt_controller(
         end
     end
     
-    always_ff @(negedge osc_40mhz or negedge n_reset) begin
+    always_ff @(negedge osc_40mhz) begin
         if (!n_reset) begin
             /* Resetting */
             m_state <= M_IDLE;
@@ -1025,7 +1082,7 @@ module bus_arbiter(
         n_bg1 = 1'b1;
     end
     
-    always @(negedge osc_40mhz or negedge n_reset) begin
+    always_ff @(negedge osc_40mhz) begin
         if (!n_reset) begin
             /* Resetting */
             m_state <= M_IDLE;
@@ -1126,7 +1183,7 @@ module ethernet_machine(
     /* Access to the Ethernet controller is by word only */
     wire eth_decoded = (!n_as && !n_uds && !n_lds && (addr[23:16] == 8'hC4));
     
-    always @(negedge osc_40mhz or negedge n_reset) begin
+    always_ff @(negedge osc_40mhz) begin
         if (!n_reset) begin
             /* Resetting */
             m_state <= M_IDLE;
@@ -1196,6 +1253,5 @@ module ethernet_machine(
     end
 endmodule /* ethernet_machine */
 `endif /* INCLUDE_ETHERNET_MACHINE */
-
 
 /* END */
