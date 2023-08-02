@@ -490,7 +490,7 @@ module xbus_machine
     output logic n_dtack,
     output logic boot_ff
 );
-    /* X-bus state machine states */
+    /* X-bus state machine */
     reg [2:0] m_state;
     
     localparam
@@ -672,7 +672,7 @@ module dram_machine
     output logic masel,
     output logic n_dtack
 );
-    /* DRAM state machine states */
+    /* DRAM state machine */
     reg [2:0] m_state;
     
     localparam
@@ -1163,7 +1163,7 @@ module ethernet_machine(
     output logic n_eth_cs,
     output logic n_dtack
 );
-    /* Ethernet machine state machine */
+    /* Ethernet state machine */
     reg [1:0] m_state;
     
     localparam
