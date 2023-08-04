@@ -1,0 +1,83 @@
+/* Devicetree for COMET68k */
+
+/dts-v1/;
+
+/ {
+    #address-cells = <1>;
+    #size-cells = <1>;
+
+    model = "COMET68k";
+
+    aliases {
+        serial0 = "/xbus@c00000/serial@c20008";
+        serial1 = "/xbus@c00000/serial@c20000";
+        timer0 = "/xbus@c00000/timer@c30000";
+        csr1 = "/xbus@c00000/gpio@c10000";
+        csr2 = "/xbus@c00000/gpio@c10001";
+    };
+
+    cpus {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        cpu0: cpu@0 {
+            device_type = "cpu";
+            compatible = "motorola,68000";
+            reg = <0>;
+            clock-frequency = <10000000>;
+        };
+    };
+
+    memory@0 {
+        device_type = "memory";
+        reg = <0 0x400000>;  /* Built-in 4MB of DRAM */
+    };
+
+    rom0: memory@f00000 {
+        device_type = "flash";
+        reg = <0xf00000 0x80000>;
+    };
+
+    rom1: memory@f80000 {
+        device_type = "flash";
+        reg = <0xf80000 0x80000>;
+    };
+
+    xbus@c00000 {
+        compatible = "simple-bus";
+        reg = <0xc00000 0x100000>;
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        gpio@c10000 {
+            reg = <0xc10000 0x1>;
+        };
+
+        gpio@c10001 {
+            reg = <0xc10001 0x1>;
+        };
+
+        /* UART channel A */
+        serial@c20008 {
+            compatible = "ns16550";
+            reg = <0xc20008 0x8>;
+            clock-frequency = <7372800>;
+            irq = <5>;
+        };
+
+        /* UART channel B */
+        serial@c20000 {
+            compatible = "ns16550";
+            reg = <0xc20000 0x8>;
+            clock-frequency = <7372800>;
+            irq = <5>;
+        };
+
+        timer@c30000 {
+            compatible = "dp8570a";
+            reg = <0xc30000 0x20>;
+            clock-frequency = <625000>;
+            irq = <1>;
+        };
+    };
+};
