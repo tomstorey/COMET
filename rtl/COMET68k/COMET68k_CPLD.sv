@@ -162,6 +162,9 @@ module COMET68k_CPLD(
     bus_watchdog bus_watchdog(
         .cpu_clk(cpu_clk),
         .n_as(n_as),
+        .n_eth_bg(n_eth_bg),
+        .n_bg0(n_bg0),
+        .n_bg1(n_bg1),
         .n_berr(n_wd_berr)
     );
 `else
@@ -213,6 +216,7 @@ module COMET68k_CPLD(
         .n_uds(n_uds),
         .n_lds(n_lds),
         .fc(fc),
+        .n_eth_bg(n_eth_bg),
         .n_ras0(n_ras0),
         .n_ras1(n_ras1),
         .n_ucas(n_ucas),
@@ -339,7 +343,7 @@ module COMET68k_CPLD(
         
         /* Debug signals */
         debug1 = 1'b0;
-        debug2 = boot_ff;
+        debug2 = 1'b0;
     end
 endmodule
 
@@ -408,6 +412,9 @@ module bus_watchdog
 (
     input cpu_clk,
     input n_as,
+    input n_eth_bg,
+    input n_bg0,
+    input n_bg1,
     output logic n_berr
 );
     /* A n bit counter to determine the timeout period */
@@ -417,6 +424,8 @@ module bus_watchdog
     initial begin
         timeout = -'d1;
     end
+    
+    wire cpu_is_master = (n_eth_bg && n_bg0 && n_bg1);
     
     always_ff @(posedge cpu_clk) begin
         if (n_as) begin
@@ -433,7 +442,7 @@ module bus_watchdog
     
     /* Assert BERR/ whenever the timer reaches zero */
     always_comb begin
-        n_berr = !(timeout == 'd0);
+        n_berr = !((timeout == 'd0) && cpu_is_master);
     end
 endmodule /* bus_watchdog */
 `endif /* INCLUDE_BUS_WATCHDOG */
@@ -490,7 +499,7 @@ module xbus_machine
     output logic n_dtack,
     output logic boot_ff
 );
-    /* X-bus state machine */
+    /* X-bus state machine states */
     reg [2:0] m_state;
     
     localparam
@@ -665,6 +674,7 @@ module dram_machine
     input n_uds,
     input n_lds,
     input [2:0] fc,
+    input n_eth_bg,
     output logic n_ras0,
     output logic n_ras1,
     output logic n_ucas,
@@ -672,7 +682,7 @@ module dram_machine
     output logic masel,
     output logic n_dtack
 );
-    /* DRAM state machine */
+    /* DRAM state machine states */
     reg [2:0] m_state;
     
     localparam
@@ -706,6 +716,10 @@ module dram_machine
         delay = 'd0;
         por_delay = 1'b0;
     end
+    
+    /* DRAM access is allowed whenever the Ethernet controller is the bus master, or when it isnt
+     * and the function code is not 7 */
+    wire permitted_access = (n_eth_bg && (fc != 3'b111) || !n_eth_bg);
     
     always_comb begin
         /* Assert DTACK/ when ever the machine is in the CAS portion of a cycle */
@@ -750,7 +764,7 @@ module dram_machine
                     delay <= REFRESH_WAIT_STATES;
                     m_state <= M_REFRESH_RAS;
                 end
-                else if (boot_ff && !n_as && (addr[23:22] == 2'b00) && (fc != 3'b111)) begin
+                else if (boot_ff && !n_as && (addr[23:22] == 2'b00) && permitted_access) begin
                     /* Memory access cycle - assert RAS according to DRAM bank */
                     if (addr[21] == 1'b0) begin
                         /* DRAM module 0 if A21 is low */
@@ -1158,12 +1172,12 @@ module ethernet_machine(
     input n_lds,
     input n_eth_bg,
     input n_dtack_in,
-    output logic n_eth_das,
-    output logic n_eth_ready,
+    inout n_eth_das,
+    inout n_eth_ready,
     output logic n_eth_cs,
     output logic n_dtack
 );
-    /* Ethernet state machine */
+    /* Ethernet machine state machine */
     reg [1:0] m_state;
     
     localparam
@@ -1174,62 +1188,49 @@ module ethernet_machine(
     /* Register defaults */
     initial begin
         m_state = M_IDLE;
-        n_eth_cs = 1'b1;
-        n_dtack = 1'b1;
-        n_eth_das = 1'bZ;
-        n_eth_ready = 1'bZ;
     end
     
     /* Access to the Ethernet controller is by word only */
-    wire eth_decoded = (!n_as && !n_uds && !n_lds && (addr[23:16] == 8'hC4));
+    wire eth_decoded = (n_eth_bg && !n_as && !n_uds && !n_lds && (addr[23:16] == 8'hC4));
+    
+    always_comb begin
+        /* Chipselect */
+        n_eth_cs = !eth_decoded;
+        
+        /* DTACK/ is only driven during a slave cycle, and is essentially just a relayed copy of
+         * the Ethernet controllers READY/ signal */
+        n_dtack = !((m_state == M_SLAVE_CYCLE) && !n_eth_ready);
+        
+        /* Assert DAS to the Ethernet controller when we are in a slave cycle */
+        n_eth_das = (m_state == M_SLAVE_CYCLE) ? 1'b0 : 1'bZ;
+        
+        /* Assert READY towards the Ethernet controller during master cycles when DTACK has been
+         * asserted by some other device in the system */
+        n_eth_ready = ((m_state == M_MASTER_CYCLE) && !n_dtack_in) ? 1'b0 : 1'bZ;
+    end
     
     always_ff @(negedge osc_40mhz) begin
         if (!n_reset) begin
             /* Resetting */
             m_state <= M_IDLE;
-            n_eth_cs <= 1'b1;
-            n_dtack <= 1'b1;
-            n_eth_das <= 1'bZ;
-            n_eth_ready <= 1'bZ;
         end
         else begin
             case (m_state)
                 M_IDLE:
-                    if (n_eth_bg) begin
-                        /* Bus slave cycles */
-                        if (eth_decoded) begin
-                            n_eth_cs <= 1'b0;
-                            n_eth_das <= 1'b0;
-                            
-                            m_state <= M_SLAVE_CYCLE;
-                        end
+                    if (eth_decoded) begin
+                        m_state <= M_SLAVE_CYCLE;
                     end
-                    else begin
-                        /* Bus master cycles */
-                        if (!n_eth_das) begin
-                            m_state <= M_MASTER_CYCLE;
-                        end
+                    else if (!n_eth_bg && !n_eth_das) begin
+                        m_state <= M_MASTER_CYCLE;
                     end
                 
                 /* In this state we are waiting for the Ethernet controller to assert its READY/
                  * signal, which indicates that it has accepted data during a write or presented
-                 * data during a read. This is then relayed to the CPU, and we wait for AS/ to go
-                 * high to indicate the bus cycle is complete. */
+                 * data during a read. This is then relayed to the CPU as DTACK/, and we then wait
+                 * for AS/ to go high to indicate the bus cycle is complete. */
                 M_SLAVE_CYCLE:
-                    if (!n_eth_ready) begin
-                        /* When the Ethernet controller signals that it is ready, relay this to the
-                         * CPU */
-                        n_dtack <= 1'b0;
-                        
-                        if (n_as) begin
-                            /* Once the CPU ends the bus cycle, negate our signals to the Ethernet
-                             * controller */
-                            n_eth_cs <= 1'b1;
-                            n_dtack <= 1'b1;
-                            n_eth_das <= 1'bZ;
-                            
-                            m_state <= M_IDLE;
-                        end
+                    if (n_as) begin
+                        m_state <= M_IDLE;
                     end
                 
                 /* When the Ethernet controller is a master, we only need relay the state of DTACK/
@@ -1237,16 +1238,8 @@ module ethernet_machine(
                  * mirroring our DTACK/ input to the n_eth_ready signal once it is asserted, and
                  * until AS/ is negated. */
                 M_MASTER_CYCLE:
-                    begin
-                        if (!n_dtack_in) begin
-                            n_eth_ready <= 1'b0;
-                        end
-                        
-                        if (n_as) begin
-                            n_eth_ready <= 1'bZ;
-                            
-                            m_state <= M_IDLE;
-                        end
+                    if (n_as) begin
+                        m_state <= M_IDLE;
                     end
             endcase
         end
