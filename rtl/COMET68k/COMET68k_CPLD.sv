@@ -264,6 +264,7 @@ module COMET68k_CPLD(
     bus_arbiter bus_arbiter(
         .osc_40mhz(osc_40mhz),
         .n_reset(n_reset),
+        .n_as(n_as),
         .n_br(n_br),
         .n_bg(n_bg),
         .n_eth_br(n_eth_br),
@@ -1069,6 +1070,7 @@ endmodule /* interrupt_controller */
 module bus_arbiter(
     input osc_40mhz,
     input n_reset,
+    input n_as,
     output logic n_br,
     input n_bg,
     input n_eth_br,
@@ -1118,9 +1120,9 @@ module bus_arbiter(
                         m_state <= M_WAIT_CPU_ASSERT_GRANT;
                     end
                 
-                /* Wait for the CPU to grant access to the bus */
+                /* Wait for the CPU to grant access to the bus and complete current cycle */
                 M_WAIT_CPU_ASSERT_GRANT:
-                    if (!n_bg) begin
+                    if (!n_bg && n_as) begin
                         /* Assert appropriate bus grant */
                         n_eth_bg <= n_eth_br;
                         n_bg0 <= !(n_eth_br && !n_br0);
