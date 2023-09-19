@@ -177,7 +177,7 @@ module COMET68k_CPLD(
     wire boot_ff;
     
     xbus_machine xbus_machine(
-        .osc_40mhz(osc_40mhz),
+        .clk(osc_40mhz),
         .n_reset(n_reset),
         .addr(addr),
         .n_as(n_as),
@@ -209,7 +209,7 @@ module COMET68k_CPLD(
     wire n_dram_dtack;
     
     dram_machine dram_machine(
-        .osc_40mhz(osc_40mhz),
+        .clk(osc_40mhz),
         .boot_ff(boot_ff),
         .addr(addr),
         .n_as(n_as),
@@ -231,8 +231,7 @@ module COMET68k_CPLD(
     /* Interrupt controller */
 `ifdef INCLUDE_INTERRUPT_CONTROLLER
     interrupt_controller interrupt_controller(
-        .osc_40mhz(osc_40mhz),
-        .cpu_clk(cpu_clk),
+        .clk(osc_40mhz),
         .n_reset(n_reset),
         .boot_ff(boot_ff),
         .addr(addr),
@@ -262,7 +261,7 @@ module COMET68k_CPLD(
     /* Bus arbiter */
 `ifdef INCLUDE_BUS_ARBITER
     bus_arbiter bus_arbiter(
-        .osc_40mhz(osc_40mhz),
+        .clk(osc_40mhz),
         .n_reset(n_reset),
         .n_as(n_as),
         .n_br(n_br),
@@ -281,7 +280,7 @@ module COMET68k_CPLD(
     wire n_eth_dtack;
     
     ethernet_machine ethernet_machine(
-        .osc_40mhz(osc_40mhz),
+        .clk(osc_40mhz),
         .n_reset(n_reset),
         .addr(addr),
         .n_as(n_as),
@@ -478,7 +477,7 @@ endmodule /* bus_watchdog */
 module xbus_machine
 #(parameter ROM_WAIT_STATES=3)
 (
-    input osc_40mhz,
+    input clk,
     input n_reset,
     input [23:16] addr,
     input n_as,
@@ -548,7 +547,7 @@ module xbus_machine
         n_dtack = (n_rom0_cs && n_rom1_cs && n_debug_cs && n_io_cs && n_uart_cs && n_timer_cs);
     end
     
-    always_ff @(negedge osc_40mhz) begin
+    always_ff @(negedge clk) begin
         if (!n_reset) begin
             /* Clear boot_ff any time the CPU is reset */
             boot_ff <= 1'b0;
@@ -668,7 +667,7 @@ module dram_machine
             ACCESS_CAS_WAIT_STATES=2,
             PRECHARGE_WAIT_STATES=2)
 (
-    input osc_40mhz,
+    input clk,
     input boot_ff,
     input [23:16] addr,
     input n_as,
@@ -727,7 +726,7 @@ module dram_machine
         n_dtack = !(m_state == M_ACCESS_CAS);
     end
     
-    always_ff @(negedge osc_40mhz) begin
+    always_ff @(negedge clk) begin
         /* The DRAM modules used in COMET require a minimum of 200uS delay prior to starting refresh
          * cycles, after which 8 refresh cycles are then required to achieve proper operation. Use
          * boot_ff going high for the very first time as an initial power on delay. Software should
@@ -881,8 +880,7 @@ endmodule /* dram_machine */
  * The NMI button must be externally debounced.
  */
 module interrupt_controller(
-    input osc_40mhz,
-    input cpu_clk,
+    input clk,
     input n_reset,
     input boot_ff,
     input [23:16] addr,
@@ -990,7 +988,7 @@ module interrupt_controller(
         end
     end
     
-    always_ff @(negedge osc_40mhz) begin
+    always_ff @(negedge clk) begin
         if (!n_reset) begin
             /* Resetting */
             m_state <= M_IDLE;
@@ -1068,7 +1066,7 @@ endmodule /* interrupt_controller */
  *  Lowest: External request level 1
  */
 module bus_arbiter(
-    input osc_40mhz,
+    input clk,
     input n_reset,
     input n_as,
     output logic n_br,
@@ -1098,7 +1096,7 @@ module bus_arbiter(
         n_bg1 = 1'b1;
     end
     
-    always_ff @(negedge osc_40mhz) begin
+    always_ff @(negedge clk) begin
         if (!n_reset) begin
             /* Resetting */
             m_state <= M_IDLE;
@@ -1166,7 +1164,7 @@ endmodule /* bus_arbiter */
  * The Ethernet controller is decoded in the address space 0xC4XXXX.
  */
 module ethernet_machine(
-    input osc_40mhz,
+    input clk,
     input n_reset,
     input [23:16] addr,
     input n_as,
@@ -1211,7 +1209,7 @@ module ethernet_machine(
         n_eth_ready = ((m_state == M_MASTER_CYCLE) && !n_dtack_in) ? 1'b0 : 1'bZ;
     end
     
-    always_ff @(negedge osc_40mhz) begin
+    always_ff @(negedge clk) begin
         if (!n_reset) begin
             /* Resetting */
             m_state <= M_IDLE;
