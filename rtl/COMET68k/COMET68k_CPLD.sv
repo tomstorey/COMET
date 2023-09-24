@@ -1,5 +1,6 @@
 `timescale 1ns/1ns
 
+/* These defines determine which machines are compiled in to the design */
 `define INCLUDE_BUS_WATCHDOG
 `define INCLUDE_DRAM_MACHINE
 `define INCLUDE_XBUS_MACHINE
@@ -7,12 +8,20 @@
 `define INCLUDE_BUS_ARBITER
 `define INCLUDE_ETHERNET_MACHINE
 
+/* Uncomment this define to source the CPU clock frequency from an external oscillator, rather than
+ * producing the CPU clock ourselves */
+//`define CPU_CLOCK_IS_EXTERNAL
+
 /* Top module */
 module COMET68k_CPLD(
     /* Clocks */
     input osc_40mhz,
     output logic eth_clk,
+`ifndef CPU_CLOCK_IS_EXTERNAL
     output logic cpu_clk,
+`else
+    input cpu_clk,
+`endif
     output logic timer_clk,
     
     /* Global reset */
@@ -151,7 +160,9 @@ module COMET68k_CPLD(
     clock_divider clock_divider(
         .osc_40mhz(osc_40mhz),
         .eth_clk(eth_clk),
+`ifndef CPU_CLOCK_IS_EXTERNAL
         .cpu_clk(cpu_clk),
+`endif
         .timer_clk(timer_clk)
     );
     
@@ -543,8 +554,9 @@ module xbus_machine
         n_uart_cs = !(uart_decoded && (m_state == M_WAIT_AS_NEGATE));
         n_timer_cs = !(timer_decoded && (m_state == M_WAIT_AS_NEGATE));
         
-        /* The X-bus operates with 0 wait states, so assert DTACK immediately */
-        n_dtack = (n_rom0_cs && n_rom1_cs && n_debug_cs && n_io_cs && n_uart_cs && n_timer_cs);
+        /* Assert DTACK once we start waiting for AS to negate */
+        n_dtack = !(!(n_rom0_cs && n_rom1_cs && n_debug_cs && n_io_cs && n_uart_cs && n_timer_cs) &&
+                    (m_state == M_WAIT_AS_NEGATE));
     end
     
     always_ff @(negedge clk) begin
@@ -664,6 +676,7 @@ endmodule /* xbus_machine */
 module dram_machine
 #(parameter REFRESH_CLOCKS=625,
             REFRESH_WAIT_STATES=3,
+            ACCESS_RAS_WAIT_STATES=1,
             ACCESS_CAS_WAIT_STATES=2,
             PRECHARGE_WAIT_STATES=2)
 (
@@ -723,7 +736,7 @@ module dram_machine
     
     always_comb begin
         /* Assert DTACK/ when ever the machine is in the CAS portion of a cycle */
-        n_dtack = !(m_state == M_ACCESS_CAS);
+        n_dtack = !(m_state == M_ACCESS_CAS && delay == 'd0);
     end
     
     always_ff @(negedge clk) begin
@@ -768,14 +781,15 @@ module dram_machine
                     /* Memory access cycle - assert RAS according to DRAM bank */
                     if (addr[21] == 1'b0) begin
                         /* DRAM module 0 if A21 is low */
-                        n_ras0 <= 1'b0;
+                        n_ras1 <= 1'b0;
                     end
                     else begin
                         /* DRAM module 1 if A21 is high */
-                        n_ras1 <= 1'b0;
+                        n_ras0 <= 1'b0;
                     end
                     
                     /* Move to wait for xDS strobes */
+                    delay <= ACCESS_RAS_WAIT_STATES;
                     m_state <= M_ACCESS_WAIT_XDS;
                 end
             
@@ -802,14 +816,19 @@ module dram_machine
             
             /* Wait for xDS to be asserted before moving to CAS access delay */
             M_ACCESS_WAIT_XDS:
-                if (!n_uds || !n_lds) begin
-                    /* Change to presenting column address */
-                    masel <= 1'b1;
-                    
-                    /* Move to CAS access delay - add one wait state to account for the fact that
-                     * CAS's will be asserted in the next state */
-                    delay <= ACCESS_CAS_WAIT_STATES + 'd1;
-                    m_state <= M_ACCESS_CAS;
+                if (delay == 'd0) begin
+                    if (!n_uds || !n_lds) begin
+                        /* Change to presenting column address */
+                        masel <= 1'b1;
+                        
+                        /* Move to CAS access delay - add one wait state to account for the fact that
+                         * CAS's will be asserted in the next state */
+                        delay <= ACCESS_CAS_WAIT_STATES + 'd1;
+                        m_state <= M_ACCESS_CAS;
+                    end
+                end
+                else begin
+                    delay <= delay + -'d1;
                 end
             
             /* CAS portion of memory access cycle */
