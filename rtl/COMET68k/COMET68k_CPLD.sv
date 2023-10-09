@@ -12,6 +12,9 @@
  * producing the CPU clock ourselves */
 //`define CPU_CLOCK_IS_EXTERNAL
 
+/* Uncomment this define to enable the Software IRQ function using the cpld_func1 pin */
+`define USE_SOFT_IRQ_FEATURE
+
 /* Top module */
 module COMET68k_CPLD(
     /* Clocks */
@@ -88,6 +91,9 @@ module COMET68k_CPLD(
     input n_irq2,
     input n_irq1,
     input n_timer_irq,
+`ifdef USE_SOFT_IRQ_FEATURE
+    input cpld_func1,       /* Software IRQ that isnt a trap */
+`endif
     input n_autovec,
     output logic [2:0] n_ipl,
     output logic n_vpa,
@@ -262,6 +268,11 @@ module COMET68k_CPLD(
         .n_irq2(n_irq2),
         .n_irq1(n_irq1),
         .n_timer_irq(n_timer_irq),
+`ifndef USE_SOFT_IRQ_FEATURE
+        .soft_irq(1'b0),
+`else
+        .soft_irq(cpld_func1),
+`endif
         .n_autovec(n_autovec),
         .n_ipl(n_ipl),
         .n_vpa(n_vpa),
@@ -919,12 +930,13 @@ module interrupt_controller(
     input n_irq2,
     input n_irq1,
     input n_timer_irq,
+    input soft_irq,
     input n_autovec,
     output logic [2:0] n_ipl,
     output logic n_vpa,
     output logic n_iack_out
 );
-    /* Interrupt controller state machine */
+    /* NMI button state machine */
     reg [1:0] m_state;
     
     localparam
@@ -956,10 +968,11 @@ module interrupt_controller(
     wire uart_ack = (uart_irq && level5);
     wire eth_ack = (!n_eth_irq && level4);
     wire timer_ack = (!n_timer_irq && n_irq1 && level1);
+    wire soft_irq_ack = (soft_irq && n_timer_irq && n_irq1 && level1);
     wire ext_irq7 = (!nmi && level7);
     wire ext_irq5 = (!uart_irq && level5);
     wire ext_irq4 = (n_eth_irq && level4);
-    wire onboard_irq = (nmi_ack || uart_ack || eth_ack || timer_ack);
+    wire onboard_irq = (nmi_ack || uart_ack || eth_ack || timer_ack || soft_irq_ack);
     wire external_irq = (ext_irq7 || level6 || ext_irq5 || ext_irq4 || level3 || level2 || level1);
     
     /* Priority encoder for IPLx */
@@ -970,8 +983,8 @@ module interrupt_controller(
         if (boot_ff) begin
             /* Interrupts other than NMI are only pended to the CPU once it has fetched the reset
              * vector and begun executing code from its run-time address map */
-            if (!n_irq1 || !n_timer_irq) begin
-                /* IPL 1: external IRQ 1 or on-board timer/RTC */
+            if (!n_irq1 || !n_timer_irq || soft_irq) begin
+                /* IPL 1: external IRQ 1, on-board timer/RTC or software IRQ */
                 n_ipl = ~3'd1;
             end
             
@@ -1007,6 +1020,7 @@ module interrupt_controller(
         end
     end
     
+    /* NMI button machine */
     always_ff @(negedge clk) begin
         if (!n_reset) begin
             /* Resetting */
