@@ -9,7 +9,9 @@
 `define INCLUDE_ETHERNET_MACHINE
 
 /* Uncomment this define to source the CPU clock frequency from an external oscillator, rather than
- * producing the CPU clock ourselves */
+ * producing the CPU clock ourselves
+ *
+ * WARNING: External CPU clock currently results in instability, more work needed... */
 //`define CPU_CLOCK_IS_EXTERNAL
 
 /* Uncomment this define to enable the Software IRQ function using the cpld_func1 pin */
@@ -163,7 +165,10 @@ module COMET68k_CPLD(
     end
     
     /* Clock divider */
-    clock_divider clock_divider(
+    clock_divider #(
+        .CPU_CLK_TAP(1)     /* 0 = 20MHz, 1 = 10MHz */
+    )
+    clock_divider(
         .osc_40mhz(osc_40mhz),
         .eth_clk(eth_clk),
 `ifndef CPU_CLOCK_IS_EXTERNAL
@@ -532,7 +537,7 @@ module xbus_machine
         M_RESET_BUS = 'd4;
     
     /* Counter used throughout the machine to time various delays */
-    reg [1:0] delay;
+    reg [2:0] delay;
     
     /* Register defaults */
     initial begin
