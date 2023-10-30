@@ -14,9 +14,6 @@
  * WARNING: External CPU clock currently results in instability, more work needed... */
 //`define CPU_CLOCK_IS_EXTERNAL
 
-/* Uncomment this define to enable the Software IRQ function using the cpld_func1 pin */
-`define USE_SOFT_IRQ_FEATURE
-
 /* Top module */
 module COMET68k_CPLD(
     /* Clocks */
@@ -35,6 +32,7 @@ module COMET68k_CPLD(
     /* Debug signals */
     output logic debug1,
     output logic debug2,
+    input cpld_func1,
     
     /* Non-specific CPU signals */
     input [23:16] addr,
@@ -93,9 +91,7 @@ module COMET68k_CPLD(
     input n_irq2,
     input n_irq1,
     input n_timer_irq,
-`ifdef USE_SOFT_IRQ_FEATURE
-    input cpld_func1,       /* Software IRQ that isnt a trap */
-`endif
+    input soft_irq,         /* Software IRQ that isnt a trap */
     input n_autovec,
     output logic [2:0] n_ipl,
     output logic n_vpa,
@@ -273,11 +269,7 @@ module COMET68k_CPLD(
         .n_irq2(n_irq2),
         .n_irq1(n_irq1),
         .n_timer_irq(n_timer_irq),
-`ifndef USE_SOFT_IRQ_FEATURE
-        .soft_irq(1'b0),
-`else
-        .soft_irq(cpld_func1),
-`endif
+        .soft_irq(soft_irq),
         .n_autovec(n_autovec),
         .n_ipl(n_ipl),
         .n_vpa(n_vpa),
@@ -1092,7 +1084,6 @@ module interrupt_controller(
     end
 endmodule /* interrupt_controller */
 `endif /* INCLUDE_INTERRUPT_CONTROLLER */
-
 
 `ifdef INCLUDE_BUS_ARBITER
 /* Bus Arbiter
