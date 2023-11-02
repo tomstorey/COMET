@@ -6,7 +6,7 @@
 
   (title_block
     (title "COMET68k")
-    (date "2023-10-30")
+    (date "2023-11-02")
     (rev "2")
     (company "(C) TOM STOREY")
     (comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -983,18 +983,6 @@
     (path "/411c4c35-9377-45bc-88d1-5633618ebe78/6e600dac-d1c1-46ad-bf3a-7d418ba7ba1e"
       (reference "R15") (unit 1) (value "10K") (footprint "COMET_footprints:R_SMD0805")
     )
-    (path "/411c4c35-9377-45bc-88d1-5633618ebe78/bc2d8fb2-caff-457e-9ff9-50405ad85b9f"
-      (reference "R16") (unit 1) (value "1K") (footprint "COMET_footprints:R_SMD0805")
-    )
-    (path "/411c4c35-9377-45bc-88d1-5633618ebe78/fc39a6f1-90bc-4d2a-a136-5da3694e9608"
-      (reference "R17") (unit 1) (value "1K") (footprint "COMET_footprints:R_SMD0805")
-    )
-    (path "/411c4c35-9377-45bc-88d1-5633618ebe78/d9bbb581-28a9-4889-b833-010730f9f2c9"
-      (reference "R18") (unit 1) (value "1K") (footprint "COMET_footprints:R_SMD0805")
-    )
-    (path "/411c4c35-9377-45bc-88d1-5633618ebe78/5f81c1fe-87c7-4b49-a333-8b8e96ab9bba"
-      (reference "R19") (unit 1) (value "1K") (footprint "COMET_footprints:R_SMD0805")
-    )
     (path "/35201f99-817e-41df-8daa-bfe6ad38e23c/bef51985-37d1-4fc6-bfc3-bd35e5831043"
       (reference "R20") (unit 1) (value "0R") (footprint "COMET_footprints:R_SMD0805")
     )
@@ -1138,6 +1126,9 @@
     )
     (path "/bd1526a3-4b0b-4984-b8c7-32015efe7cc3/c4590429-8570-4f6a-bf5d-87e3866226cd"
       (reference "RN26") (unit 1) (value "1K5") (footprint "Resistor_SMD:R_Cat16-4")
+    )
+    (path "/411c4c35-9377-45bc-88d1-5633618ebe78/25c1ab1d-a966-4bb7-887c-d8d9912d873b"
+      (reference "RN27") (unit 1) (value "1K") (footprint "Resistor_SMD:R_Cat16-4")
     )
     (path "/92532d4c-47b6-436f-8fb1-521989723bf0/b17b971f-6020-4112-9eef-9c02c2b748ea"
       (reference "SPK1") (unit 1) (value "Speaker") (footprint "COMET_footprints:Buzzer_D12mm_H10mm_P6.35mm")
