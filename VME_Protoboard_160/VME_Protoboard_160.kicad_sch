@@ -4,6 +4,14 @@
 
   (paper "A3")
 
+  (title_block
+    (title "VMEbus PROTOTYPING BOARD, 160MM")
+    (date "2023-11-11")
+    (rev "1")
+    (company "(C) TOM STOREY")
+    (comment 1 "FREE FOR NON-COMMERCIAL USE")
+  )
+
   (lib_symbols
     (symbol "COMET_symbols:74x16245" (in_bom yes) (on_board yes)
       (property "Reference" "U" (id 0) (at 0 0 0)
@@ -6171,7 +6179,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 226.06 220.98 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 14212bdf-5cde-4d77-859e-1011eb603440)
-    (property "Reference" "C15" (id 0) (at 229.87 219.7099 0)
+    (property "Reference" "C6" (id 0) (at 229.87 219.7099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 229.87 222.2499 0)
@@ -6260,7 +6268,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 195.58 241.3 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 20dffc27-a2f8-40ca-8067-dc0ce46e1b30)
-    (property "Reference" "C11" (id 0) (at 199.39 240.0299 0)
+    (property "Reference" "C10" (id 0) (at 199.39 240.0299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 199.39 242.5699 0)
@@ -6413,7 +6421,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 180.34 241.3 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 24b1bfba-a3d5-48d3-8335-569b7ae55422)
-    (property "Reference" "C8" (id 0) (at 184.15 240.0299 0)
+    (property "Reference" "C9" (id 0) (at 184.15 240.0299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 184.15 242.5699 0)
@@ -6500,7 +6508,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 165.1 241.3 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 30244e0a-87fb-4037-a406-16a158cb1dcf)
-    (property "Reference" "C5" (id 0) (at 168.91 240.0299 0)
+    (property "Reference" "C8" (id 0) (at 168.91 240.0299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 168.91 242.5699 0)
@@ -6589,7 +6597,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 149.86 241.3 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 37d2a6de-8e5a-4b85-9f09-1cdc8935b7aa)
-    (property "Reference" "C2" (id 0) (at 153.67 240.0299 0)
+    (property "Reference" "C7" (id 0) (at 153.67 240.0299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 153.67 242.5699 0)
@@ -6839,7 +6847,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 226.06 241.3 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 6257b12b-44d7-46c4-b528-ce1423702b2e)
-    (property "Reference" "C16" (id 0) (at 229.87 240.0299 0)
+    (property "Reference" "C12" (id 0) (at 229.87 240.0299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 229.87 242.5699 0)
@@ -7371,7 +7379,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 165.1 261.62 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 905a8a9c-b71a-4b8a-9643-500b4f4a73d4)
-    (property "Reference" "C6" (id 0) (at 168.91 260.3499 0)
+    (property "Reference" "C14" (id 0) (at 168.91 260.3499 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 168.91 262.8899 0)
@@ -7423,7 +7431,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 180.34 220.98 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 9a68dc55-c954-434c-a8f4-c99db220eb01)
-    (property "Reference" "C7" (id 0) (at 184.15 219.7099 0)
+    (property "Reference" "C3" (id 0) (at 184.15 219.7099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 184.15 222.2499 0)
@@ -7442,7 +7450,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 210.82 241.3 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 9b08e108-524b-4573-82a2-4f529931ad96)
-    (property "Reference" "C14" (id 0) (at 214.63 240.0299 0)
+    (property "Reference" "C11" (id 0) (at 214.63 240.0299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 214.63 242.5699 0)
@@ -7461,7 +7469,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 165.1 220.98 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 9d9bc76c-7881-4834-b3ba-03078f5a37ab)
-    (property "Reference" "C4" (id 0) (at 168.91 219.7099 0)
+    (property "Reference" "C2" (id 0) (at 168.91 219.7099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 168.91 222.2499 0)
@@ -7624,7 +7632,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 182.88 264.16 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a82f2fbd-c73e-47a9-9ed6-d8c22f62be5f)
-    (property "Reference" "C9" (id 0) (at 186.69 262.0009 0)
+    (property "Reference" "C15" (id 0) (at 186.69 262.0009 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100uF" (id 1) (at 186.69 264.5409 0)
@@ -7643,7 +7651,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 198.12 264.16 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a99c29e4-24d8-42a5-9c39-c0b4d8d58458)
-    (property "Reference" "C12" (id 0) (at 201.93 262.0009 0)
+    (property "Reference" "C16" (id 0) (at 201.93 262.0009 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100uF" (id 1) (at 201.93 264.5409 0)
@@ -7814,7 +7822,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 210.82 220.98 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid bb592069-747f-48b6-bb4c-5f4ab5809af7)
-    (property "Reference" "C13" (id 0) (at 214.63 219.7099 0)
+    (property "Reference" "C5" (id 0) (at 214.63 219.7099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 214.63 222.2499 0)
@@ -8066,7 +8074,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 195.58 220.98 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid d9827e5b-3e37-47fb-ac9a-982862830164)
-    (property "Reference" "C10" (id 0) (at 199.39 219.7099 0)
+    (property "Reference" "C4" (id 0) (at 199.39 219.7099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 199.39 222.2499 0)
@@ -8117,7 +8125,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 149.86 261.62 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e15bb0f8-2adb-4d2a-be36-c865a4765e4d)
-    (property "Reference" "C3" (id 0) (at 153.67 260.3499 0)
+    (property "Reference" "C13" (id 0) (at 153.67 260.3499 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (id 1) (at 153.67 262.8899 0)
@@ -8524,50 +8532,50 @@
     (path "/8d780505-482f-4f72-965e-008996d5d906"
       (reference "C1") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
-    (path "/37d2a6de-8e5a-4b85-9f09-1cdc8935b7aa"
+    (path "/9d9bc76c-7881-4834-b3ba-03078f5a37ab"
       (reference "C2") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
-    (path "/e15bb0f8-2adb-4d2a-be36-c865a4765e4d"
+    (path "/9a68dc55-c954-434c-a8f4-c99db220eb01"
       (reference "C3") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
-    (path "/9d9bc76c-7881-4834-b3ba-03078f5a37ab"
+    (path "/d9827e5b-3e37-47fb-ac9a-982862830164"
       (reference "C4") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
-    (path "/30244e0a-87fb-4037-a406-16a158cb1dcf"
+    (path "/bb592069-747f-48b6-bb4c-5f4ab5809af7"
       (reference "C5") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
-    (path "/905a8a9c-b71a-4b8a-9643-500b4f4a73d4"
+    (path "/14212bdf-5cde-4d77-859e-1011eb603440"
       (reference "C6") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
-    (path "/9a68dc55-c954-434c-a8f4-c99db220eb01"
+    (path "/37d2a6de-8e5a-4b85-9f09-1cdc8935b7aa"
       (reference "C7") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
-    (path "/24b1bfba-a3d5-48d3-8335-569b7ae55422"
+    (path "/30244e0a-87fb-4037-a406-16a158cb1dcf"
       (reference "C8") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
-    (path "/a82f2fbd-c73e-47a9-9ed6-d8c22f62be5f"
-      (reference "C9") (unit 1) (value "100uF") (footprint "COMET_footprints:C_SMD_4.3MMx7.3MM")
-    )
-    (path "/d9827e5b-3e37-47fb-ac9a-982862830164"
-      (reference "C10") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
+    (path "/24b1bfba-a3d5-48d3-8335-569b7ae55422"
+      (reference "C9") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
     (path "/20dffc27-a2f8-40ca-8067-dc0ce46e1b30"
-      (reference "C11") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
-    )
-    (path "/a99c29e4-24d8-42a5-9c39-c0b4d8d58458"
-      (reference "C12") (unit 1) (value "100uF") (footprint "COMET_footprints:C_SMD_4.3MMx7.3MM")
-    )
-    (path "/bb592069-747f-48b6-bb4c-5f4ab5809af7"
-      (reference "C13") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
+      (reference "C10") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
     (path "/9b08e108-524b-4573-82a2-4f529931ad96"
-      (reference "C14") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
-    )
-    (path "/14212bdf-5cde-4d77-859e-1011eb603440"
-      (reference "C15") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
+      (reference "C11") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
     )
     (path "/6257b12b-44d7-46c4-b528-ce1423702b2e"
-      (reference "C16") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
+      (reference "C12") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
+    )
+    (path "/e15bb0f8-2adb-4d2a-be36-c865a4765e4d"
+      (reference "C13") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
+    )
+    (path "/905a8a9c-b71a-4b8a-9643-500b4f4a73d4"
+      (reference "C14") (unit 1) (value "100nF") (footprint "COMET_footprints:C_SMD0805")
+    )
+    (path "/a82f2fbd-c73e-47a9-9ed6-d8c22f62be5f"
+      (reference "C15") (unit 1) (value "100uF") (footprint "COMET_footprints:C_SMD_4.3MMx7.3MM")
+    )
+    (path "/a99c29e4-24d8-42a5-9c39-c0b4d8d58458"
+      (reference "C16") (unit 1) (value "100uF") (footprint "COMET_footprints:C_SMD_4.3MMx7.3MM")
     )
     (path "/d3ffd695-d981-4e2a-af11-93614a7812fe"
       (reference "J1") (unit 1) (value "Conn_02x08_Odd_Even") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical")
