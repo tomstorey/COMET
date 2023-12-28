@@ -1,7 +1,7 @@
         .title "crt0.S for m68k bare metal"
 
 /* Uncomment the following define if remapping RAM to start at addr 0 */
-#define ROMRAM_REMAP
+/* #define ROMRAM_REMAP */
 
 /* Along with the ROMRAM_REMAP define, uncomment the following define if you
  * are using a 68010 CPU. Rather than copying the exception vector table into
@@ -26,10 +26,8 @@
 _start:
         move.w  #0x2700, %sr            /* Ensure interrupts are "disabled" */
 
-#if 0
-        move.w  #1000, %d0              /* DRAM settling delay */
+        move.w  #1000, %d0              /* DRAM start-up delay */
 0:      dbf     %d0, 0b
-#endif
 
 #ifdef MC68010
         /* Whether or not ROM/RAM remapping is being performed, if using a
