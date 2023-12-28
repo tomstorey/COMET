@@ -10,6 +10,7 @@ typedef enum {
     STATE_JUMP,
     STATE_READ_MEM,
     STATE_WRITE_MEM,
+    STATE_READ_BLOCK
 } state_machine_state_t;
 
 enum {
@@ -24,7 +25,9 @@ enum {
     COMMAND_RX_READ_MEM,
     COMMAND_TX_READ_MEM,
     COMMAND_RX_WRITE_MEM,
-    COMMAND_TX_WRITE_MEM
+    COMMAND_TX_WRITE_MEM,
+    COMMAND_RX_READ_BLOCK,
+    COMMAND_TX_READ_BLOCK
 };
 
 void
@@ -300,6 +303,67 @@ main(void)
 
                 break;
 
+            case STATE_READ_BLOCK:
+                /* Reading memory block (i.e. without incrementing the read pointer)
+                 *
+                 * Memory can be read as byte, word, or long types.
+                 * 
+                 * The first step is to receive the type that is to be read.
+                 * This comes in the form of a single byte specifying the byte
+                 * width of the type (1 for byte, 2 for word, 4 for long). */
+                data_type = uart_get_char();
+
+                /* Next is a 32 bit value specifying the number of reads of
+                 * that type to be performed. */
+                data_len = uart_get_long();
+
+                /* Next get the address where the data is to be read from */
+                data_ptr = (uint8_t *)uart_get_long();
+                data_ptr16 = (uint16_t *)data_ptr;
+                data_ptr32 = (uint32_t *)data_ptr;
+
+                /* Respond to say that data will follow */
+                uart_send_char((uint8_t)COMMAND_TX_READ_MEM);
+
+                for (; data_len;) {
+                    /* Wait for the TX FIFO to empty, then we can queue 16
+                     * bytes in one go */
+                    while (UALSRbits.THRE == 0);
+
+                    /* Queue bytes until either 16 bytes are queued or data_len
+                     * is decremented to zero */
+                    if (data_type == 0x01) {
+                        ctr = 16;
+                    } else if (data_type == 0x02) {
+                        ctr = 8;
+                    } else if (data_type == 0x04) {
+                        ctr = 4;
+                    }
+
+                    for (; ctr && data_len; ctr--, data_len--) {
+                        if (data_type == 0x01) {
+                            UATHR = *data_ptr;
+                        } else if (data_type == 0x02) {
+                            word_data = *data_ptr16;
+
+                            UATHR = (word_data >> 8);
+                            UATHR = word_data;
+                        } else if (data_type == 0x04) {
+                            long_data = *data_ptr32;
+
+                            UATHR = (long_data >> 24);
+                            UATHR = (long_data >> 16);
+                            UATHR = (long_data >> 8);
+                            UATHR = long_data;
+                        }
+                        
+                    }
+                }
+
+                state = STATE_DEFAULT;
+
+                break;
+
             case STATE_DEFAULT:
             default:
                 /* Receive a command */
@@ -340,6 +404,12 @@ main(void)
                     case COMMAND_RX_WRITE_MEM:
                         /* Writing memory */
                         state = STATE_WRITE_MEM;
+
+                        break;
+
+                    case COMMAND_RX_READ_BLOCK:
+                        /* Reading memory block (i.e. without incrementing read pointer) */
+                        state = STATE_READ_BLOCK;
 
                         break;
 
