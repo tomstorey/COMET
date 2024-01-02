@@ -27,6 +27,18 @@
     )
   )
 
+  (sheet (at 137.16 63.5) (size 38.1 22.86) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 690998cb-2e53-4216-8cb7-97fab565f6bf)
+    (property "Sheet name" "Socket 2" (id 0) (at 137.16 62.7884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "socket2.kicad_sch" (id 1) (at 137.16 86.9446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
   (sheet (at 88.9 30.48) (size 38.1 22.86) (fields_autoplaced)
     (stroke (width 0.1524) (type solid) (color 0 0 0 0))
     (fill (color 0 0 0 0.0000))
@@ -35,6 +47,18 @@
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
     (property "Sheet file" "term_resistors.kicad_sch" (id 1) (at 88.9 53.9246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 137.16 96.52) (size 38.1 22.86) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid ac657d7f-8653-46d3-9390-b301de631689)
+    (property "Sheet name" "Slot 3" (id 0) (at 137.16 95.8084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "socket3.kicad_sch" (id 1) (at 137.16 119.9646 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
   )
@@ -56,6 +80,8 @@
     (path "/246231bb-ffb7-4bc4-ae1f-2359f6ae3062" (page "2"))
     (path "/a0862581-9ad8-4f93-908d-f8764efb062e" (page "3"))
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841" (page "4"))
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf" (page "5"))
+    (path "/ac657d7f-8653-46d3-9390-b301de631689" (page "6"))
   )
 
   (symbol_instances
@@ -125,19 +151,49 @@
     (path "/a0862581-9ad8-4f93-908d-f8764efb062e/56d8c889-6b53-4c7d-9fbf-83940e4f579e"
       (reference "#PWR0117") (unit 1) (value "GND") (footprint "")
     )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/15eb33a9-6829-4119-a057-ae0e9f25a250"
+      (reference "#PWR0118") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/d3329ffb-50ed-4e13-90ef-6ac5d5272f0c"
+      (reference "#PWR0118") (unit 1) (value "+5V") (footprint "")
+    )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/d3329ffb-50ed-4e13-90ef-6ac5d5272f0c"
       (reference "#PWR0118") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/1b82873c-f1ff-4ebb-9465-84e8075c1fa8"
+      (reference "#PWR0119") (unit 1) (value "+BATT") (footprint "")
     )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/6e689a33-5399-42a6-b0fe-3e03ee299bde"
       (reference "#PWR0119") (unit 1) (value "+BATT") (footprint "")
     )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/6e689a33-5399-42a6-b0fe-3e03ee299bde"
+      (reference "#PWR0119") (unit 1) (value "+BATT") (footprint "")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/3f4bc253-033d-43d6-a231-892b175c4b73"
+      (reference "#PWR0120") (unit 1) (value "+12V") (footprint "")
+    )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/3f4bc253-033d-43d6-a231-892b175c4b73"
       (reference "#PWR0120") (unit 1) (value "+12V") (footprint "")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/d46fc349-9845-44d9-9506-6f078b2a6198"
+      (reference "#PWR0120") (unit 1) (value "+12V") (footprint "")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/1ea725bd-00c1-4238-80d8-eadf8a9cd67d"
+      (reference "#PWR0121") (unit 1) (value "GND") (footprint "")
     )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/735ce7df-973e-4cc4-9a9c-2ecc4138d11c"
       (reference "#PWR0121") (unit 1) (value "GND") (footprint "")
     )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/735ce7df-973e-4cc4-9a9c-2ecc4138d11c"
+      (reference "#PWR0121") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/1b2faaab-0f34-4168-9018-573a93797c17"
+      (reference "#PWR0122") (unit 1) (value "-12V") (footprint "")
+    )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/f05e85ae-9abc-48cf-89e0-cec04104616c"
+      (reference "#PWR0122") (unit 1) (value "-12V") (footprint "")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/f05e85ae-9abc-48cf-89e0-cec04104616c"
       (reference "#PWR0122") (unit 1) (value "-12V") (footprint "")
     )
     (path "/a0862581-9ad8-4f93-908d-f8764efb062e/69fbe2ce-7b1e-437f-852e-0c1529c0fc75"
@@ -173,7 +229,13 @@
     (path "/246231bb-ffb7-4bc4-ae1f-2359f6ae3062/eed60ce7-2235-424a-862a-0b04e64942f2"
       (reference "C14") (unit 1) (value "10uF") (footprint "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm")
     )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/86d96e16-419f-47de-b37c-95d5f21955dd"
+      (reference "C101") (unit 1) (value "100nF") (footprint "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm")
+    )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/abd60e67-36d8-486b-9be7-861e9eaae082"
+      (reference "C101") (unit 1) (value "100nF") (footprint "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/abd60e67-36d8-486b-9be7-861e9eaae082"
       (reference "C101") (unit 1) (value "100nF") (footprint "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm")
     )
     (path "/a0862581-9ad8-4f93-908d-f8764efb062e/8387712c-3c5f-43d9-aee5-f200454ab703"
@@ -284,13 +346,31 @@
     (path "/246231bb-ffb7-4bc4-ae1f-2359f6ae3062/6f0a0e90-c3a1-4a9b-8679-2b0a4e5d969a"
       (reference "X90") (unit 1) (value "GND") (footprint "Connector_Pin:Pin_D1.0mm_L10.0mm")
     )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/976f9a9b-6fb6-4ca6-a9bf-e6c2cf1db92b"
+      (reference "X101") (unit 1) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Female_Vertical_THT")
+    )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/976f9a9b-6fb6-4ca6-a9bf-e6c2cf1db92b"
       (reference "X101") (unit 1) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Female_Vertical_THT")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/b5ef662d-7348-4042-9e15-7a172b3370ae"
+      (reference "X101") (unit 1) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Female_Vertical_THT")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/ed4c7fd7-5953-4871-a6af-bc9151321a2f"
+      (reference "X101") (unit 2) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT")
     )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/ed4c7fd7-5953-4871-a6af-bc9151321a2f"
       (reference "X101") (unit 2) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT")
     )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/fbdad1a2-45c4-47b3-aaf4-3ac4cf9101cf"
+      (reference "X101") (unit 2) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT")
+    )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/73869421-9a77-4fcd-9423-6810debf4fdd"
+      (reference "X101") (unit 3) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/73869421-9a77-4fcd-9423-6810debf4fdd"
+      (reference "X101") (unit 3) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/b83ad41c-bde4-4b5a-b342-ee8ad068474d"
       (reference "X101") (unit 3) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT")
     )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/87ad8df9-8632-4357-8ced-e5a61d9e55b0"
@@ -305,8 +385,38 @@
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/e6b9198a-335f-4f8f-aa06-c9d3b79bab64"
       (reference "X401D1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
     )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/5f3ca291-1825-4b63-b1b2-2ae6f4c1d07c"
+      (reference "X402A1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/87ad8df9-8632-4357-8ced-e5a61d9e55b0"
+      (reference "X402A1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/15eb4a8d-e657-4234-a176-cd0e23c3a904"
+      (reference "X402B1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/523fb9a4-aee7-4544-9fc1-d0d537ed9db1"
+      (reference "X402B1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/0a2e9296-cfd2-473b-bf7c-e5c6a85d2cd8"
+      (reference "X402C1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/6c9240e7-52fb-4528-99c0-726babfcf7d1"
+      (reference "X402C1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/00a3eff5-b658-4912-b806-dab82ece593f"
+      (reference "X402D1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/e6b9198a-335f-4f8f-aa06-c9d3b79bab64"
+      (reference "X402D1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
     (path "/d65a77fd-c4df-4617-a5a6-70a784b7b841/209831ef-045e-4829-8684-1e00162d0620"
       (reference "X501") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/ac657d7f-8653-46d3-9390-b301de631689/209831ef-045e-4829-8684-1e00162d0620"
+      (reference "X502") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/690998cb-2e53-4216-8cb7-97fab565f6bf/b72570ab-f598-4ae6-a179-1ab7addc5d8c"
+      (reference "X502") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
     )
   )
 )
