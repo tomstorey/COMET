@@ -14,16 +14,16 @@
     },
     "ratsnest_display_mode": 0,
     "selection_filter": {
-      "dimensions": true,
+      "dimensions": false,
       "footprints": true,
-      "graphics": true,
-      "keepouts": true,
+      "graphics": false,
+      "keepouts": false,
       "lockedItems": false,
-      "otherItems": true,
-      "pads": true,
+      "otherItems": false,
+      "pads": false,
       "text": true,
       "tracks": true,
-      "vias": true,
+      "vias": false,
       "zones": true
     },
     "visible_items": [
@@ -62,11 +62,11 @@
       35,
       36
     ],
-    "visible_layers": "ffcffff_fffffff9",
+    "visible_layers": "ffcffff_ffffffff",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "VME_Backplane_3ActPas.kicad_prl",
+    "filename": "VME_Backplane_8ActPas.kicad_prl",
     "version": 3
   },
   "project": {
