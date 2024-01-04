@@ -1,0 +1,141 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid db751f91-d0b0-4674-955a-a763a5c464a7)
+
+  (paper "A3")
+
+  (title_block
+    (title "MINI VME BACKPLANE")
+    (date "2023-07-03")
+    (rev "2")
+    (company "TOM STOREY")
+    (comment 1 "NON-COMMERCIAL USE")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 73.66 132.08) (size 38.1 25.4) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 582c0e92-ce74-49c2-b1f4-cf69653c33e1)
+    (property "Sheet name" "Termination Resistors" (id 0) (at 73.66 131.3684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "rterm.kicad_sch" (id 1) (at 73.66 158.0646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 134.62 132.08) (size 38.1 25.4) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 672ae3ab-815d-4056-a526-80866fe94521)
+    (property "Sheet name" "Sockets 1" (id 0) (at 134.62 131.3684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "sockets1.kicad_sch" (id 1) (at 134.62 158.0646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1" (page "2"))
+    (path "/672ae3ab-815d-4056-a526-80866fe94521" (page "3"))
+  )
+
+  (symbol_instances
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/1deb59da-d0dd-43cc-96b4-994db91ef5a6"
+      (reference "#PWR01") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/ca42d721-c8bc-4ea4-8355-4933984d8a3a"
+      (reference "#PWR02") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/19a5c4c9-7c03-48ce-b10b-9a1d7e5897f6"
+      (reference "#PWR03") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/5cf282fc-e0f8-4b75-994b-0c052e42f6f7"
+      (reference "#PWR04") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/31324f6e-aa63-4155-9184-8970c4770fe6"
+      (reference "#PWR05") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/699f442d-ca9c-4c5e-8a72-358156a95281"
+      (reference "#PWR06") (unit 1) (value "+5VA") (footprint "")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/6b495864-d6b6-47e9-8220-8c52a8ff33b2"
+      (reference "#PWR07") (unit 1) (value "+12V") (footprint "")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/81f85810-4265-4e3c-9a1c-8b22a23bce2d"
+      (reference "#PWR08") (unit 1) (value "-12V") (footprint "")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/173e3451-68e6-48b2-b987-c2d6a4f2511b"
+      (reference "#PWR09") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/55763dcf-bef2-4a4a-8da9-4656af21348f"
+      (reference "J1") (unit 1) (value "Screw_Terminal_01x05") (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-5-5.08_1x05_P5.08mm_Horizontal")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/40c172d0-f944-43f9-8c0d-867beb6d9b91"
+      (reference "R1") (unit 1) (value "330R") (footprint "COMET_footprints:R_SMD0805")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/aae7c2b9-7132-456c-b04f-5b200283dd90"
+      (reference "R2") (unit 1) (value "470R") (footprint "COMET_footprints:R_SMD0805")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/8306c7ed-6ddd-4548-a540-b572f93c84ae"
+      (reference "RN1") (unit 1) (value "200R") (footprint "Resistor_THT:R_Array_SIP9")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/fda80cce-c36f-48aa-8837-fd330332da2f"
+      (reference "RN2") (unit 1) (value "200R") (footprint "Resistor_THT:R_Array_SIP9")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/ef792ad7-b95e-48e4-9e1a-1bb0bc4aaae8"
+      (reference "RN3") (unit 1) (value "200R") (footprint "Resistor_THT:R_Array_SIP9")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/5ed50909-b393-4c18-8f5c-29a3f16d910d"
+      (reference "RN4") (unit 1) (value "200R") (footprint "Resistor_THT:R_Array_SIP9")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/a891b729-f477-49f1-8530-2c7179542002"
+      (reference "RN5") (unit 1) (value "200R") (footprint "Resistor_THT:R_Array_SIP9")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/2482d99f-ee0a-4f48-adc7-ff5adc9a5e0d"
+      (reference "RN6") (unit 1) (value "200R") (footprint "Resistor_THT:R_Array_SIP9")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/97b1d06d-6b02-44ce-979c-0edf5bb389b7"
+      (reference "RN7") (unit 1) (value "200R") (footprint "Resistor_THT:R_Array_SIP9")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/6bc309e6-ab6a-4325-a837-e8fe807ed618"
+      (reference "RN8") (unit 1) (value "200R") (footprint "Resistor_THT:R_Array_SIP9")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/042864b1-d634-4ac4-a29f-015a365aaa49"
+      (reference "RN9") (unit 1) (value "200R") (footprint "Resistor_THT:R_Array_SIP9")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/6ccce533-2586-45cd-b47a-2d8bd9a05998"
+      (reference "U1") (unit 1) (value "NCV0372") (footprint "COMET_footprints:Package_SO16W")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/e8f6bbf6-adab-4fb1-8141-f892f22711e4"
+      (reference "U1") (unit 2) (value "NCV0372") (footprint "COMET_footprints:Package_SO16W")
+    )
+    (path "/582c0e92-ce74-49c2-b1f4-cf69653c33e1/7033faac-6f06-4a84-b7f9-3bb625b1e088"
+      (reference "U1") (unit 3) (value "NCV0372") (footprint "COMET_footprints:Package_SO16W")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/1a0db559-2610-48b4-a580-fc7b640a56af"
+      (reference "X1") (unit 1) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Female_Vertical_THT")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/f76c109f-a727-486b-be7d-5863c6a1ec92"
+      (reference "X1") (unit 2) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Female_Vertical_THT")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/87b1cda1-a264-4f26-946b-f6ea99650b4e"
+      (reference "X1") (unit 3) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Female_Vertical_THT")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/ead116d5-8ff8-43da-a4a0-846d1d1589b9"
+      (reference "X2") (unit 1) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Female_Vertical_THT")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/6b61c6b8-b9c1-4f0a-8e54-629938d421be"
+      (reference "X2") (unit 2) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Female_Vertical_THT")
+    )
+    (path "/672ae3ab-815d-4056-a526-80866fe94521/93ce96ac-425c-4a49-a95f-ab2fd7b744a6"
+      (reference "X2") (unit 3) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Female_Vertical_THT")
+    )
+  )
+)
