@@ -10,8 +10,8 @@ This document outlines the progress for the following design:
 ## Status
 | Item | Progress |
 |--|--|
-| Schematic | In Progress |
-| PCB layout | In Progress |
+| Schematic | Complete |
+| PCB layout | Complete |
 | PCB build | Not started |
 | Functional testing | Not started |
 | Further revision | Unknown |
