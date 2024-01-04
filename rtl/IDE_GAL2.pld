@@ -1,0 +1,61 @@
+Name     IDE_GAL ;
+PartNo   00 ;
+Date     06/12/2023 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Company ;
+Assembly None ;
+Location U3 ;
+Device   p22v10 ;
+
+
+/*************************** INPUTS ***************************/
+pin 2 = !lds;
+pin 3 = !uds;
+pin 4 = !wr;
+pin 5 = fc0;
+pin 6 = fc1;
+pin 7 = fc2;
+pin 8 = a4;
+pin 9 = a5;
+pin 10 = !cs;
+pin 11 = iordy;
+
+/*************************** OUTPUTS **************************/
+pin 23 = !ide_cs0;
+pin 22 = !ide_cs1;
+pin 21 = !ide_rd;
+pin 20 = !ide_wr;
+pin 19 = !wrcon;
+pin 18 = !rdstat;
+pin 17 = !dtack;
+pin 16 = ddir;
+
+/************************** INTERNAL **************************/
+pin 14 = cpu_space;
+
+/************************** EQUATIONS *************************/
+
+/* We need to ignore all bus cycles that are CPU space cycles */
+cpu_space = fc0 & fc1 & fc2;
+
+/* Assert DTACK when ever a valid operation is decoded */
+dtack = !cpu_space & cs & (lds # uds) & (!a5 & iordy #
+                                          a5 & !iordy);
+
+/* ddir by default takes in from the bus, and only outputs to the bus when reading */
+ddir = ide_rd # rdstat;
+
+/* Assert IORD/IOWR towards the IDE interface when an operation is decoded */
+ide_rd = !cpu_space & cs & (lds # uds) & !wr;
+ide_wr = !cpu_space & cs & (lds # uds) & wr;
+
+/* Assert either of the CSx signals towards the IDE interface based on A4 */
+ide_cs0 = !cpu_space & cs & (lds # uds) & !a4 & !a5;
+ide_cs1 = !cpu_space & cs & (lds # uds) & a4 & !a5;
+
+/* Assert status/control read/write signals */
+wrcon = !cpu_space & cs & uds & wr & a5;
+rdstat = !cpu_space & cs & uds & !wr & a5;
+
+/* END */
