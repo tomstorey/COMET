@@ -1,0 +1,45 @@
+Name     DEBUG_GAL;
+PartNo   00;
+Date     04/12/2023;
+Revision 01;
+Designer Engineer;
+Company  Company;
+Assembly None;
+Location U1;
+Device   g16v8a;
+
+
+ORDER: !cs, !uds, !lds, !wr, fc0, fc1, fc2, cpu_space, !clk, !blank, !dtack; 
+
+
+VECTORS:
+1111000L***
+1111100L***
+1111010L***
+1111110L***
+1111001L***
+1111101L***
+1111011L***
+1111111H***
+1111000L***
+1111000****
+0111000*HHH
+0011000*HHH
+0101000*HHH
+0111000*HHH
+1111000****
+1111000****
+0111000*HHH
+0001000*HLL
+0001000*HLL
+1111000****
+1111000****
+0111000*HHH
+0000000*LHL
+0000000*LHL
+1111000****
+1111000****
+0111000LHHH
+0000000LLHL
+0000111HHHH
+1111000****

@@ -1,0 +1,41 @@
+Name     DEBUG_GAL ;
+PartNo   00 ;
+Date     04/12/2023 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Company ;
+Assembly None ;
+Location U1 ;
+Device   g16v8a ;
+
+
+/*************************** INPUTS ***************************/
+pin 1 = !cs;
+pin 2 = !lds;
+pin 3 = !uds;
+pin 4 = !wr;
+pin 5 = fc0;
+pin 6 = fc1;
+pin 7 = fc2;
+
+/*************************** OUTPUTS **************************/
+pin 19 = !clk;
+pin 18 = !blank;
+pin 17 = !dtack;
+pin 16 = cpu_space;
+
+/************************** EQUATIONS *************************/
+
+/* We need to ignore all bus cycles that are CPU space cycles */
+cpu_space = fc0 & fc1 & fc2;
+
+/* Writing the debug display space clocks new data in */
+clk = !cpu_space & wr & lds & uds & cs;
+
+/* Reading the debug display space should blank the displays */
+blank = !cpu_space & !wr & lds & uds & cs;
+
+/* Assert DTACK when ever a valid operation is decoded */
+dtack = !cpu_space & lds & uds & cs;
+
+/* END */
