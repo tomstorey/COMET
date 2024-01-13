@@ -6179,7 +6179,7 @@
   (symbol (lib_id "COMET_symbols:74x1G07") (at 276.86 91.44 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4ba0c2f3-3832-4528-aeb9-3e5b8717f3f0)
-    (property "Reference" "U6" (id 0) (at 269.24 83.82 0))
+    (property "Reference" "U7" (id 0) (at 269.24 83.82 0))
     (property "Value" "74LVC1G07" (id 1) (at 269.24 86.36 0))
     (property "Footprint" "COMET_footprints:Package_SOT23-5" (id 2) (at 276.86 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -6984,7 +6984,7 @@
   (symbol (lib_id "CF_Board:22V10") (at 241.3 60.96 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid bf78465e-8143-4386-9bea-26a4dc82fef1)
-    (property "Reference" "U3" (id 0) (at 241.3 38.1 0))
+    (property "Reference" "U6" (id 0) (at 241.3 38.1 0))
     (property "Value" "22V10" (id 1) (at 241.3 40.64 0))
     (property "Footprint" "Package_DIP:DIP-24_W7.62mm_Socket" (id 2) (at 241.3 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -7437,7 +7437,7 @@
   (symbol (lib_id "COMET_symbols:74x1G07") (at 276.86 91.44 0) (unit 2)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid f6922de3-83a8-4ae7-a429-21dcab08499a)
-    (property "Reference" "U6" (id 0) (at 278.13 90.1699 0)
+    (property "Reference" "U7" (id 0) (at 278.13 90.1699 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Value" "74LVC1G07" (id 1) (at 278.13 91.4399 0)
@@ -7649,14 +7649,17 @@
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/2f7fdaa7-a5f4-4ab2-b599-1857fed2ef27"
       (reference "#PWR035") (unit 1) (value "+5V") (footprint "")
     )
-    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/4a3dff2b-a332-4f67-a2b7-a22fe1597ff4"
+    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/a9a15d0f-5372-4367-9eac-932310111a3d"
       (reference "#PWR036") (unit 1) (value "GND") (footprint "")
     )
+    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/4a3dff2b-a332-4f67-a2b7-a22fe1597ff4"
+      (reference "#PWR037") (unit 1) (value "GND") (footprint "")
+    )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/10650d22-6857-40a1-b492-46769c22407b"
-      (reference "#PWR037") (unit 1) (value "+5V") (footprint "")
+      (reference "#PWR038") (unit 1) (value "+5V") (footprint "")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/27bb9906-69ce-49c5-b498-0c6583c3f6d3"
-      (reference "#PWR038") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR039") (unit 1) (value "GND") (footprint "")
     )
     (path "/cae18acc-bd78-4da2-b66f-6219bb4579c3"
       (reference "C1") (unit 1) (value "100uF") (footprint "COMET_footprints:C_SMD_4.3MMx7.3MM")
@@ -7709,6 +7712,9 @@
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/f8370008-3a7f-4001-a459-5ade8d3e6ac9"
       (reference "D1") (unit 1) (value "ACT") (footprint "COMET_footprints:LED_SMD0805")
     )
+    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/f82f6d47-c157-4d06-93be-d169a9d1d0db"
+      (reference "D2") (unit 1) (value "IN USE") (footprint "COMET_footprints:LED_SMD0805")
+    )
     (path "/499364ce-bdfc-457a-8aa7-047e56692ab1"
       (reference "J1") (unit 1) (value "Conn_02x04_Odd_Even") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical")
     )
@@ -7720,6 +7726,9 @@
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/25ad3ba9-916b-424c-affc-cb234f3df204"
       (reference "R3") (unit 1) (value "1K") (footprint "COMET_footprints:R_SMD0805")
+    )
+    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/31b0cbd2-be15-47c0-8cda-bdc3fd83ce20"
+      (reference "R4") (unit 1) (value "1K") (footprint "COMET_footprints:R_SMD0805")
     )
     (path "/9581bc50-ee87-45b9-940d-768a95d4e1b1"
       (reference "RN1") (unit 1) (value "R_Pack04") (footprint "Resistor_SMD:R_Cat16-4")
@@ -7763,9 +7772,6 @@
     (path "/a31bc32b-4afd-4136-993e-527e790370b3"
       (reference "U2") (unit 2) (value "74HCT245") (footprint "COMET_footprints:Package_SO20W")
     )
-    (path "/bf78465e-8143-4386-9bea-26a4dc82fef1"
-      (reference "U3") (unit 1) (value "22V10") (footprint "Package_DIP:DIP-24_W7.62mm_Socket")
-    )
     (path "/c69e888b-138f-4719-9a37-3da8c0c6ecc8"
       (reference "U3") (unit 2) (value "22V10") (footprint "Package_DIP:DIP-24_W7.62mm_Socket")
     )
@@ -7781,50 +7787,53 @@
     (path "/e3584e88-0cfa-47da-84ff-d12a820a524d"
       (reference "U5") (unit 2) (value "74HCT138") (footprint "")
     )
+    (path "/bf78465e-8143-4386-9bea-26a4dc82fef1"
+      (reference "U6") (unit 1) (value "22V10") (footprint "Package_DIP:DIP-24_W7.62mm_Socket")
+    )
     (path "/4ba0c2f3-3832-4528-aeb9-3e5b8717f3f0"
-      (reference "U6") (unit 1) (value "74LVC1G07") (footprint "COMET_footprints:Package_SOT23-5")
+      (reference "U7") (unit 1) (value "74LVC1G07") (footprint "COMET_footprints:Package_SOT23-5")
     )
     (path "/f6922de3-83a8-4ae7-a429-21dcab08499a"
-      (reference "U6") (unit 2) (value "74LVC1G07") (footprint "COMET_footprints:Package_SOT23-5")
+      (reference "U7") (unit 2) (value "74LVC1G07") (footprint "COMET_footprints:Package_SOT23-5")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/34e759cd-e28a-4c0c-b576-973f07e5c0f9"
-      (reference "U7") (unit 1) (value "74FCT245") (footprint "COMET_footprints:Package_QSOP20")
+      (reference "U8") (unit 1) (value "74FCT245") (footprint "COMET_footprints:Package_QSOP20")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/bcafce73-2c98-40e6-a329-5f4de00f37ef"
-      (reference "U7") (unit 2) (value "74FCT245") (footprint "")
+      (reference "U8") (unit 2) (value "74FCT245") (footprint "")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/f384fbd4-38b0-4ed2-a372-5d3477c371e4"
-      (reference "U8") (unit 1) (value "74HCT74") (footprint "COMET_footprints:Package_SO14")
+      (reference "U9") (unit 1) (value "74HCT74") (footprint "COMET_footprints:Package_SO14")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/2d309f4c-163d-4028-9c71-ba1623007e1a"
-      (reference "U8") (unit 2) (value "74HCT74") (footprint "COMET_footprints:Package_SO14")
+      (reference "U9") (unit 2) (value "74HCT74") (footprint "COMET_footprints:Package_SO14")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/801c220f-f363-4e5b-beeb-548acd8f298d"
-      (reference "U8") (unit 3) (value "74HCT74") (footprint "COMET_footprints:Package_SO14")
+      (reference "U9") (unit 3) (value "74HCT74") (footprint "COMET_footprints:Package_SO14")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/80aecc33-2700-4f84-867e-e95febb524d7"
-      (reference "U9") (unit 1) (value "74HCT245") (footprint "COMET_footprints:Package_SO20W")
-    )
-    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/301e26e0-2284-4361-8a21-cdfab701578e"
-      (reference "U9") (unit 2) (value "74HCT245") (footprint "COMET_footprints:Package_SO20W")
-    )
-    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/ee0c1982-1d2f-46f0-8b26-f0ced053c93e"
       (reference "U10") (unit 1) (value "74HCT245") (footprint "COMET_footprints:Package_SO20W")
     )
-    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/06c64bbc-cc23-465a-8aca-8c908bcb46f0"
+    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/301e26e0-2284-4361-8a21-cdfab701578e"
       (reference "U10") (unit 2) (value "74HCT245") (footprint "COMET_footprints:Package_SO20W")
     )
+    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/ee0c1982-1d2f-46f0-8b26-f0ced053c93e"
+      (reference "U11") (unit 1) (value "74HCT245") (footprint "COMET_footprints:Package_SO20W")
+    )
+    (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/06c64bbc-cc23-465a-8aca-8c908bcb46f0"
+      (reference "U11") (unit 2) (value "74HCT245") (footprint "COMET_footprints:Package_SO20W")
+    )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/5822f788-16e3-4f95-a414-c1f2b160c11c"
-      (reference "U11") (unit 1) (value "74LVC1G08") (footprint "COMET_footprints:Package_SOT23-5")
+      (reference "U12") (unit 1) (value "74LVC1G08") (footprint "COMET_footprints:Package_SOT23-5")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/d913847b-a0a4-4a07-b5e1-a62a38846430"
-      (reference "U11") (unit 2) (value "74LVC1G08") (footprint "COMET_footprints:Package_SOT23-5")
+      (reference "U12") (unit 2) (value "74LVC1G08") (footprint "COMET_footprints:Package_SOT23-5")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/0be3b92c-3373-4b1a-973e-16062d14b9e8"
-      (reference "U12") (unit 1) (value "74LVC1G32") (footprint "COMET_footprints:Package_SOT23-5")
+      (reference "U13") (unit 1) (value "74LVC1G32") (footprint "COMET_footprints:Package_SOT23-5")
     )
     (path "/8c055054-ec87-47ff-a53f-2ab313e3f5a5/633e274d-81e8-4dd7-9d8d-233aa0deb5f6"
-      (reference "U12") (unit 2) (value "74LVC1G32") (footprint "COMET_footprints:Package_SOT23-5")
+      (reference "U13") (unit 2) (value "74LVC1G32") (footprint "COMET_footprints:Package_SOT23-5")
     )
     (path "/af791db5-c55d-4390-9b8d-c57620a9ba6f"
       (reference "X1") (unit 1) (value "DIN41612_03x32_ABC_VMEbus") (footprint "Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT")
