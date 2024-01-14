@@ -11,7 +11,7 @@ This document outlines the progress for the following design:
 | Item | Progress |
 |--|--|
 | Schematic | Complete |
-| PCB layout | Not started |
+| PCB layout | In progress |
 | PCB build | Not started |
 | Functional testing | Prototyped, see notes |
 | Further revision | Unknown |
