@@ -22,3 +22,5 @@ The overall status for this design is: **Work in progress**
 A simpler version of this board has been prototyped, but the design was since expanded.
 
 Further functional testing is required once PCBs have been produced.
+
+This design was intended to use the IORDY signal to stretch/time bus cycles, but the IORDY signal does not work in such a way as to be useful for this purpose. A new design is pending which will provide flexibility to adjust bus cycle timing to suit slower and faster cards.
