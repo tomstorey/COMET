@@ -16,7 +16,7 @@ This document outlines the progress for the following design:
 | Functional testing | Prototyped, see notes |
 | Further revision | Unknown |
 
-The overall status for this design is: **Work in progress**
+The overall status for this design is: **Mothballed**
 
 ## Notes
 A simpler version of this board has been prototyped, but the design was since expanded.
