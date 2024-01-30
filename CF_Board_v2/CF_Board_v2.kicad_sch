@@ -285,6 +285,15 @@
     (path "/5925358b-9ea5-4865-a664-eb9169d83490/ff8127ff-3318-4f80-bc6c-4daad0d9ea71"
       (reference "#PWR060") (unit 1) (value "+5V") (footprint "")
     )
+    (path "/5925358b-9ea5-4865-a664-eb9169d83490/9d332c49-ecfb-48e8-8f03-f6c4b832219d"
+      (reference "#PWR061") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/5925358b-9ea5-4865-a664-eb9169d83490/eb921760-c7e0-4af0-ae71-7bc870e82ceb"
+      (reference "#PWR062") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/5925358b-9ea5-4865-a664-eb9169d83490/0c2c628f-fda4-4b1d-b88f-d04c35b6c092"
+      (reference "#PWR063") (unit 1) (value "+5V") (footprint "")
+    )
     (path "/b42014f4-8cef-4133-90bb-07e241937a83/8b4006ec-fcaf-4230-8f30-fe445cf87a57"
       (reference "C1") (unit 1) (value "100uF") (footprint "COMET_footprints:C_SMD_4.3MMx7.3MM")
     )
@@ -354,6 +363,9 @@
     (path "/aa22ec19-cff9-402b-a543-c44718f3e691/a6ec837c-6e2b-49b0-b023-9b34a0fac1d5"
       (reference "J1") (unit 1) (value "PAGE") (footprint "")
     )
+    (path "/5925358b-9ea5-4865-a664-eb9169d83490/ff9db908-7d95-4395-9c3c-de5f2f72d9a8"
+      (reference "J2") (unit 1) (value "JTAG") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical")
+    )
     (path "/d1d34ee5-a363-4eb8-8fe8-6bbd6aebc09b/9e806274-87d6-4026-9978-da416d01820a"
       (reference "R1") (unit 1) (value "10K") (footprint "COMET_footprints:R_SMD0805")
     )
@@ -401,6 +413,9 @@
     )
     (path "/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36/af78af4a-c4fb-4be5-854d-94d5f89ee6be"
       (reference "RN8") (unit 1) (value "R_Pack04") (footprint "")
+    )
+    (path "/5925358b-9ea5-4865-a664-eb9169d83490/a21deff4-9dd8-445f-b8b5-9d704b78a4b9"
+      (reference "RN9") (unit 1) (value "10K") (footprint "")
     )
     (path "/aa22ec19-cff9-402b-a543-c44718f3e691/d65daedd-f5a1-4c3d-8b7b-38b7db2d86db"
       (reference "SW1") (unit 1) (value "BASE") (footprint "")
