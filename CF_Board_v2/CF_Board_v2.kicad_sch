@@ -249,6 +249,9 @@
     (path "/07ac2787-baa6-4147-ae47-38a71484db30/da1d7e33-d43b-4092-a334-d54b993b5a80"
       (reference "#PWR048") (unit 1) (value "+5V") (footprint "")
     )
+    (path "/07ac2787-baa6-4147-ae47-38a71484db30/172f2bdd-20ed-4332-8445-cda136c35488"
+      (reference "#PWR049") (unit 1) (value "GND") (footprint "")
+    )
     (path "/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36/ca72c104-2d1d-4d1e-89ff-9199998f69b8"
       (reference "#PWR050") (unit 1) (value "+5V") (footprint "")
     )
@@ -281,9 +284,6 @@
     )
     (path "/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36/abf76776-9d81-4f20-89d4-148b843c1f2d"
       (reference "#PWR060") (unit 1) (value "+5V") (footprint "")
-    )
-    (path "/07ac2787-baa6-4147-ae47-38a71484db30/172f2bdd-20ed-4332-8445-cda136c35488"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/b42014f4-8cef-4133-90bb-07e241937a83/8b4006ec-fcaf-4230-8f30-fe445cf87a57"
       (reference "C1") (unit 1) (value "100uF") (footprint "COMET_footprints:C_SMD_4.3MMx7.3MM")
@@ -495,11 +495,11 @@
     (path "/07ac2787-baa6-4147-ae47-38a71484db30/4087aed6-2b28-4230-a48f-53095303bc73"
       (reference "U13") (unit 2) (value "74HCT244") (footprint "")
     )
-    (path "/07ac2787-baa6-4147-ae47-38a71484db30/1a077c80-00da-4425-8ebb-64c5b859c564"
-      (reference "U14") (unit 1) (value "74LVC1G32") (footprint "COMET_footprints:Package_SOT23-5")
+    (path "/07ac2787-baa6-4147-ae47-38a71484db30/40c98ab1-bb8a-443f-8dc5-b0aa036a4bd9"
+      (reference "U14") (unit 1) (value "74LVC1G02") (footprint "COMET_footprints:Package_SOT23-5")
     )
-    (path "/07ac2787-baa6-4147-ae47-38a71484db30/f15b3e50-d831-4849-80e1-defd3a662f30"
-      (reference "U14") (unit 2) (value "74LVC1G32") (footprint "COMET_footprints:Package_SOT23-5")
+    (path "/07ac2787-baa6-4147-ae47-38a71484db30/815a3445-7589-4bc9-8bcd-7055ad68f0ee"
+      (reference "U14") (unit 2) (value "74LVC1G02") (footprint "COMET_footprints:Package_SOT23-5")
     )
     (path "/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36/c69e937e-ee75-4d78-b76f-a4c011239ada"
       (reference "U15") (unit 1) (value "74HCT245") (footprint "COMET_footprints:Package_SO20W")
