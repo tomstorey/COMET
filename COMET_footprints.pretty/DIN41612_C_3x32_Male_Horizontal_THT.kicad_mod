@@ -187,9 +187,9 @@
   (pad "c30" thru_hole circle (at 73.66 5.08) (size 1.55 1.55) (drill 1) (layers *.Cu *.Mask) (tstamp 2b43d3c5-f1a8-46c5-a660-7457151b5ebf))
   (pad "c31" thru_hole circle (at 76.2 5.08) (size 1.55 1.55) (drill 1) (layers *.Cu *.Mask) (tstamp fccdbf5a-c6a7-4057-bde7-810a7b158c01))
   (pad "c32" thru_hole circle (at 78.74 5.08) (size 1.55 1.55) (drill 1) (layers *.Cu *.Mask) (tstamp 53f8f43d-92ad-46df-9b83-7a12c82fc6ac))
-  (model "${KICAD6_3DMODEL_DIR}/Connector_DIN.3dshapes/DIN41612_C_3x32_Male_Horizontal_THT.wrl"
-    (offset (xyz 0 0 0))
+  (model "../3dmodels/86093967113755elf.stp"
+    (offset (xyz -7.5 12.7 -1.6))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
+    (rotate (xyz 180 0 0))
   )
 )
