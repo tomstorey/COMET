@@ -246,6 +246,9 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
+    (property "ki_description" "3-to-8 line decoder/demultiplexer; inverting" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (symbol "74x138_1_1"
       (rectangle (start -7.62 10.16) (end 7.62 -12.7)
         (stroke (width 0.254) (type default) (color 0 0 0 0))
@@ -334,6 +337,9 @@
     )
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_description" "Dual 2-to-4 line decoder/demultiplexer; inverting" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x139_1_0"
       (pin input inverted (at -12.7 -5.08 0) (length 5.08)
@@ -429,6 +435,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_description" "Dual octal bus transceiver; 3-state" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x16245_1_0"
@@ -722,6 +731,9 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
+    (property "ki_description" "Single 2-input NAND gate" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (symbol "74x1G00_1_1"
       (arc (start 0 -3.81) (mid 3.81 0) (end 0 3.81)
         (stroke (width 0.254) (type default) (color 0 0 0 0))
@@ -846,6 +858,9 @@
     )
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_description" "Single 2-input NOR gate" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x1G02_1_1"
       (arc (start -3.5562 -3.81) (mid -2.3352 0) (end -3.5562 3.81)
@@ -972,6 +987,9 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
+    (property "ki_description" "Inverter with open-drain output" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (symbol "74x1G06_1_0"
       (polyline
         (pts
@@ -1079,6 +1097,9 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
+    (property "ki_description" "Buffer with open-drain output" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (symbol "74x1G07_1_0"
       (polyline
         (pts
@@ -1185,6 +1206,9 @@
     )
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_description" "Single 2-input AND gate" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x1G08_1_1"
       (arc (start 0 -3.81) (mid 3.81 0) (end 0 3.81)
@@ -1311,6 +1335,9 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
+    (property "ki_description" "Bus buffer/line driver; 3-state" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (symbol "74x1G125_1_0"
       (polyline
         (pts
@@ -1361,6 +1388,9 @@
     )
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_description" "Single Schmitt-trigger inverter" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x1G14_1_0"
       (polyline
@@ -1431,7 +1461,7 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "ki_description" "1-of-2 Noninverting Demultiplexer With 3-State Deselected Output" (id 5) (at 0 0 0)
+    (property "ki_description" "1-of-2 non-inverting demultiplexer with 3-state deselected output" (id 5) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x1G18_1_1"
@@ -1483,7 +1513,7 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "ki_description" "1-of-2 Decoder and Demultiplexer" (id 5) (at 0 0 0)
+    (property "ki_description" "1-of-2 decoder/demultiplexer" (id 5) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x1G19_1_1"
@@ -1534,6 +1564,9 @@
     )
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_description" "Single 2-input OR gate" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x1G32_1_1"
       (arc (start -3.5562 -3.81) (mid -2.3352 0) (end -3.5562 3.81)
@@ -1660,6 +1693,9 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
+    (property "ki_description" "Single D-type flip-flop with set and reset; positive edge trigger" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (symbol "74x1G74_1_1"
       (rectangle (start -5.08 7.62) (end 5.08 -7.62)
         (stroke (width 0.254) (type default) (color 0 0 0 0))
@@ -1716,6 +1752,9 @@
     )
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_description" "Octal buffer/line driver; 3-state" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x244_1_0"
       (pin input inverted (at -12.7 -12.7 0) (length 5.08)
@@ -1823,6 +1862,9 @@
     )
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_description" "Octal bus transceiver; 3-state" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x245_1_0"
       (pin input line (at -12.7 -12.7 0) (length 5.08)
@@ -1963,6 +2005,9 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
+    (property "ki_description" "Quad 2-input multiplexer; 3-state" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (symbol "74x257_1_0"
       (pin input line (at -12.7 -12.7 0) (length 5.08)
         (name "S" (effects (font (size 1.27 1.27))))
@@ -2051,7 +2096,7 @@
     (property "Datasheet" "" (id 3) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "ki_description" "8-bit D Flip-Flop, reset" (id 4) (at 0 0 0)
+    (property "ki_description" "Octal D-type flip-flop with reset; positive-edge trigger" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "ki_fp_filters" "DIP?20* SO?20* SOIC?20*" (id 5) (at 0 0 0)
@@ -2161,7 +2206,7 @@
     (property "Datasheet" "" (id 3) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "ki_description" "8-bit D Type Latch, 3-state" (id 4) (at 0 0 0)
+    (property "ki_description" "Octal D-type transparent latch; 3-state" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "ki_fp_filters" "DIP?20* SO?20* SOIC?20*" (id 5) (at 0 0 0)
@@ -2273,6 +2318,9 @@
     )
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_description" "Octal register/transceiver; 3-state" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x543_1_1"
       (rectangle (start -7.62 20.32) (end 7.62 -20.32)
@@ -2392,6 +2440,9 @@
     (property "Datasheet" "" (id 3) (at 0 2.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "ki_description" "Octal D-type transparent latch; 3-state" (id 4) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (symbol "74x573_1_1"
       (rectangle (start -7.62 15.24) (end 7.62 -15.24)
         (stroke (width 0.254) (type default) (color 0 0 0 0))
@@ -2492,6 +2543,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 0 2.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_description" "Octal D-type flip-flop; positive edge-trigger; 3-state" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "74x574_1_1"
@@ -2833,7 +2887,7 @@
     (property "ki_locked" "" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "ki_description" "Dual D Flip-flop, Set & Reset" (id 5) (at 0 0 0)
+    (property "ki_description" "Dual D-type flip-flop with set and reset; positive edge-trigger" (id 5) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "ki_fp_filters" "DIP*W7.62mm*" (id 6) (at 0 0 0)
