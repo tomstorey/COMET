@@ -1702,7 +1702,7 @@
     (uuid fcdabf98-95fa-4bdb-9968-84f3b2d229eb)
   )
 
-  (text "ADDRESS DECODER CONFIGURATION\n\nSW1 SELECTS A 64KB BASE ADDRESS FOR THE BOARD.\n\nJ1 SELECTS A 4KB PAGE/OFFSET FROM THE BASE ADDRESS:\n\nPOS		PAGE\n1-2		0\n3-4		0x1000\n5-6		0x2000\n7-8		0x3000"
+  (text "ADDRESS DECODER CONFIGURATION\n\nSW1 SELECTS A 64KB BASE ADDRESS FOR THE BOARD.\n\nJ1 SELECTS A 4KB OFFSET FROM THE BASE ADDRESS:\n\nPOS		PAGE\n1-2		0\n3-4		0x1000\n5-6		0x2000\n7-8		0x3000"
     (at 193.04 106.68 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ad989c8e-7a33-4bfd-a6aa-e7ffe04f1daf)
@@ -2250,7 +2250,7 @@
     (property "Reference" "J1" (at 163.83 24.13 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "PAGE" (at 163.83 26.67 0)
+    (property "Value" "OFFSET" (at 163.83 26.67 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" (at 162.56 33.02 0)
