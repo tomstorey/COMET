@@ -12,8 +12,8 @@ This document outlines the progress for the following design:
 |--|--|
 | Schematic | Complete |
 | PCB layout | Complete |
-| PCB build | Not started |
-| Functional testing | Not started |
+| PCB build | Complete |
+| Functional testing | Complete |
 | Further revision | Unknown |
 
-The overall status for this design is: **Work in progress**
+The overall status for this design is: **Stable**
