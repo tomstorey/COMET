@@ -16,4 +16,7 @@ This document outlines the progress for the following design:
 | Functional testing | Not started |
 | Further revision | Unknown |
 
-The overall status for this design is: **Work in progress**
+The overall status for this design is: **Stable**
+
+## Notes
+This design is considered stable even though the PCB build and functional testing have not been completed. This is because the 8 slot backplane was derived from the 3 slot design, and it has been built and tested. I therefore consider this design to be functionally equivalent other than the number of slots.
