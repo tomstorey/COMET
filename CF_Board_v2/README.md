@@ -5,13 +5,13 @@ This document outlines the progress for the following design:
 
 **Revision:** 1
 
-**Date:** January 2024
+**Date:** February 2024
 
 ## Status
 | Item | Progress |
 |--|--|
-| Schematic | In progress |
-| PCB layout | Not started |
+| Schematic | Complete |
+| PCB layout | Complete |
 | PCB build | Not started |
 | Functional testing | Not started |
 | Further revision | Unknown |
