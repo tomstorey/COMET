@@ -1,7 +1,7 @@
 # Design Progress Document
 This document outlines the progress for the following design:
 
-**Name:** Compact Flash board v2
+**Name:** Compact Flash Interface v2
 
 **Revision:** 1
 

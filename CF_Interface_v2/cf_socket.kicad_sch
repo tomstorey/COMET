@@ -13,14 +13,14 @@
   )
 
   (lib_symbols
-    (symbol "CF_Board_v2:Socket_CF" (in_bom yes) (on_board yes)
+    (symbol "CF_Interface_v2:Socket_CF" (in_bom yes) (on_board yes)
       (property "Reference" "X" (at 0 0 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Value" "Socket_CF" (at 0 0 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "CF_Board_v2:CF_Socket" (at 0 0 0)
+      (property "Footprint" "CF_Interface_v2:CF_Socket" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "" (at 0 2.54 0)
@@ -2262,7 +2262,7 @@
     (pin "10" (uuid e6309684-d836-4db5-b5a2-1f6974194c8c))
     (pin "20" (uuid 87434dad-0b2d-457d-a4e6-f9967b0540c9))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "U16") (unit 2)
         )
@@ -2306,7 +2306,7 @@
     (pin "10" (uuid 7bdfdf81-52df-470e-901f-7b4e5ccc02a4))
     (pin "20" (uuid 67b9849f-548b-448d-b290-b3f89fb32343))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "U15") (unit 2)
         )
@@ -2332,7 +2332,7 @@
     (pin "1" (uuid e799e668-7ce7-46b2-ad89-65d374475da5))
     (pin "2" (uuid 917a2f69-7bdf-424c-ac8c-ac53150cd00f))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "C19") (unit 1)
         )
@@ -2357,7 +2357,7 @@
     )
     (pin "1" (uuid 633b80e8-ab0f-42cc-a7f6-46248bb57f9e))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR057") (unit 1)
         )
@@ -2383,7 +2383,7 @@
     (pin "1" (uuid e247b368-1978-4b21-a590-8e701c998ddb))
     (pin "2" (uuid c0270762-1083-4ccf-a7fd-740d11c35dd0))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "C20") (unit 1)
         )
@@ -2427,7 +2427,7 @@
     (pin "10" (uuid 8c9e42af-c3ce-4cde-b61c-a4e35b8aa93e))
     (pin "20" (uuid 608460f9-949a-4622-a9e2-4ce26c36b2a7))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "U16") (unit 1)
         )
@@ -2453,7 +2453,7 @@
     (pin "1" (uuid 7a25c26b-689d-42f7-91fa-af7b93b50500))
     (pin "2" (uuid 6241ae19-af8e-4b82-94d7-8c5cfce5fd7d))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "C18") (unit 1)
         )
@@ -2478,7 +2478,7 @@
     )
     (pin "1" (uuid d6c07ebe-1f19-4031-9a7e-11a439d5c57d))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR055") (unit 1)
         )
@@ -2503,7 +2503,7 @@
     )
     (pin "1" (uuid 3ef02785-b537-48f5-9251-bf3653155d01))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR053") (unit 1)
         )
@@ -2528,7 +2528,7 @@
     )
     (pin "1" (uuid d38a8e3d-674e-409f-9540-2c083fe13ec6))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR056") (unit 1)
         )
@@ -2553,7 +2553,7 @@
     )
     (pin "1" (uuid 6cd91ac9-69cd-4c83-b6e1-a3360a7d15b4))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR051") (unit 1)
         )
@@ -2578,7 +2578,7 @@
     )
     (pin "1" (uuid efc988d0-5339-451b-a2eb-002fb231aff6))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR058") (unit 1)
         )
@@ -2603,7 +2603,7 @@
     )
     (pin "1" (uuid 2d4f1884-85b7-4345-9cca-ab7eea76d8b9))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR059") (unit 1)
         )
@@ -2611,7 +2611,7 @@
     )
   )
 
-  (symbol (lib_id "CF_Board_v2:Socket_CF") (at 190.5 78.74 0) (unit 1)
+  (symbol (lib_id "CF_Interface_v2:Socket_CF") (at 190.5 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aae29305-cd6f-40c0-802c-e29a73c114e5)
     (property "Reference" "X3" (at 190.5 17.78 0)
@@ -2620,7 +2620,7 @@
     (property "Value" "Socket_CF" (at 190.5 20.32 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "CF_Board_v2:CF_Socket" (at 190.5 78.74 0)
+    (property "Footprint" "CF_Interface_v2:CF_Socket" (at 190.5 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 185.42 96.52 0)
@@ -2677,7 +2677,7 @@
     (pin "8" (uuid 96c3e38f-7209-445a-94b0-f9ad65a23474))
     (pin "9" (uuid 77e2544b-e5c7-43f4-99a2-db2c8e2be9d7))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "X3") (unit 1)
         )
@@ -2702,7 +2702,7 @@
     )
     (pin "1" (uuid 2fe7de0d-6d4a-4a05-b078-798d5a34832f))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR060") (unit 1)
         )
@@ -2746,7 +2746,7 @@
     (pin "10" (uuid 941559d8-a562-4c74-b065-a4e43592060c))
     (pin "20" (uuid e8bac65d-7079-46b2-8d7f-e75f2fe1894a))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "U15") (unit 1)
         )
@@ -2771,7 +2771,7 @@
     )
     (pin "1" (uuid 26aed8e5-d17e-458d-b63c-be23b127d4fd))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR050") (unit 1)
         )
@@ -2797,7 +2797,7 @@
     (pin "1" (uuid eb7cff59-b8c3-420d-9537-505ebf87e41b))
     (pin "2" (uuid 141400a0-a41e-4c54-9bfe-c1a78ea729b2))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "D2") (unit 1)
         )
@@ -2822,7 +2822,7 @@
     )
     (pin "1" (uuid 118d51fc-1cef-4543-99d3-c1f73bcd9c5f))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR052") (unit 1)
         )
@@ -2847,7 +2847,7 @@
     )
     (pin "1" (uuid 584e4359-f06d-445a-9d0c-141aba94e09b))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "#PWR0102") (unit 1)
         )
@@ -2873,7 +2873,7 @@
     (pin "1" (uuid 40ad6a8b-786c-46e7-ab47-07f3ca821959))
     (pin "2" (uuid 110efbea-99d1-499c-8e83-e17bc06ecfd3))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "R8") (unit 1)
         )
@@ -2905,7 +2905,7 @@
     (pin "7" (uuid e945add7-b38a-48f6-9641-fe80b83f66d5))
     (pin "8" (uuid fef66379-8b3a-4cbe-8516-ac54241a2238))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "RN9") (unit 1)
         )
@@ -2931,7 +2931,7 @@
     (pin "1" (uuid 6771ac46-f71e-47ba-89f7-b4a44769a16a))
     (pin "2" (uuid 53ac1ce7-9f38-4b81-ba96-87445e32118f))
     (instances
-      (project "CF_Board_v2"
+      (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
           (reference "C17") (unit 1)
         )
