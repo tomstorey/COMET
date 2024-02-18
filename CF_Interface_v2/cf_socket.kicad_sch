@@ -2614,7 +2614,7 @@
   (symbol (lib_id "CF_Interface_v2:Socket_CF") (at 190.5 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aae29305-cd6f-40c0-802c-e29a73c114e5)
-    (property "Reference" "X3" (at 190.5 17.78 0)
+    (property "Reference" "J4" (at 190.5 17.78 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Socket_CF" (at 190.5 20.32 0)
@@ -2679,7 +2679,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36"
-          (reference "X3") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )

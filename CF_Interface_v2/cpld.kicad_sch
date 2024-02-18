@@ -1808,7 +1808,7 @@
   (symbol (lib_id "Oscillator:SG-7050CCN") (at 76.2 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 46776d88-99c8-4046-8782-33a3606936b5)
-    (property "Reference" "X2" (at 88.9 28.6893 0)
+    (property "Reference" "X1" (at 88.9 28.6893 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "40MHz" (at 88.9 31.2293 0)
@@ -1827,7 +1827,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/5925358b-9ea5-4865-a664-eb9169d83490"
-          (reference "X2") (unit 1)
+          (reference "X1") (unit 1)
         )
       )
     )
@@ -2378,7 +2378,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x05_Odd_Even") (at 91.44 127 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ff9db908-7d95-4395-9c3c-de5f2f72d9a8)
-    (property "Reference" "J2" (at 90.17 115.57 0)
+    (property "Reference" "J3" (at 90.17 115.57 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "JTAG" (at 90.17 118.11 0)
@@ -2403,7 +2403,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/5925358b-9ea5-4865-a664-eb9169d83490"
-          (reference "J2") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
