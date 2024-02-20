@@ -1,0 +1,90 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 75b66dbb-7202-4875-8695-2c14dee692f0)
+
+  (paper "A4")
+
+  (title_block
+    (title "PARALLEL PRINTER INTERFACE")
+    (date "2024-02-20")
+    (rev "1")
+    (company "(C) TOM STOREY")
+    (comment 1 "FREE FOR NON-COMMERCIAL USE")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 40.64 35.56) (size 30.48 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 3172fa24-ac81-4f5e-8039-d5a2a969bd95)
+    (property "Sheetname" "Expansion bus connector" (at 40.64 34.8484 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "expansion_bus.kicad_sch" (at 40.64 53.9246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Printer_Interface"
+        (path "/75b66dbb-7202-4875-8695-2c14dee692f0" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 154.94 35.56) (size 30.48 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 6311bdc0-1305-46dc-b099-cd17c676089b)
+    (property "Sheetname" "GAL" (at 154.94 34.8484 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "gal.kicad_sch" (at 154.94 53.9246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Printer_Interface"
+        (path "/75b66dbb-7202-4875-8695-2c14dee692f0" (page "5"))
+      )
+    )
+  )
+
+  (sheet (at 116.84 35.56) (size 30.48 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid bdaf78ce-5d85-4dab-bf63-95f2230db1ef)
+    (property "Sheetname" "Address decoding" (at 116.84 34.8484 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "addr_decode.kicad_sch" (at 116.84 53.9246 0) (show_name)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Printer_Interface"
+        (path "/75b66dbb-7202-4875-8695-2c14dee692f0" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 78.74 35.56) (size 30.48 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid f4191360-82a0-499d-bb29-833bf852803f)
+    (property "Sheetname" "Buffers and transceivers" (at 78.74 34.8484 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "buffers_transceivers.kicad_sch" (at 78.74 53.9246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Printer_Interface"
+        (path "/75b66dbb-7202-4875-8695-2c14dee692f0" (page "3"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
