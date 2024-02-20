@@ -1721,7 +1721,7 @@
     (uuid fcdabf98-95fa-4bdb-9968-84f3b2d229eb)
   )
 
-  (text "ADDRESS DECODER CONFIGURATION\n\nSW1 SELECTS A 64KB BASE ADDRESS FOR THE BOARD.\n\nJ1 SELECTS A 4KB OFFSET FROM THE BASE ADDRESS:\n\nPOS		PAGE\n1-2		0\n3-4		0x1000\n5-6		0x2000\n7-8		0x3000"
+  (text "ADDRESS DECODER CONFIGURATION\n\nSW1 SELECTS A 64KB BASE ADDRESS FOR THE BOARD.\n\nJ2 SELECTS A 4KB OFFSET FROM THE BASE ADDRESS:\n\nPOS		PAGE\n1-2		0\n3-4		0x1000\n5-6		0x2000\n7-8		0x3000"
     (at 198.12 106.68 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ad989c8e-7a33-4bfd-a6aa-e7ffe04f1daf)
@@ -2473,11 +2473,11 @@
     (property "Datasheet" "" (at 88.646 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "3" (uuid eabaff93-cf3f-4fe4-b4c1-3bbe7ef2571f))
-    (pin "4" (uuid 5e659333-b249-40cf-bbac-f644570721b7))
-    (pin "5" (uuid c3818264-de76-473b-8e5a-99dd039f34f7))
-    (pin "2" (uuid c60fee62-e27e-4c4f-8a97-8755df34951c))
-    (pin "1" (uuid dd230845-d086-4d95-a787-952270c2b51c))
+    (pin "3" (uuid eabaff93-cf3f-4fe4-b4c1-3bbe7ef25720))
+    (pin "4" (uuid 5e659333-b249-40cf-bbac-f644570721b8))
+    (pin "5" (uuid c3818264-de76-473b-8e5a-99dd039f34f8))
+    (pin "2" (uuid c60fee62-e27e-4c4f-8a97-8755df34951d))
+    (pin "1" (uuid dd230845-d086-4d95-a787-952270c2b51d))
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
