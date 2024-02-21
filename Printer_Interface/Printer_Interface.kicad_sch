@@ -6,7 +6,7 @@
 
   (title_block
     (title "PARALLEL PRINTER INTERFACE")
-    (date "2024-02-20")
+    (date "2024-02-21")
     (rev "1")
     (company "(C) TOM STOREY")
     (comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -33,6 +33,23 @@
     )
   )
 
+  (sheet (at 193.04 35.56) (size 30.48 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 5e3df452-5717-4bd3-bb16-2ac0410dccdc)
+    (property "Sheetname" "Interrupt logic" (at 193.04 34.8484 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "interrupt.kicad_sch" (at 193.04 53.9246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Printer_Interface"
+        (path "/75b66dbb-7202-4875-8695-2c14dee692f0" (page "6"))
+      )
+    )
+  )
+
   (sheet (at 154.94 35.56) (size 30.48 17.78) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
@@ -50,6 +67,23 @@
     )
   )
 
+  (sheet (at 40.64 66.04) (size 30.48 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid a331cdb5-c1a9-4d89-ab19-f84fbc20db5e)
+    (property "Sheetname" "Registers" (at 40.64 65.3284 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "registers.kicad_sch" (at 40.64 84.4046 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Printer_Interface"
+        (path "/75b66dbb-7202-4875-8695-2c14dee692f0" (page "7"))
+      )
+    )
+  )
+
   (sheet (at 116.84 35.56) (size 30.48 17.78) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
@@ -63,6 +97,23 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 78.74 66.04) (size 30.48 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid e15b2ef1-1da3-413f-9d76-ae86a74f8425)
+    (property "Sheetname" "Printer port" (at 78.74 65.3284 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "printer_port.kicad_sch" (at 78.74 84.4046 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Printer_Interface"
+        (path "/75b66dbb-7202-4875-8695-2c14dee692f0" (page "8"))
       )
     )
   )

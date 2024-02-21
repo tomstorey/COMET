@@ -6,7 +6,7 @@
 
   (title_block
     (title "ADDRESS DECODING")
-    (date "2024-02-20")
+    (date "2024-02-21")
     (rev "1")
     (company "(C) TOM STOREY")
     (comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -1786,7 +1786,7 @@
   (symbol (lib_id "power:+5V") (at 76.2 165.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 11a4d91b-3755-46d0-8f21-a0824031822a)
-    (property "Reference" "#PWR019" (at 76.2 168.91 0)
+    (property "Reference" "#PWR021" (at 76.2 168.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 76.2 160.02 0)
@@ -1802,7 +1802,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -1847,7 +1847,7 @@
   (symbol (lib_id "COMET_symbols:74x1G32") (at 193.04 33.02 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 37cd97cc-ae93-4ed6-9d6b-1d3ebe44f8d2)
-    (property "Reference" "U7" (at 194.31 33.0199 0)
+    (property "Reference" "U8" (at 194.31 33.0199 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Value" "74HCT1G32" (at 194.31 34.2899 0)
@@ -1867,7 +1867,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "U7") (unit 2)
+          (reference "U8") (unit 2)
         )
       )
       (project "CF_Interface_v2"
@@ -1881,7 +1881,7 @@
   (symbol (lib_id "power:GND") (at 114.3 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3d0372d4-82a2-41e6-bcbc-476b486a5c1c)
-    (property "Reference" "#PWR021" (at 114.3 133.35 0)
+    (property "Reference" "#PWR023" (at 114.3 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 114.3 132.08 0)
@@ -1897,7 +1897,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -1948,7 +1948,7 @@
   (symbol (lib_id "COMET_symbols:74x688") (at 147.32 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 449619d6-e1c5-4407-9f71-e802e39e33f9)
-    (property "Reference" "U6" (at 147.32 58.42 0)
+    (property "Reference" "U7" (at 147.32 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74HCT688" (at 147.32 60.96 0)
@@ -1983,7 +1983,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "U6") (unit 1)
+          (reference "U7") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -1997,7 +1997,7 @@
   (symbol (lib_id "power:GND") (at 50.8 187.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 521157cb-7ded-42b0-adde-b0b77f9fdee6)
-    (property "Reference" "#PWR017" (at 50.8 194.31 0)
+    (property "Reference" "#PWR019" (at 50.8 194.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 50.8 193.04 0)
@@ -2013,7 +2013,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -2027,7 +2027,7 @@
   (symbol (lib_id "power:+5V") (at 220.98 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5c90dac8-eca3-456d-93eb-6e7c0cdfd1ed)
-    (property "Reference" "#PWR025" (at 220.98 31.75 0)
+    (property "Reference" "#PWR027" (at 220.98 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 220.98 22.86 0)
@@ -2043,7 +2043,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -2088,11 +2088,11 @@
   (symbol (lib_id "COMET_symbols:74x688") (at 50.8 172.72 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 75df708a-dda3-4c71-a27b-373c6c38e9dd)
-    (property "Reference" "U6" (at 52.07 171.4499 0)
+    (property "Reference" "U7" (at 52.07 172.72 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "74HCT688" (at 52.07 173.9899 0)
-      (effects (font (size 1.27 1.27)) (justify left))
+      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Footprint" "COMET_footprints:Package_SO20W" (at 50.8 172.72 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2123,7 +2123,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "U6") (unit 2)
+          (reference "U7") (unit 2)
         )
       )
       (project "CF_Interface_v2"
@@ -2174,7 +2174,7 @@
   (symbol (lib_id "power:GND") (at 193.04 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8292f0be-52af-49b2-b24f-ed99c77c53ae)
-    (property "Reference" "#PWR024" (at 193.04 44.45 0)
+    (property "Reference" "#PWR026" (at 193.04 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 193.04 43.18 0)
@@ -2190,7 +2190,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -2204,7 +2204,7 @@
   (symbol (lib_id "COMET_symbols:74x138") (at 147.32 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 873b7e02-1998-45f6-8adc-9ad3cdb2b2e3)
-    (property "Reference" "U5" (at 147.32 22.86 0)
+    (property "Reference" "U6" (at 147.32 22.86 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74HCT138" (at 147.32 25.4 0)
@@ -2235,7 +2235,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "U5") (unit 1)
+          (reference "U6") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -2249,7 +2249,7 @@
   (symbol (lib_id "power:+5V") (at 35.56 157.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 97e6be78-664b-4ffe-851e-ccf72e9b8ded)
-    (property "Reference" "#PWR016" (at 35.56 161.29 0)
+    (property "Reference" "#PWR018" (at 35.56 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 35.56 152.4 0)
@@ -2265,7 +2265,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -2279,7 +2279,7 @@
   (symbol (lib_id "power:+5V") (at 63.5 86.36 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a50671e6-900d-4608-be0b-41187186bc2b)
-    (property "Reference" "#PWR018" (at 63.5 90.17 0)
+    (property "Reference" "#PWR020" (at 63.5 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 63.5 81.28 0)
@@ -2295,7 +2295,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -2377,7 +2377,7 @@
   (symbol (lib_id "power:GND") (at 132.08 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bbe401a1-2804-42fe-a761-319421d25709)
-    (property "Reference" "#PWR022" (at 132.08 57.15 0)
+    (property "Reference" "#PWR024" (at 132.08 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 132.08 55.88 0)
@@ -2393,7 +2393,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -2407,7 +2407,7 @@
   (symbol (lib_id "power:GND") (at 91.44 180.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c1c35409-80ba-4bbd-a345-b340a88850ed)
-    (property "Reference" "#PWR020" (at 91.44 186.69 0)
+    (property "Reference" "#PWR022" (at 91.44 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 91.44 185.42 0)
@@ -2423,7 +2423,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -2437,11 +2437,11 @@
   (symbol (lib_id "COMET_symbols:74x138") (at 35.56 172.72 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c48b8d48-cc73-4248-afb1-ffca5e723003)
-    (property "Reference" "U5" (at 36.83 171.4499 0)
+    (property "Reference" "U6" (at 36.83 172.72 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "74HCT138" (at 36.83 173.9899 0)
-      (effects (font (size 1.27 1.27)) (justify left))
+      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Footprint" "COMET_footprints:Package_SO16" (at 35.56 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2468,7 +2468,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "U5") (unit 2)
+          (reference "U6") (unit 2)
         )
       )
       (project "CF_Interface_v2"
@@ -2482,7 +2482,7 @@
   (symbol (lib_id "COMET_symbols:74x1G32") (at 193.04 33.02 0) (unit 1) (convert 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cfbb0334-2785-4cad-8356-309f8d3fdb8c)
-    (property "Reference" "U7" (at 201.93 24.13 0)
+    (property "Reference" "U8" (at 201.93 24.13 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74HCT1G32" (at 201.93 26.67 0)
@@ -2502,7 +2502,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "U7") (unit 1)
+          (reference "U8") (unit 1)
         )
       )
       (project "CF_Interface_v2"
@@ -2561,7 +2561,7 @@
   (symbol (lib_id "power:+5V") (at 193.04 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ea27a2af-824e-48b8-8d59-c469f17a9036)
-    (property "Reference" "#PWR023" (at 193.04 31.75 0)
+    (property "Reference" "#PWR025" (at 193.04 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 193.04 22.86 0)
@@ -2577,7 +2577,7 @@
     (instances
       (project "Printer_Interface"
         (path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
       (project "CF_Interface_v2"
