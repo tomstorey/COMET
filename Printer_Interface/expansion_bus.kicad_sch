@@ -2670,6 +2670,31 @@
     )
   )
 
+  (symbol (lib_id "power:PWR_FLAG") (at 193.04 149.86 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 956f6208-588e-4bc8-a5dc-42cf19121fd2)
+    (property "Reference" "#FLG01" (at 193.04 151.765 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 193.04 154.94 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 193.04 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 193.04 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 5c01a9e2-173b-462d-8ee9-cd20f5d955a8))
+    (instances
+      (project "Printer_Interface"
+        (path "/75b66dbb-7202-4875-8695-2c14dee692f0/3172fa24-ac81-4f5e-8039-d5a2a969bd95"
+          (reference "#FLG01") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "COMET_symbols:DIN41612_03x32_ABC_COMETbus") (at 60.96 93.98 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c3b4c1a9-337a-4089-a3fa-f92f78bbaaf3)
@@ -2790,36 +2815,6 @@
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/b42014f4-8cef-4133-90bb-07e241937a83"
           (reference "J1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:PWR_FLAG") (at 193.04 149.86 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d7e13f83-a2b9-4bbc-be2d-2281668f3423)
-    (property "Reference" "#FLG01" (at 193.04 151.765 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "PWR_FLAG" (at 195.58 151.1299 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "" (at 193.04 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 193.04 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 9dadf745-ba7f-4634-b625-8122917c9c62))
-    (instances
-      (project "Printer_Interface"
-        (path "/75b66dbb-7202-4875-8695-2c14dee692f0/3172fa24-ac81-4f5e-8039-d5a2a969bd95"
-          (reference "#FLG01") (unit 1)
-        )
-      )
-      (project "CF_Interface_v2"
-        (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/b42014f4-8cef-4133-90bb-07e241937a83"
-          (reference "#FLG01") (unit 1)
         )
       )
     )
