@@ -8,18 +8,19 @@ Assembly None ;
 Location None ;
 Device   g16v8a ;
 
-$define IDLE 'b'0
-$define ACTIVE 'b'1
+$define WAITING 'b'0
+$define REQUESTING 'b'1
 
 /*************************** INPUTS ***************************/
 pin 1 = clk;
+pin 2 = irq_en;
 pin 9 = !iack;
-pin 3 = !iack_in;
+pin 3 = !iackin;
 pin 7 = !irq_in1;
 pin 8 = irq_in2;
 
 /*************************** OUTPUTS **************************/
-pin 19 = !iack_out;
+pin 19 = !iackout;
 pin 18 = !vec;
 pin 17 = !irq_drv;
 
@@ -29,43 +30,44 @@ pin 16 = state;
 /************************** EQUATIONS *************************/
 
 /* Assert IRQ whenever either of the IRQ inputs is asserted */
-irq_drv = irq_in1 # irq_in2;
+irq_drv = state:REQUESTING;
 
-/* IACK IN may only be passed along if we are not an active interruptor that is
+/* IACKIN may only be passed along if we are not an active interruptor that is
  * being acknowledged */
-iack_out.d = iack_in & !state #
-             iack_in &  state & !iack;
+iackout.d = iackin & state:WAITING #
+            iackin & state:REQUESTING & !iack;
 
 /* Assert vector acquire output during interrupt acknowledge when we are the next
  * interruptor to be serviced */
-vec = state & iack;
-
+vec = state:REQUESTING & iack;
 
 /* Interruptor state machine
  *
- * The state machine determines how and when the IACK IN and vector acquire
+ * The state machine determines how and when the IACKIN and vector acquire
  * signals are handled.
  *
- * When we are an active interruptor and we are being acknowledged, the IACK IN
+ * When we are an active interruptor and we are being acknowledged, the IACKIN
  * signal will not be daisy chained to further slots and we can assert our vector
  * acquire signal to other logic which is then responsible for determining how to
  * generate a response to the CPU.
  *
  * When we are not an active interruptor or if we are not being acknowledged in
- * the current IACK cycle, the IACK IN signal is daisy chained to further slots
+ * the current IACK cycle, the IACKIN signal is daisy chained to further slots
  * and we do not assert our vector acquire signal.
  */
 sequence state {
 	/* In state 0, wait for either of our IRQ inputs to become active, and if
-	 * another interrupt is not already being serviced, move to state 1 */
-	present IDLE
-		if !iack_in & (irq_in1 # irq_in2) next ACTIVE;
-		default next IDLE;
+	 * another interrupt is not already being serviced, move to the requesting
+ 	 * state so that we dont potentially clash with an in-flight interrupt */
+	present WAITING
+		if irq_en & !iackin & (irq_in1 # irq_in2) next REQUESTING;
+		default next WAITING;
 
 	/* In state 1, wait for our IRQ inputs to be negated */
-	present ACTIVE
-		if !irq_in1 & !irq_in2 next IDLE;
-		default next ACTIVE;
+	present REQUESTING
+		if !irq_en next WAITING;
+		if !irq_in1 & !irq_in2 next WAITING;
+		default next REQUESTING;
 }
 
 /* END */
