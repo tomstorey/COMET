@@ -1663,6 +1663,25 @@
       )
     )
     (symbol "74x1G14_1_1"
+      (polyline
+        (pts
+          (xy 1.27 -0.762)
+          (xy 1.27 0.762)
+          (xy 1.778 0.762)
+        )
+        (stroke (width 0.2032) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 0.762 -0.762)
+          (xy 1.778 -0.762)
+          (xy 1.778 0.762)
+          (xy 2.286 0.762)
+        )
+        (stroke (width 0.2032) (type default))
+        (fill (type none))
+      )
       (pin input line (at -5.08 0 0) (length 2.54)
         (name "~" (effects (font (size 1.27 1.27))))
         (number "2" (effects (font (size 1.27 1.27))))
