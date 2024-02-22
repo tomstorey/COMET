@@ -1,0 +1,78 @@
+Name     PRINTER_GAL ;
+PartNo   00 ;
+Date     22/02/2024 ;
+Revision 01 ;
+Designer Tom Storey ;
+Company  COMET68k ;
+Assembly Printer Interface ;
+Location U9 ;
+Device   g22v10lcc ;
+
+/*************************** INPUTS ***************************/
+pin 2 = clk;
+pin 3 = !sel;
+pin 11 = !lds;
+pin 12 = !uds;
+pin 10 = !wr;
+pin 9 = fc0;
+pin 7 = fc1;
+pin 6 = fc2;
+pin 4 = a1;
+pin 5 = !vector;
+
+/*************************** OUTPUTS **************************/
+pin 27 = !dat;
+pin 26 = !vec;
+pin 25 = !con;
+pin 24 = !stat;
+pin 19 = ddir;
+pin 20 = !dben;
+pin 21 = !dtack_drv;
+
+/************************** INTERNAL **************************/
+pin 17 = cpu_space;
+pin 18 = timer;
+
+/************************** EQUATIONS *************************/
+
+/* We want to ignore all bus cycles that are CPU space cycles except when
+ * outputting an interrupt vector */
+cpu_space = fc0 & fc1 & fc2;
+
+/* Timer is set one clock after either of the CPU data strobes is asserted, and
+ * is used to generate a shorter write strobe towards on-board registers */
+timer.d = lds # uds;
+timer.ar = 'b'0;
+timer.sp = 'b'0;
+
+/* Access the data port */
+dat = sel & !cpu_space & !a1 & !wr & uds #
+      sel & !cpu_space & !a1 &  wr & uds & !timer;
+
+/* Access the interrupt vector register */
+vec = sel & !cpu_space & !a1 & !wr & lds #
+      sel & !cpu_space & !a1 &  wr & lds & !timer #
+      vector & cpu_space;
+
+/* Access the control register */
+con = sel & !cpu_space & a1 & !wr & uds #
+      sel & !cpu_space & a1 &  wr & uds & !timer;
+
+/* Access the status register */
+stat = sel & !cpu_space & a1 & lds & !wr;
+
+/* Set the direction of the data bus buffers */
+ddir = sel & !cpu_space & !wr #
+       vector & cpu_space & !wr;
+
+/* Enable the data bus buffers */
+dben = sel & !cpu_space #
+       vector & cpu_space;
+
+/* Assert DTACK when ever an access is decoded */
+dtack_drv = sel & !cpu_space & !a1 #
+            sel & !cpu_space & a1 & uds #
+            sel & !cpu_space & a1 & !wr & lds #
+            vector & cpu_space;
+
+/* END */

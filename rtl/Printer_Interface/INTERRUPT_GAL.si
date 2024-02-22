@@ -1,0 +1,45 @@
+Name     INTERRUPT_GAL;
+PartNo   00;
+Date     22/02/2024;
+Revision 01;
+Designer Tom Storey;
+Company  COMET68k;
+Assembly None;
+Location None;
+Device   g16v8a;
+
+
+ORDER: clk, !irq_in1, irq_in2, !iack_in, !iack, !vec, !iack_out, !irq_drv, state; 
+
+
+VECTORS:
+C1011HHHL
+C0011HHLH
+C1011HHHL
+C1111HHLH
+C1011****
+C1011****
+C1001HLHL
+C1001HLHL
+C1011****
+C1011****
+C0011HHLH
+C0011HHLH
+C0001HLLH
+C0000LHLH
+C0000LHLH
+C0000LHLH
+C0011HHLH
+C1011****
+C1011****
+C1111*HLH
+C1101*LLH
+C1101*LLH
+C1011****
+C1011****
+C1111HHLH
+C1101HLLH
+C1001HLHL
+C1000HLHL
+C1000HLHL
+C1011****
