@@ -6,7 +6,7 @@
 
   (title_block
     (title "EXPANSION BUS CONNECTOR")
-    (date "2024-02-18")
+    (date "2024-02-26")
     (rev "1")
     (company "(C) TOM STOREY")
     (comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -1448,7 +1448,6 @@
   (no_connect (at 66.04 114.3) (uuid 6420da3f-a302-4335-b25c-b892283255d3))
   (no_connect (at 137.16 119.38) (uuid 740f8249-725d-42db-a83b-f01303f90482))
   (no_connect (at 208.28 129.54) (uuid 8084596a-fce6-4502-875a-5b4eaa42f1fd))
-  (no_connect (at 208.28 127) (uuid 82b18176-1d5d-4a19-82b0-37d45c0433f8))
   (no_connect (at 137.16 129.54) (uuid 8506a33f-4a55-4d00-9a7c-154aac18c7d5))
   (no_connect (at 137.16 116.84) (uuid 87a986ac-cd12-47be-a764-5023d0c880a7))
   (no_connect (at 208.28 81.28) (uuid 946ca270-a6f9-4bca-b39b-df175badbcbb))
@@ -1520,6 +1519,10 @@
   (bus_entry (at 81.28 68.58) (size -2.54 2.54)
     (stroke (width 0) (type default))
     (uuid 65a2442a-6dce-4305-a9b0-0874a6b3f753)
+  )
+  (bus_entry (at 228.6 124.46) (size -2.54 2.54)
+    (stroke (width 0) (type default))
+    (uuid 682ca0f0-799d-4fe5-9746-6a792ceb8aa9)
   )
   (bus_entry (at 86.36 121.92) (size -2.54 2.54)
     (stroke (width 0) (type default))
@@ -1671,6 +1674,10 @@
     (uuid 1a0e677d-6bd5-4e4a-8935-c675dd5809ae)
   )
 
+  (wire (pts (xy 208.28 127) (xy 226.06 127))
+    (stroke (width 0) (type default))
+    (uuid 1aa7d450-8972-4fdd-a7f8-91571a550fd8)
+  )
   (wire (pts (xy 213.36 139.7) (xy 223.52 139.7))
     (stroke (width 0) (type default))
     (uuid 1df273ec-5ffd-45e7-bb68-f3851cb78db7)
@@ -1949,6 +1956,11 @@
     (stroke (width 0) (type default))
     (uuid 9c4960a7-67db-431e-946f-4a2917cf0d38)
   )
+  (bus (pts (xy 228.6 116.84) (xy 228.6 124.46))
+    (stroke (width 0) (type default))
+    (uuid 9c5b1138-d97c-400e-80f0-ccfe4acaa6f5)
+  )
+
   (wire (pts (xy 40.64 139.7) (xy 40.64 142.24))
     (stroke (width 0) (type default))
     (uuid 9e67b0ac-17d0-406c-a53f-94cc3014baec)
@@ -2209,6 +2221,10 @@
   (label "SA14" (at 223.52 114.3 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 6da84c07-ffd6-4c84-9eea-547dae779f98)
+  )
+  (label "SA9" (at 223.52 127 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid 70a0d1e1-8fd0-43fc-b46a-20b119d31902)
   )
   (label "SA21" (at 223.52 96.52 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
@@ -2513,7 +2529,7 @@
   (symbol (lib_id "power:GND") (at 55.88 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3fbaac9c-7884-45eb-89b8-6030085614ca)
-    (property "Reference" "#PWR034" (at 55.88 161.29 0)
+    (property "Reference" "#PWR02" (at 55.88 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 55.88 160.02 0)
@@ -2529,7 +2545,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/b42014f4-8cef-4133-90bb-07e241937a83"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -2563,7 +2579,7 @@
   (symbol (lib_id "power:GND") (at 210.82 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5ff1c9eb-2ed0-4821-a485-1370219f7fa4)
-    (property "Reference" "#PWR02" (at 210.82 156.21 0)
+    (property "Reference" "#PWR03" (at 210.82 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 210.82 154.94 0)
@@ -2579,7 +2595,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/b42014f4-8cef-4133-90bb-07e241937a83"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -2905,7 +2921,7 @@
   (symbol (lib_id "power:+5V") (at 233.68 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fb2724ae-bfed-42a0-9b65-3d670466e7f1)
-    (property "Reference" "#PWR03" (at 233.68 140.97 0)
+    (property "Reference" "#PWR04" (at 233.68 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 233.68 132.08 0)
@@ -2921,7 +2937,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/b42014f4-8cef-4133-90bb-07e241937a83"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )

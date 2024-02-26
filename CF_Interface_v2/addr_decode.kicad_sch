@@ -6,7 +6,7 @@
 
   (title_block
     (title "ADDRESS DECODING")
-    (date "2024-02-18")
+    (date "2024-02-26")
     (rev "1")
     (company "(C) TOM STOREY")
     (comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -1721,7 +1721,7 @@
     (uuid fcdabf98-95fa-4bdb-9968-84f3b2d229eb)
   )
 
-  (text "ADDRESS DECODER CONFIGURATION\n\nSW1 SELECTS A 64KB BASE ADDRESS FOR THE BOARD.\n\nJ2 SELECTS A 4KB OFFSET FROM THE BASE ADDRESS:\n\nPOS		PAGE\n1-2		0\n3-4		0x1000\n5-6		0x2000\n7-8		0x3000"
+  (text "ADDRESS DECODER CONFIGURATION\n\nSW1 SELECTS A 64KB BASE ADDRESS FOR THE BOARD.\n\nJ1 SELECTS A 4KB OFFSET FROM THE BASE ADDRESS:\n\nPOS		PAGE\n1-2		0\n3-4		0x1000\n5-6		0x2000\n7-8		0x3000"
     (at 198.12 106.68 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ad989c8e-7a33-4bfd-a6aa-e7ffe04f1daf)
@@ -1801,7 +1801,7 @@
   (symbol (lib_id "power:+5V") (at 76.2 165.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 11a4d91b-3755-46d0-8f21-a0824031822a)
-    (property "Reference" "#PWR017" (at 76.2 168.91 0)
+    (property "Reference" "#PWR024" (at 76.2 168.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 76.2 160.02 0)
@@ -1817,7 +1817,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -1826,7 +1826,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 76.2 172.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1fa72063-b1fe-4261-8a89-d05cf2afb585)
-    (property "Reference" "C8" (at 80.01 171.4499 0)
+    (property "Reference" "C9" (at 80.01 171.4499 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 80.01 173.9899 0)
@@ -1843,7 +1843,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "C8") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
     )
@@ -1852,7 +1852,7 @@
   (symbol (lib_id "COMET_symbols:74x1G32") (at 193.04 33.02 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 37cd97cc-ae93-4ed6-9d6b-1d3ebe44f8d2)
-    (property "Reference" "U6" (at 194.31 33.0199 0)
+    (property "Reference" "U10" (at 194.31 33.0199 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Value" "74HCT1G32" (at 194.31 34.2899 0)
@@ -1872,7 +1872,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "U6") (unit 2)
+          (reference "U10") (unit 2)
         )
       )
     )
@@ -1881,7 +1881,7 @@
   (symbol (lib_id "power:GND") (at 88.9 48.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3910f827-9ec4-4907-b22c-1361284f261d)
-    (property "Reference" "#PWR037" (at 88.9 54.61 0)
+    (property "Reference" "#PWR026" (at 88.9 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 88.9 53.34 0)
@@ -1897,7 +1897,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -1906,7 +1906,7 @@
   (symbol (lib_id "power:GND") (at 114.3 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3d0372d4-82a2-41e6-bcbc-476b486a5c1c)
-    (property "Reference" "#PWR021" (at 114.3 133.35 0)
+    (property "Reference" "#PWR028" (at 114.3 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 114.3 132.08 0)
@@ -1922,7 +1922,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -1931,7 +1931,7 @@
   (symbol (lib_id "Device:R_Pack04") (at 88.9 116.84 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3d5ac1dd-c364-496f-b501-d62511dac189)
-    (property "Reference" "RN1" (at 83.82 129.54 0)
+    (property "Reference" "RN6" (at 83.82 129.54 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 83.82 132.08 0)
@@ -1954,7 +1954,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "RN1") (unit 1)
+          (reference "RN6") (unit 1)
         )
       )
     )
@@ -1963,7 +1963,7 @@
   (symbol (lib_id "COMET_symbols:74x688") (at 147.32 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 449619d6-e1c5-4407-9f71-e802e39e33f9)
-    (property "Reference" "U5" (at 147.32 58.42 0)
+    (property "Reference" "U8" (at 147.32 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74HCT688" (at 147.32 60.96 0)
@@ -1998,7 +1998,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "U5") (unit 1)
+          (reference "U8") (unit 1)
         )
       )
     )
@@ -2007,7 +2007,7 @@
   (symbol (lib_id "power:+5V") (at 88.9 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4927ca70-0a44-4cc0-ae3b-dacdd7969e95)
-    (property "Reference" "#PWR035" (at 88.9 41.91 0)
+    (property "Reference" "#PWR025" (at 88.9 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 88.9 33.02 0)
@@ -2023,7 +2023,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -2032,7 +2032,7 @@
   (symbol (lib_id "power:GND") (at 50.8 187.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 521157cb-7ded-42b0-adde-b0b77f9fdee6)
-    (property "Reference" "#PWR015" (at 50.8 194.31 0)
+    (property "Reference" "#PWR022" (at 50.8 194.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 50.8 193.04 0)
@@ -2048,7 +2048,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -2057,7 +2057,7 @@
   (symbol (lib_id "power:+5V") (at 220.98 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5c90dac8-eca3-456d-93eb-6e7c0cdfd1ed)
-    (property "Reference" "#PWR024" (at 220.98 31.75 0)
+    (property "Reference" "#PWR033" (at 220.98 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 220.98 22.86 0)
@@ -2073,7 +2073,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -2082,7 +2082,7 @@
   (symbol (lib_id "COMET_symbols:C") (at 91.44 172.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 70a9c867-c931-4194-a8b1-329cb56ce84a)
-    (property "Reference" "C9" (at 95.25 171.4499 0)
+    (property "Reference" "C10" (at 95.25 171.4499 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 95.25 173.9899 0)
@@ -2099,7 +2099,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "C9") (unit 1)
+          (reference "C10") (unit 1)
         )
       )
     )
@@ -2108,7 +2108,7 @@
   (symbol (lib_id "COMET_symbols:74x688") (at 50.8 172.72 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 75df708a-dda3-4c71-a27b-373c6c38e9dd)
-    (property "Reference" "U5" (at 52.07 171.4499 0)
+    (property "Reference" "U8" (at 52.07 171.4499 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "74HCT688" (at 52.07 173.9899 0)
@@ -2143,7 +2143,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "U5") (unit 2)
+          (reference "U8") (unit 2)
         )
       )
     )
@@ -2152,7 +2152,7 @@
   (symbol (lib_id "Device:R_Pack04") (at 104.14 116.84 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 82261558-e918-4cc3-9c7d-80c714b8533d)
-    (property "Reference" "RN2" (at 99.06 129.54 0)
+    (property "Reference" "RN7" (at 99.06 129.54 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 99.06 132.08 0)
@@ -2175,7 +2175,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "RN2") (unit 1)
+          (reference "RN7") (unit 1)
         )
       )
     )
@@ -2184,7 +2184,7 @@
   (symbol (lib_id "power:GND") (at 193.04 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8292f0be-52af-49b2-b24f-ed99c77c53ae)
-    (property "Reference" "#PWR023" (at 193.04 44.45 0)
+    (property "Reference" "#PWR032" (at 193.04 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 193.04 43.18 0)
@@ -2200,7 +2200,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
     )
@@ -2209,7 +2209,7 @@
   (symbol (lib_id "COMET_symbols:74x138") (at 147.32 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 873b7e02-1998-45f6-8adc-9ad3cdb2b2e3)
-    (property "Reference" "U4" (at 147.32 22.86 0)
+    (property "Reference" "U7" (at 147.32 22.86 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74HCT138" (at 147.32 25.4 0)
@@ -2240,7 +2240,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "U4") (unit 1)
+          (reference "U7") (unit 1)
         )
       )
     )
@@ -2249,7 +2249,7 @@
   (symbol (lib_id "power:+5V") (at 132.08 20.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8a432fbb-f8a1-4bb2-ac85-3654a6cf518d)
-    (property "Reference" "#PWR019" (at 132.08 24.13 0)
+    (property "Reference" "#PWR030" (at 132.08 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 132.08 15.24 0)
@@ -2265,7 +2265,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -2274,7 +2274,7 @@
   (symbol (lib_id "power:+5V") (at 35.56 157.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 97e6be78-664b-4ffe-851e-ccf72e9b8ded)
-    (property "Reference" "#PWR014" (at 35.56 161.29 0)
+    (property "Reference" "#PWR021" (at 35.56 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 35.56 152.4 0)
@@ -2290,7 +2290,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -2299,7 +2299,7 @@
   (symbol (lib_id "power:+5V") (at 63.5 86.36 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a50671e6-900d-4608-be0b-41187186bc2b)
-    (property "Reference" "#PWR016" (at 63.5 90.17 0)
+    (property "Reference" "#PWR023" (at 63.5 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 63.5 81.28 0)
@@ -2315,7 +2315,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -2356,7 +2356,7 @@
   (symbol (lib_id "COMET_symbols:R") (at 220.98 35.56 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a983e31a-4399-4282-8d2e-96691b9853e8)
-    (property "Reference" "R2" (at 223.52 34.2899 0)
+    (property "Reference" "R1" (at 223.52 34.2899 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 223.52 36.8299 0)
@@ -2373,7 +2373,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "R2") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -2382,7 +2382,7 @@
   (symbol (lib_id "power:GND") (at 129.54 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bbe401a1-2804-42fe-a761-319421d25709)
-    (property "Reference" "#PWR020" (at 129.54 57.15 0)
+    (property "Reference" "#PWR029" (at 129.54 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 129.54 55.88 0)
@@ -2398,7 +2398,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -2407,7 +2407,7 @@
   (symbol (lib_id "power:GND") (at 91.44 180.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c1c35409-80ba-4bbd-a345-b340a88850ed)
-    (property "Reference" "#PWR018" (at 91.44 186.69 0)
+    (property "Reference" "#PWR027" (at 91.44 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 91.44 185.42 0)
@@ -2423,7 +2423,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -2490,7 +2490,7 @@
   (symbol (lib_id "COMET_symbols:74x138") (at 35.56 172.72 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c48b8d48-cc73-4248-afb1-ffca5e723003)
-    (property "Reference" "U4" (at 36.83 171.4499 0)
+    (property "Reference" "U7" (at 36.83 171.4499 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "74HCT138" (at 36.83 173.9899 0)
@@ -2521,7 +2521,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "U4") (unit 2)
+          (reference "U7") (unit 2)
         )
       )
     )
@@ -2530,7 +2530,7 @@
   (symbol (lib_id "COMET_symbols:74x1G32") (at 193.04 33.02 0) (unit 1) (convert 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cfbb0334-2785-4cad-8356-309f8d3fdb8c)
-    (property "Reference" "U6" (at 201.93 24.13 0)
+    (property "Reference" "U10" (at 201.93 24.13 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74HCT1G32" (at 201.93 26.67 0)
@@ -2550,7 +2550,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "U6") (unit 1)
+          (reference "U10") (unit 1)
         )
       )
     )
@@ -2599,7 +2599,7 @@
   (symbol (lib_id "power:+5V") (at 193.04 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ea27a2af-824e-48b8-8d59-c469f17a9036)
-    (property "Reference" "#PWR022" (at 193.04 31.75 0)
+    (property "Reference" "#PWR031" (at 193.04 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 193.04 22.86 0)
@@ -2615,7 +2615,7 @@
     (instances
       (project "CF_Interface_v2"
         (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/aa22ec19-cff9-402b-a543-c44718f3e691"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
     )
