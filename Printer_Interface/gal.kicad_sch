@@ -1830,6 +1830,12 @@
 		(uuid "1a43978e-4f13-4afc-ab55-42f01c454170")
 	)
 	(junction
+		(at 91.44 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2001316e-a2f3-4570-b354-953f9578518a")
+	)
+	(junction
 		(at 25.4 182.88)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1985,6 +1991,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 99.06) (xy 101.6 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0654f4ed-bf87-47b8-9799-83608b11c006")
+	)
+	(wire
+		(pts
 			(xy 195.58 121.92) (xy 215.9 121.92)
 		)
 		(stroke
@@ -2065,6 +2081,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 99.06) (xy 91.44 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19c7a9c8-abf9-4ad6-90ee-b6abb957085a")
+	)
+	(wire
+		(pts
 			(xy 43.18 180.34) (xy 43.18 182.88)
 		)
 		(stroke
@@ -2102,6 +2128,16 @@
 			(type default)
 		)
 		(uuid "22abdf30-8bfd-4bbf-9942-dbd3bd84c44d")
+	)
+	(wire
+		(pts
+			(xy 91.44 71.12) (xy 111.76 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "274a0225-5a27-4852-9868-0db223fc4a29")
 	)
 	(wire
 		(pts
@@ -2292,6 +2328,16 @@
 			(type default)
 		)
 		(uuid "5f72f985-b725-4291-a70b-b2e8e9a893cd")
+	)
+	(wire
+		(pts
+			(xy 91.44 71.12) (xy 91.44 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61a9def7-c37c-4411-a102-6138ba866b0e")
 	)
 	(wire
 		(pts
@@ -2685,6 +2731,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 101.6) (xy 101.6 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2ad270c-95e1-44e4-b39e-e6d79f856602")
+	)
+	(wire
+		(pts
 			(xy 127 165.1) (xy 127 167.64)
 		)
 		(stroke
@@ -2835,7 +2891,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 71.12) (xy 111.76 71.12)
+			(xy 71.12 71.12) (xy 91.44 71.12)
 		)
 		(stroke
 			(width 0)
@@ -4047,6 +4103,76 @@
 		)
 	)
 	(symbol
+		(lib_id "COMET_symbols:R")
+		(at 91.44 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6e0495e7-586e-4024-995d-9ccd6cd878d2")
+		(property "Reference" "R23"
+			(at 93.98 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 93.98 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "COMET_footprints:R_SMD0805"
+			(at 91.44 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5b5ed038-78b8-4fc4-b8e4-6a9997763587")
+		)
+		(pin "2"
+			(uuid "683f8c27-1a17-45dd-a2ce-bac75a641d53")
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/6311bdc0-1305-46dc-b099-cd17c676089b"
+					(reference "R23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "COMET_symbols:C")
 		(at 111.76 170.18 0)
 		(unit 1)
@@ -4959,6 +5085,71 @@
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/6311bdc0-1305-46dc-b099-cd17c676089b"
 					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 101.6 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d9dd6720-4b04-41c5-9ee8-59ec382d3807")
+		(property "Reference" "#PWR067"
+			(at 101.6 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 101.6 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c177f5bb-c8cb-4c7f-9adc-1c9708b93202")
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/6311bdc0-1305-46dc-b099-cd17c676089b"
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
