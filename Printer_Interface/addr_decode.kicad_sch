@@ -2697,9 +2697,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2797,8 +2797,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2817,9 +2817,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2893,8 +2893,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4906,7 +4906,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 76.2 165.1 0)
 			(effects
 				(font
@@ -4943,7 +4943,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1fa72063-b1fe-4261-8a89-d05cf2afb585")
-		(property "Reference" "C10"
+		(property "Reference" "C11"
 			(at 80.01 171.4499 0)
 			(effects
 				(font
@@ -4997,7 +4997,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-					(reference "C10")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -5057,7 +5057,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 193.04 33.02 0)
 			(effects
 				(font
@@ -5141,7 +5141,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 114.3 127 0)
 			(effects
 				(font
@@ -5213,7 +5213,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 88.9 116.84 0)
 			(effects
 				(font
@@ -5305,7 +5305,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "8-bit magnitude comparator"
 			(at 147.32 88.9 0)
 			(effects
 				(font
@@ -5434,7 +5434,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 50.8 187.96 0)
 			(effects
 				(font
@@ -5505,7 +5505,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 220.98 27.94 0)
 			(effects
 				(font
@@ -5542,7 +5542,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "70a9c867-c931-4194-a8b1-329cb56ce84a")
-		(property "Reference" "C11"
+		(property "Reference" "C12"
 			(at 95.25 171.4499 0)
 			(effects
 				(font
@@ -5596,7 +5596,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/bdaf78ce-5d85-4dab-bf63-95f2230db1ef"
-					(reference "C11")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -5655,7 +5655,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "8-bit magnitude comparator"
 			(at 50.8 172.72 0)
 			(effects
 				(font
@@ -5784,7 +5784,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 104.14 116.84 0)
 			(effects
 				(font
@@ -5877,7 +5877,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 193.04 38.1 0)
 			(effects
 				(font
@@ -5948,7 +5948,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "3-to-8 line decoder/demultiplexer; inverting"
 			(at 147.32 38.1 0)
 			(effects
 				(font
@@ -6065,7 +6065,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 35.56 157.48 0)
 			(effects
 				(font
@@ -6137,7 +6137,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 63.5 86.36 0)
 			(effects
 				(font
@@ -6208,7 +6208,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 167.64 33.02 0)
 			(effects
 				(font
@@ -6377,7 +6377,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 132.08 50.8 0)
 			(effects
 				(font
@@ -6449,7 +6449,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 91.44 180.34 0)
 			(effects
 				(font
@@ -6523,7 +6523,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "3-to-8 line decoder/demultiplexer; inverting"
 			(at 35.56 172.72 0)
 			(effects
 				(font
@@ -6639,7 +6639,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 193.04 33.02 0)
 			(effects
 				(font
@@ -6723,7 +6723,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "8x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
 			(at 73.66 99.06 0)
 			(effects
 				(font
@@ -6839,7 +6839,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 193.04 27.94 0)
 			(effects
 				(font

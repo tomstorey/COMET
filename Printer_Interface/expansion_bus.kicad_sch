@@ -3139,9 +3139,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3239,8 +3239,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3259,9 +3259,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3335,8 +3335,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3418,7 +3418,7 @@
 				(pin power_out line
 					(at 0 0 90)
 					(length 0)
-					(name "pwr"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6043,7 +6043,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DIN41612 3x32 male connector with COMETbus signals"
 			(at 132.08 93.98 0)
 			(effects
 				(font
@@ -6400,7 +6400,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 27.94 154.94 0)
 			(effects
 				(font
@@ -6472,7 +6472,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 43.18 154.94 0)
 			(effects
 				(font
@@ -6544,7 +6544,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 223.52 137.16 0)
 			(effects
 				(font
@@ -6617,7 +6617,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor"
 			(at 58.42 147.32 0)
 			(effects
 				(font
@@ -6686,7 +6686,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 210.82 149.86 0)
 			(effects
 				(font
@@ -6759,7 +6759,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor"
 			(at 27.94 147.32 0)
 			(effects
 				(font
@@ -6834,7 +6834,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 58.42 154.94 0)
 			(effects
 				(font
@@ -6900,7 +6900,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 193.04 149.86 0)
 			(effects
 				(font
@@ -6966,7 +6966,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DIN41612 3x32 male connector with COMETbus signals"
 			(at 60.96 93.98 0)
 			(effects
 				(font
@@ -7323,7 +7323,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DIN41612 3x32 male connector with COMETbus signals"
 			(at 203.2 93.98 0)
 			(effects
 				(font
@@ -7681,7 +7681,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor"
 			(at 43.18 147.32 0)
 			(effects
 				(font
@@ -7756,7 +7756,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 233.68 137.16 0)
 			(effects
 				(font

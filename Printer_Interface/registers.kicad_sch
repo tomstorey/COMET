@@ -2132,9 +2132,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2232,8 +2232,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2252,9 +2252,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2328,8 +2328,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6159,7 +6159,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state"
 			(at 88.9 45.72 0)
 			(effects
 				(font
@@ -6247,7 +6247,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c6dc9ee-f44d-42e6-a764-effa646e4328")
-		(property "Reference" "C19"
+		(property "Reference" "C20"
 			(at 90.17 173.9899 0)
 			(effects
 				(font
@@ -6301,7 +6301,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/a331cdb5-c1a9-4d89-ab19-f84fbc20db5e"
-					(reference "C19")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -6423,7 +6423,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state; inverting"
 			(at 60.96 175.26 0)
 			(effects
 				(font
@@ -6545,7 +6545,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type flip-flop with reset; positive-edge trigger"
 			(at 185.42 104.14 0)
 			(effects
 				(font
@@ -6668,7 +6668,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 127 127 0)
 			(effects
 				(font
@@ -6699,7 +6699,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "55ddc21b-6826-48df-9b99-5f84e8685aed")
-		(property "Reference" "C23"
+		(property "Reference" "C24"
 			(at 151.13 173.9899 0)
 			(effects
 				(font
@@ -6753,7 +6753,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/a331cdb5-c1a9-4d89-ab19-f84fbc20db5e"
-					(reference "C23")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -6804,7 +6804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 68.58 119.38 0)
 			(effects
 				(font
@@ -6835,7 +6835,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5c771b7a-7350-42a2-9527-99f72f328e20")
-		(property "Reference" "C22"
+		(property "Reference" "C23"
 			(at 135.89 173.9899 0)
 			(effects
 				(font
@@ -6889,7 +6889,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/a331cdb5-c1a9-4d89-ab19-f84fbc20db5e"
-					(reference "C22")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -6940,7 +6940,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 86.36 167.64 0)
 			(effects
 				(font
@@ -7008,7 +7008,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state"
 			(at 71.12 175.26 0)
 			(effects
 				(font
@@ -7129,7 +7129,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state"
 			(at 142.24 116.84 0)
 			(effects
 				(font
@@ -7252,7 +7252,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 71.12 190.5 0)
 			(effects
 				(font
@@ -7318,7 +7318,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 162.56 182.88 0)
 			(effects
 				(font
@@ -7383,7 +7383,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state"
 			(at 88.9 27.94 0)
 			(effects
 				(font
@@ -7506,7 +7506,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 20.32 160.02 0)
 			(effects
 				(font
@@ -7537,7 +7537,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8cae42de-f5b9-437c-919e-e90b9a8d2769")
-		(property "Reference" "C20"
+		(property "Reference" "C21"
 			(at 105.41 173.9899 0)
 			(effects
 				(font
@@ -7591,7 +7591,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/a331cdb5-c1a9-4d89-ab19-f84fbc20db5e"
-					(reference "C20")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -7644,7 +7644,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state"
 			(at 30.48 175.26 0)
 			(effects
 				(font
@@ -7766,7 +7766,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type flip-flop with reset; positive-edge trigger"
 			(at 137.16 35.56 0)
 			(effects
 				(font
@@ -7891,7 +7891,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type flip-flop with reset; positive-edge trigger"
 			(at 20.32 175.26 0)
 			(effects
 				(font
@@ -8012,7 +8012,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state; inverting"
 			(at 142.24 96.52 0)
 			(effects
 				(font
@@ -8134,7 +8134,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state; inverting"
 			(at 226.06 93.98 0)
 			(effects
 				(font
@@ -8259,7 +8259,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type flip-flop with reset; positive-edge trigger"
 			(at 50.8 175.26 0)
 			(effects
 				(font
@@ -8382,7 +8382,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 228.6 60.96 0)
 			(effects
 				(font
@@ -8413,7 +8413,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c9f5ed56-2a05-434e-9753-1d8aa2b1b28f")
-		(property "Reference" "C24"
+		(property "Reference" "C25"
 			(at 166.37 173.9899 0)
 			(effects
 				(font
@@ -8467,7 +8467,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/a331cdb5-c1a9-4d89-ab19-f84fbc20db5e"
-					(reference "C24")
+					(reference "C25")
 					(unit 1)
 				)
 			)
@@ -8520,7 +8520,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type transparent latch; 3-state"
 			(at 40.64 175.26 0)
 			(effects
 				(font
@@ -8641,7 +8641,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type transparent latch; 3-state"
 			(at 88.9 104.14 0)
 			(effects
 				(font
@@ -8763,7 +8763,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state"
 			(at 226.06 114.3 0)
 			(effects
 				(font
@@ -8919,7 +8919,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff471ca8-6c37-40c1-88ff-72844e167e88")
-		(property "Reference" "C21"
+		(property "Reference" "C22"
 			(at 120.65 173.9899 0)
 			(effects
 				(font
@@ -8973,7 +8973,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/a331cdb5-c1a9-4d89-ab19-f84fbc20db5e"
-					(reference "C21")
+					(reference "C22")
 					(unit 1)
 				)
 			)

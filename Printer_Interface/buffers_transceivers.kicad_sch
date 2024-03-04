@@ -2310,9 +2310,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2410,8 +2410,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2430,9 +2430,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2506,8 +2506,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2554,6 +2554,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "14a7f189-3e1b-4020-bf2a-a7b0ddf4bdc0")
+	)
+	(junction
+		(at 96.52 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "17578e5e-a65e-4ea7-8a7b-a467dda6e1ba")
 	)
 	(junction
 		(at 50.8 185.42)
@@ -2608,6 +2614,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "48949024-df95-4ea1-9747-1187f0568282")
+	)
+	(junction
+		(at 111.76 185.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48c4aa53-d801-4f32-892e-ab2089d503f1")
 	)
 	(junction
 		(at 238.76 45.72)
@@ -3667,6 +3679,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 177.8) (xy 111.76 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f8d4a14-653d-4b6a-afa0-55d0fde5ca25")
+	)
+	(wire
+		(pts
 			(xy 20.32 175.26) (xy 35.56 175.26)
 		)
 		(stroke
@@ -4487,7 +4509,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 185.42) (xy 96.52 187.96)
+			(xy 111.76 185.42) (xy 111.76 187.96)
 		)
 		(stroke
 			(width 0)
@@ -4785,6 +4807,16 @@
 		)
 		(uuid "84205be2-060d-48be-bc0b-2df8a4c532e4")
 	)
+	(wire
+		(pts
+			(xy 111.76 185.42) (xy 96.52 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8426f36f-ae0e-413b-a057-f6ac90d94408")
+	)
 	(bus
 		(pts
 			(xy 119.38 63.5) (xy 119.38 66.04)
@@ -4834,6 +4866,16 @@
 			(type default)
 		)
 		(uuid "8e989647-8802-488a-a195-cc3d1a469794")
+	)
+	(wire
+		(pts
+			(xy 111.76 182.88) (xy 111.76 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ead2bf5-ded5-4e0a-96b9-c685145a8149")
 	)
 	(wire
 		(pts
@@ -5724,6 +5766,16 @@
 			(type default)
 		)
 		(uuid "f13b168e-4115-49e2-9413-e1f3255d7fa4")
+	)
+	(wire
+		(pts
+			(xy 96.52 175.26) (xy 111.76 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f196e759-ef32-449d-87fa-204eac141641")
 	)
 	(wire
 		(pts
@@ -6790,7 +6842,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 238.76 137.16 0)
 			(effects
 				(font
@@ -6868,7 +6920,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Dual octal bus transceiver; 3-state"
 			(at 83.82 78.74 0)
 			(effects
 				(font
@@ -7081,7 +7133,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 238.76 33.02 0)
 			(effects
 				(font
@@ -7153,7 +7205,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 68.58 149.86 0)
 			(effects
 				(font
@@ -7225,7 +7277,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 238.76 147.32 0)
 			(effects
 				(font
@@ -7291,7 +7343,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 238.76 99.06 0)
 			(effects
 				(font
@@ -7360,7 +7412,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 238.76 71.12 0)
 			(effects
 				(font
@@ -7444,7 +7496,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 134.62 33.02 0)
 			(effects
 				(font
@@ -7569,6 +7621,76 @@
 		)
 	)
 	(symbol
+		(lib_id "COMET_symbols:C")
+		(at 111.76 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43f9097e-53c4-4eeb-8396-94eb203e20c6")
+		(property "Reference" "C10"
+			(at 115.57 179.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 115.57 181.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "COMET_footprints:C_SMD0805"
+			(at 111.76 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ebdd054-5bb5-4dda-a575-916840454e56")
+		)
+		(pin "2"
+			(uuid "15f9e3b2-dc8f-4f54-9373-f9c0a0172aa9")
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/f4191360-82a0-499d-bb29-833bf852803f"
+					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 238.76 48.26 0)
 		(unit 1)
@@ -7613,7 +7735,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 238.76 48.26 0)
 			(effects
 				(font
@@ -7685,7 +7807,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 165.1 187.96 0)
 			(effects
 				(font
@@ -7757,7 +7879,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 134.62 50.8 0)
 			(effects
 				(font
@@ -7848,7 +7970,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 134.62 66.04 0)
 			(effects
 				(font
@@ -7898,7 +8020,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 96.52 187.96 0)
+		(at 111.76 187.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7907,7 +8029,7 @@
 		(fields_autoplaced yes)
 		(uuid "601ee562-a3e0-4afe-89c1-f75ce3e017a5")
 		(property "Reference" "#PWR09"
-			(at 96.52 194.31 0)
+			(at 111.76 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7916,7 +8038,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 96.52 193.04 0)
+			(at 111.76 193.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7924,7 +8046,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 96.52 187.96 0)
+			(at 111.76 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7933,7 +8055,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 187.96 0)
+			(at 111.76 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7941,8 +8063,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 96.52 187.96 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 111.76 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8013,7 +8135,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 20.32 172.72 0)
 			(effects
 				(font
@@ -8088,7 +8210,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 238.76 38.1 0)
 			(effects
 				(font
@@ -8172,7 +8294,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 137.16 157.48 0)
 			(effects
 				(font
@@ -8244,7 +8366,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 238.76 132.08 0)
 			(effects
 				(font
@@ -8460,7 +8582,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 238.76 38.1 0)
 			(effects
 				(font
@@ -8542,7 +8664,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 134.62 83.82 0)
 			(effects
 				(font
@@ -8638,7 +8760,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 238.76 137.16 0)
 			(effects
 				(font
@@ -8714,7 +8836,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 238.76 71.12 0)
 			(effects
 				(font
@@ -8798,7 +8920,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 238.76 114.3 0)
 			(effects
 				(font
@@ -8942,7 +9064,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal bus transceiver; 3-state"
 			(at 165.1 172.72 0)
 			(effects
 				(font
@@ -9071,7 +9193,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Dual octal bus transceiver; 3-state"
 			(at 83.82 35.56 0)
 			(effects
 				(font
@@ -9287,7 +9409,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 238.76 104.14 0)
 			(effects
 				(font
@@ -9365,7 +9487,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 238.76 81.28 0)
 			(effects
 				(font
@@ -9437,7 +9559,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 58.42 147.32 0)
 			(effects
 				(font
@@ -9509,7 +9631,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 238.76 66.04 0)
 			(effects
 				(font
@@ -9581,7 +9703,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 149.86 30.48 0)
 			(effects
 				(font
@@ -9655,7 +9777,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Dual octal bus transceiver; 3-state"
 			(at 139.7 172.72 0)
 			(effects
 				(font
@@ -9866,7 +9988,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 238.76 104.14 0)
 			(effects
 				(font
@@ -10019,7 +10141,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal bus transceiver; 3-state"
 			(at 83.82 132.08 0)
 			(effects
 				(font

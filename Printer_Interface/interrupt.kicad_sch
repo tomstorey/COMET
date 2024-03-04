@@ -2682,9 +2682,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2782,8 +2782,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2802,9 +2802,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2878,8 +2878,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4875,7 +4875,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 129.54 91.44 0)
 			(effects
 				(font
@@ -4941,7 +4941,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 71.12 187.96 0)
 			(effects
 				(font
@@ -5007,7 +5007,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 71.12 106.68 0)
 			(effects
 				(font
@@ -5073,7 +5073,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 96.52 96.52 0)
 			(effects
 				(font
@@ -5139,7 +5139,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 104.14 165.1 0)
 			(effects
 				(font
@@ -5205,7 +5205,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input AND gate"
 			(at 81.28 121.92 0)
 			(effects
 				(font
@@ -5283,7 +5283,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 81.28 60.96 0)
 			(effects
 				(font
@@ -5314,7 +5314,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2d6e2ae6-93fc-4f7b-aca8-7f4695e98eb2")
-		(property "Reference" "C17"
+		(property "Reference" "C18"
 			(at 138.43 171.4499 0)
 			(effects
 				(font
@@ -5368,7 +5368,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/5e3df452-5717-4bd3-bb16-2ac0410dccdc"
-					(reference "C17")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -5419,7 +5419,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 149.86 180.34 0)
 			(effects
 				(font
@@ -5450,7 +5450,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "44a3d9cc-aaf8-43d4-ab4c-71c91616a416")
-		(property "Reference" "C16"
+		(property "Reference" "C17"
 			(at 123.19 171.4499 0)
 			(effects
 				(font
@@ -5504,7 +5504,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/5e3df452-5717-4bd3-bb16-2ac0410dccdc"
-					(reference "C16")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -5520,7 +5520,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53ed9c01-a923-4f33-9e1f-0801bacaeeda")
-		(property "Reference" "C15"
+		(property "Reference" "C16"
 			(at 107.95 171.4499 0)
 			(effects
 				(font
@@ -5574,7 +5574,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/5e3df452-5717-4bd3-bb16-2ac0410dccdc"
-					(reference "C15")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -5627,7 +5627,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 40.64 172.72 0)
 			(effects
 				(font
@@ -5705,7 +5705,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 139.7 27.94 0)
 			(effects
 				(font
@@ -5736,7 +5736,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6c31f843-4692-43b2-9358-a0be6951df9a")
-		(property "Reference" "C18"
+		(property "Reference" "C19"
 			(at 153.67 171.4499 0)
 			(effects
 				(font
@@ -5790,7 +5790,7 @@
 		(instances
 			(project "Printer_Interface"
 				(path "/75b66dbb-7202-4875-8695-2c14dee692f0/5e3df452-5717-4bd3-bb16-2ac0410dccdc"
-					(reference "C18")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -5913,7 +5913,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single D-type flip-flop with set and reset; positive edge trigger"
 			(at 71.12 172.72 0)
 			(effects
 				(font
@@ -6000,7 +6000,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 205.74 55.88 0)
 			(effects
 				(font
@@ -6167,7 +6167,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 20.32 157.48 0)
 			(effects
 				(font
@@ -6232,7 +6232,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 231.14 63.5 0)
 			(effects
 				(font
@@ -6318,7 +6318,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single D-type flip-flop with set and reset; positive edge trigger"
 			(at 142.24 101.6 0)
 			(effects
 				(font
@@ -6405,7 +6405,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 152.4 35.56 0)
 			(effects
 				(font
@@ -6469,7 +6469,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Buffer with open-drain output"
 			(at 205.74 60.96 0)
 			(effects
 				(font
@@ -6547,7 +6547,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Buffer with open-drain output"
 			(at 205.74 60.96 0)
 			(effects
 				(font
@@ -6624,7 +6624,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input AND gate"
 			(at 50.8 172.72 0)
 			(effects
 				(font
@@ -6702,7 +6702,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 205.74 66.04 0)
 			(effects
 				(font
@@ -6767,7 +6767,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Jumper, 2-pole, open"
 			(at 170.18 78.74 0)
 			(effects
 				(font
@@ -6835,7 +6835,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single D-type flip-flop with reset; positive edge trigger"
 			(at 109.22 101.6 0)
 			(effects
 				(font
@@ -6916,7 +6916,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 81.28 101.6 0)
 			(effects
 				(font
@@ -6993,7 +6993,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "3-to-8 line decoder/demultiplexer; inverting"
 			(at 101.6 48.26 0)
 			(effects
 				(font
@@ -7106,7 +7106,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "3-to-8 line decoder/demultiplexer; inverting"
 			(at 20.32 172.72 0)
 			(effects
 				(font
@@ -7219,7 +7219,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single D-type flip-flop with reset; positive edge trigger"
 			(at 60.96 172.72 0)
 			(effects
 				(font
@@ -7299,7 +7299,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 121.92 45.72 0)
 			(effects
 				(font
