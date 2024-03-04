@@ -2701,7 +2701,7 @@
 					(type background)
 				)
 			)
-			(pin input line
+			(pin input inverted
 				(at -12.7 -5.08 0)
 				(length 5.08)
 				(name "1~{OEAB}"
@@ -2794,7 +2794,7 @@
 			(pin input clock
 				(at -12.7 -7.62 0)
 				(length 5.08)
-				(name "1~{CLKAB}"
+				(name "1CLKAB"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3010,7 +3010,7 @@
 			(pin input clock
 				(at -12.7 -15.24 0)
 				(length 5.08)
-				(name "1~{CLKBA}"
+				(name "1CLKBA"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5378,6 +5378,8 @@
 					)
 				)
 			)
+		)
+		(symbol "74x1G125_1_1"
 			(pin input line
 				(at -5.08 0 0)
 				(length 2.54)
@@ -5415,7 +5417,83 @@
 				)
 			)
 		)
+		(symbol "74x1G125_1_2"
+			(pin input inverted
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state inverted
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
 		(symbol "74x1G125_2_1"
+			(pin power_in line
+				(at 0 -5.08 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 0.635 0.635)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 5.08 270)
+				(length 2.54)
+				(name "VCC"
+					(effects
+						(font
+							(size 0.635 0.635)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "74x1G125_2_2"
 			(pin power_in line
 				(at 0 -5.08 90)
 				(length 2.54)
@@ -9970,7 +10048,7 @@
 					(type background)
 				)
 			)
-			(pin input line
+			(pin input inverted
 				(at -12.7 -12.7 0)
 				(length 5.08)
 				(name "~{OE}"
@@ -10393,7 +10471,7 @@
 					(type background)
 				)
 			)
-			(pin input line
+			(pin input inverted
 				(at -12.7 -12.7 0)
 				(length 5.08)
 				(name "~{OE}"
@@ -11328,7 +11406,7 @@
 			(pin input inverted
 				(at -12.7 -22.86 0)
 				(length 5.08)
-				(name "G"
+				(name "~{G}"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -11490,7 +11568,7 @@
 			(pin output inverted
 				(at 12.7 22.86 180)
 				(length 5.08)
-				(name "P=Q"
+				(name "~{P=Q}"
 					(effects
 						(font
 							(size 1.27 1.27)
