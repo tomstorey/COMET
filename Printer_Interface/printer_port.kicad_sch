@@ -684,6 +684,30 @@
 				)
 			)
 			(symbol "74x1G14_1_2"
+				(polyline
+					(pts
+						(xy 1.27 -0.762) (xy 1.27 0.762) (xy 1.778 0.762)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -0.762) (xy 1.778 -0.762) (xy 1.778 0.762) (xy 2.286 0.762)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin input inverted
 					(at -5.08 0 0)
 					(length 2.54)
@@ -857,7 +881,7 @@
 						(type background)
 					)
 				)
-				(pin input line
+				(pin input inverted
 					(at -12.7 -12.7 0)
 					(length 5.08)
 					(name "~{OE}"
@@ -1280,7 +1304,7 @@
 						(type background)
 					)
 				)
-				(pin input line
+				(pin input inverted
 					(at -12.7 -12.7 0)
 					(length 5.08)
 					(name "~{OE}"
@@ -7456,7 +7480,7 @@
 			)
 		)
 	)
-	(global_label "INIT_OUT"
+	(global_label "~{INIT_OUT}"
 		(shape input)
 		(at 33.02 121.92 180)
 		(fields_autoplaced yes)
@@ -7770,6 +7794,7 @@
 		(lib_id "COMET_symbols:74x1G07")
 		(at 50.8 121.92 0)
 		(unit 1)
+		(convert 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -10028,6 +10053,7 @@
 		(lib_id "COMET_symbols:74x1G14")
 		(at 154.94 111.76 0)
 		(unit 1)
+		(convert 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -11760,6 +11786,7 @@
 		(lib_id "COMET_symbols:74x1G14")
 		(at 154.94 101.6 0)
 		(unit 1)
+		(convert 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -11968,6 +11995,7 @@
 		(lib_id "COMET_symbols:74x1G14")
 		(at 154.94 132.08 0)
 		(unit 1)
+		(convert 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)

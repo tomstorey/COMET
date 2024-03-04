@@ -1401,7 +1401,7 @@
 						(type background)
 					)
 				)
-				(pin input line
+				(pin input inverted
 					(at -12.7 -12.7 0)
 					(length 5.08)
 					(name "~{OE}"
@@ -5632,7 +5632,7 @@
 		)
 		(uuid "fa7b1ac0-a37a-430c-92bb-464e7310b6da")
 	)
-	(global_label "INIT_OUT"
+	(global_label "~{INIT_OUT}"
 		(shape output)
 		(at 248.92 35.56 0)
 		(fields_autoplaced yes)
