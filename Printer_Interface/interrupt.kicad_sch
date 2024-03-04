@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "INTERRUPT LOGIC")
-		(date "2024-02-22")
+		(date "2024-03-04")
 		(rev "1")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -2484,9 +2484,9 @@
 					)
 				)
 				(pin output inverted
-					(at 15.24 0 180)
+					(at 15.24 -5.08 180)
 					(length 5.08)
-					(name "~{IRQ_DRV}"
+					(name "~{VECTOR}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2502,9 +2502,9 @@
 					)
 				)
 				(pin output inverted
-					(at 15.24 -5.08 180)
+					(at 15.24 0 180)
 					(length 5.08)
-					(name "~{VECTOR}"
+					(name "~{IRQ_DRV}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2537,10 +2537,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -15.24 2.54 0)
+				(pin input inverted
+					(at -15.24 7.62 0)
 					(length 5.08)
-					(name "IRQ_EN"
+					(name "~{IACKIN}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2556,9 +2556,9 @@
 					)
 				)
 				(pin input inverted
-					(at -15.24 7.62 0)
+					(at -15.24 10.16 0)
 					(length 5.08)
-					(name "~{IACKIN}"
+					(name "~{IACK}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2566,6 +2566,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 2.54 0)
+					(length 5.08)
+					(name "IRQ_EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2602,24 +2620,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input inverted
-					(at -15.24 10.16 0)
-					(length 5.08)
-					(name "~{IACK}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6092,7 +6092,7 @@
 		(pin "19"
 			(uuid "72ae598d-cfd4-453b-b84a-625874682c39")
 		)
-		(pin "2"
+		(pin "4"
 			(uuid "2bd94045-f915-4d0e-873f-da29809f718f")
 		)
 		(pin "3"
@@ -6104,7 +6104,7 @@
 		(pin "8"
 			(uuid "e841ad2d-106b-4474-8753-c811e65c89e3")
 		)
-		(pin "9"
+		(pin "2"
 			(uuid "e171ee94-0347-4101-bc22-d783f4213c2e")
 		)
 		(pin "10"
@@ -7409,7 +7409,7 @@
 		(pin "19"
 			(uuid "72ae598d-cfd4-453b-b84a-625874682c3a")
 		)
-		(pin "2"
+		(pin "4"
 			(uuid "ca2dba7b-b165-49c8-b002-5c7aeea1acf0")
 		)
 		(pin "3"
@@ -7421,7 +7421,7 @@
 		(pin "8"
 			(uuid "e841ad2d-106b-4474-8753-c811e65c89e4")
 		)
-		(pin "9"
+		(pin "2"
 			(uuid "e171ee94-0347-4101-bc22-d783f4213c2f")
 		)
 		(pin "10"

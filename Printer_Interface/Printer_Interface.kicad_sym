@@ -626,9 +626,9 @@
 				)
 			)
 			(pin output inverted
-				(at 15.24 0 180)
+				(at 15.24 -5.08 180)
 				(length 5.08)
-				(name "~{IRQ_DRV}"
+				(name "~{VECTOR}"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -644,9 +644,9 @@
 				)
 			)
 			(pin output inverted
-				(at 15.24 -5.08 180)
+				(at 15.24 0 180)
 				(length 5.08)
-				(name "~{VECTOR}"
+				(name "~{IRQ_DRV}"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -679,10 +679,10 @@
 					)
 				)
 			)
-			(pin input line
-				(at -15.24 2.54 0)
+			(pin input inverted
+				(at -15.24 7.62 0)
 				(length 5.08)
-				(name "IRQ_EN"
+				(name "~{IACKIN}"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -698,9 +698,9 @@
 				)
 			)
 			(pin input inverted
-				(at -15.24 7.62 0)
+				(at -15.24 10.16 0)
 				(length 5.08)
-				(name "~{IACKIN}"
+				(name "~{IACK}"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -708,6 +708,24 @@
 					)
 				)
 				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 2.54 0)
+				(length 5.08)
+				(name "IRQ_EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -744,24 +762,6 @@
 					)
 				)
 				(number "8"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input inverted
-				(at -15.24 10.16 0)
-				(length 5.08)
-				(name "~{IACK}"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "9"
 					(effects
 						(font
 							(size 1.27 1.27)
