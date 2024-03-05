@@ -127,6 +127,44 @@
 		)
 	)
 	(sheet
+		(at 116.84 66.04)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9f1aa0b3-06ff-4f83-be8e-295493b9f0b6")
+		(property "Sheetname" "Register documentation"
+			(at 116.84 65.3284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "reg_doc.kicad_sch"
+			(at 116.84 84.4046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 40.64 66.04)
 		(size 30.48 17.78)
 		(fields_autoplaced yes)
