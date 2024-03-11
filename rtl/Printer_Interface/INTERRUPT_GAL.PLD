@@ -13,16 +13,16 @@ $define REQUESTING 'b'1
 
 /*************************** INPUTS ***************************/
 pin 1 = clk;
-pin 2 = irq_en;
-pin 9 = !iack;
-pin 3 = !iackin;
+pin 2 = !iackin;
+pin 3 = !iack;
+pin 4 = irq_en;
 pin 7 = !irq_in1;
 pin 8 = irq_in2;
 
 /*************************** OUTPUTS **************************/
-pin 19 = !iackout;
-pin 18 = !vec;
 pin 17 = !irq_drv;
+pin 18 = !vec;
+pin 19 = !iackout;
 
 /************************** INTERNAL **************************/
 pin 16 = state;
@@ -39,7 +39,7 @@ iackout.d = iackin & state:WAITING #
 
 /* Assert vector acquire output during interrupt acknowledge when we are the next
  * interruptor to be serviced */
-vec = state:REQUESTING & iack;
+vec = iackin & state:REQUESTING & iack;
 
 /* Interruptor state machine
  *
