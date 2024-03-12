@@ -1,124 +1,248 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid 9d49a333-d5ad-4058-b99f-23ea3249a5a8)
-
-  (paper "A4")
-
-  (title_block
-    (title "COMPACT FLASH INTERFACE V2")
-    (date "2024-02-26")
-    (rev "1")
-    (company "(C) TOM STOREY")
-    (comment 1 "FREE FOR NON-COMMERCIAL USE")
-  )
-
-  (lib_symbols
-  )
-
-
-  (sheet (at 190.5 25.4) (size 33.02 20.32) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 07ac2787-baa6-4147-ae47-38a71484db30)
-    (property "Sheetname" "Control and status registers" (at 190.5 24.6884 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "con_stat.kicad_sch" (at 190.5 46.3046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "CF_Interface_v2"
-        (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8" (page "6"))
-      )
-    )
-  )
-
-  (sheet (at 149.86 25.4) (size 33.02 20.32) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 5925358b-9ea5-4865-a664-eb9169d83490)
-    (property "Sheetname" "CPLD" (at 149.86 24.6884 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "cpld.kicad_sch" (at 149.86 46.3046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "CF_Interface_v2"
-        (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8" (page "5"))
-      )
-    )
-  )
-
-  (sheet (at 109.22 25.4) (size 33.02 20.32) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid aa22ec19-cff9-402b-a543-c44718f3e691)
-    (property "Sheetname" "Address decoding" (at 109.22 24.6884 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "addr_decode.kicad_sch" (at 109.22 46.3046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "CF_Interface_v2"
-        (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8" (page "4"))
-      )
-    )
-  )
-
-  (sheet (at 27.94 25.4) (size 33.02 20.32) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid b42014f4-8cef-4133-90bb-07e241937a83)
-    (property "Sheetname" "Expansion bus connector" (at 27.94 24.6884 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "expansion_bus.kicad_sch" (at 27.94 46.3046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "CF_Interface_v2"
-        (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8" (page "2"))
-      )
-    )
-  )
-
-  (sheet (at 68.58 25.4) (size 33.02 20.32) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid d1d34ee5-a363-4eb8-8fe8-6bbd6aebc09b)
-    (property "Sheetname" "Buffers and transceivers" (at 68.58 24.6884 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "buffers_transceivers.kicad_sch" (at 68.58 46.3046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "CF_Interface_v2"
-        (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8" (page "3"))
-      )
-    )
-  )
-
-  (sheet (at 231.14 25.4) (size 33.02 20.32) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36)
-    (property "Sheetname" "CF socket" (at 231.14 24.6884 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "cf_socket.kicad_sch" (at 231.14 46.3046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "CF_Interface_v2"
-        (path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8" (page "7"))
-      )
-    )
-  )
-
-  (sheet_instances
-    (path "/" (page "1"))
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "9d49a333-d5ad-4058-b99f-23ea3249a5a8")
+	(paper "A4")
+	(title_block
+		(title "COMPACT FLASH INTERFACE V2")
+		(date "2024-02-26")
+		(rev "1")
+		(company "(C) TOM STOREY")
+		(comment 1 "FREE FOR NON-COMMERCIAL USE")
+	)
+	(lib_symbols)
+	(sheet
+		(at 190.5 25.4)
+		(size 33.02 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "07ac2787-baa6-4147-ae47-38a71484db30")
+		(property "Sheetname" "Control and status registers"
+			(at 190.5 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "con_stat.kicad_sch"
+			(at 190.5 46.3046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 149.86 25.4)
+		(size 33.02 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5925358b-9ea5-4865-a664-eb9169d83490")
+		(property "Sheetname" "CPLD"
+			(at 149.86 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cpld.kicad_sch"
+			(at 149.86 46.3046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 109.22 25.4)
+		(size 33.02 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "aa22ec19-cff9-402b-a543-c44718f3e691")
+		(property "Sheetname" "Address decoding"
+			(at 109.22 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "addr_decode.kicad_sch"
+			(at 109.22 46.3046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 25.4)
+		(size 33.02 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b42014f4-8cef-4133-90bb-07e241937a83")
+		(property "Sheetname" "Expansion bus connector"
+			(at 27.94 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "expansion_bus.kicad_sch"
+			(at 27.94 46.3046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 68.58 25.4)
+		(size 33.02 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d1d34ee5-a363-4eb8-8fe8-6bbd6aebc09b")
+		(property "Sheetname" "Buffers and transceivers"
+			(at 68.58 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "buffers_transceivers.kicad_sch"
+			(at 68.58 46.3046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 231.14 25.4)
+		(size 33.02 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e0d3f2e6-55ab-4b8c-857f-139dbd8d0c36")
+		(property "Sheetname" "CF socket"
+			(at 231.14 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cf_socket.kicad_sch"
+			(at 231.14 46.3046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
 )
