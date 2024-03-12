@@ -9,29 +9,29 @@ Location U9 ;
 Device   g22v10lcc ;
 
 /*************************** INPUTS ***************************/
-pin 2 = clk;
-pin 3 = !sel;
-pin 11 = !lds;
-pin 12 = !uds;
-pin 10 = !wr;
-pin 9 = fc0;
-pin 7 = fc1;
-pin 6 = fc2;
-pin 4 = a1;
-pin 5 = !vector;
+PIN 2 = clk;
+PIN 3 = !sel;
+PIN 11 = !lds;
+PIN 12 = !uds;
+PIN 10 = !wr;
+PIN 9 = fc0;
+PIN 7 = fc1;
+PIN 6 = fc2;
+PIN 4 = a1;
+PIN 5 = !vector;
 
 /*************************** OUTPUTS **************************/
-pin 27 = !dat;
-pin 26 = !vec;
-pin 25 = !con;
-pin 24 = !stat;
-pin 19 = ddir;
-pin 20 = !dben;
-pin 21 = !dtack_drv;
+PIN 24 = !con;
+PIN 25 = !dat;
+PIN 26 = !vec;
+PIN 27 = !stat;
+PIN 20 = ddir;
+PIN 21 = !dben;
+PIN 23 = !dtack_drv;
 
 /************************** INTERNAL **************************/
-pin 17 = cpu_space;
-pin 18 = timer;
+PIN 17 = cpu_space;
+PIN 18 = timer;
 
 /************************** EQUATIONS *************************/
 
