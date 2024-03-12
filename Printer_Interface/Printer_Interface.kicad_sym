@@ -979,24 +979,6 @@
 					)
 				)
 			)
-			(pin output line
-				(at 17.78 -2.54 180)
-				(length 5.08)
-				(name "DDIR"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "19"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin input clock
 				(at -17.78 17.78 0)
 				(length 5.08)
@@ -1015,6 +997,24 @@
 					)
 				)
 			)
+			(pin output line
+				(at 17.78 -2.54 180)
+				(length 5.08)
+				(name "DDIR"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin output inverted
 				(at 17.78 -5.08 180)
 				(length 5.08)
@@ -1025,7 +1025,7 @@
 						)
 					)
 				)
-				(number "20"
+				(number "21"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1043,7 +1043,7 @@
 						)
 					)
 				)
-				(number "21"
+				(number "23"
 					(effects
 						(font
 							(size 1.27 1.27)
