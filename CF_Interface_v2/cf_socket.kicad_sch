@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "COMPACT FLASH SOCKET")
-		(date "2024-02-26")
-		(rev "1")
+		(date "2024-03-13")
+		(rev "2")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
 	)
@@ -2184,9 +2184,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2284,8 +2284,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2304,9 +2304,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2380,8 +2380,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6011,7 +6011,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal bus transceiver; 3-state"
 			(at 48.26 172.72 0)
 			(effects
 				(font
@@ -6136,7 +6136,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal bus transceiver; 3-state"
 			(at 33.02 172.72 0)
 			(effects
 				(font
@@ -6329,7 +6329,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 210.82 38.1 0)
 			(effects
 				(font
@@ -6464,7 +6464,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal bus transceiver; 3-state"
 			(at 106.68 78.74 0)
 			(effects
 				(font
@@ -6657,7 +6657,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 162.56 78.74 0)
 			(effects
 				(font
@@ -6723,7 +6723,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 121.92 180.34 0)
 			(effects
 				(font
@@ -6789,7 +6789,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 162.56 127 0)
 			(effects
 				(font
@@ -6855,7 +6855,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 48.26 187.96 0)
 			(effects
 				(font
@@ -6921,7 +6921,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 210.82 55.88 0)
 			(effects
 				(font
@@ -6987,7 +6987,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 231.14 142.24 0)
 			(effects
 				(font
@@ -7265,7 +7265,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 246.38 127 0)
 			(effects
 				(font
@@ -7330,7 +7330,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal bus transceiver; 3-state"
 			(at 106.68 38.1 0)
 			(effects
 				(font
@@ -7453,7 +7453,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 33.02 157.48 0)
 			(effects
 				(font
@@ -7587,7 +7587,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 76.2 165.1 0)
 			(effects
 				(font
@@ -7653,7 +7653,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 91.44 96.52 0)
 			(effects
 				(font
@@ -7786,7 +7786,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 223.52 149.86 0)
 			(effects
 				(font

@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "CONTROL AND STATUS REGISTERS")
-		(date "2024-02-26")
-		(rev "1")
+		(date "2024-03-13")
+		(rev "2")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
 	)
@@ -1956,9 +1956,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2056,8 +2056,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2076,9 +2076,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2152,8 +2152,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2176,6 +2176,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1021f008-0891-49f5-812e-7f2f948e4628")
+	)
+	(junction
+		(at 121.92 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "221e1ea3-bbd3-4bef-8c69-004adb1ffc21")
 	)
 	(junction
 		(at 68.58 165.1)
@@ -2272,12 +2278,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e0b9a1cd-884d-4e34-8d6e-b559333dfd72")
-	)
-	(junction
-		(at 152.4 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fb6cdf87-4fc4-424b-84c2-4358cf29df50")
 	)
 	(no_connect
 		(at 88.9 48.26)
@@ -2707,6 +2707,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 66.04) (xy 121.92 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32ca85f6-bdd4-44c0-891f-5ba896dce83d")
+	)
+	(wire
+		(pts
 			(xy 27.94 157.48) (xy 27.94 160.02)
 		)
 		(stroke
@@ -2874,16 +2884,6 @@
 			(type default)
 		)
 		(uuid "50e49ff7-06f2-4be3-a132-63bd1466851b")
-	)
-	(wire
-		(pts
-			(xy 149.86 68.58) (xy 152.4 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "530dfd8a-20f4-4c7b-a8ef-3d24798af712")
 	)
 	(bus
 		(pts
@@ -3087,6 +3087,16 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 66.04) (xy 121.92 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "859c7e4b-72d8-45be-82f9-bb942d06fed8")
+	)
+	(wire
+		(pts
 			(xy 119.38 55.88) (xy 119.38 86.36)
 		)
 		(stroke
@@ -3094,6 +3104,16 @@
 			(type default)
 		)
 		(uuid "8612f6e9-7dec-472c-b99a-a2f98df0f126")
+	)
+	(wire
+		(pts
+			(xy 121.92 68.58) (xy 121.92 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87f4f6aa-a7ba-4121-8be7-bcc972c8e67d")
 	)
 	(wire
 		(pts
@@ -3124,16 +3144,6 @@
 			(type default)
 		)
 		(uuid "909de98c-2e4c-4e57-b635-3010ac387178")
-	)
-	(wire
-		(pts
-			(xy 149.86 66.04) (xy 152.4 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "91895f41-7256-445b-9fb7-54532d873ed7")
 	)
 	(wire
 		(pts
@@ -3204,16 +3214,6 @@
 			(type default)
 		)
 		(uuid "9a1e4017-6752-4761-bdae-a38cfffdd9fe")
-	)
-	(wire
-		(pts
-			(xy 152.4 66.04) (xy 152.4 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9b343f5e-d7df-4d99-9661-3811d2dc7b59")
 	)
 	(polyline
 		(pts
@@ -3327,7 +3327,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 76.2) (xy 152.4 76.2)
+			(xy 38.1 76.2) (xy 121.92 76.2)
 		)
 		(stroke
 			(width 0)
@@ -3454,6 +3454,16 @@
 			(type default)
 		)
 		(uuid "cab12487-628d-4fb5-b6ab-22270e310a86")
+	)
+	(wire
+		(pts
+			(xy 121.92 68.58) (xy 124.46 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caf89686-3a33-4960-a9db-4851d476ecf1")
 	)
 	(wire
 		(pts
@@ -3674,16 +3684,6 @@
 			(type default)
 		)
 		(uuid "f72c790e-45b5-4d81-895c-b7630ef94f52")
-	)
-	(wire
-		(pts
-			(xy 152.4 68.58) (xy 152.4 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa093cb9-b348-43e6-a43f-306b13896ef2")
 	)
 	(text "CD"
 		(exclude_from_sim no)
@@ -4418,13 +4418,11 @@
 	(symbol
 		(lib_id "COMET_symbols:74x373")
 		(at 137.16 55.88 0)
-		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "0e9bbe73-46ce-420d-a749-fc418e34d860")
 		(property "Reference" "U14"
 			(at 137.16 35.56 0)
@@ -4460,7 +4458,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type transparent latch; 3-state"
 			(at 137.16 55.88 0)
 			(effects
 				(font
@@ -4582,7 +4580,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type flip-flop with reset; positive-edge trigger"
 			(at 76.2 55.88 0)
 			(effects
 				(font
@@ -4705,7 +4703,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 147.32 111.76 0)
 			(effects
 				(font
@@ -4773,7 +4771,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 50.8 114.3 0)
 			(effects
 				(font
@@ -4860,7 +4858,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 68.58 162.56 0)
 			(effects
 				(font
@@ -4926,7 +4924,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 40.64 185.42 0)
 			(effects
 				(font
@@ -4992,7 +4990,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 83.82 177.8 0)
 			(effects
 				(font
@@ -5125,7 +5123,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input NOR gate"
 			(at 76.2 101.6 0)
 			(effects
 				(font
@@ -5205,7 +5203,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type transparent latch; 3-state"
 			(at 40.64 170.18 0)
 			(effects
 				(font
@@ -5329,7 +5327,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal D-type flip-flop with reset; positive-edge trigger"
 			(at 27.94 170.18 0)
 			(effects
 				(font
@@ -5455,7 +5453,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input NOR gate"
 			(at 76.2 101.6 0)
 			(effects
 				(font
@@ -5673,7 +5671,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 66.04 119.38 0)
 			(effects
 				(font
@@ -5740,7 +5738,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 76.2 106.68 0)
 			(effects
 				(font
@@ -5806,7 +5804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 27.94 154.94 0)
 			(effects
 				(font
@@ -5873,7 +5871,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 76.2 96.52 0)
 			(effects
 				(font

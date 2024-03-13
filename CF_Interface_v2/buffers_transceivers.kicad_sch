@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "EXPANSION BUS BUFFERS AND TRANSCEIVERS")
-		(date "2024-02-26")
-		(rev "1")
+		(date "2024-03-13")
+		(rev "2")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
 	)
@@ -2758,9 +2758,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2858,8 +2858,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2878,9 +2878,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2954,8 +2954,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7958,7 +7958,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Dual octal bus transceiver; 3-state"
 			(at 73.66 76.2 0)
 			(effects
 				(font
@@ -8165,7 +8165,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 246.38 27.94 0)
 			(effects
 				(font
@@ -8231,7 +8231,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 58.42 144.78 0)
 			(effects
 				(font
@@ -8300,7 +8300,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 246.38 66.04 0)
 			(effects
 				(font
@@ -8448,7 +8448,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 114.3 142.24 0)
 			(effects
 				(font
@@ -8514,7 +8514,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 124.46 33.02 0)
 			(effects
 				(font
@@ -8601,7 +8601,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 124.46 86.36 0)
 			(effects
 				(font
@@ -8687,7 +8687,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state"
 			(at 147.32 129.54 0)
 			(effects
 				(font
@@ -8810,7 +8810,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 114.3 132.08 0)
 			(effects
 				(font
@@ -8876,7 +8876,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 246.38 43.18 0)
 			(effects
 				(font
@@ -8942,7 +8942,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 165.1 187.96 0)
 			(effects
 				(font
@@ -9008,7 +9008,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 124.46 50.8 0)
 			(effects
 				(font
@@ -9097,7 +9097,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state"
 			(at 165.1 172.72 0)
 			(effects
 				(font
@@ -9220,7 +9220,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 96.52 187.96 0)
 			(effects
 				(font
@@ -9286,7 +9286,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 20.32 172.72 0)
 			(effects
 				(font
@@ -9355,7 +9355,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 246.38 33.02 0)
 			(effects
 				(font
@@ -9433,7 +9433,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 132.08 157.48 0)
 			(effects
 				(font
@@ -9639,7 +9639,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 248.92 154.94 0)
 			(effects
 				(font
@@ -9703,7 +9703,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 246.38 33.02 0)
 			(effects
 				(font
@@ -9784,7 +9784,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 114.3 137.16 0)
 			(effects
 				(font
@@ -9862,7 +9862,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 124.46 68.58 0)
 			(effects
 				(font
@@ -9947,7 +9947,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 246.38 66.04 0)
 			(effects
 				(font
@@ -10027,7 +10027,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal bus transceiver; 3-state"
 			(at 154.94 172.72 0)
 			(effects
 				(font
@@ -10150,7 +10150,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 198.12 137.16 0)
 			(effects
 				(font
@@ -10216,7 +10216,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single 2-input OR gate"
 			(at 114.3 137.16 0)
 			(effects
 				(font
@@ -10293,7 +10293,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal buffer/line driver; 3-state"
 			(at 264.16 144.78 0)
 			(effects
 				(font
@@ -10416,7 +10416,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 132.08 139.7 0)
 			(effects
 				(font
@@ -10482,7 +10482,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Dual octal bus transceiver; 3-state"
 			(at 73.66 35.56 0)
 			(effects
 				(font
@@ -10689,7 +10689,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 246.38 76.2 0)
 			(effects
 				(font
@@ -10825,7 +10825,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 48.26 142.24 0)
 			(effects
 				(font
@@ -10891,7 +10891,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 246.38 60.96 0)
 			(effects
 				(font
@@ -10957,7 +10957,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 139.7 30.48 0)
 			(effects
 				(font
@@ -11022,7 +11022,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 190.5 127 0)
 			(effects
 				(font
@@ -11111,7 +11111,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Dual octal bus transceiver; 3-state"
 			(at 134.62 172.72 0)
 			(effects
 				(font
@@ -11387,7 +11387,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octal bus transceiver; 3-state"
 			(at 73.66 127 0)
 			(effects
 				(font

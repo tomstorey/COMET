@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "CPLD")
-		(date "2024-02-26")
-		(rev "1")
+		(date "2024-03-13")
+		(rev "2")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
 	)
@@ -2140,9 +2140,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2240,8 +2240,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2260,9 +2260,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2336,8 +2336,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4400,7 +4400,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 114.3 144.78 0)
 			(effects
 				(font
@@ -4877,7 +4877,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 231.14 101.6 0)
 			(effects
 				(font
@@ -4943,7 +4943,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 22.86 154.94 0)
 			(effects
 				(font
@@ -5009,7 +5009,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 231.14 91.44 0)
 			(effects
 				(font
@@ -5074,7 +5074,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "CMOS Clock Oscillator 2.5 to 50 MHz"
 			(at 76.2 33.02 0)
 			(effects
 				(font
@@ -5149,7 +5149,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 33.02 185.42 0)
 			(effects
 				(font
@@ -5523,7 +5523,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 76.2 40.64 0)
 			(effects
 				(font
@@ -5589,7 +5589,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 114.3 187.96 0)
 			(effects
 				(font
@@ -5655,7 +5655,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 76.2 121.92 0)
 			(effects
 				(font
@@ -5722,7 +5722,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 104.14 139.7 0)
 			(effects
 				(font
@@ -5812,7 +5812,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Buffer with open-drain output"
 			(at 231.14 96.52 0)
 			(effects
 				(font
@@ -5889,7 +5889,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 200.66 83.82 0)
 			(effects
 				(font
@@ -6115,7 +6115,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Buffer with open-drain output"
 			(at 231.14 96.52 0)
 			(effects
 				(font
@@ -6191,7 +6191,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "4 resistor network, parallel topology"
 			(at 172.72 83.82 0)
 			(effects
 				(font
@@ -6348,7 +6348,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 81.28 134.62 0)
 			(effects
 				(font
@@ -6414,7 +6414,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 53.34 172.72 0)
 			(effects
 				(font
@@ -6480,7 +6480,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 76.2 25.4 0)
 			(effects
 				(font
@@ -6546,7 +6546,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 210.82 88.9 0)
 			(effects
 				(font
@@ -6612,7 +6612,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 91.44 127 0)
 			(effects
 				(font
