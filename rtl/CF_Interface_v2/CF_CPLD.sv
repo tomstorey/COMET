@@ -44,9 +44,9 @@ module CF_CPLD
     reg n_uds_reg2;
     reg n_lds_reg1;
     reg n_lds_reg2;
-    wire n_sel_regd = ~(!n_sel_reg1 && !n_sel_reg2);
-    wire n_uds_regd = ~(!n_uds_reg1 && !n_uds_reg2);
-    wire n_lds_regd = ~(!n_lds_reg1 && !n_lds_reg2);
+    wire n_sel_regd = !(!n_sel_reg1 && !n_sel_reg2);
+    wire n_uds_regd = !(!n_uds_reg1 && !n_uds_reg2);
+    wire n_lds_regd = !(!n_lds_reg1 && !n_lds_reg2);
     
     /* Cycle timing modes 
      *
@@ -116,17 +116,17 @@ module CF_CPLD
         
         /* Set the direction of the CF card data buffers. The direction is high when not decoded or
          * when writing, and low when reading. */
-        cf_ddir = ~(selected && !addr[5] && n_write);
+        cf_ddir = !(selected && !addr[5] && n_write);
         
         /* Chip selects based on A4: CS0 for the primary register set, CS1 for the alternative
          * register set */
-        n_cs0 = (t == MODE_ASYNC) ? ~(!addr[4] && selected) :
-                                    ~(!addr[4] && selected && (m_state == M_ACCESS));
-        n_cs1 = (t == MODE_ASYNC) ? ~( addr[4] && selected) :
-                                    ~( addr[4] && selected && (m_state == M_ACCESS));
+        n_cs0 = (t == MODE_ASYNC) ? !(!addr[4] && selected) :
+                                    !(!addr[4] && selected && (m_state == M_ACCESS));
+        n_cs1 = (t == MODE_ASYNC) ? !( addr[4] && selected) :
+                                    !( addr[4] && selected && (m_state == M_ACCESS));
         
         /* CF read/write signals */
-        n_rd = ~(selected && !addr[5] && n_write &&
+        n_rd = !(selected && !addr[5] && n_write &&
                  (
                   ((!n_uds_regd || !n_lds_regd) && (m_state == M_ACCESS) &&
                    (
@@ -138,7 +138,7 @@ module CF_CPLD
                   ((t == MODE_ASYNC) && (!n_uds      || !n_lds))
                  )
                 );
-        n_wr = ~(selected && !addr[5] && !n_write &&
+        n_wr = !(selected && !addr[5] && !n_write &&
                  (
                   ((!n_uds_regd || !n_lds_regd) && (m_state == M_ACCESS) &&
                    (
@@ -152,11 +152,11 @@ module CF_CPLD
                 );
         
         /* Read or write the status/control register (always async) */
-        n_rdstat = ~(selected &&  n_write && addr[5] && !n_uds);
-        n_wrcon  = ~(selected && !n_write && addr[5] && !n_uds);
+        n_rdstat = !(selected &&  n_write && addr[5] && !n_uds);
+        n_wrcon  = !(selected && !n_write && addr[5] && !n_uds);
         
         /* Assert DTACK on any decoded opreation */
-        n_dtack_drv = ~((selected && addr[5] && !n_uds) ||
+        n_dtack_drv = !((selected && addr[5] && !n_uds) ||
                         ((m_state == M_ACCESS) && (!n_uds_regd || !n_lds_regd) &&
                          (
                           ((t == MODE_PIO01) && c_timer[7]) ||
