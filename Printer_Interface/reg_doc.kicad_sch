@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "REGISTER DOCUMENTATION")
-		(date "2024-03-12")
+		(date "2024-03-24")
 		(rev "1")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -572,7 +572,7 @@
 		)
 		(uuid "fc6ed597-d58d-4602-976c-d8b212dedc20")
 	)
-	(text "0x0 - DATA PORT"
+	(text "DATA PORT"
 		(exclude_from_sim no)
 		(at 20.32 22.86 0)
 		(effects
@@ -726,7 +726,7 @@
 		)
 		(uuid "46ac3eb1-9813-41d3-bf8d-5b8be0e8295a")
 	)
-	(text "0x2 - STATUS REGISTER"
+	(text "STATUS REGISTER"
 		(exclude_from_sim no)
 		(at 20.32 97.155 0)
 		(effects
@@ -737,7 +737,7 @@
 		)
 		(uuid "50747b77-72b9-446d-8c53-8d512b85a234")
 	)
-	(text "0x3 - CONTROL REGISTER"
+	(text "CONTROL REGISTER"
 		(exclude_from_sim no)
 		(at 108.585 22.86 0)
 		(effects
@@ -792,7 +792,7 @@
 		)
 		(uuid "70a2d3ad-b83a-4c66-8e42-f774ba010ac7")
 	)
-	(text "0x1 - INTERRUPT VECTOR"
+	(text "INTERRUPT VECTOR"
 		(exclude_from_sim no)
 		(at 20.32 59.055 0)
 		(effects

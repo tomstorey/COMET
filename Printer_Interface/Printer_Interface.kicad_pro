@@ -59,6 +59,9 @@
         }
       ],
       "drc_exclusions": [
+        "duplicate_footprints|66980000|142070000|bd2b202c-90e8-4368-abfd-b47c77727ea8|96cc354e-c222-4878-8fc0-134b86ae10c7",
+        "extra_footprint|66980000|142070000|bd2b202c-90e8-4368-abfd-b47c77727ea8|00000000-0000-0000-0000-000000000000",
+        "extra_footprint|66980000|53510000|96cc354e-c222-4878-8fc0-134b86ae10c7|00000000-0000-0000-0000-000000000000",
         "items_not_allowed|217940000|145250000|c2c3b0aa-870f-4103-92d3-576734c35827|00000000-0000-0000-0000-000000000000",
         "items_not_allowed|66622789|50330000|96cc354e-c222-4878-8fc0-134b86ae10c7|00000000-0000-0000-0000-000000000000",
         "items_not_allowed|67337211|145250000|bd2b202c-90e8-4368-abfd-b47c77727ea8|00000000-0000-0000-0000-000000000000",
@@ -124,7 +127,7 @@
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.0,
+        "min_copper_edge_clearance": 0.508,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.19999999999999998,
@@ -438,7 +441,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "ignore",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",

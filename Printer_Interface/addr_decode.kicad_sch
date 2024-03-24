@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "ADDRESS DECODING")
-		(date "2024-03-12")
+		(date "2024-03-24")
 		(rev "1")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -4652,16 +4652,49 @@
 		)
 		(uuid "fcdabf98-95fa-4bdb-9968-84f3b2d229eb")
 	)
-	(text "ADDRESS DECODER CONFIGURATION\n\nSW1 SELECTS A 64KB BASE ADDRESS FOR THE BOARD.\n\nJ2 SELECTS A 4KB OFFSET FROM THE BASE ADDRESS:\n\nPOS		OFFSET\n1-2		0x4000\n3-4		0x5000\n5-6		0x6000\n7-8		0x7000"
+	(text "REFERENCE MEMORY MAP"
 		(exclude_from_sim no)
-		(at 198.12 106.68 0)
+		(at 187.96 132.08 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left top)
+		)
+		(uuid "07f024a5-01b1-4223-ba03-c46b18b6e8db")
+	)
+	(text "SW1 SELECTS A 64KB BASE ADDRESS FOR THE BOARD.\n\nJ2 SELECTS A 4KB OFFSET FROM THE BASE ADDRESS:\n\nPOS		OFFSET\n1-2		0x4000\n3-4		0x5000\n5-6		0x6000\n7-8		0x7000"
+		(exclude_from_sim no)
+		(at 187.96 104.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left top)
 		)
 		(uuid "ad989c8e-7a33-4bfd-a6aa-e7ffe04f1daf")
+	)
+	(text "BASE ADDRESS + OFFSET +	0		DATA PORT\n						0x1		INTERRUPT VECTOR REGISTER\n						0x2		STATUS REGISTER\n						0x3		CONTROL REGISTER\n"
+		(exclude_from_sim no)
+		(at 187.96 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "d7653ae8-443c-427c-a58a-66d349bd3a7a")
+	)
+	(text "ADDRESS DECODER CONFIGURATION"
+		(exclude_from_sim no)
+		(at 187.96 99.06 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left top)
+		)
+		(uuid "e2b8f213-cb02-4a3d-a052-520a6cc0769d")
 	)
 	(label "SA21"
 		(at 121.92 81.28 0)
