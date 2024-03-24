@@ -35,6 +35,7 @@ module CF_CPLD
     output logic cf_ddir,
     
     /* Other */
+    input func1,
     output logic debug1
 );
     /* Signal synchronisation */
