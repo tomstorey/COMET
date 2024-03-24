@@ -22094,6 +22094,26 @@
 		)
 	)
 	(gr_line
+		(start 73.406 132.842)
+		(end 69.85 126.238)
+		(stroke
+			(width 0.5)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "3ae14627-54e2-44b3-9c5e-88e77fdb3534")
+	)
+	(gr_line
+		(start 66.294 132.842)
+		(end 73.406 132.842)
+		(stroke
+			(width 0.5)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7f7c3cce-41ba-4744-92a1-3740622eef8f")
+	)
+	(gr_line
 		(start 75.78 117.65)
 		(end 63.94 117.65)
 		(stroke
@@ -22112,6 +22132,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "da798373-9ede-43d0-b100-963d3ef5567d")
+	)
+	(gr_line
+		(start 69.85 126.238)
+		(end 66.294 132.842)
+		(stroke
+			(width 0.5)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "f70a8677-5d28-4448-8165-5fed3924e9c8")
 	)
 	(gr_line
 		(start 64 107.25)
@@ -22180,6 +22210,18 @@
 		(layer "Edge.Cuts")
 		(uuid "d6cb1264-1f52-41a3-b223-7169a961354b")
 	)
+	(gr_text "REMOVE POWER BEFORE\nINSERTING OR REMOVING\nCF CARD"
+		(at 74.676 125.222 0)
+		(layer "F.SilkS")
+		(uuid "1ceb8124-e138-4d71-b3b2-82133fa12c92")
+		(effects
+			(font
+				(size 2 1.75)
+				(thickness 0.15)
+			)
+			(justify left top)
+		)
+	)
 	(gr_text "IN USE"
 		(at 69.215 61.595 0)
 		(layer "F.SilkS")
@@ -22214,6 +22256,19 @@
 				(thickness 0.15)
 			)
 			(justify right)
+		)
+	)
+	(gr_text "!"
+		(at 69.85 128.778 0)
+		(layer "F.SilkS")
+		(uuid "37bb8201-229c-4343-91b7-c1d2e0c77628")
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.5)
+				(bold yes)
+			)
+			(justify top)
 		)
 	)
 	(gr_text "BASE ADDRESS"
