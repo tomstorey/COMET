@@ -5,8 +5,8 @@
 	(uuid "c28bf2fe-ba20-4d90-9485-2108139e6255")
 	(paper "A4")
 	(title_block
-		(title "GAL")
-		(date "2024-03-24")
+		(title "CONTROL GAL")
+		(date "2024-03-25")
 		(rev "1")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -1043,7 +1043,7 @@
 				)
 			)
 		)
-		(symbol "Printer_Interface:PRINTER_GAL"
+		(symbol "Printer_Interface:CONTROL_GAL"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1055,7 +1055,7 @@
 					)
 				)
 			)
-			(property "Value" "PRINTER_GAL"
+			(property "Value" "CONTROL_GAL"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1098,7 +1098,7 @@
 					)
 				)
 			)
-			(symbol "PRINTER_GAL_1_1"
+			(symbol "CONTROL_GAL_1_1"
 				(rectangle
 					(start -12.7 20.32)
 					(end 12.7 -20.32)
@@ -1166,24 +1166,6 @@
 				)
 				(pin no_connect line
 					(at 17.78 -17.78 180)
-					(length 5.08)
-					(name "CPU_SPACE"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 17.78 -15.24 180)
 					(length 5.08)
 					(name "TIMER"
 						(effects
@@ -1453,7 +1435,7 @@
 					)
 				)
 			)
-			(symbol "PRINTER_GAL_2_0"
+			(symbol "CONTROL_GAL_2_0"
 				(pin power_in line
 					(at -2.54 10.16 270)
 					(length 5.08)
@@ -4728,7 +4710,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Printer_Interface:PRINTER_GAL")
+		(lib_id "Printer_Interface:CONTROL_GAL")
 		(at 129.54 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4745,7 +4727,7 @@
 				)
 			)
 		)
-		(property "Value" "PRINTER_GAL"
+		(property "Value" "CONTROL_GAL"
 			(at 129.54 30.48 0)
 			(effects
 				(font
@@ -4788,9 +4770,6 @@
 		)
 		(pin "12"
 			(uuid "10769330-7a4c-4418-88e3-0b14bc51582d")
-		)
-		(pin "17"
-			(uuid "f6b5bc8c-dc11-4902-9bb3-9f8752fc8a5e")
 		)
 		(pin "18"
 			(uuid "570ff580-d75f-4846-ae94-3e6d85ffaf2d")
@@ -5457,7 +5436,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Printer_Interface:PRINTER_GAL")
+		(lib_id "Printer_Interface:CONTROL_GAL")
 		(at 27.94 170.18 0)
 		(unit 2)
 		(exclude_from_sim no)
@@ -5467,7 +5446,7 @@
 		(fields_autoplaced yes)
 		(uuid "fbb6c669-7f81-4512-8507-b0f1bd320886")
 		(property "Reference" "U10"
-			(at 34.29 170.18 0)
+			(at 34.29 170.1799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5475,8 +5454,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PRINTER_GAL"
-			(at 34.29 171.45 0)
+		(property "Value" "CONTROL_GAL"
+			(at 34.29 171.4499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5520,9 +5499,6 @@
 		)
 		(pin "12"
 			(uuid "10769330-7a4c-4418-88e3-0b14bc51582e")
-		)
-		(pin "17"
-			(uuid "f6b5bc8c-dc11-4902-9bb3-9f8752fc8a5f")
 		)
 		(pin "18"
 			(uuid "570ff580-d75f-4846-ae94-3e6d85ffaf2e")
