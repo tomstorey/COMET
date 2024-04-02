@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "INTERRUPT LOGIC")
-		(date "2024-03-25")
+		(date "2024-04-02")
 		(rev "1")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -2087,7 +2087,7 @@
 							)
 						)
 					)
-					(number "16"
+					(number "12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2096,9 +2096,9 @@
 					)
 				)
 				(pin output inverted
-					(at 15.24 -5.08 180)
+					(at 15.24 0 180)
 					(length 5.08)
-					(name "~{VECTOR}"
+					(name "~{IRQ_DRV}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2114,9 +2114,9 @@
 					)
 				)
 				(pin output inverted
-					(at 15.24 0 180)
+					(at 15.24 -5.08 180)
 					(length 5.08)
-					(name "~{IRQ_DRV}"
+					(name "~{VECTOR}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2213,7 +2213,7 @@
 							)
 						)
 					)
-					(number "7"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2231,7 +2231,7 @@
 							)
 						)
 					)
-					(number "8"
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4022,7 +4022,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4044,7 +4043,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4066,7 +4064,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4088,7 +4085,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4110,7 +4106,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4132,7 +4127,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4154,7 +4148,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4176,7 +4169,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4198,7 +4190,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4220,7 +4211,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4242,7 +4232,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4264,7 +4253,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4286,7 +4274,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -5509,7 +5496,7 @@
 		(pin "1"
 			(uuid "61914533-7131-401f-ae8c-6d54fcede275")
 		)
-		(pin "16"
+		(pin "12"
 			(uuid "ad7b9816-c85f-44dd-9fce-fc647398fbdb")
 		)
 		(pin "17"
@@ -5527,7 +5514,7 @@
 		(pin "3"
 			(uuid "588f263d-792e-4e2d-8dc4-cca6e6b55854")
 		)
-		(pin "7"
+		(pin "9"
 			(uuid "ae2a8724-5852-4031-86de-2893a748ec14")
 		)
 		(pin "8"
@@ -6607,7 +6594,7 @@
 		(pin "1"
 			(uuid "61914533-7131-401f-ae8c-6d54fcede276")
 		)
-		(pin "16"
+		(pin "12"
 			(uuid "ad7b9816-c85f-44dd-9fce-fc647398fbdc")
 		)
 		(pin "17"
@@ -6625,7 +6612,7 @@
 		(pin "3"
 			(uuid "588f263d-792e-4e2d-8dc4-cca6e6b55855")
 		)
-		(pin "7"
+		(pin "9"
 			(uuid "ae2a8724-5852-4031-86de-2893a748ec15")
 		)
 		(pin "8"
