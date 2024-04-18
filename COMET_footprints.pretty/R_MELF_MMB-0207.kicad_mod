@@ -1,0 +1,221 @@
+(footprint "R_MELF_MMB-0207"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Resistor, MELF, MMB-0207, http://www.vishay.com/docs/28713/melfprof.pdf")
+	(tags "MELF Resistor")
+	(property "Reference" "REF**"
+		(at 0.05 -2.05 0)
+		(layer "F.SilkS")
+		(uuid "5c393e8b-2514-4ccf-9612-1b0af6a303ee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "R_MELF_MMB-0207"
+		(at 0 2.2 0)
+		(layer "F.Fab")
+		(uuid "53157d63-b40e-401d-8fd3-96908898bdbd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "06a8793a-e13d-45a6-b754-d4b1d49f4848")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "23247959-e360-499c-945c-880c5403857a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b4e4e105-b6cb-4226-a801-54ebb8f6e74e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 1.2 -1.2)
+		(end -1.2 -1.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "20d7dd1d-5d11-4eb2-b831-a6945a9583d1")
+	)
+	(fp_line
+		(start 1.2 1.2)
+		(end -1.2 1.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c5c17977-704b-46d5-a60c-56685ed526cd")
+	)
+	(fp_line
+		(start -3.75 -1.55)
+		(end -3.75 1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "48090ee0-d0fa-4792-b410-dd57ea5171f7")
+	)
+	(fp_line
+		(start -3.75 -1.55)
+		(end 3.75 -1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "88c8de74-0b06-4030-b251-8229eb6f8f3a")
+	)
+	(fp_line
+		(start 3.75 1.55)
+		(end -3.75 1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "53013c10-7e47-4d12-9b38-70513a2c3dbc")
+	)
+	(fp_line
+		(start 3.75 1.55)
+		(end 3.75 -1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4596406b-0712-4c3f-954d-3ef1ee7e42ae")
+	)
+	(fp_line
+		(start -2.9 -1.1)
+		(end -2.9 1.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "68c61d14-5772-4f15-8205-1594f038e6ff")
+	)
+	(fp_line
+		(start -2.9 1.1)
+		(end 2.9 1.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "15cefedc-b7d6-4a91-b1c8-13a1a2550241")
+	)
+	(fp_line
+		(start -1.7 -1.1)
+		(end -1.7 1.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "57e37978-ebc2-45f4-a750-fdf07aca6045")
+	)
+	(fp_line
+		(start 1.7 -1.1)
+		(end 1.7 1.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "30f2f09f-012f-49f2-81c6-3dc9f7225f8d")
+	)
+	(fp_line
+		(start 2.9 -1.1)
+		(end -2.9 -1.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8977ff15-100c-45e4-9a6c-0c2a25283158")
+	)
+	(fp_line
+		(start 2.9 1.1)
+		(end 2.9 -1.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "db264f8c-d218-4a6b-ab9d-7d095eb0d439")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "ff637716-fa69-4ad3-a0d8-5b461aa3ae41")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.45 0)
+		(size 2.1 2.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "c158c21e-2062-40d5-95b4-5f08fca7a565")
+	)
+	(pad "2" smd rect
+		(at 2.45 0)
+		(size 2.1 2.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "9ceaab0c-1a60-47dd-bc0a-a04fb7fb55f7")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_MELF_MMB-0207.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

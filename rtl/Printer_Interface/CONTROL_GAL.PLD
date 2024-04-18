@@ -1,0 +1,82 @@
+Name     CONTROL_GAL ;
+PartNo   00 ;
+Date     25/03/2024 ;
+Revision 01 ;
+Designer Tom Storey ;
+Company  COMET68k ;
+Assembly Printer Interface ;
+Location U10 ;
+Device   g22v10lcc ;
+
+/*********************************** INPUTS ************************************/
+PIN 2 = clk;
+PIN 3 = !sel;
+PIN 11 = !lds;
+PIN 12 = !uds;
+PIN 10 = !wr;
+PIN 9 = fc0;
+PIN 7 = fc1;
+PIN 6 = fc2;
+PIN 4 = a1;
+PIN 5 = !vector;
+
+/*********************************** OUTPUTS ***********************************/
+PIN 24 = !con;
+PIN 25 = !dat;
+PIN 26 = !vec;
+PIN 27 = !stat;
+PIN 20 = ddir;
+PIN 21 = !dben;
+PIN 23 = !dtack_drv;
+
+/********************************** INTERNAL ***********************************/
+PIN 18 = timer;
+
+/********************************** EQUATIONS **********************************/
+
+/* Function code field for restricting access to the interface */
+$DEFINE FC_USER_DATA 'b'001
+$DEFINE FC_USER_PROG 'b'010
+$DEFINE FC_SUP_DATA 'b'101
+$DEFINE FC_SUP_PROG 'b'110
+$DEFINE FC_CPU_SPACE 'b'111
+
+FIELD fc = [fc2..0];
+
+/* Timer is set one clock after either of the CPU data strobes is asserted, and
+ * is used to generate a shorter write strobe towards on-board registers */
+timer.d = lds # uds;
+timer.ar = 'b'0;
+timer.sp = 'b'0;
+
+/* Access the data port */
+dat = sel & fc:FC_SUP_DATA & !a1 & !wr & uds #
+      sel & fc:FC_SUP_DATA & !a1 &  wr & uds & !timer;
+
+/* Access the interrupt vector register */
+vec = sel & fc:FC_SUP_DATA & !a1 & !wr & lds #
+      sel & fc:FC_SUP_DATA & !a1 &  wr & lds & !timer #
+      vector & fc:FC_CPU_SPACE;
+
+/* Access the control register */
+con = sel & fc:FC_SUP_DATA & a1 & !wr & uds #
+      sel & fc:FC_SUP_DATA & a1 &  wr & uds & !timer;
+
+/* Access the status register */
+stat = sel & fc:FC_SUP_DATA & a1 & lds & !wr;
+
+/* Set the direction of the data bus buffers */
+ddir = sel & fc:FC_SUP_DATA & !wr #
+       vector & fc:FC_CPU_SPACE & !wr;
+
+/* Enable the data bus buffers */
+dben = sel & fc:FC_SUP_DATA #
+       vector & fc:FC_CPU_SPACE;
+
+/* Assert DTACK when ever an access is decoded */
+dtack_drv = sel & fc:FC_SUP_DATA & !a1 #
+            sel & fc:FC_SUP_DATA & a1 & uds #
+            sel & fc:FC_SUP_DATA & a1 & !wr & lds #
+            vector & fc:FC_CPU_SPACE;
+
+/* END */

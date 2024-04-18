@@ -1,0 +1,325 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "75b66dbb-7202-4875-8695-2c14dee692f0")
+	(paper "A4")
+	(title_block
+		(title "PARALLEL PRINTER INTERFACE")
+		(date "2024-04-18")
+		(rev "1")
+		(company "(C) TOM STOREY")
+		(comment 1 "FREE FOR NON-COMMERCIAL USE")
+	)
+	(lib_symbols)
+	(sheet
+		(at 40.64 35.56)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3172fa24-ac81-4f5e-8039-d5a2a969bd95")
+		(property "Sheetname" "Expansion bus connector"
+			(at 40.64 34.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "expansion_bus.kicad_sch"
+			(at 40.64 53.9246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 193.04 35.56)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5e3df452-5717-4bd3-bb16-2ac0410dccdc")
+		(property "Sheetname" "Interrupt logic"
+			(at 193.04 34.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "interrupt.kicad_sch"
+			(at 193.04 53.9246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 154.94 35.56)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6311bdc0-1305-46dc-b099-cd17c676089b")
+		(property "Sheetname" "Control GAL"
+			(at 154.94 34.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "gal.kicad_sch"
+			(at 154.94 53.9246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 116.84 66.04)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9f1aa0b3-06ff-4f83-be8e-295493b9f0b6")
+		(property "Sheetname" "Register documentation"
+			(at 116.84 65.3284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "reg_doc.kicad_sch"
+			(at 116.84 84.4046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 40.64 66.04)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a331cdb5-c1a9-4d89-ab19-f84fbc20db5e")
+		(property "Sheetname" "Registers"
+			(at 40.64 65.3284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "registers.kicad_sch"
+			(at 40.64 84.4046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 116.84 35.56)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bdaf78ce-5d85-4dab-bf63-95f2230db1ef")
+		(property "Sheetname" "Address decoding"
+			(at 116.84 34.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "addr_decode.kicad_sch"
+			(at 116.84 53.9246 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 78.74 66.04)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e15b2ef1-1da3-413f-9d76-ae86a74f8425")
+		(property "Sheetname" "Printer port"
+			(at 78.74 65.3284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "printer_port.kicad_sch"
+			(at 78.74 84.4046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 78.74 35.56)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f4191360-82a0-499d-bb29-833bf852803f")
+		(property "Sheetname" "Buffers and transceivers"
+			(at 78.74 34.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "buffers_transceivers.kicad_sch"
+			(at 78.74 53.9246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Printer_Interface"
+				(path "/75b66dbb-7202-4875-8695-2c14dee692f0"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
