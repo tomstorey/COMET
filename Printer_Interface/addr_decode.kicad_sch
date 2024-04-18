@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "ADDRESS DECODING")
-		(date "2024-04-04")
+		(date "2024-04-18")
 		(rev "1")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -4674,7 +4674,7 @@
 		)
 		(uuid "ad989c8e-7a33-4bfd-a6aa-e7ffe04f1daf")
 	)
-	(text "BASE ADDRESS + OFFSET +	0		DATA PORT\n						0x1		INTERRUPT VECTOR REGISTER\n						0x2		STATUS REGISTER\n						0x3		CONTROL REGISTER\n"
+	(text "BASE ADDRESS + OFFSET +	0		DATA PORT\n						0x1		INTERRUPT VECTOR REGISTER\n						0x2		CONTROL REGISTER\n						0x3		STATUS REGISTER\n"
 		(exclude_from_sim no)
 		(at 187.96 137.16 0)
 		(effects
