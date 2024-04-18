@@ -12,12 +12,12 @@ This document outlines the progress for the following design:
 |--|--|
 | Schematic | Complete |
 | PCB layout | Complete |
-| PLD logic | In progress |
-| PCB build | Not started |
-| Functional testing | Not started |
+| PLD logic | Complete |
+| PCB build | Complete |
+| Functional testing | Complete |
 | Further revision | None |
 
-The overall status for this design is: **Work in progress**
+The overall status for this design is: **Stable**
 
 ## Revision History
 
