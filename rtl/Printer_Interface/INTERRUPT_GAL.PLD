@@ -1,6 +1,6 @@
 Name     INTERRUPT_GAL ;
 PartNo   00 ;
-Date     12/03/2024 ;
+Date     17/04/2024 ;
 Revision 01 ;
 Designer Tom Storey ;
 Company  COMET68k ;
@@ -12,35 +12,35 @@ Device   g16v8a ;
 $DEFINE M_WAITING 'b'0
 $DEFINE M_REQUESTING 'b'1
 
-/*************************** INPUTS ***************************/
+/*********************************** INPUTS ************************************/
 PIN 1 = clk;
 PIN 2 = !iackin;
 PIN 3 = !iack;
 PIN 4 = irq_en;
-PIN 7 = !irq_in1;
-PIN 8 = irq_in2;
+PIN 8 = !irq_in1;
+PIN 9 = irq_in2;
 
-/*************************** OUTPUTS **************************/
+/*********************************** OUTPUTS ***********************************/
 PIN 17 = !irq_drv;
 PIN 18 = !vec;
 PIN 19 = !iackout;
 
-/************************** INTERNAL **************************/
-PIN 16 = state;
+/********************************** INTERNAL ***********************************/
+PIN 12 = state;
 
-/************************** EQUATIONS *************************/
+/********************************** EQUATIONS **********************************/
 
 /* Assert IRQ whenever either of the IRQ inputs is asserted */
 irq_drv = irq_en & (irq_in1 # irq_in2);
 
 /* IACKIN may only be passed along if we are not an active interruptor that is
  * being acknowledged */
-iackout = state:M_WAITING & iackin #
-          state:M_REQUESTING & iackin & !iack;
+iackout = iackin & (state:M_WAITING #
+                    state:M_REQUESTING & !iack);
 
 /* Assert vector acquire output during interrupt acknowledge when we are the
  * interruptor being serviced */
-vec = state:M_REQUESTING & iackin & iack;
+vec = iackin & state:M_REQUESTING & iack;
 
 /* Interruptor state machine
  *
