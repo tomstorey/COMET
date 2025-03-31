@@ -2,7 +2,7 @@
 	(version 20231120)
 	(generator "eeschema")
 	(generator_version "8.0")
-	(uuid "4f90dc25-658e-4838-9127-42014c331923")
+	(uuid "452d5d9d-5dd5-4265-a47b-090a2b80fd12")
 	(paper "A4")
 	(title_block
 		(title "FPGA HOST INTERFACE")
@@ -273,6 +273,156 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "COMET_symbols:LED"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "COMET_footprints:LED_SMD0805"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2057,6 +2207,24 @@
 						)
 					)
 				)
+				(pin output line
+					(at 17.78 10.16 180)
+					(length 5.08)
+					(name "IN_USE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin input clock
 					(at -17.78 63.5 0)
 					(length 5.08)
@@ -2859,6 +3027,16 @@
 		)
 		(uuid "00554079-6a2f-4366-b55f-62efb20059ea")
 	)
+	(wire
+		(pts
+			(xy 152.4 99.06) (xy 152.4 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0407254d-e392-4301-aa95-ae26898ddab1")
+	)
 	(bus
 		(pts
 			(xy 43.18 99.06) (xy 43.18 96.52)
@@ -3078,6 +3256,16 @@
 			(type default)
 		)
 		(uuid "2bf5e035-65c9-4f11-a3fc-f5c33680b81d")
+	)
+	(wire
+		(pts
+			(xy 93.98 99.06) (xy 121.92 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c02968a-f301-43dc-93fb-eeaaafd50dca")
 	)
 	(wire
 		(pts
@@ -3541,6 +3729,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 99.06) (xy 134.62 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d7dc9c4-7315-4cb9-a04a-6884e21c87dc")
+	)
+	(wire
+		(pts
 			(xy 45.72 88.9) (xy 53.34 88.9)
 		)
 		(stroke
@@ -3558,6 +3756,16 @@
 			(type default)
 		)
 		(uuid "a012bf20-6e6d-4d8b-b572-65b800040745")
+	)
+	(wire
+		(pts
+			(xy 144.78 99.06) (xy 152.4 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a21b9c1e-58aa-4027-846d-5c166caddbc0")
 	)
 	(wire
 		(pts
@@ -5270,6 +5478,9 @@
 		(pin ""
 			(uuid "83f6e9ae-89b2-4115-9f24-c0fd695142aa")
 		)
+		(pin ""
+			(uuid "49bfae94-a1ee-4786-ad5b-c48b85a1b110")
+		)
 		(instances
 			(project "Video_Card"
 				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4/8217a928-c177-438d-95d3-465bb0f88b4c"
@@ -5760,6 +5971,210 @@
 				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4/8217a928-c177-438d-95d3-465bb0f88b4c"
 					(reference "U8")
 					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "COMET_symbols:LED")
+		(at 139.7 99.06 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92f75b45-9d99-4db2-92dd-74ba206ba142")
+		(property "Reference" "D4"
+			(at 141.2875 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GREEN"
+			(at 141.2875 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "COMET_footprints:LED_SMD0805"
+			(at 139.7 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "69388ece-00ed-4ad9-950a-07395b33c186")
+		)
+		(pin "2"
+			(uuid "0041133d-b5e1-4b12-9e17-a9bb9c7e61bb")
+		)
+		(instances
+			(project "Video_Card"
+				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4/8217a928-c177-438d-95d3-465bb0f88b4c"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 152.4 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "94c784f8-68c1-44fb-b6ca-fa5b9cb43d91")
+		(property "Reference" "#PWR033"
+			(at 152.4 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 152.4 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 152.4 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e6d3b500-00b0-410e-874c-88a3d5764377")
+		)
+		(instances
+			(project "Video_Card"
+				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4/8217a928-c177-438d-95d3-465bb0f88b4c"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "COMET_symbols:R")
+		(at 127 99.06 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "950d5409-0f7b-4e79-8ca1-1c9c4c7aae14")
+		(property "Reference" "R11"
+			(at 127 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1K"
+			(at 127 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "COMET_footprints:R_SMD0805"
+			(at 127 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 127 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ba1ec59a-cdca-47ee-9650-5ac12a4f3248")
+		)
+		(pin "1"
+			(uuid "5e4ab421-f097-4a92-b118-80a9194f82e1")
+		)
+		(instances
+			(project "Video_Card"
+				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4/8217a928-c177-438d-95d3-465bb0f88b4c"
+					(reference "R11")
+					(unit 1)
 				)
 			)
 		)

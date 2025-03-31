@@ -2875,6 +2875,24 @@
 						)
 					)
 				)
+				(pin output line
+					(at 17.78 10.16 180)
+					(length 5.08)
+					(name "IN_USE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin input clock
 					(at -17.78 63.5 0)
 					(length 5.08)
@@ -6799,6 +6817,9 @@
 		(pin ""
 			(uuid "2607d9c8-97d0-4bb9-bbd4-f374c15d7a69")
 		)
+		(pin ""
+			(uuid "58f07665-3e3f-43c5-b204-603ec861d7a9")
+		)
 		(instances
 			(project ""
 				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4/dda2f9f0-48ba-4430-bf7d-c9f8fdf15897"
@@ -8732,6 +8753,9 @@
 		)
 		(pin ""
 			(uuid "6f8997e5-5766-47d4-8780-7990a511bf6d")
+		)
+		(pin ""
+			(uuid "eddd27df-b7df-44ad-ac04-5965b1723bcc")
 		)
 		(instances
 			(project ""
