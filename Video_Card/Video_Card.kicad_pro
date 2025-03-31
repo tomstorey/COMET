@@ -440,7 +440,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.2032,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -450,9 +450,9 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
+        "track_width": 0.2032,
+        "via_diameter": 0.66,
+        "via_drill": 0.4,
         "wire_width": 6
       }
     ],
@@ -583,7 +583,23 @@
     ],
     [
       "e1f658c3-76d6-4ea0-afb3-b5c03ebbe336",
-      "Expansion bus"
+      "Expansion bus connector"
+    ],
+    [
+      "6902519a-82e7-4b96-a6f6-d08f99251d96",
+      "Data bus buffers"
+    ],
+    [
+      "cee867c2-6f9f-48de-a89c-5412c7a35c84",
+      "Address bus buffers"
+    ],
+    [
+      "dda2f9f0-48ba-4430-bf7d-c9f8fdf15897",
+      "Promulator"
+    ],
+    [
+      "8217a928-c177-438d-95d3-465bb0f88b4c",
+      "FPGA host interface"
     ]
   ],
   "text_variables": {}
