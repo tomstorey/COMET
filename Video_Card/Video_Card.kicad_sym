@@ -32,7 +32,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 -5.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -41,7 +41,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 -5.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1298,6 +1298,78 @@
 					)
 				)
 			)
+			(pin input line
+				(at 17.78 -20.32 180)
+				(length 5.08)
+				(name "CFG0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 17.78 -22.86 180)
+				(length 5.08)
+				(name "CFG1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 17.78 -25.4 180)
+				(length 5.08)
+				(name "CFG2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 17.78 -27.94 180)
+				(length 5.08)
+				(name "CFG3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin output line
 				(at 17.78 -63.5 180)
 				(length 5.08)
@@ -1914,6 +1986,264 @@
 				(at -17.78 48.26 0)
 				(length 5.08)
 				(name "~{WRITE}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "FPGA_dev_4_1"
+			(rectangle
+				(start -20.32 12.7)
+				(end 20.32 -12.7)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(text "FPGA\nCLOCKS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 2.54 2.54)
+					)
+				)
+			)
+			(pin input clock
+				(at -25.4 -10.16 0)
+				(length 5.08)
+				(name "25.175MHZ"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input clock
+				(at -25.4 -7.62 0)
+				(length 5.08)
+				(name "28.322MHZ"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input clock
+				(at -25.4 10.16 0)
+				(length 5.08)
+				(name "50MHZ"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 25.4 10.16 180)
+				(length 5.08)
+				(name "KBCLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 25.4 -7.62 180)
+				(length 5.08)
+				(name "PCLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "FPGA_dev_5_1"
+			(rectangle
+				(start -7.62 35.56)
+				(end 7.62 -38.1)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(text "EXP'N\nROM\nI/F"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 2.54 2.54)
+					)
+				)
+			)
+			(pin output line
+				(at 12.7 -17.78 180)
+				(length 5.08)
+				(name "LREG_LE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 12.7 -35.56 180)
+				(length 5.08)
+				(name "ROM_A0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 12.7 30.48 180)
+				(length 5.08)
+				(name "UBUF_DIR"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 12.7 -15.24 180)
+				(length 5.08)
+				(name "~{LREG_OE}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 12.7 -27.94 180)
+				(length 5.08)
+				(name "~{ROM_OE}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 12.7 -30.48 180)
+				(length 5.08)
+				(name "~{ROM_WE}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 12.7 33.02 180)
+				(length 5.08)
+				(name "~{UBUF_OE}"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5333,7 +5663,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin input clock
 				(at 12.7 2.54 180)
 				(length 5.08)
 				(name "SCK"

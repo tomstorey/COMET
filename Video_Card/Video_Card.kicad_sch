@@ -13,6 +13,44 @@
 	)
 	(lib_symbols)
 	(sheet
+		(at 104.14 53.34)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "37f8fef1-8a18-416a-926e-8beadcc7297f")
+		(property "Sheetname" "FPGA clocks"
+			(at 104.14 52.6284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fpga_clocks.kicad_sch"
+			(at 104.14 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Video_Card"
+				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 66.04 25.4)
 		(size 30.48 17.78)
 		(fields_autoplaced yes)
@@ -46,6 +84,44 @@
 			(project "Video_Card"
 				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 81.28)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7db2e550-8c41-4f4c-b1c2-f8f8690d43d4")
+		(property "Sheetname" "Expansion ROM"
+			(at 27.94 80.5684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "exp_rom.kicad_sch"
+			(at 27.94 99.6446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Video_Card"
+				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4"
+					(page "8")
 				)
 			)
 		)
