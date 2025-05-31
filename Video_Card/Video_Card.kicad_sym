@@ -2825,8 +2825,8 @@
 		)
 		(symbol "FPGA_dev_5_1"
 			(rectangle
-				(start -7.62 35.56)
-				(end 7.62 -38.1)
+				(start -7.62 45.72)
+				(end 7.62 -45.72)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -2844,25 +2844,7 @@
 				)
 			)
 			(pin output line
-				(at 12.7 -17.78 180)
-				(length 5.08)
-				(name "LREG_LE"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number ""
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 12.7 -35.56 180)
+				(at 12.7 -43.18 180)
 				(length 5.08)
 				(name "ROM_A0"
 					(effects
@@ -2880,7 +2862,7 @@
 				)
 			)
 			(pin output line
-				(at 12.7 30.48 180)
+				(at 12.7 40.64 180)
 				(length 5.08)
 				(name "UBUF_DIR"
 					(effects
@@ -2897,8 +2879,44 @@
 					)
 				)
 			)
-			(pin output line
-				(at 12.7 -15.24 180)
+			(pin output inverted
+				(at 12.7 -22.86 180)
+				(length 5.08)
+				(name "~{LBUF_OE}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output inverted
+				(at 12.7 -25.4 180)
+				(length 5.08)
+				(name "~{LREG_LE}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output inverted
+				(at 12.7 -27.94 180)
 				(length 5.08)
 				(name "~{LREG_OE}"
 					(effects
@@ -2915,8 +2933,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at 12.7 -27.94 180)
+			(pin output inverted
+				(at 12.7 -35.56 180)
 				(length 5.08)
 				(name "~{ROM_OE}"
 					(effects
@@ -2933,8 +2951,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at 12.7 -30.48 180)
+			(pin output inverted
+				(at 12.7 -38.1 180)
 				(length 5.08)
 				(name "~{ROM_WE}"
 					(effects
@@ -2951,8 +2969,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at 12.7 33.02 180)
+			(pin output inverted
+				(at 12.7 43.18 180)
 				(length 5.08)
 				(name "~{UBUF_OE}"
 					(effects
@@ -5382,7 +5400,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 0 43.18 0)
+			(at 0 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5390,7 +5408,7 @@
 			)
 		)
 		(property "Value" "SN74CBT16212CDLR"
-			(at 0 40.64 0)
+			(at 0 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5398,7 +5416,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SSOP56-1"
-			(at 0 -40.64 0)
+			(at 0 -43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5407,7 +5425,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74cbt16212c.pdf"
-			(at 0 -40.64 0)
+			(at 0 -43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5416,7 +5434,7 @@
 			)
 		)
 		(property "Description" "24-bit FET bus exchange switch"
-			(at 0 -40.64 0)
+			(at 0 -43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5434,8 +5452,8 @@
 		)
 		(symbol "SN74CBT16212CDLR_1_1"
 			(rectangle
-				(start -12.7 38.1)
-				(end 12.7 -38.1)
+				(start -12.7 40.64)
+				(end 12.7 -40.64)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -5446,7 +5464,7 @@
 			)
 			(polyline
 				(pts
-					(xy 0.635 0) (xy 5.08 0)
+					(xy 0.635 1.27) (xy 5.08 1.27)
 				)
 				(stroke
 					(width 0.254)
@@ -5458,7 +5476,7 @@
 			)
 			(polyline
 				(pts
-					(xy 0.635 10.16) (xy 5.08 10.16)
+					(xy 0.635 11.43) (xy 5.08 11.43)
 				)
 				(stroke
 					(width 0.254)
@@ -5470,7 +5488,7 @@
 			)
 			(polyline
 				(pts
-					(xy -5.08 0) (xy -0.635 0) (xy 0.635 0.635)
+					(xy -5.08 1.27) (xy -0.635 1.27) (xy 0.635 1.905)
 				)
 				(stroke
 					(width 0.254)
@@ -5482,7 +5500,7 @@
 			)
 			(polyline
 				(pts
-					(xy -5.08 10.16) (xy -0.635 10.16) (xy 0.635 10.795)
+					(xy -5.08 11.43) (xy -0.635 11.43) (xy 0.635 12.065)
 				)
 				(stroke
 					(width 0.254)
@@ -5494,7 +5512,7 @@
 			)
 			(polyline
 				(pts
-					(xy -2.54 10.16) (xy -2.54 8.89) (xy -1.905 7.62)
+					(xy -2.54 11.43) (xy -2.54 10.16) (xy -1.905 8.89)
 				)
 				(stroke
 					(width 0.254)
@@ -5506,7 +5524,7 @@
 			)
 			(polyline
 				(pts
-					(xy 2.54 10.16) (xy 2.54 8.89) (xy 3.175 7.62)
+					(xy 2.54 11.43) (xy 2.54 10.16) (xy 3.175 8.89)
 				)
 				(stroke
 					(width 0.254)
@@ -5518,7 +5536,7 @@
 			)
 			(polyline
 				(pts
-					(xy -2.54 0) (xy -2.54 2.54) (xy 2.54 5.08) (xy 2.54 7.62)
+					(xy -2.54 1.27) (xy -2.54 3.81) (xy 2.54 6.35) (xy 2.54 8.89)
 				)
 				(stroke
 					(width 0.254)
@@ -5530,7 +5548,7 @@
 			)
 			(polyline
 				(pts
-					(xy 2.54 0) (xy 2.54 2.54) (xy -2.54 5.08) (xy -2.54 7.62)
+					(xy 2.54 1.27) (xy 2.54 3.81) (xy -2.54 6.35) (xy -2.54 8.89)
 				)
 				(stroke
 					(width 0.254)
@@ -5541,7 +5559,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 -30.48 0)
+				(at -17.78 -33.02 0)
 				(length 5.08)
 				(name "S0"
 					(effects
@@ -5577,7 +5595,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 25.4 0)
+				(at -17.78 27.94 0)
 				(length 5.08)
 				(name "5A1"
 					(effects
@@ -5613,7 +5631,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 22.86 0)
+				(at -17.78 25.4 0)
 				(length 5.08)
 				(name "6A1"
 					(effects
@@ -5649,7 +5667,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 20.32 0)
+				(at -17.78 22.86 0)
 				(length 5.08)
 				(name "7A1"
 					(effects
@@ -5685,7 +5703,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 17.78 0)
+				(at -17.78 20.32 0)
 				(length 5.08)
 				(name "8A1"
 					(effects
@@ -5703,7 +5721,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 35.56 0)
+				(at -17.78 38.1 0)
 				(length 5.08)
 				(name "1A1"
 					(effects
@@ -5739,7 +5757,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 15.24 0)
+				(at -17.78 17.78 0)
 				(length 5.08)
 				(name "9A1"
 					(effects
@@ -5775,7 +5793,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 12.7 0)
+				(at -17.78 15.24 0)
 				(length 5.08)
 				(name "10A1"
 					(effects
@@ -5811,7 +5829,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 10.16 0)
+				(at -17.78 12.7 0)
 				(length 5.08)
 				(name "11A1"
 					(effects
@@ -5847,7 +5865,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 7.62 0)
+				(at -17.78 10.16 0)
 				(length 5.08)
 				(name "12A1"
 					(effects
@@ -5919,7 +5937,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 7.62 180)
+				(at 17.78 10.16 180)
 				(length 5.08)
 				(name "12B1"
 					(effects
@@ -5955,7 +5973,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 10.16 180)
+				(at 17.78 12.7 180)
 				(length 5.08)
 				(name "11B1"
 					(effects
@@ -5991,7 +6009,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 12.7 180)
+				(at 17.78 15.24 180)
 				(length 5.08)
 				(name "10B1"
 					(effects
@@ -6027,7 +6045,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 15.24 180)
+				(at 17.78 17.78 180)
 				(length 5.08)
 				(name "9B1"
 					(effects
@@ -6063,7 +6081,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 17.78 180)
+				(at 17.78 20.32 180)
 				(length 5.08)
 				(name "8B1"
 					(effects
@@ -6081,7 +6099,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 33.02 0)
+				(at -17.78 35.56 0)
 				(length 5.08)
 				(name "2A1"
 					(effects
@@ -6117,7 +6135,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 20.32 180)
+				(at 17.78 22.86 180)
 				(length 5.08)
 				(name "7B1"
 					(effects
@@ -6153,7 +6171,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 22.86 180)
+				(at 17.78 25.4 180)
 				(length 5.08)
 				(name "6B1"
 					(effects
@@ -6189,7 +6207,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 25.4 180)
+				(at 17.78 27.94 180)
 				(length 5.08)
 				(name "5B1"
 					(effects
@@ -6225,7 +6243,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 27.94 180)
+				(at 17.78 30.48 180)
 				(length 5.08)
 				(name "4B1"
 					(effects
@@ -6279,7 +6297,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 30.48 180)
+				(at 17.78 33.02 180)
 				(length 5.08)
 				(name "3B1"
 					(effects
@@ -6315,7 +6333,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 33.02 180)
+				(at 17.78 35.56 180)
 				(length 5.08)
 				(name "2B1"
 					(effects
@@ -6351,7 +6369,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 35.56 180)
+				(at 17.78 38.1 180)
 				(length 5.08)
 				(name "1B1"
 					(effects
@@ -6369,7 +6387,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 -33.02 0)
+				(at -17.78 -35.56 0)
 				(length 5.08)
 				(name "S1"
 					(effects
@@ -6387,7 +6405,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 -35.56 0)
+				(at -17.78 -38.1 0)
 				(length 5.08)
 				(name "S2"
 					(effects
@@ -6405,7 +6423,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 30.48 0)
+				(at -17.78 33.02 0)
 				(length 5.08)
 				(name "3A1"
 					(effects
@@ -6441,7 +6459,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 27.94 0)
+				(at -17.78 30.48 0)
 				(length 5.08)
 				(name "4A1"
 					(effects

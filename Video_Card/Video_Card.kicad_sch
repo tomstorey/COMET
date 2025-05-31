@@ -51,6 +51,44 @@
 		)
 	)
 	(sheet
+		(at 66.04 109.22)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4c651430-12b5-4ac9-bd48-63816f1996d8")
+		(property "Sheetname" "Regen memory banks"
+			(at 66.04 108.5084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "regen_mem.kicad_sch"
+			(at 66.04 127.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Video_Card"
+				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 27.94 81.28)
 		(size 30.48 17.78)
 		(fields_autoplaced yes)
@@ -198,6 +236,44 @@
 			(project "Video_Card"
 				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4"
 					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 109.22)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b16fc2f8-d4da-4626-b4cc-4a1b97dc0c8b")
+		(property "Sheetname" "Regen bus mux"
+			(at 27.94 108.5084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "regen_bus_mux.kicad_sch"
+			(at 27.94 127.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Video_Card"
+				(path "/ae665dca-cabf-48ec-b560-2bab32dde7c4"
+					(page "10")
 				)
 			)
 		)
