@@ -427,7 +427,9 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
+    "pinned_footprint_libs": [
+      "Video_Card"
+    ],
     "pinned_symbol_libs": [
       "Video_Card"
     ]
@@ -566,7 +568,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "",
+    "plot_directory": "./",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -606,20 +608,40 @@
       "FPGA clocks"
     ],
     [
-      "5e087399-1e9b-4e79-be09-800c644667de",
-      "RAMDAC"
+      "be9834dd-e56f-41c0-b840-285eaf27780d",
+      "FPGA regen memory interface"
+    ],
+    [
+      "a61e69a2-f5e5-4f5a-84e9-a98872b42d7a",
+      "Regen bus mux 1"
+    ],
+    [
+      "07866cdd-bcca-4b2a-be06-53e0b51f1852",
+      "Regen bus mux 2"
+    ],
+    [
+      "b617fd2b-5d28-4d3a-a80f-06a0133dd182",
+      "Regen bus mux 3"
+    ],
+    [
+      "4c651430-12b5-4ac9-bd48-63816f1996d8",
+      "Regen memory banks"
     ],
     [
       "7db2e550-8c41-4f4c-b1c2-f8f8690d43d4",
       "Expansion ROM"
     ],
     [
-      "b16fc2f8-d4da-4626-b4cc-4a1b97dc0c8b",
-      "Regen bus mux"
+      "5e087399-1e9b-4e79-be09-800c644667de",
+      "RAMDAC"
     ],
     [
-      "4c651430-12b5-4ac9-bd48-63816f1996d8",
-      "Regen memory banks"
+      "c4babace-3ffc-4e9b-ab46-6b2a13674464",
+      "I2C controller"
+    ],
+    [
+      "0553e66b-7469-4057-a165-a633275d8972",
+      "Keyboard controller"
     ]
   ],
   "text_variables": {}
