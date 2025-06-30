@@ -1,0 +1,204 @@
+(footprint "Fuse_2920_7451Metric"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Fuse SMD 2920 (7451 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size from: http://www.megastar.com/products/fusetronic/polyswitch/PDF/smd2920.pdf), generated with kicad-footprint-generator")
+	(tags "fuse")
+	(property "Reference" "REF**"
+		(at 0 -3.68 0)
+		(layer "F.SilkS")
+		(uuid "1f8609af-0e9a-4873-9c12-b887744f4364")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Fuse_2920_7451Metric"
+		(at 0 3.68 0)
+		(layer "F.Fab")
+		(uuid "f7ffdb2c-9f5f-4b2e-9536-465daa8a4237")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bd412fa3-a974-44f3-b2ca-5762967fe01e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "808fb049-1372-4cd6-920c-1601e61e7c6e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ecefc858-f98d-457d-b822-54c901486500")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.203752 -2.67)
+		(end 2.203752 -2.67)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "226add76-4cac-4a99-bb99-b60177b43ece")
+	)
+	(fp_line
+		(start -2.203752 2.67)
+		(end 2.203752 2.67)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "700dd196-14c4-49ad-a7bb-626dd1dc8949")
+	)
+	(fp_line
+		(start -4.6 -2.98)
+		(end 4.6 -2.98)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fb6554f1-1162-4c75-b357-3c1173884d8b")
+	)
+	(fp_line
+		(start -4.6 2.98)
+		(end -4.6 -2.98)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "19248760-f39b-4f0d-95c5-8ee42973afc1")
+	)
+	(fp_line
+		(start 4.6 -2.98)
+		(end 4.6 2.98)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ffd6c53c-5ee4-45d3-bc64-a78482ceebb6")
+	)
+	(fp_line
+		(start 4.6 2.98)
+		(end -4.6 2.98)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5d3198bb-95c8-48a8-b3c9-00bff30d4586")
+	)
+	(fp_line
+		(start -3.6775 -2.56)
+		(end 3.6775 -2.56)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "48e289c8-702c-492b-90bd-f668ba74676a")
+	)
+	(fp_line
+		(start -3.6775 2.56)
+		(end -3.6775 -2.56)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9bbdaac5-5b6c-4e88-b3c2-f034b31bcfea")
+	)
+	(fp_line
+		(start 3.6775 -2.56)
+		(end 3.6775 2.56)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1ce4dfb7-0630-420c-9ddb-33b49b37a0cd")
+	)
+	(fp_line
+		(start 3.6775 2.56)
+		(end -3.6775 2.56)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1b94c8d0-c10d-4ced-8e98-bb29958c6aad")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "c918c99d-f4da-4fb0-9806-483f372d9dd7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3.3875 0)
+		(size 1.925 5.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "e7ea846d-5a71-4cb1-a568-802f0177aad9")
+	)
+	(pad "2" smd rect
+		(at 3.3875 0)
+		(size 1.925 5.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "66257c59-c813-43ef-9634-19189070c24e")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Fuse.3dshapes/Fuse_2920_7451Metric.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

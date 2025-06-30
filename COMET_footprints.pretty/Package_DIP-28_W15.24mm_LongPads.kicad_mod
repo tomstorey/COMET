@@ -454,8 +454,31 @@
 		(uuid "9f312f8c-fe59-4a2d-a1ec-08cf68163b12")
 	)
 	(model "${KICAD8_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-28_W15.24mm.wrl"
+		(hide yes)
 		(offset
+			(xyz -7.63 16.5 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
 			(xyz 0 0 0)
+		)
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-28_W15.24mm.wrl"
+		(offset
+			(xyz -7.63 16.5 4.65)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "C:/Projects/git/COMET/3dmodels/AR28-HZL-TT.stp"
+		(offset
+			(xyz 0 0 1.6)
 		)
 		(scale
 			(xyz 1 1 1)
