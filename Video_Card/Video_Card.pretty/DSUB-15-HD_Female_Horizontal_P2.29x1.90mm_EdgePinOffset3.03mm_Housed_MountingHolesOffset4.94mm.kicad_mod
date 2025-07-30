@@ -1,7 +1,7 @@
 (footprint "DSUB-15-HD_Female_Horizontal_P2.29x1.90mm_EdgePinOffset3.03mm_Housed_MountingHolesOffset4.94mm"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "15-pin D-Sub connector, horizontal/angled (90 deg), THT-mount, female, pitch 2.29x1.9mm, pin-PCB-offset 3.03mm, distance of mounting holes 25mm, distance of mounting holes to PCB edge 4.94mm, see https://disti-assets.s3.amazonaws.com/tonar/files/datasheets/16730.pdf")
 	(tags "15-pin D-Sub connector horizontal angled 90deg THT female pitch 2.29x1.9mm pin-PCB-offset 3.03mm mounting-holes-distance 25mm mounting-hole-offset 4.94mm")
@@ -23,18 +23,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "65edc8a2-b34b-4561-b9e2-a7116ab39d97")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -573,6 +561,7 @@
 		(remove_unused_layers no)
 		(uuid "398475f3-f1cd-4bc3-bd28-1c970557b61b")
 	)
+	(embedded_fonts no)
 	(model "../3dmodels/VGA-DB15F_slim.stp"
 		(offset
 			(xyz -4.32 -1.9 0)
@@ -582,6 +571,17 @@
 		)
 		(rotate
 			(xyz 0 0 0)
+		)
+	)
+	(model "../3dmodels/VGA-DB15F_slim_blue.step"
+		(offset
+			(xyz -4.32 -1.9 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
 		)
 	)
 )
