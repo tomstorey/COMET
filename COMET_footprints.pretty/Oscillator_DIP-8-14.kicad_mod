@@ -1,7 +1,7 @@
 (footprint "Oscillator_DIP-8-14"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "Oscillator, combo DIP8/14 footprint")
 	(tags "oscillator")
@@ -23,19 +23,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at -7.62 3.81 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "ee6a3527-b2e7-403d-ab28-b44f4f6e307d")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -366,6 +353,7 @@
 		(remove_unused_layers no)
 		(uuid "117d26aa-2084-4ca8-b221-073a726b8b99")
 	)
+	(embedded_fonts no)
 	(model "${KICAD8_3DMODEL_DIR}/Oscillator.3dshapes/Oscillator_DIP-14.wrl"
 		(offset
 			(xyz -7.62 -3.81 0)

@@ -1,7 +1,7 @@
 (footprint "Package_DIP-8_W7.62mm_LongPads"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "8-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), LongPads")
 	(tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads")
@@ -23,18 +23,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "4d4c4182-9a15-4985-8baf-93fd46da41e7")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -231,7 +219,8 @@
 		(size 2.4 1.6)
 		(drill 0.8)
 		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
 		(uuid "24b25f63-75a2-4e72-a646-e4c12bce101c")
 	)
 	(pad "2" thru_hole oval
@@ -239,7 +228,8 @@
 		(size 2.4 1.6)
 		(drill 0.8)
 		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
 		(uuid "4377e25b-aecb-48ef-8708-33be152a4c1c")
 	)
 	(pad "3" thru_hole oval
@@ -247,7 +237,8 @@
 		(size 2.4 1.6)
 		(drill 0.8)
 		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
 		(uuid "289961c6-ae87-429e-8fa6-ec90b0720512")
 	)
 	(pad "4" thru_hole oval
@@ -255,7 +246,8 @@
 		(size 2.4 1.6)
 		(drill 0.8)
 		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
 		(uuid "6788b8e6-39a4-47d1-aa83-c8678122de98")
 	)
 	(pad "5" thru_hole oval
@@ -263,7 +255,8 @@
 		(size 2.4 1.6)
 		(drill 0.8)
 		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
 		(uuid "0bce05eb-4f92-4020-8eef-0ebdc1f158f9")
 	)
 	(pad "6" thru_hole oval
@@ -271,7 +264,8 @@
 		(size 2.4 1.6)
 		(drill 0.8)
 		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
 		(uuid "d24744d7-d6ac-4f4b-b8e0-af164931ebfb")
 	)
 	(pad "7" thru_hole oval
@@ -279,7 +273,8 @@
 		(size 2.4 1.6)
 		(drill 0.8)
 		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
 		(uuid "8b903ef4-bf83-462d-85e3-553b509a3c3e")
 	)
 	(pad "8" thru_hole oval
@@ -287,9 +282,11 @@
 		(size 2.4 1.6)
 		(drill 0.8)
 		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
 		(uuid "2c80fe43-fbfc-414a-81b0-f7f495f44492")
 	)
+	(embedded_fonts no)
 	(model "${KICAD6_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-8_W7.62mm.wrl"
 		(offset
 			(xyz -3.81 3.81 0)

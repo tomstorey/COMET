@@ -1,7 +1,7 @@
 (footprint "C_SMD_4.3MMx7.3MM"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 -0.5 0)
@@ -23,18 +23,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "9ac7fb6b-63c9-4221-8b28-b121eebb5016")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -65,8 +53,8 @@
 	)
 	(attr smd)
 	(fp_line
-		(start -4.445 -2.921)
-		(end 4.445 -2.921)
+		(start -4.445 -2.667)
+		(end 4.445 -2.667)
 		(stroke
 			(width 0.2032)
 			(type solid)
@@ -75,8 +63,8 @@
 		(uuid "0a65d281-46b3-4c01-9dca-fd136612aeb0")
 	)
 	(fp_line
-		(start -4.445 2.921)
-		(end 4.445 2.921)
+		(start -4.445 2.667)
+		(end 4.445 2.667)
 		(stroke
 			(width 0.2032)
 			(type solid)
@@ -85,8 +73,8 @@
 		(uuid "6fdfd515-6a5a-4191-af77-7ca25603dcc4")
 	)
 	(fp_line
-		(start 4.445 -2.921)
-		(end 4.445 2.921)
+		(start 4.445 -2.667)
+		(end 4.445 2.667)
 		(stroke
 			(width 0.2032)
 			(type solid)
@@ -95,19 +83,19 @@
 		(uuid "f268ee4b-ae1b-475c-b700-1edcf926ab6d")
 	)
 	(fp_rect
-		(start -4.445 -2.921)
-		(end -0.508 2.921)
+		(start -4.445 -2.667)
+		(end -0.508 2.667)
 		(stroke
 			(width 0.2032)
 			(type solid)
 		)
-		(fill solid)
+		(fill yes)
 		(layer "F.SilkS")
 		(uuid "78b53b91-f889-481c-8ddd-99f70682ca78")
 	)
 	(fp_line
-		(start -4.445 -2.921)
-		(end 4.445 -2.921)
+		(start -4.445 -2.667)
+		(end 4.445 -2.667)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -116,8 +104,8 @@
 		(uuid "7018800a-7ce7-4f86-9d26-1de17ca24d1a")
 	)
 	(fp_line
-		(start -4.445 2.921)
-		(end -4.445 -2.921)
+		(start -4.445 2.667)
+		(end -4.445 -2.667)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -126,8 +114,8 @@
 		(uuid "9779ce4d-86ac-43f5-ac1e-29f4a84b648b")
 	)
 	(fp_line
-		(start 4.445 -2.921)
-		(end 4.445 2.921)
+		(start 4.445 -2.667)
+		(end 4.445 2.667)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -136,8 +124,8 @@
 		(uuid "c1ea5583-7cda-49ae-81d9-baeb0e441e11")
 	)
 	(fp_line
-		(start 4.445 2.921)
-		(end -4.445 2.921)
+		(start 4.445 2.667)
+		(end -4.445 2.667)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -173,15 +161,16 @@
 	(pad "1" smd rect
 		(at -3 0)
 		(size 2 5)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "049b98cc-b79a-4713-8cb2-600e1d60ee23")
 	)
 	(pad "2" smd rect
 		(at 3 0)
 		(size 2 5)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "625ff530-2100-4004-88a0-1602aced9fa4")
 	)
+	(embedded_fonts no)
 	(model "../3dmodels/D 7343-31.step"
 		(offset
 			(xyz 0 0 0)
