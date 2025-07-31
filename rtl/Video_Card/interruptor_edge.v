@@ -44,7 +44,7 @@ module interruptor_edge(
 	output irq_drv;
 	
 	/* Public parameters **************************************************************************/
-	parameter ILMATCH = 5;		/* Supply as parameter to instance */
+	parameter ILMATCH = 0;		/* Supply as parameter to instance */
 	
 	/* Edge triggered clear ***********************************************************************/
 	wire clear_ff_out;
