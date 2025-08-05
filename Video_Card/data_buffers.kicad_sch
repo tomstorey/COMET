@@ -2334,15 +2334,15 @@
 		(uuid "ca90c7ea-4bc5-4c0a-905e-fb3accc5622b")
 	)
 	(no_connect
-		(at 251.46 149.86)
-		(uuid "1e2c517a-ee18-4913-8003-75787f1f8189")
+		(at 246.38 152.4)
+		(uuid "4366cb16-65bc-4e36-8864-3d984689affb")
 	)
 	(no_connect
-		(at 251.46 144.78)
+		(at 246.38 147.32)
 		(uuid "6742679c-d4cf-4979-bcaa-68ce03fce429")
 	)
 	(no_connect
-		(at 251.46 154.94)
+		(at 246.38 157.48)
 		(uuid "f69ddf31-25e4-4e07-ac81-230b57b88b0d")
 	)
 	(bus_entry
@@ -2809,7 +2809,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 63.5) (xy 175.26 88.9)
+			(xy 175.26 58.42) (xy 175.26 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3559,7 +3559,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 63.5) (xy 175.26 63.5)
+			(xy 172.72 58.42) (xy 175.26 58.42)
 		)
 		(stroke
 			(width 0)
@@ -4747,7 +4747,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 256.54 144.78 270)
+		(at 251.46 147.32 270)
 		(mirror x)
 		(unit 6)
 		(exclude_from_sim no)
@@ -4756,15 +4756,15 @@
 		(dnp no)
 		(uuid "0936231f-0a87-4bb8-aabe-7acc26aacd6e")
 		(property "Reference" "RN1"
-			(at 271.78 144.78 90)
+			(at 266.7 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 256.54 142.24 90)
+		(property "Value" "4K7"
+			(at 274.32 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4772,7 +4772,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 256.54 144.78 0)
+			(at 251.46 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4781,7 +4781,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 144.78 0)
+			(at 251.46 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4790,7 +4790,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 256.54 144.78 0)
+			(at 251.46 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4935,7 +4935,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 53.34 270)
+		(at 167.64 66.04 270)
 		(mirror x)
 		(unit 12)
 		(exclude_from_sim no)
@@ -4944,15 +4944,15 @@
 		(dnp no)
 		(uuid "177ce715-0794-47e5-989a-c64060e6a16b")
 		(property "Reference" "RN1"
-			(at 182.88 53.34 90)
+			(at 182.88 66.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 50.8 90)
+		(property "Value" "4K7"
+			(at 190.5 66.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4960,7 +4960,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 53.34 0)
+			(at 167.64 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4969,7 +4969,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 53.34 0)
+			(at 167.64 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4978,7 +4978,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 53.34 0)
+			(at 167.64 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5057,7 +5057,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 66.04 270)
+		(at 167.64 53.34 270)
 		(mirror x)
 		(unit 2)
 		(exclude_from_sim no)
@@ -5066,15 +5066,15 @@
 		(dnp no)
 		(uuid "34bed034-e71f-4b42-b73e-af9d16902ef0")
 		(property "Reference" "RN1"
-			(at 182.88 66.04 90)
+			(at 182.88 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 63.5 90)
+		(property "Value" "4K7"
+			(at 190.5 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5082,7 +5082,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 66.04 0)
+			(at 167.64 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5091,7 +5091,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 66.04 0)
+			(at 167.64 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5100,7 +5100,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 66.04 0)
+			(at 167.64 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5179,7 +5179,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 45.72 270)
+		(at 167.64 71.12 270)
 		(mirror x)
 		(unit 13)
 		(exclude_from_sim no)
@@ -5188,15 +5188,15 @@
 		(dnp no)
 		(uuid "3ee940ac-a8d7-4ff0-beb0-9c8a88d271e0")
 		(property "Reference" "RN1"
-			(at 182.88 45.72 90)
+			(at 182.88 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 43.18 90)
+		(property "Value" "4K7"
+			(at 190.5 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5204,7 +5204,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 45.72 0)
+			(at 167.64 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5213,7 +5213,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 45.72 0)
+			(at 167.64 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5222,7 +5222,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 45.72 0)
+			(at 167.64 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5301,7 +5301,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 256.54 154.94 270)
+		(at 251.46 157.48 270)
 		(mirror x)
 		(unit 16)
 		(exclude_from_sim no)
@@ -5310,15 +5310,15 @@
 		(dnp no)
 		(uuid "4b12dcbb-b878-4738-9da7-dc3ff4c6eeb5")
 		(property "Reference" "RN1"
-			(at 271.78 154.94 90)
+			(at 266.7 157.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 256.54 152.4 90)
+		(property "Value" "4K7"
+			(at 274.32 157.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5326,7 +5326,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 256.54 154.94 0)
+			(at 251.46 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5335,7 +5335,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 154.94 0)
+			(at 251.46 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5344,7 +5344,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 256.54 154.94 0)
+			(at 251.46 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5423,7 +5423,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 71.12 270)
+		(at 167.64 45.72 270)
 		(mirror x)
 		(unit 3)
 		(exclude_from_sim no)
@@ -5432,15 +5432,15 @@
 		(dnp no)
 		(uuid "5455ef88-2dec-4b82-addd-72591ee0aac3")
 		(property "Reference" "RN1"
-			(at 182.88 71.12 90)
+			(at 182.88 45.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 68.58 90)
+		(property "Value" "4K7"
+			(at 190.5 45.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5448,7 +5448,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 71.12 0)
+			(at 167.64 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5457,7 +5457,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 71.12 0)
+			(at 167.64 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5466,7 +5466,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 71.12 0)
+			(at 167.64 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5545,7 +5545,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 68.58 270)
+		(at 167.64 55.88 270)
 		(mirror x)
 		(unit 19)
 		(exclude_from_sim no)
@@ -5554,15 +5554,15 @@
 		(dnp no)
 		(uuid "587a2bbe-0e48-4186-bbd8-65cb62707548")
 		(property "Reference" "RN1"
-			(at 182.88 68.58 90)
+			(at 182.88 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 66.04 90)
+		(property "Value" "4K7"
+			(at 190.5 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5570,7 +5570,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 68.58 0)
+			(at 167.64 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5579,7 +5579,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 68.58 0)
+			(at 167.64 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5588,7 +5588,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 68.58 0)
+			(at 167.64 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5667,7 +5667,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 38.1 270)
+		(at 167.64 83.82 270)
 		(mirror x)
 		(unit 15)
 		(exclude_from_sim no)
@@ -5676,15 +5676,15 @@
 		(dnp no)
 		(uuid "63919a83-736d-4a6f-b442-c3df9a520ec8")
 		(property "Reference" "RN1"
-			(at 182.88 38.1 90)
+			(at 182.88 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 35.56 90)
+		(property "Value" "4K7"
+			(at 190.5 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5692,7 +5692,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 38.1 0)
+			(at 167.64 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5701,7 +5701,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 38.1 0)
+			(at 167.64 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5710,7 +5710,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 38.1 0)
+			(at 167.64 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5789,7 +5789,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 63.5 270)
+		(at 167.64 58.42 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5798,15 +5798,15 @@
 		(dnp no)
 		(uuid "689023d1-145c-43c7-bd2d-d1c76a0e84c1")
 		(property "Reference" "RN1"
-			(at 182.88 63.5 90)
+			(at 182.88 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 60.96 90)
+		(property "Value" "4K7"
+			(at 190.5 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5814,7 +5814,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 63.5 0)
+			(at 167.64 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5823,7 +5823,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 63.5 0)
+			(at 167.64 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5832,7 +5832,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 63.5 0)
+			(at 167.64 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5911,7 +5911,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 43.18 270)
+		(at 167.64 76.2 270)
 		(mirror x)
 		(unit 8)
 		(exclude_from_sim no)
@@ -5920,15 +5920,15 @@
 		(dnp no)
 		(uuid "6f2d56c6-4a98-4327-8395-d4745918417c")
 		(property "Reference" "RN1"
-			(at 182.88 43.18 90)
+			(at 182.88 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 40.64 90)
+		(property "Value" "4K7"
+			(at 190.5 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5936,7 +5936,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 43.18 0)
+			(at 167.64 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5945,7 +5945,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 43.18 0)
+			(at 167.64 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5954,7 +5954,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 43.18 0)
+			(at 167.64 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6239,7 +6239,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 76.2 270)
+		(at 167.64 50.8 270)
 		(mirror x)
 		(unit 18)
 		(exclude_from_sim no)
@@ -6248,15 +6248,15 @@
 		(dnp no)
 		(uuid "97f9e64a-6549-4cbc-a935-de6be47e3f67")
 		(property "Reference" "RN1"
-			(at 182.88 76.2 90)
+			(at 182.88 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 73.66 90)
+		(property "Value" "4K7"
+			(at 190.5 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6264,7 +6264,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 76.2 0)
+			(at 167.64 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6273,7 +6273,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 76.2 0)
+			(at 167.64 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6282,7 +6282,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 76.2 0)
+			(at 167.64 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6438,7 +6438,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 58.42 270)
+		(at 167.64 63.5 270)
 		(mirror x)
 		(unit 11)
 		(exclude_from_sim no)
@@ -6447,15 +6447,15 @@
 		(dnp no)
 		(uuid "ac4b3110-459b-4f5c-b4f2-bacde7d1e7b0")
 		(property "Reference" "RN1"
-			(at 182.88 58.42 90)
+			(at 182.88 63.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 55.88 90)
+		(property "Value" "4K7"
+			(at 190.5 63.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6463,7 +6463,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 58.42 0)
+			(at 167.64 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6472,7 +6472,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 58.42 0)
+			(at 167.64 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6481,7 +6481,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 58.42 0)
+			(at 167.64 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6560,7 +6560,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 50.8 270)
+		(at 167.64 68.58 270)
 		(mirror x)
 		(unit 9)
 		(exclude_from_sim no)
@@ -6569,15 +6569,15 @@
 		(dnp no)
 		(uuid "c69ed10d-3605-4555-a99f-c26169472aea")
 		(property "Reference" "RN1"
-			(at 182.88 50.8 90)
+			(at 182.88 68.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 48.26 90)
+		(property "Value" "4K7"
+			(at 190.5 68.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6585,7 +6585,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 50.8 0)
+			(at 167.64 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6594,7 +6594,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 50.8 0)
+			(at 167.64 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6603,7 +6603,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 50.8 0)
+			(at 167.64 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6682,7 +6682,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 81.28 270)
+		(at 167.64 43.18 270)
 		(mirror x)
 		(unit 17)
 		(exclude_from_sim no)
@@ -6691,15 +6691,15 @@
 		(dnp no)
 		(uuid "d576da32-8872-4759-9e9e-9310f06133ad")
 		(property "Reference" "RN1"
-			(at 182.88 81.28 90)
+			(at 182.88 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 78.74 90)
+		(property "Value" "4K7"
+			(at 190.5 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6707,7 +6707,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 81.28 0)
+			(at 167.64 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6716,7 +6716,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 81.28 0)
+			(at 167.64 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6725,7 +6725,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 81.28 0)
+			(at 167.64 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6804,7 +6804,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 256.54 149.86 270)
+		(at 167.64 81.28 270)
 		(mirror x)
 		(unit 7)
 		(exclude_from_sim no)
@@ -6813,15 +6813,15 @@
 		(dnp no)
 		(uuid "d621d49c-bbad-4ec0-a61a-c522a0899c81")
 		(property "Reference" "RN1"
-			(at 271.78 149.86 90)
+			(at 182.88 81.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 256.54 147.32 90)
+		(property "Value" "4K7"
+			(at 190.5 81.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6829,7 +6829,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 256.54 149.86 0)
+			(at 167.64 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6838,7 +6838,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 149.86 0)
+			(at 167.64 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6847,7 +6847,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 256.54 149.86 0)
+			(at 167.64 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6926,7 +6926,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 55.88 270)
+		(at 251.46 152.4 270)
 		(mirror x)
 		(unit 10)
 		(exclude_from_sim no)
@@ -6935,15 +6935,15 @@
 		(dnp no)
 		(uuid "de813e25-4f80-4a5c-b922-5b0da9db0753")
 		(property "Reference" "RN1"
-			(at 182.88 55.88 90)
+			(at 266.7 152.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 53.34 90)
+		(property "Value" "4K7"
+			(at 274.32 152.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6951,7 +6951,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 55.88 0)
+			(at 251.46 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6960,7 +6960,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 55.88 0)
+			(at 251.46 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6969,7 +6969,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 55.88 0)
+			(at 251.46 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7048,7 +7048,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 78.74 270)
+		(at 167.64 40.64 270)
 		(mirror x)
 		(unit 4)
 		(exclude_from_sim no)
@@ -7057,15 +7057,15 @@
 		(dnp no)
 		(uuid "e478d7a9-bdcd-4247-9820-8d1a8da54a6d")
 		(property "Reference" "RN1"
-			(at 182.88 78.74 90)
+			(at 182.88 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 76.2 90)
+		(property "Value" "4K7"
+			(at 190.5 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7073,7 +7073,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 78.74 0)
+			(at 167.64 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7082,7 +7082,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 78.74 0)
+			(at 167.64 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7091,7 +7091,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 78.74 0)
+			(at 167.64 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7170,7 +7170,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 83.82 270)
+		(at 167.64 38.1 270)
 		(mirror x)
 		(unit 5)
 		(exclude_from_sim no)
@@ -7179,15 +7179,15 @@
 		(dnp no)
 		(uuid "e7dcd587-c031-4a14-8bd0-937e35ee6e2b")
 		(property "Reference" "RN1"
-			(at 182.88 83.82 90)
+			(at 182.88 38.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 81.28 90)
+		(property "Value" "4K7"
+			(at 190.5 38.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7195,7 +7195,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 83.82 0)
+			(at 167.64 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7204,7 +7204,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 83.82 0)
+			(at 167.64 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7213,7 +7213,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 83.82 0)
+			(at 167.64 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7292,7 +7292,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R_Bussed19_Split")
-		(at 167.64 40.64 270)
+		(at 167.64 78.74 270)
 		(mirror x)
 		(unit 14)
 		(exclude_from_sim no)
@@ -7301,15 +7301,15 @@
 		(dnp no)
 		(uuid "ea277db5-efb9-4c81-ada1-3edea7eec082")
 		(property "Reference" "RN1"
-			(at 182.88 40.64 90)
+			(at 182.88 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 167.64 38.1 90)
+		(property "Value" "4K7"
+			(at 190.5 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7317,7 +7317,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOM-20"
-			(at 167.64 40.64 0)
+			(at 167.64 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7326,7 +7326,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 40.64 0)
+			(at 167.64 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7335,7 +7335,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 40.64 0)
+			(at 167.64 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
