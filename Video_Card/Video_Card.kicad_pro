@@ -58,48 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "courtyards_overlap|79145000|57602000|47ca44d9-91e8-4ec5-a558-b79399ad1788|5dbe79cd-b151-4960-a85c-2ac259f0aeac",
-          ""
-        ],
-        [
-          "courtyards_overlap|87425000|61975000|5e182482-8d88-4bde-b28d-d811ea78616d|b04eaa78-b58c-48d9-89c2-0850cd62b74b",
-          ""
-        ],
-        [
-          "courtyards_overlap|93537815|79755000|4c2598b1-95db-41c5-a509-cf94d0fc94da|5e182482-8d88-4bde-b28d-d811ea78616d",
-          ""
-        ],
-        [
-          "items_not_allowed|217940000|145250000|c2510cac-8fee-4435-959d-f26810150c54|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|66980000|145250000|e09ac595-9ccb-403a-a1d8-653581663e56|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|66980000|50330000|2a3e8b63-1390-41ad-b632-5825cc87e979|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "nonmirrored_text_on_back_layer|117475000|156845000|b7998f32-6560-4e75-bd7a-925918c57816|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "unconnected_items|106680000|62865000|aa46f615-6dbc-4d8b-9785-1822f21cc919|aa46f615-6dbc-4d8b-9785-1822f21cc919",
-          ""
-        ],
-        [
-          "unconnected_items|106680000|76200000|522f02c3-2644-4400-bf00-6f1daa28cb1d|522f02c3-2644-4400-bf00-6f1daa28cb1d",
-          ""
-        ],
-        [
-          "unconnected_items|136500000|103500000|be8f1f74-ff40-4af9-a0e9-de3382cba261|be8f1f74-ff40-4af9-a0e9-de3382cba261",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -560,6 +519,7 @@
         "bus_width": 12,
         "clearance": 0.15,
         "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -577,6 +537,7 @@
         "bus_width": 12,
         "clearance": 0.15,
         "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
