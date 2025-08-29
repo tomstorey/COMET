@@ -1,13 +1,13 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "6b243468-b3d6-4683-aeb0-4a03d22f944a")
 	(paper "A3")
 	(title_block
 		(title "RESET, VOLTAGE SUPERVISOR, WATCHDOG")
-		(date "2023-11-02")
-		(rev "2")
+		(date "2025-08-29")
+		(rev "3")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
 	)
@@ -79,17 +79,17 @@
 						(type background)
 					)
 				)
-				(pin input clock
-					(at -10.16 -2.54 0)
+				(pin input inverted
+					(at -10.16 5.08 0)
 					(length 5.08)
-					(name "CLK"
+					(name "~{PRE}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -115,35 +115,17 @@
 						)
 					)
 				)
-				(pin output inverted
-					(at 10.16 -5.08 180)
+				(pin input clock
+					(at -10.16 -2.54 0)
 					(length 5.08)
-					(name "~{Q}"
+					(name "CLK"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 5.08 180)
-					(length 5.08)
-					(name "Q"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -169,17 +151,35 @@
 						)
 					)
 				)
-				(pin input inverted
-					(at -10.16 5.08 0)
+				(pin output line
+					(at 10.16 5.08 180)
 					(length 5.08)
-					(name "~{PRE}"
+					(name "Q"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "7"
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 10.16 -5.08 180)
+					(length 5.08)
+					(name "~{Q}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -189,24 +189,6 @@
 				)
 			)
 			(symbol "74x1G74_1_2_1"
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
 					(at 0 10.16 270)
 					(length 5.08)
@@ -225,7 +207,26 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "74x1G74_2"
 			(exclude_from_sim no)
@@ -294,17 +295,17 @@
 						(type background)
 					)
 				)
-				(pin input clock
-					(at -10.16 -2.54 0)
+				(pin input inverted
+					(at -10.16 5.08 0)
 					(length 5.08)
-					(name "CLK"
+					(name "~{PRE}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -330,35 +331,17 @@
 						)
 					)
 				)
-				(pin output inverted
-					(at 10.16 -5.08 180)
+				(pin input clock
+					(at -10.16 -2.54 0)
 					(length 5.08)
-					(name "~{Q}"
+					(name "CLK"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 5.08 180)
-					(length 5.08)
-					(name "Q"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -384,17 +367,35 @@
 						)
 					)
 				)
-				(pin input inverted
-					(at -10.16 5.08 0)
+				(pin output line
+					(at 10.16 5.08 180)
 					(length 5.08)
-					(name "~{PRE}"
+					(name "Q"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "7"
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 10.16 -5.08 180)
+					(length 5.08)
+					(name "~{Q}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -404,24 +405,6 @@
 				)
 			)
 			(symbol "74x1G74_2_2_1"
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
 					(at 0 10.16 270)
 					(length 5.08)
@@ -440,7 +423,26 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "74x1G74_3"
 			(exclude_from_sim no)
@@ -509,17 +511,17 @@
 						(type background)
 					)
 				)
-				(pin input clock
-					(at -10.16 -2.54 0)
+				(pin input inverted
+					(at -10.16 5.08 0)
 					(length 5.08)
-					(name "CLK"
+					(name "~{PRE}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -545,35 +547,17 @@
 						)
 					)
 				)
-				(pin output inverted
-					(at 10.16 -5.08 180)
+				(pin input clock
+					(at -10.16 -2.54 0)
 					(length 5.08)
-					(name "~{Q}"
+					(name "CLK"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 5.08 180)
-					(length 5.08)
-					(name "Q"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -599,17 +583,35 @@
 						)
 					)
 				)
-				(pin input inverted
-					(at -10.16 5.08 0)
+				(pin output line
+					(at 10.16 5.08 180)
 					(length 5.08)
-					(name "~{PRE}"
+					(name "Q"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "7"
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 10.16 -5.08 180)
+					(length 5.08)
+					(name "~{Q}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -619,24 +621,6 @@
 				)
 			)
 			(symbol "74x1G74_3_2_1"
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
 					(at 0 10.16 270)
 					(length 5.08)
@@ -655,7 +639,26 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "COMET_symbols:74x1G07"
 			(exclude_from_sim no)
@@ -852,24 +855,6 @@
 			)
 			(symbol "74x1G07_2_1"
 				(pin power_in line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 0.635 0.635)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at 0 5.08 270)
 					(length 2.54)
 					(name "VCC"
@@ -880,6 +865,24 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -890,24 +893,6 @@
 			)
 			(symbol "74x1G07_2_2"
 				(pin power_in line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 0.635 0.635)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at 0 5.08 270)
 					(length 2.54)
 					(name "VCC"
@@ -925,7 +910,26 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "COMET_symbols:74x1G125"
 			(exclude_from_sim no)
@@ -995,24 +999,6 @@
 						(type background)
 					)
 				)
-				(pin input inverted
-					(at 2.54 -5.08 90)
-					(length 3.683)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -1024,6 +1010,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at 2.54 -5.08 90)
+					(length 3.683)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1052,24 +1056,6 @@
 			)
 			(symbol "74x1G125_2_1"
 				(pin power_in line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 0.635 0.635)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at 0 5.08 270)
 					(length 2.54)
 					(name "VCC"
@@ -1087,7 +1073,26 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "COMET_symbols:74x1G74"
 			(exclude_from_sim no)
@@ -1156,17 +1161,17 @@
 						(type background)
 					)
 				)
-				(pin input clock
-					(at -10.16 -2.54 0)
+				(pin input inverted
+					(at -10.16 5.08 0)
 					(length 5.08)
-					(name "CLK"
+					(name "~{PRE}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1192,35 +1197,17 @@
 						)
 					)
 				)
-				(pin output inverted
-					(at 10.16 -5.08 180)
+				(pin input clock
+					(at -10.16 -2.54 0)
 					(length 5.08)
-					(name "~{Q}"
+					(name "CLK"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 5.08 180)
-					(length 5.08)
-					(name "Q"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1246,17 +1233,35 @@
 						)
 					)
 				)
-				(pin input inverted
-					(at -10.16 5.08 0)
+				(pin output line
+					(at 10.16 5.08 180)
 					(length 5.08)
-					(name "~{PRE}"
+					(name "Q"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "7"
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 10.16 -5.08 180)
+					(length 5.08)
+					(name "~{Q}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1266,24 +1271,6 @@
 				)
 			)
 			(symbol "74x1G74_2_1"
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
 					(at 0 10.16 270)
 					(length 5.08)
@@ -1302,11 +1289,34 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "COMET_symbols:C"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1356,7 +1366,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -1368,7 +1378,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -1417,6 +1427,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "COMET_symbols:MAX705"
 			(exclude_from_sim no)
@@ -1479,24 +1490,6 @@
 				)
 			)
 			(symbol "MAX705_1_1"
-				(pin input line
-					(at -12.7 2.54 0)
-					(length 5.08)
-					(name "~{MR}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
 					(at -12.7 5.08 0)
 					(length 5.08)
@@ -1515,17 +1508,35 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -12.7 -5.08 0)
+				(pin input line
+					(at -12.7 2.54 0)
 					(length 5.08)
-					(name "GND"
+					(name "~{MR}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 0 0)
+					(length 5.08)
+					(name "WDI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1551,17 +1562,17 @@
 						)
 					)
 				)
-				(pin output line
-					(at 12.7 -2.54 180)
+				(pin power_in line
+					(at -12.7 -5.08 0)
 					(length 5.08)
-					(name "~{PFO}"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1569,17 +1580,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -12.7 0 0)
+				(pin output line
+					(at 12.7 2.54 180)
 					(length 5.08)
-					(name "WDI"
+					(name "~{WDO}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "6"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1606,16 +1617,16 @@
 					)
 				)
 				(pin output line
-					(at 12.7 2.54 180)
+					(at 12.7 -2.54 180)
 					(length 5.08)
-					(name "~{WDO}"
+					(name "~{PFO}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "8"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1624,10 +1635,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "COMET_symbols:R"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1725,11 +1741,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C_Polarized_US"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1834,9 +1855,9 @@
 					)
 				)
 				(arc
-					(start 2.032 -1.27)
+					(start -2.032 -1.27)
 					(mid 0 -0.5572)
-					(end -2.032 -1.27)
+					(end 2.032 -1.27)
 					(stroke
 						(width 0.508)
 						(type default)
@@ -1884,11 +1905,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Switch:SW_Push"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1969,10 +1995,9 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
-					)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
 					(stroke
 						(width 0)
 						(type default)
@@ -1981,9 +2006,10 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -2029,6 +2055,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
@@ -2106,7 +2133,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -2118,7 +2145,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -2132,7 +2159,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+5V"
 						(effects
 							(font
@@ -2149,6 +2177,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -2228,7 +2257,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -2245,7 +2275,52 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "THE \"RESET\" SIGNAL IS THE COMPLEMENT OF ~{RESET} SPECIFICALLY\nSO THAT IF THE CPU ASSERTS ~{RESET}, THEN THIS WILL CAUSE ALL\nPERIPHERALS USING A POSITIVE RESET SIGNAL TO BE RESET AS WELL."
+		(exclude_from_sim no)
+		(at 238.76 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1dc3bc1f-1f5b-49a0-885f-73ba3504e04a")
+	)
+	(text "RESET CAUSE TRUTH TABLE\n\nPOR	  WDTO	CAUSE (NOTE)\n---  ----  ---------\n0	  0		SOFTWARE, PUSHBUTTON OR VOLTAGE THRESHOLD (1)\n0	  1		WATCHDOG TIMEOUT (2)\n1	  0		POWER ON RESET OR BROWNOUT (VCC < 4V) (3)\n1	  1		INVALID COMBINATION\n\nSOFTWARE MUST READ THE CONTROL/STATUS REGISTER CONTAINING\nTHE RESET CAUSE BITS ON EACH STARTUP TO ENSURE THAT THE\nSTATUS BITS REPRESENT THE MOST RECENT RESET CAUSE. FAILURE\nTO DO SO MAY RESULT IN AN INCORRECT RESET CAUSE BEING\nRECOGNISED. SEE LIMITATIONS MENTIONED BELOW.\n\nNOTES:\n\n1. A VOLTAGE THRESHOLD RESET DOES NOT SET ANY STATUS BITS\nAND IS CONSIDERED THE SAME AS A SOFTWARE OR PUSBUTTON\nRESET EVENT. A POWER ON RESET EVENT OR BROWNOUT WHERE VCC\nDROPS BELOW 4V WILL SET THE POR FLAG. TO FURTHER CORRELATE\nRESET EVENT CAUSES, A SOFTWARE INITIATED RESET MAY BE\nTRACKED THROUGH THE USE OF A PERSISTENT VARIABLE IN MEMORY\nAS DRAM REFRESHING IS MAINTAINED THROUGH ALL RESET EVENTS\nEXCEPT FOR POR/BROWNOUT.\n\n2. A WATCHDOG TIMEOUT RESET EVENT CANNOT BE RECOGNISED AS\nLONG AS THE POR FLAG IS ACTIVE. THE WDTO FLAG IS RESET IN\nTHE EVENT OF A POR/BROWNOUT RESET EVENT. THE WDTO FLAG IS\nNOT AFFECTED BY A SOFTWARE/PUSHBUTTON/VOLTAGE THRESHOLD\nRESET EVENT.\n\n3. THE POR FLAG CAN ONLY BE RESET BY READING THE RESET\nSTATUS BITS FROM THEIR CORRESPONDING CONTROL/STATUS\nREGISTER. THE POR FLAG IS NOT AFFECTED BY A SOFTWARE/\nPUSHBUTTON/VOLTAGE THRESHOLD RESET EVENT, AND WHEN ACTIVE\nPREVENTS THE WDTO FLAG FROM BEING SET IN THE EVENT OF A\nWATCHDOG TIMEOUT RESET."
+		(exclude_from_sim no)
+		(at 325.12 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6fc6ab3b-d71f-4aaf-a2ff-b47b3efb34cf")
+	)
+	(text "22K OVER 10K PRODUCES\n1.25V AT 4V INPUT"
+		(exclude_from_sim no)
+		(at 170.18 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a310be28-3fa8-4781-a1dc-8df414b3abf5")
+	)
+	(text "POPULATE EITHER R16 OR R35\n\nR16 IMPLIES PULL UP FROM BACKPLANE"
+		(exclude_from_sim no)
+		(at 93.98 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "f8070ae2-5663-423a-bf47-8c9281e46cf7")
 	)
 	(junction
 		(at 48.26 246.38)
@@ -2272,6 +2347,12 @@
 		(uuid "19b17e0f-6c90-4e90-9b8e-5fa5457ea260")
 	)
 	(junction
+		(at 109.22 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "243a66a6-09da-4d1b-b2ba-f7055fe55ac2")
+	)
+	(junction
 		(at 170.18 246.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2294,12 +2375,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5e7814e4-be8f-4a73-b540-05516f3ac0cc")
-	)
-	(junction
-		(at 137.16 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "637eb091-b140-43ab-b418-d52fc2160949")
 	)
 	(junction
 		(at 259.08 76.2)
@@ -2330,6 +2405,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8051c1c5-defb-4ec8-9b8a-ec905972916b")
+	)
+	(junction
+		(at 165.1 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8afcf2a5-fed3-42cf-9822-fe0f0136b1f9")
 	)
 	(junction
 		(at 175.26 78.74)
@@ -2392,7 +2473,7 @@
 		(uuid "ec9e8815-8a00-485a-8087-06a244629d37")
 	)
 	(junction
-		(at 106.68 81.28)
+		(at 124.46 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ee7338c6-dd21-4302-ae2d-628d2c1b38b1")
@@ -2438,6 +2519,16 @@
 			(type default)
 		)
 		(uuid "036853f9-30e2-41b7-9b0b-d088932ffcce")
+	)
+	(wire
+		(pts
+			(xy 109.22 81.28) (xy 124.46 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0396a0b3-d7cb-4809-8835-9d58d603e760")
 	)
 	(wire
 		(pts
@@ -2711,6 +2802,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 81.28) (xy 177.8 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "401445bb-65fc-4661-ae7a-94620df3e35f")
+	)
+	(wire
+		(pts
 			(xy 274.32 88.9) (xy 276.86 88.9)
 		)
 		(stroke
@@ -2841,7 +2942,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 81.28) (xy 106.68 81.28)
+			(xy 99.06 81.28) (xy 109.22 81.28)
 		)
 		(stroke
 			(width 0)
@@ -2881,7 +2982,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 66.04) (xy 106.68 68.58)
+			(xy 124.46 66.04) (xy 124.46 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2951,7 +3052,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 63.5) (xy 119.38 45.72)
+			(xy 144.78 63.5) (xy 144.78 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2961,7 +3062,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 63.5) (xy 119.38 63.5)
+			(xy 147.32 63.5) (xy 144.78 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2971,7 +3072,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 78.74) (xy 106.68 81.28)
+			(xy 124.46 78.74) (xy 124.46 81.28)
 		)
 		(stroke
 			(width 0)
@@ -3011,7 +3112,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 63.5) (xy 137.16 63.5)
+			(xy 160.02 63.5) (xy 165.1 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3221,7 +3322,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 81.28) (xy 132.08 81.28)
+			(xy 124.46 81.28) (xy 132.08 81.28)
 		)
 		(stroke
 			(width 0)
@@ -3311,6 +3412,26 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 78.74) (xy 109.22 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b44fabee-9dc9-4370-91e8-ca5b74b3ea4f")
+	)
+	(wire
+		(pts
+			(xy 109.22 68.58) (xy 109.22 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b90a742c-4cfe-4163-94f2-db44abbbaed4")
+	)
+	(wire
+		(pts
 			(xy 198.12 182.88) (xy 198.12 185.42)
 		)
 		(stroke
@@ -3391,7 +3512,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 63.5) (xy 137.16 81.28)
+			(xy 165.1 63.5) (xy 165.1 81.28)
 		)
 		(stroke
 			(width 0)
@@ -3488,16 +3609,6 @@
 			(type default)
 		)
 		(uuid "d7a23fab-ec99-476e-9785-7fc4120120dc")
-	)
-	(wire
-		(pts
-			(xy 137.16 81.28) (xy 177.8 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d864c0ef-1aea-480d-8565-7d432bc52e16")
 	)
 	(wire
 		(pts
@@ -3651,6 +3762,16 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 60.96) (xy 109.22 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3b1eb58-d039-486e-a06f-859d8d428539")
+	)
+	(wire
+		(pts
 			(xy 215.9 83.82) (xy 228.6 83.82)
 		)
 		(stroke
@@ -3671,7 +3792,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 81.28) (xy 137.16 81.28)
+			(xy 132.08 81.28) (xy 165.1 81.28)
 		)
 		(stroke
 			(width 0)
@@ -3701,46 +3822,13 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 45.72) (xy 208.28 45.72)
+			(xy 144.78 45.72) (xy 208.28 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ffded707-1402-4042-b775-79171e6d9956")
-	)
-	(text "THE \"RESET\" SIGNAL IS THE COMPLEMENT OF ~{RESET} SPECIFICALLY\nSO THAT IF THE CPU ASSERTS ~{RESET}, THEN THIS WILL CAUSE ALL\nPERIPHERALS USING A POSITIVE RESET SIGNAL TO BE RESET AS WELL."
-		(exclude_from_sim no)
-		(at 238.76 40.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1dc3bc1f-1f5b-49a0-885f-73ba3504e04a")
-	)
-	(text "RESET CAUSE TRUTH TABLE\n\nPOR	  WDTO	CAUSE (NOTE)\n---  ----  ---------\n0	  0		SOFTWARE, PUSHBUTTON OR VOLTAGE THRESHOLD (1)\n0	  1		WATCHDOG TIMEOUT (2)\n1	  0		POWER ON RESET OR BROWNOUT (VCC < 4V) (3)\n1	  1		INVALID COMBINATION\n\nSOFTWARE MUST READ THE CONTROL/STATUS REGISTER CONTAINING\nTHE RESET CAUSE BITS ON EACH STARTUP TO ENSURE THAT THE\nSTATUS BITS REPRESENT THE MOST RECENT RESET CAUSE. FAILURE\nTO DO SO MAY RESULT IN AN INCORRECT RESET CAUSE BEING\nRECOGNISED. SEE LIMITATIONS MENTIONED BELOW.\n\nNOTES:\n\n1. A VOLTAGE THRESHOLD RESET DOES NOT SET ANY STATUS BITS\nAND IS CONSIDERED THE SAME AS A SOFTWARE OR PUSBUTTON\nRESET EVENT. A POWER ON RESET EVENT OR BROWNOUT WHERE VCC\nDROPS BELOW 4V WILL SET THE POR FLAG. TO FURTHER CORRELATE\nRESET EVENT CAUSES, A SOFTWARE INITIATED RESET MAY BE\nTRACKED THROUGH THE USE OF A PERSISTENT VARIABLE IN MEMORY\nAS DRAM REFRESHING IS MAINTAINED THROUGH ALL RESET EVENTS\nEXCEPT FOR POR/BROWNOUT.\n\n2. A WATCHDOG TIMEOUT RESET EVENT CANNOT BE RECOGNISED AS\nLONG AS THE POR FLAG IS ACTIVE. THE WDTO FLAG IS RESET IN\nTHE EVENT OF A POR/BROWNOUT RESET EVENT. THE WDTO FLAG IS\nNOT AFFECTED BY A SOFTWARE/PUSHBUTTON/VOLTAGE THRESHOLD\nRESET EVENT.\n\n3. THE POR FLAG CAN ONLY BE RESET BY READING THE RESET\nSTATUS BITS FROM THEIR CORRESPONDING CONTROL/STATUS\nREGISTER. THE POR FLAG IS NOT AFFECTED BY A SOFTWARE/\nPUSHBUTTON/VOLTAGE THRESHOLD RESET EVENT, AND WHEN ACTIVE\nPREVENTS THE WDTO FLAG FROM BEING SET IN THE EVENT OF A\nWATCHDOG TIMEOUT RESET."
-		(exclude_from_sim no)
-		(at 325.12 208.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6fc6ab3b-d71f-4aaf-a2ff-b47b3efb34cf")
-	)
-	(text "22K OVER 10K PRODUCES\n1.25V AT 4V INPUT"
-		(exclude_from_sim no)
-		(at 170.18 121.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a310be28-3fa8-4781-a1dc-8df414b3abf5")
 	)
 	(global_label "~{RESET}"
 		(shape output)
@@ -3949,6 +4037,27 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "~{BUSRESET}"
+		(shape input)
+		(at 78.74 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "df85d19c-9733-4834-8433-98a296a3ed91")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.1997 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -4690,7 +4799,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 127 58.42 0)
+		(at 152.4 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4699,7 +4808,7 @@
 		(fields_autoplaced yes)
 		(uuid "2ea7509c-aa5c-46e1-aad0-bd2eb2c984f9")
 		(property "Reference" "#PWR0147"
-			(at 127 62.23 0)
+			(at 152.4 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4708,7 +4817,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 127 53.34 0)
+			(at 152.4 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4716,7 +4825,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 58.42 0)
+			(at 152.4 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4725,7 +4834,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 58.42 0)
+			(at 152.4 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4734,7 +4843,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 127 58.42 0)
+			(at 152.4 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5032,7 +5141,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:74x1G07")
-		(at 127 63.5 0)
+		(at 152.4 63.5 0)
 		(mirror y)
 		(unit 2)
 		(exclude_from_sim no)
@@ -5042,7 +5151,7 @@
 		(fields_autoplaced yes)
 		(uuid "3c64bdc2-0918-4ff3-b8b1-c8bede8d4370")
 		(property "Reference" "U44"
-			(at 128.27 62.2299 0)
+			(at 153.67 62.2299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5052,7 +5161,7 @@
 			)
 		)
 		(property "Value" "74LVC1G07"
-			(at 128.27 63.4999 0)
+			(at 153.67 63.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5062,7 +5171,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOT23-5"
-			(at 127 63.5 0)
+			(at 152.4 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5071,7 +5180,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 63.5 0)
+			(at 152.4 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5080,7 +5189,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 127 63.5 0)
+			(at 152.4 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5576,32 +5685,35 @@
 		)
 	)
 	(symbol
-		(lib_id "COMET_symbols:74x1G07")
-		(at 127 63.5 0)
+		(lib_id "COMET_symbols:R")
+		(at 109.22 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6bf1a4a4-d077-4ffd-b973-cc4ab4293d7d")
-		(property "Reference" "U44"
-			(at 137.16 55.88 0)
+		(fields_autoplaced yes)
+		(uuid "6a4dee63-bde6-4b51-a052-380f171765b2")
+		(property "Reference" "R16"
+			(at 111.76 72.3899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "74LVC1G07"
-			(at 137.16 58.42 0)
+		(property "Value" "0R"
+			(at 111.76 74.9299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "COMET_footprints:Package_SOT23-5"
-			(at 127 63.5 0)
+		(property "Footprint" "COMET_footprints:R_SMD0805"
+			(at 109.22 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5610,7 +5722,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 63.5 0)
+			(at 109.22 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5619,7 +5731,74 @@
 			)
 		)
 		(property "Description" ""
-			(at 127 63.5 0)
+			(at 109.22 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8db222c7-9d3a-41bf-95fe-59d4eaf1df31")
+		)
+		(pin "2"
+			(uuid "44803e91-1338-47cc-90d5-8a171ef1af59")
+		)
+		(instances
+			(project "COMET68k"
+				(path "/29f3f17d-ec56-43ae-8ed0-f61aed488ce5/df841545-9bb1-425d-8b64-d9b0b6949511"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "COMET_symbols:74x1G07")
+		(at 152.4 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bf1a4a4-d077-4ffd-b973-cc4ab4293d7d")
+		(property "Reference" "U44"
+			(at 162.56 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LVC1G07"
+			(at 162.56 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "COMET_footprints:Package_SOT23-5"
+			(at 152.4 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5650,16 +5829,16 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R")
-		(at 106.68 73.66 0)
+		(at 124.46 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6cde0df3-3ef2-45fb-bcd2-59b1e06a5adf")
 		(property "Reference" "R35"
-			(at 109.22 72.3899 0)
+			(at 127 72.3899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5668,7 +5847,7 @@
 			)
 		)
 		(property "Value" "1K5"
-			(at 109.22 74.9299 0)
+			(at 127 74.9299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5677,7 +5856,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:R_SMD0805"
-			(at 106.68 73.66 0)
+			(at 124.46 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5686,7 +5865,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.68 73.66 0)
+			(at 124.46 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5695,7 +5874,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 106.68 73.66 0)
+			(at 124.46 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5786,7 +5965,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 127 68.58 0)
+		(at 152.4 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5795,7 +5974,7 @@
 		(fields_autoplaced yes)
 		(uuid "6f91e184-f09d-4999-b50a-f3b12dfd78bd")
 		(property "Reference" "#PWR0148"
-			(at 127 74.93 0)
+			(at 152.4 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5804,7 +5983,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 127 73.66 0)
+			(at 152.4 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5812,7 +5991,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 68.58 0)
+			(at 152.4 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5821,7 +6000,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 68.58 0)
+			(at 152.4 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5830,7 +6009,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 127 68.58 0)
+			(at 152.4 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6357,7 +6536,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 106.68 66.04 0)
+		(at 124.46 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6366,7 +6545,7 @@
 		(fields_autoplaced yes)
 		(uuid "9b16eabc-b868-4165-bf06-467c8e34121a")
 		(property "Reference" "#PWR0144"
-			(at 106.68 69.85 0)
+			(at 124.46 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6375,7 +6554,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 106.68 60.96 0)
+			(at 124.46 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6383,7 +6562,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 106.68 66.04 0)
+			(at 124.46 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6392,7 +6571,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.68 66.04 0)
+			(at 124.46 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6401,7 +6580,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 106.68 66.04 0)
+			(at 124.46 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
