@@ -3,7 +3,7 @@ The COMETbus specification is intended to be a subset of the VMEbus specificatio
 
 This document will describe the most significant differences to VMEbus.
 
-The current release version of this specification is v1.0, dated 2025/03/08.
+The current release version of this specification is v1.1, dated 2025/08/29.
 
 ## Document Conventions  
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
@@ -27,44 +27,44 @@ By and large, most VMEbus signals are carried across to COMETbus. The following 
 | Pin | VMEbus | COMETbus | Notes |
 |-|-|-|-|
 |  | A23..1 | A23..1 |  |
-|  | ACFAIL/ |  |  |
-|  | AM0 | FC0 | Equivalent CPU signal |
-|  | AM1 | FC1 | Equivalent CPU signal |
-|  | AM2 | FC2 | Equivalent CPU signal |
-|  | AM3 |  |  |
-|  | AM4 |  |  |
-|  | AM5 |  |  |
-|  | AS/ | AS/ |  |
-|  | BBSY/ |  |  |
-|  | BCLR/ |  |  |
-|  | BERR/ | BERR/ |  |
-|  | BG0IN/ | BG0IN/ | SHOULD be bridged to BG0OUT/ if unused |
-|  | BG0OUT/ | BG0OUT/ | SHOULD be bridged to BG0IN/ if unused |
-|  | BG1IN/ | BG1IN/ | SHOULD be bridged to BG1OUT/ if unused |
-|  | BG1OUT/ | BG1OUT/ | SHOULD be bridged to BG1IN/ if unused |
-|  | BG2IN/ |  | MUST be bridged to BG2OUT/ |
-|  | BG2OUT/ |  | MUST be bridged to BG2IN/ |
-|  | BG3IN/ |  | MUST be bridged to BG3OUT/ |
-|  | BG3OUT/ |  | MUST be bridged to BG3IN/ |
-|  | BR0/ | BR0/ | Highest priority in COMETbus |
-|  | BR1/ | BR1/ | Lowest priority in COMETbus |
-|  | BR2/ |  |  |
-|  | BR3/ |  |  |
+| B3 | ACFAIL/ |  |  |
+| B16 | AM0 | FC0 | Equivalent CPU signal |
+| B17 | AM1 | FC1 | Equivalent CPU signal |
+| B18 | AM2 | FC2 | Equivalent CPU signal |
+| B19 | AM3 |  |  |
+| A23 | AM4 |  |  |
+| C14 | AM5 |  |  |
+| A18 | AS/ | AS/ |  |
+| B1 | BBSY/ |  |  |
+| B2 | BCLR/ |  |  |
+| C11 | BERR/ | BERR/ |  |
+| B4 | BG0IN/ | BG0IN/ | SHOULD be bridged to BG0OUT/ if unused |
+| B5 | BG0OUT/ | BG0OUT/ | SHOULD be bridged to BG0IN/ if unused |
+| B6 | BG1IN/ | BG1IN/ | SHOULD be bridged to BG1OUT/ if unused |
+| B7 | BG1OUT/ | BG1OUT/ | SHOULD be bridged to BG1IN/ if unused |
+| B8 | BG2IN/ |  | MUST be bridged to BG2OUT/ |
+| B9 | BG2OUT/ |  | MUST be bridged to BG2IN/ |
+| B10 | BG3IN/ |  | MUST be bridged to BG3OUT/ |
+| B11 | BG3OUT/ |  | MUST be bridged to BG3IN/ |
+| B12 | BR0/ | BR0/ | Highest priority in COMETbus |
+| B13 | BR1/ | BR1/ | Lowest priority in COMETbus |
+| B14 | BR2/ |  |  |
+| B15 | BR3/ |  |  |
 |  | D15..0 | D15..0 |  |
-|  | DS0/ | LDS/ | Equivalent CPU signal |
-|  | DS1/ | UDS/ | Equivalent CPU signal |
-|  | DTACK/ | DTACK/ |  |
-|  | IACK/ | AUTOVEC/ | Allows an interrupter to autovector instead of supplying a vector |
-|  | IACKIN/ | IACKIN/ | SHOULD be bridged to IACKOUT/ if unused |
-|  | IACKOUT/ | IACKOUT/ | SHOULD be bridged to IACKIN/ if unused |
+| A13 | DS0/ | LDS/ | Equivalent CPU signal |
+| A12 | DS1/ | UDS/ | Equivalent CPU signal |
+| A16 | DTACK/ | DTACK/ |  |
+| A20 | IACK/ | AUTOVEC/ | Allows an interrupter to autovector instead of supplying a vector |
+| A21 | IACKIN/ | IACKIN/ | SHOULD be bridged to IACKOUT/ if unused |
+| A22 | IACKOUT/ | IACKOUT/ | SHOULD be bridged to IACKIN/ if unused |
 |  | IRQx/ | IRQx/ |  |
-|  | LWORD/ |  |  |
-|  | SERCLK |  |  |
-|  | SERDAT |  |  |
-|  | SYSCLK | SYSCLK |  |
-|  | SYSFAIL/ |  |  |
-|  | SYSRESET/ | SYSRESET/ |  |
-|  | WRITE/ | WRITE/ |  |
+| C13 | LWORD/ |  |  |
+| B21 | SERCLK |  |  |
+| B22 | SERDAT/ |  |  |
+| A10 | SYSCLK | SYSCLK |  |
+| C10 | SYSFAIL/ | BUSRESET/ | Input to the CPU board |
+| C12 | SYSRESET/ | SYSRESET/ | Output from the CPU board to rest of system |
+| A14 | WRITE/ | WRITE/ |  |
 
 All signals which are undefined within the COMETbus column MUST NOT be used for any purpose to ensure compatibility with this specification as it continues to evolve.
 
@@ -100,3 +100,9 @@ VMEbus does not have any built-in mechanism to allow a peripheral to autovector 
 To simplify interrupt handling in a COMETbus system, the IACK/ signal has been replaced with AUTOVEC/ which permits a peripheral to signal back to the CPU that it can autovector the currently serviced interrupt. The CPU card generates the IACK/ signal which it propagates via the IACKOUT/ to IACKIN/ daisy chain.
 
 A peripheral must only ever assert the AUTOVEC/ signal when it is the currently serviced interrupter, which is resolved through the IACKIN/ to IACKOUT/ daisy chain and matching IRQ signalled via A3..1.
+
+### SYSRESET/ and BUSRESET/
+The VMEbus specification details SYSRESET/ as an output from any board that is able to reset the entire system. In a COMETbus system, SYSRESET/ is defined as an output from the CPU board to the rest of the system only. It is implemented via an open collector/drain driver on the CPU board.
+
+VMEbus specifies SYSFAIL/ as an output from a master that can be used to signal a fault condition to the rest of the system. COMETbus redefines SYSFAIL/ to become BUSRESET/, with the intention to provide a reset input to the CPU Board from another board in the system. Such boards may include watchdogs and other supervisors, or development tools that need to initiate a system wide reset. Peripheral boards within a COMETbus system MUST use SYSRESET/ as their reset input, and may initiate a system reset through the BUSRESET/ signal. BUSRESET/ should be implemented as an open collector/drain driver on any board that drives it.
+
