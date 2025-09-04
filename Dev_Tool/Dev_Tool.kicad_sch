@@ -1,0 +1,399 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "a5cc9727-587c-40e3-bd55-82381bb9520b")
+	(paper "A4")
+	(title_block
+		(title "COMETbus DEVELOPMENT TOOL")
+		(date "2025-09-03")
+		(rev "1")
+		(company "(C) TOM STOREY")
+		(comment 1 "FREE FOR NON-COMMERCIAL USE")
+	)
+	(lib_symbols)
+	(sheet
+		(at 30.48 86.36)
+		(size 30.48 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0080ff63-eda6-45f5-b1ea-8ba541fbf582")
+		(property "Sheetname" "CPLD"
+			(at 30.48 85.6484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cpld.kicad_sch"
+			(at 30.48 104.7246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 144.78 58.42)
+		(size 30.48 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0c11cb35-7183-4880-a395-b2322e31a6fb")
+		(property "Sheetname" "USB UART 2"
+			(at 144.78 57.7084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usb_uart_2.kicad_sch"
+			(at 144.78 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 106.68 58.42)
+		(size 30.48 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3ea1cb28-642d-4660-9969-da53543e5d21")
+		(property "Sheetname" "USB UART 1"
+			(at 106.68 57.7084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usb_uart_1.kicad_sch"
+			(at 106.68 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30.48 58.42)
+		(size 30.48 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "403536b9-4c12-4248-9509-32fc05dc8151")
+		(property "Sheetname" "USB hub"
+			(at 30.48 57.7084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usb_hub.kicad_sch"
+			(at 30.48 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 68.58 114.3)
+		(size 30.48 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4a8195f2-5515-4c2b-85e0-b82ac45b2575")
+		(property "Sheetname" "Mechanical"
+			(at 68.58 113.5884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mechanical.kicad_sch"
+			(at 68.58 132.6646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30.48 114.3)
+		(size 30.48 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7f27b703-97b8-43bc-b860-36ec96bf8015")
+		(property "Sheetname" "Power"
+			(at 30.48 113.5884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 30.48 132.6646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 68.58 86.36)
+		(size 30.48 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "afaf90bf-bcda-40ab-891b-326d2f5d3adf")
+		(property "Sheetname" "Vector buffer"
+			(at 68.58 85.6484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "vec_buf.kicad_sch"
+			(at 68.58 104.7246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 68.58 58.42)
+		(size 30.48 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b4fc2b01-933f-4ccf-b6d4-7f874139b255")
+		(property "Sheetname" "USB-I2C-GPIO"
+			(at 68.58 57.7084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usb_i2c_gpio.kicad_sch"
+			(at 68.58 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30.48 30.48)
+		(size 30.48 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b564389a-8b58-455f-b9cb-c0bda5ae6dab")
+		(property "Sheetname" "Expansion bus connector"
+			(at 30.48 29.7684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "expansion_bus.kicad_sch"
+			(at 30.48 48.8446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
