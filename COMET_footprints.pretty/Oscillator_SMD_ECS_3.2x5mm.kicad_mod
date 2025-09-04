@@ -1,0 +1,155 @@
+(footprint "Oscillator_SMD_ECS_3.2x5mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2.9 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "4a2ba92f-dbfb-4cb2-b1b9-85f6cebf30fb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Untitled"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "4582d42e-f647-4488-af76-0e8c8154faa3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a544dd2a-4861-4b75-99be-58e8c3f87108")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d1d51686-dbe2-4688-9c4e-8368aa7122e1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.9 -2)
+		(end 2.9 -2)
+		(stroke
+			(width 0.2032)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "1d1d21fd-b5a3-4893-827a-ee6734406b09")
+	)
+	(fp_line
+		(start -2.9 1.3)
+		(end -2.9 -2)
+		(stroke
+			(width 0.2032)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "adcad518-d6ba-43b7-a5ac-a6010b216370")
+	)
+	(fp_line
+		(start -2.2 2)
+		(end -2.9 1.3)
+		(stroke
+			(width 0.2032)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "34d03487-a5b1-45f2-8e1d-6b202bfb3060")
+	)
+	(fp_line
+		(start 2.9 -2)
+		(end 2.9 2)
+		(stroke
+			(width 0.2032)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "a10a39a0-2691-4c8a-b364-421a9d73666b")
+	)
+	(fp_line
+		(start 2.9 2)
+		(end -2.2 2)
+		(stroke
+			(width 0.2032)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "d4d80a21-1345-4099-b3fa-26f5d39725e9")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "5857cc5b-93fc-4b62-aba6-da4769d406c6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.27 1.1)
+		(size 1.4 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "da57e640-fc2c-4aa6-846d-b57851c19fe1")
+	)
+	(pad "2" smd rect
+		(at 1.27 1.1)
+		(size 1.4 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1e6dd269-a4d9-4880-afcf-cd5865bc1de9")
+	)
+	(pad "3" smd rect
+		(at 1.27 -1.1)
+		(size 1.4 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b2522060-e596-4421-8049-35808933cbfb")
+	)
+	(pad "4" smd rect
+		(at -1.27 -1.1)
+		(size 1.4 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5b94965c-40af-48d7-8d50-c18823fbc688")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Oscillator.3dshapes/Oscillator_SMD_EuroQuartz_XO53-4Pin_5.0x3.2mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)
