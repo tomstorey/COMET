@@ -2385,7 +2385,6 @@ applicable agreement for further details.
 (text "REQUEST IS PENDING" (rect 792 -24 945 -9)(font "Arial" (font_size 8)))
 (text "IT WILL REMAIN IN THIS STATE WHEN THE INTERRUPT" (rect 792 8 1161 23)(font "Arial" (font_size 8)))
 (text "REQUEST IS CLEARED AS LONG AS IACKIN IS STILL" (rect 792 24 1141 39)(font "Arial" (font_size 8)))
-(text "ASSERTED, AFTER WHICH IS WILL RETURN TO THE" (rect 792 40 1142 55)(font "Arial" (font_size 8)))
 (text "WAITING STATE" (rect 792 56 897 71)(font "Arial" (font_size 8)))
 (text "IACKOUNT MAY BE ASSERTED WHEN:" (rect 1704 -24 1958 -9)(font "Arial" (font_size 8)))
 (text "1. THE STATE MACHINE IS IN THE WAITING STATE" (rect 1704 8 2036 23)(font "Arial" (font_size 8)))
@@ -2406,3 +2405,4 @@ applicable agreement for further details.
 (text "REQUESTING STATE AND IACKIN IS ASSERTED AND" (rect 1704 600 2055 615)(font "Arial" (font_size 8)))
 (text "THE ACKNOWLEDGED INTERRUPT LEVEL MATCHES." (rect 1704 616 2063 631)(font "Arial" (font_size 8)))
 (text "IT IS CLEARED WHEN THE IPL RETURNS TO LEVEL 0." (rect 1704 632 2065 647)(font "Arial" (font_size 8)))
+(text "ASSERTED, AFTER WHICH IT WILL RETURN TO THE" (rect 792 40 1141 55)(font "Arial" (font_size 8)))
