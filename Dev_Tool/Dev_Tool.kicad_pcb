@@ -11813,7 +11813,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 271 "unconnected-(U8A-CBUS1-Pad22)")
 			(pinfunction "CBUS1")
-			(pintype "bidirectional")
+			(pintype "bidirectional+no_connect")
 			(uuid "ed913778-def2-40cf-a540-fdc8978197a1")
 		)
 		(pad "23" smd rect
@@ -30949,7 +30949,7 @@
 				)
 			)
 		)
-		(property "Value" "680R"
+		(property "Value" "560R"
 			(at 0 2.54 0)
 			(unlocked yes)
 			(layer "F.Fab")
