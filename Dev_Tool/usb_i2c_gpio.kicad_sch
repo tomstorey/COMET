@@ -5,8 +5,8 @@
 	(uuid "bf6f070f-3d04-4c97-a3b2-c5b0faec9e11")
 	(paper "A4")
 	(title_block
-		(title "USB-I2C CONVERTER AND I2C GPIO EXPANDER")
-		(date "2025-09-08")
+		(title "USB-I2C CONVERTER AND I2C GPIO EXPANDER (PORT C)")
+		(date "2025-09-09")
 		(rev "1")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -2914,7 +2914,7 @@
 		)
 		(uuid "591f1b08-0e64-415a-a2f3-4a36052cb76c")
 	)
-	(text "RESISTOR DIVIDER FOR\nBACKPLANE VOLTAGE ADC\n\n10K OVER 4K7 GIVES\nAPPROX 1.6V AT 5V"
+	(text "RESISTOR DIVIDER FOR\nBACKPLANE VOLTAGE ADC\n\n4K7 OVER 10K GIVES\nAPPROX 3.7V AT 5.5V\n(MAX RANGE)\n\nADCVRM SHOULD BE SET\nTO 4.096V"
 		(exclude_from_sim no)
 		(at 38.1 101.6 0)
 		(effects
@@ -4875,7 +4875,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "1nF"
 			(at 87.63 113.0299 0)
 			(effects
 				(font
@@ -5377,7 +5377,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "4K7"
 			(at 71.12 100.3299 0)
 			(effects
 				(font
@@ -6429,7 +6429,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4K7"
+		(property "Value" "10K"
 			(at 71.12 115.5699 0)
 			(effects
 				(font

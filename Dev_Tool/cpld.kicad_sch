@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "INTERRUPT CPLD")
-		(date "2025-09-08")
+		(date "2025-09-09")
 		(rev "1")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -840,8 +840,8 @@
 			)
 			(symbol "EPM7032SLC44-10_1_1"
 				(rectangle
-					(start -17.78 27.94)
-					(end 17.78 -30.48)
+					(start -17.78 35.56)
+					(end 17.78 -40.64)
 					(stroke
 						(width 0.254)
 						(type solid)
@@ -851,7 +851,7 @@
 					)
 				)
 				(pin input clock
-					(at -22.86 25.4 0)
+					(at -22.86 33.02 0)
 					(length 5.08)
 					(name "SYSCLK"
 						(effects
@@ -869,7 +869,7 @@
 					)
 				)
 				(pin input inverted
-					(at -22.86 22.86 0)
+					(at -22.86 30.48 0)
 					(length 5.08)
 					(name "~{SYSRESET}"
 						(effects
@@ -887,7 +887,7 @@
 					)
 				)
 				(pin input inverted
-					(at -22.86 17.78 0)
+					(at -22.86 25.4 0)
 					(length 5.08)
 					(name "~{IACKIN}"
 						(effects
@@ -905,7 +905,7 @@
 					)
 				)
 				(pin input inverted
-					(at -22.86 15.24 0)
+					(at -22.86 22.86 0)
 					(length 5.08)
 					(name "~{AS}"
 						(effects
@@ -923,7 +923,7 @@
 					)
 				)
 				(pin input inverted
-					(at -22.86 12.7 0)
+					(at -22.86 20.32 0)
 					(length 5.08)
 					(name "~{LDS}"
 						(effects
@@ -941,7 +941,7 @@
 					)
 				)
 				(pin input line
-					(at -22.86 5.08 0)
+					(at -22.86 12.7 0)
 					(length 5.08)
 					(name "A1"
 						(effects
@@ -959,7 +959,7 @@
 					)
 				)
 				(pin input line
-					(at -22.86 2.54 0)
+					(at -22.86 10.16 0)
 					(length 5.08)
 					(name "A2"
 						(effects
@@ -977,7 +977,7 @@
 					)
 				)
 				(pin input line
-					(at -22.86 0 0)
+					(at -22.86 7.62 0)
 					(length 5.08)
 					(name "A3"
 						(effects
@@ -995,7 +995,7 @@
 					)
 				)
 				(pin input line
-					(at -22.86 -5.08 0)
+					(at -22.86 2.54 0)
 					(length 5.08)
 					(name "AUTOVEC"
 						(effects
@@ -1013,7 +1013,7 @@
 					)
 				)
 				(pin input inverted
-					(at -22.86 -12.7 0)
+					(at -22.86 -5.08 0)
 					(length 5.08)
 					(name "~{IPL0}"
 						(effects
@@ -1031,7 +1031,7 @@
 					)
 				)
 				(pin input inverted
-					(at -22.86 -15.24 0)
+					(at -22.86 -7.62 0)
 					(length 5.08)
 					(name "~{IPL1}"
 						(effects
@@ -1049,7 +1049,7 @@
 					)
 				)
 				(pin input inverted
-					(at -22.86 -17.78 0)
+					(at -22.86 -10.16 0)
 					(length 5.08)
 					(name "~{IPL2}"
 						(effects
@@ -1066,8 +1066,170 @@
 						)
 					)
 				)
+				(pin no_connect clock
+					(at -22.86 -17.78 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -22.86 -20.32 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -22.86 -22.86 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -22.86 -25.4 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -22.86 -27.94 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -22.86 -30.48 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -22.86 -33.02 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -22.86 -35.56 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -22.86 -38.1 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "44"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin output inverted
-					(at 22.86 17.78 180)
+					(at 22.86 25.4 180)
 					(length 5.08)
 					(name "~{IACKOUT}"
 						(effects
@@ -1085,7 +1247,7 @@
 					)
 				)
 				(pin output line
-					(at 22.86 12.7 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(name "ACKD"
 						(effects
@@ -1103,7 +1265,7 @@
 					)
 				)
 				(pin output inverted
-					(at 22.86 -5.08 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(name "~{AUTOVEC_DRV}"
 						(effects
@@ -1121,7 +1283,7 @@
 					)
 				)
 				(pin output inverted
-					(at 22.86 -7.62 180)
+					(at 22.86 0 180)
 					(length 5.08)
 					(name "~{VEC_DRV}"
 						(effects
@@ -1139,7 +1301,7 @@
 					)
 				)
 				(pin output inverted
-					(at 22.86 -12.7 180)
+					(at 22.86 -5.08 180)
 					(length 5.08)
 					(name "~{IRQ7_DRV}"
 						(effects
@@ -1157,7 +1319,7 @@
 					)
 				)
 				(pin output inverted
-					(at 22.86 -15.24 180)
+					(at 22.86 -7.62 180)
 					(length 5.08)
 					(name "~{IRQ6_DRV}"
 						(effects
@@ -1175,7 +1337,7 @@
 					)
 				)
 				(pin output inverted
-					(at 22.86 -17.78 180)
+					(at 22.86 -10.16 180)
 					(length 5.08)
 					(name "~{IRQ5_DRV}"
 						(effects
@@ -1193,7 +1355,7 @@
 					)
 				)
 				(pin output inverted
-					(at 22.86 -20.32 180)
+					(at 22.86 -12.7 180)
 					(length 5.08)
 					(name "~{IRQ4_DRV}"
 						(effects
@@ -1211,7 +1373,7 @@
 					)
 				)
 				(pin output inverted
-					(at 22.86 -22.86 180)
+					(at 22.86 -15.24 180)
 					(length 5.08)
 					(name "~{IRQ3_DRV}"
 						(effects
@@ -1229,7 +1391,7 @@
 					)
 				)
 				(pin output inverted
-					(at 22.86 -25.4 180)
+					(at 22.86 -17.78 180)
 					(length 5.08)
 					(name "~{IRQ2_DRV}"
 						(effects
@@ -1247,7 +1409,7 @@
 					)
 				)
 				(pin output inverted
-					(at 22.86 -27.94 180)
+					(at 22.86 -20.32 180)
 					(length 5.08)
 					(name "~{IRQ1_DRV}"
 						(effects
@@ -4179,13 +4341,12 @@
 	)
 	(symbol
 		(lib_id "Dev_Tool:EPM7032SLC44-10")
-		(at 99.06 63.5 0)
+		(at 99.06 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1282e54f-92b6-41ea-b422-48e6ff0780e2")
 		(property "Reference" "U10"
 			(at 99.06 30.48 0)
@@ -4204,7 +4365,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_PLCC-44_SMD_Socket"
-			(at 99.06 63.5 0)
+			(at 99.06 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4213,7 +4374,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 63.5 0)
+			(at 99.06 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4222,7 +4383,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 99.06 63.5 0)
+			(at 99.06 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4334,6 +4495,33 @@
 		)
 		(pin "42"
 			(uuid "6890100d-4b39-4ec1-8242-3a671693827d")
+		)
+		(pin "12"
+			(uuid "f7812e8b-9226-465d-ae7c-aac494d61cc1")
+		)
+		(pin "2"
+			(uuid "6f609054-d24d-4dbf-a7a8-08ed95eb54cd")
+		)
+		(pin "11"
+			(uuid "43afc71b-738a-4db3-a4f1-411be685a8bd")
+		)
+		(pin "17"
+			(uuid "15b07328-13e8-40a6-859b-55c1adca8f0c")
+		)
+		(pin "19"
+			(uuid "3a71a36d-fcf3-4871-81aa-8e9d3181c4bb")
+		)
+		(pin "14"
+			(uuid "db5d41ac-fe2d-4ac7-ba04-0a3646372230")
+		)
+		(pin "16"
+			(uuid "0532d163-6fe1-4e3f-940b-5055a11c87a3")
+		)
+		(pin "44"
+			(uuid "994e41a3-9493-4d5a-8d47-bd3512a1a8ef")
+		)
+		(pin "18"
+			(uuid "452e1ff5-d750-4553-bc69-f70b1f47388a")
 		)
 		(instances
 			(project ""
@@ -5426,6 +5614,33 @@
 		)
 		(pin "42"
 			(uuid "6890100d-4b39-4ec1-8242-3a671693827e")
+		)
+		(pin "17"
+			(uuid "1777466e-7a39-4c4a-943e-824a6cc602de")
+		)
+		(pin "19"
+			(uuid "9a0f4d3d-4d79-4c2d-9c59-45b7f55d7b4a")
+		)
+		(pin "44"
+			(uuid "d2ee84e4-f3dd-4f90-9454-eb06325ee590")
+		)
+		(pin "2"
+			(uuid "1d8bbd85-0f7b-4f97-aa08-5e1f716cf8ad")
+		)
+		(pin "16"
+			(uuid "5a9369b1-97ca-4a8a-9d85-f90366a02e21")
+		)
+		(pin "18"
+			(uuid "49f19867-5c7e-4b72-8cae-1140db11e5fe")
+		)
+		(pin "12"
+			(uuid "a52c1f5a-2efd-47b1-b2b0-bc9190be8a5e")
+		)
+		(pin "11"
+			(uuid "64dbe930-9412-4a1f-957a-07fb7dc7bb46")
+		)
+		(pin "14"
+			(uuid "2d9f2f1b-bb5f-482d-8365-ce8ed45dcbe5")
 		)
 		(instances
 			(project ""

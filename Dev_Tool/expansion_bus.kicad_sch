@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "EXPANSION BUS CONNECTOR")
-		(date "2025-09-08")
+		(date "2025-09-09")
 		(rev "1")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -3951,10 +3951,10 @@
 		(uuid "61c28d20-cb87-45b0-94ab-87811aa86239")
 	)
 	(junction
-		(at 246.38 137.16)
+		(at 254 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "809f3d49-0bc3-4349-94a8-d14145a492e7")
+		(uuid "8e1a3fee-79ed-48f7-bcaf-f2e563940acd")
 	)
 	(junction
 		(at 63.5 76.2)
@@ -4460,7 +4460,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 137.16) (xy 264.16 127)
+			(xy 261.62 137.16) (xy 261.62 127)
 		)
 		(stroke
 			(width 0)
@@ -4540,23 +4540,13 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 129.54) (xy 256.54 127)
+			(xy 243.84 129.54) (xy 243.84 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3f43bba2-351f-43e1-9658-df9dd1babe65")
-	)
-	(wire
-		(pts
-			(xy 246.38 137.16) (xy 264.16 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "430f9e73-c587-41dc-973d-1ff15b665552")
 	)
 	(wire
 		(pts
@@ -4950,7 +4940,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 129.54) (xy 256.54 129.54)
+			(xy 236.22 129.54) (xy 243.84 129.54)
 		)
 		(stroke
 			(width 0)
@@ -5010,6 +5000,16 @@
 	)
 	(wire
 		(pts
+			(xy 254 137.16) (xy 261.62 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9a2fa9b-a155-4085-88a3-9645682dbe45")
+	)
+	(wire
+		(pts
 			(xy 129.54 88.9) (xy 129.54 96.52)
 		)
 		(stroke
@@ -5030,7 +5030,7 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 127) (xy 246.38 137.16)
+			(xy 254 127) (xy 254 137.16)
 		)
 		(stroke
 			(width 0)
@@ -5250,7 +5250,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 137.16) (xy 246.38 137.16)
+			(xy 231.14 137.16) (xy 254 137.16)
 		)
 		(stroke
 			(width 0)
@@ -6828,7 +6828,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 256.54 127 0)
+		(at 243.84 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6837,7 +6837,7 @@
 		(fields_autoplaced yes)
 		(uuid "bc67f03a-3cc0-4cd1-88d0-90570f000f8c")
 		(property "Reference" "#PWR042"
-			(at 256.54 130.81 0)
+			(at 243.84 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6846,7 +6846,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 256.54 121.92 0)
+			(at 243.84 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6854,7 +6854,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 256.54 127 0)
+			(at 243.84 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6863,7 +6863,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 127 0)
+			(at 243.84 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6872,7 +6872,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 256.54 127 0)
+			(at 243.84 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7046,7 +7046,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 264.16 127 0)
+		(at 261.62 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7055,7 +7055,7 @@
 		(fields_autoplaced yes)
 		(uuid "dfdfd21a-49c1-4e66-9330-c9cb48fe3f62")
 		(property "Reference" "#PWR041"
-			(at 264.16 130.81 0)
+			(at 261.62 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7064,7 +7064,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 264.16 121.92 0)
+			(at 261.62 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7072,7 +7072,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 264.16 127 0)
+			(at 261.62 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7081,7 +7081,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 264.16 127 0)
+			(at 261.62 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7090,7 +7090,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 264.16 127 0)
+			(at 261.62 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7530,7 +7530,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 246.38 127 0)
+		(at 254 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7539,7 +7539,7 @@
 		(fields_autoplaced yes)
 		(uuid "f1a6c81e-2ae2-48f6-a59d-10c683724431")
 		(property "Reference" "#FLG02"
-			(at 246.38 125.095 0)
+			(at 254 125.095 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7548,7 +7548,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 246.38 121.92 0)
+			(at 254 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7556,7 +7556,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 246.38 127 0)
+			(at 254 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7565,7 +7565,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 246.38 127 0)
+			(at 254 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7574,7 +7574,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 246.38 127 0)
+			(at 254 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)

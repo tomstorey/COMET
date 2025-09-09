@@ -429,6 +429,15 @@
 	(net 260 "unconnected-(U8A-~{DCD}-Pad10)")
 	(net 261 "unconnected-(U8A-CBUS1-Pad22)")
 	(net 262 "unconnected-(U8A-~{DSR}-Pad9)")
+	(net 263 "unconnected-(U10-Pad44)")
+	(net 264 "unconnected-(U10-Pad11)")
+	(net 265 "unconnected-(U10-Pad16)")
+	(net 266 "unconnected-(U10-Pad14)")
+	(net 267 "unconnected-(U10-Pad17)")
+	(net 268 "unconnected-(U10-Pad19)")
+	(net 269 "unconnected-(U10-Pad2)")
+	(net 270 "unconnected-(U10-Pad12)")
+	(net 271 "unconnected-(U10-Pad18)")
 	(footprint "COMET_footprints:Package_SOT23-6"
 		(layer "F.Cu")
 		(uuid "0135111e-5478-47d5-a973-fa0cf0a5bc1d")
@@ -1099,7 +1108,7 @@
 			)
 		)
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/0088c9f0-a924-42e8-b443-c23912a249f3")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(clearance 0.1016)
 		(attr smd)
@@ -2088,7 +2097,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/6d79528e-3b03-4642-86c4-5a8b7d3d947a")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3153,7 +3162,7 @@
 			)
 		)
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/a2272cea-d4b2-43f6-97ec-b1f9a035cc13")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3583,7 +3592,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/8c5eb0fc-2009-4df0-8dd9-5997b112b54a")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6126,7 +6135,7 @@
 		)
 		(property ki_fp_filters "DIP* SOIC* R*Array*Concave* R*Array*Convex* MSOP*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/479affa6-f935-4b8f-805b-7b7d5abdabf0")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6878,7 +6887,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/8330f047-c46c-4e37-a9b7-f78dcb8b952a")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7307,7 +7316,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/7b0d35a1-969d-48c3-a9dd-b597071da0b1")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -7905,7 +7914,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/712738d2-5b04-4a93-bb0e-c7f5d266234a")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8114,7 +8123,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/84295871-8dd5-4699-b8c5-19bcb07cf69b")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9309,7 +9318,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/8c5922f5-bf83-4349-86b0-3c23ef9a8d54")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10019,7 +10028,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/3ba64520-8c6f-40a5-aaef-062d5bc285be")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10777,7 +10786,7 @@
 		)
 		(property ki_fp_filters "8P8C* RJ31* RJ32* RJ33* RJ34* RJ35* RJ41* RJ45* RJ49* RJ61*")
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/59a688d0-e00d-417e-85b6-f1aeafeb2c2f")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -11455,7 +11464,7 @@
 			)
 		)
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/208658c9-c5f8-470c-ad81-4df5cb37cf4c")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(clearance 0.1778)
 		(attr smd)
@@ -12501,7 +12510,7 @@
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/53c06a2d-4352-42b4-900f-ad5b836b6395")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -12824,7 +12833,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/cd23f5c1-5bdd-42cb-a8ba-e8cb559161e1")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13034,7 +13043,7 @@
 			)
 		)
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/16334777-8fac-4dd2-8c1b-6dd5bde6d2ab")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18058,7 +18067,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/b6cde8fe-a416-4dff-95e5-e67236a5b2c2")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -18355,7 +18364,7 @@
 		)
 		(property ki_fp_filters "DIP* SOIC* R*Array*Concave* R*Array*Convex* MSOP*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/29d24eea-09f9-4919-acb8-74c9d05d0f6c")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18829,7 +18838,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/9632fe79-3bf5-4841-8f19-6102df5181a8")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19548,7 +19557,7 @@
 				)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "4K7"
 			(at 0 2.54 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19586,7 +19595,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/42597743-b065-43f7-82f3-675efd2305c0")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19794,7 +19803,7 @@
 			)
 		)
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/88dad5b6-7e1f-470a-bea7-5bbb9e37dbb2")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20784,7 +20793,7 @@
 			)
 		)
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/dc92c201-bac4-4f34-a63d-d4d74e4ce2dc")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21005,7 +21014,7 @@
 		)
 		(property ki_fp_filters "8P8C* RJ31* RJ32* RJ33* RJ34* RJ35* RJ41* RJ45* RJ49* RJ61*")
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/59a688d0-e00d-417e-85b6-f1aeafeb2c2f")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -21314,7 +21323,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/9632fe79-3bf5-4841-8f19-6102df5181a8")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21836,7 +21845,7 @@
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/1a0a0fde-c9f3-4326-ab45-347651f0ea3c")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -21950,7 +21959,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/d2e1fc53-4cf2-491a-94be-d9b753fda125")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22343,7 +22352,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/77d6d39b-afed-4665-8075-170b9ea0f7ea")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22736,7 +22745,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/3ba64520-8c6f-40a5-aaef-062d5bc285be")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22907,7 +22916,7 @@
 				)
 			)
 		)
-		(property "Value" "4K7"
+		(property "Value" "10K"
 			(at 0 2.54 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22945,7 +22954,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/882e880c-816c-4038-86f2-cf6ebb594352")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23389,7 +23398,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/d2e1fc53-4cf2-491a-94be-d9b753fda125")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23560,7 +23569,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "1nF"
 			(at 0 2.54 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23611,7 +23620,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/0ef34936-2e84-464e-97ac-ec6380749c91")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24017,7 +24026,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/94fd5400-c06d-4c76-a7aa-a0cc5e684e06")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24239,7 +24248,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/77d6d39b-afed-4665-8075-170b9ea0f7ea")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24449,7 +24458,7 @@
 			)
 		)
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/16334777-8fac-4dd2-8c1b-6dd5bde6d2ab")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25152,7 +25161,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/67dc62cb-ba74-415e-af82-cc66f112c5c7")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25363,7 +25372,7 @@
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/1a0a0fde-c9f3-4326-ab45-347651f0ea3c")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -26302,7 +26311,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:C_*")
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/cd23f5c1-5bdd-42cb-a8ba-e8cb559161e1")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27012,7 +27021,7 @@
 			)
 		)
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/493ac547-eee9-460f-977c-61a3e731ecdb")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28259,7 +28268,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "1180f011-f8a7-490e-a492-411553f88a97")
+			(uuid "21ccb396-49c7-4c39-b7e9-23bc3ba59ce6")
 		)
 		(fp_line
 			(start -11.75 -9.75)
@@ -28269,7 +28278,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "5c33b506-e04a-409d-ac2c-c22de4dee7ab")
+			(uuid "09594c7f-c9df-4a87-8661-08209e4f58cc")
 		)
 		(fp_line
 			(start -11.75 11.75)
@@ -28279,7 +28288,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "e923304f-56fa-41db-a726-5172849789d7")
+			(uuid "564c8361-3901-4ece-9fab-556a007ff0cd")
 		)
 		(fp_line
 			(start -9.271 -7.62)
@@ -28289,7 +28298,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "eca0b26b-5b92-4ec6-8427-1ba0358bb1d8")
+			(uuid "3e04e443-3499-468b-8cfa-93b3148bf15d")
 		)
 		(fp_line
 			(start -9.271 9.271)
@@ -28299,7 +28308,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "294aede5-5b78-4947-b434-4a0a35cf7783")
+			(uuid "c5c2fef7-b827-433a-9f72-5f837d3dcd2d")
 		)
 		(fp_line
 			(start -7.62 -9.271)
@@ -28309,7 +28318,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "b6b4a992-193f-40d7-bcae-790244e6e3d7")
+			(uuid "4abd8d5a-dd2d-4c80-9e65-d7308975b2eb")
 		)
 		(fp_line
 			(start 9.271 -9.271)
@@ -28319,7 +28328,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "75913025-325f-48dd-89a6-3fb8edc6b093")
+			(uuid "9649bc41-c48e-4b08-926d-c31c10a69723")
 		)
 		(fp_line
 			(start 9.271 9.271)
@@ -28329,7 +28338,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "b633b328-20aa-422a-bef1-ee5c6b8d2ace")
+			(uuid "0f071511-62af-48e0-95b4-5603fcff0c20")
 		)
 		(fp_line
 			(start 11.75 -11.75)
@@ -28339,7 +28348,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "c768cad1-3f4f-49ec-a33e-5184b17a1ef4")
+			(uuid "b763c3ef-982c-4c10-ae04-7f22e56c8efa")
 		)
 		(fp_line
 			(start 11.75 -11.75)
@@ -28349,7 +28358,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "3797dec8-d0be-44cf-962e-65508cf71f40")
+			(uuid "24be2ad3-94e0-4cb8-9e69-8daabb5222cf")
 		)
 		(fp_line
 			(start -11.75 -11.75)
@@ -28359,7 +28368,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "b842cc3b-3efd-428c-aaf5-18f15c4c8ede")
+			(uuid "19a19193-831d-4146-a2d9-c6e1e0c15ec8")
 		)
 		(fp_line
 			(start -11.75 11.75)
@@ -28369,7 +28378,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "32e8a1d0-e74e-4103-92b1-39f74e21a21b")
+			(uuid "c339ede3-8c69-457a-9461-4308216246a2")
 		)
 		(fp_line
 			(start 11.75 -11.75)
@@ -28379,7 +28388,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "5c77002f-0628-4aff-ab1b-60df0985235a")
+			(uuid "8419d7d8-adfe-4165-969d-c8f682771e17")
 		)
 		(fp_line
 			(start 11.75 11.75)
@@ -28389,7 +28398,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "dfee6129-fca0-41ed-b3a6-548f046f45c1")
+			(uuid "12c14850-2239-4bb4-aeef-5eaeaf6afcc4")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
@@ -28415,6 +28424,8 @@
 			(at -1.27 -7.8625)
 			(size 0.6492 1.925)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 269 "unconnected-(U10-Pad2)")
+			(pintype "no_connect")
 			(uuid "d03058ae-7aff-4bb5-8aa7-dd6f030e22bb")
 		)
 		(pad "3" smd rect
@@ -28493,12 +28504,16 @@
 			(at -7.8625 -1.27 90)
 			(size 0.6492 1.925)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 264 "unconnected-(U10-Pad11)")
+			(pintype "no_connect")
 			(uuid "30fd5f95-3a77-4407-a75d-b1a937840d09")
 		)
 		(pad "12" smd rect
 			(at -7.8625 0 90)
 			(size 0.6492 1.925)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 270 "unconnected-(U10-Pad12)")
+			(pintype "no_connect")
 			(uuid "d37e79d1-0e1b-4c85-b1d9-ffd207bb9230")
 		)
 		(pad "13" smd rect
@@ -28514,6 +28529,8 @@
 			(at -7.8625 2.54 90)
 			(size 0.6492 1.925)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 266 "unconnected-(U10-Pad14)")
+			(pintype "no_connect")
 			(uuid "8e9c9d1a-ec9a-474c-a970-35406376d48d")
 		)
 		(pad "15" smd rect
@@ -28529,24 +28546,32 @@
 			(at -7.8625 5.08 90)
 			(size 0.6492 1.925)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 265 "unconnected-(U10-Pad16)")
+			(pintype "no_connect")
 			(uuid "33263f3b-ae33-470d-825c-459d950b23e8")
 		)
 		(pad "17" smd rect
 			(at -7.8625 6.35 90)
 			(size 0.6492 1.925)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 267 "unconnected-(U10-Pad17)")
+			(pintype "no_connect")
 			(uuid "ada450b1-2569-4149-94ec-cbce49d004b7")
 		)
 		(pad "18" smd rect
 			(at -6.35 7.8625)
 			(size 0.6492 1.925)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 271 "unconnected-(U10-Pad18)")
+			(pintype "no_connect")
 			(uuid "e9607e1d-6262-43f9-84be-6961df2cb13e")
 		)
 		(pad "19" smd rect
 			(at -5.08 7.8625)
 			(size 0.6492 1.925)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 268 "unconnected-(U10-Pad19)")
+			(pintype "no_connect")
 			(uuid "c2397332-1110-4feb-8523-dcdaa5645b39")
 		)
 		(pad "20" smd rect
@@ -28769,6 +28794,8 @@
 			(at 1.27 -7.8625)
 			(size 0.6492 1.925)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 263 "unconnected-(U10-Pad44)")
+			(pintype "no_connect")
 			(uuid "30cab08b-2e9c-4429-93f8-ee896f240efa")
 		)
 		(embedded_fonts no)
@@ -28837,7 +28864,7 @@
 			)
 		)
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/80d823e4-cacd-49b6-b591-8ecef9175604")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -30299,7 +30326,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/314e2973-0193-4afa-9a5e-fd3444f87bb4")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -31386,7 +31413,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/a491ac35-079f-4bbd-9439-5e2c1160df13")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -31661,7 +31688,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/7cb28655-7471-496b-ab63-7ea6d1b682fb")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -31870,7 +31897,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/0c11cb35-7183-4880-a395-b2322e31a6fb/a846ded2-f783-4eca-9632-225ac77a105d")
-		(sheetname "/USB UART 2/")
+		(sheetname "/USB UART 2 (PORT B)/")
 		(sheetfile "usb_uart_2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -32467,7 +32494,7 @@
 			)
 		)
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/5fb15315-a5de-42f5-83e7-7c633870580e")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -33538,7 +33565,7 @@
 			)
 		)
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/eba6ebb6-0a98-4874-8b91-6f65141b670b")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -33935,7 +33962,7 @@
 		)
 		(property ki_fp_filters "COMET_footprints:R_*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/1f7a1451-7f9e-4bc5-b919-2249ff80f18e")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -34577,7 +34604,7 @@
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/b4fc2b01-933f-4ccf-b6d4-7f874139b255/da7b491d-6eee-44ad-8a1e-cd7292094a8d")
-		(sheetname "/USB-I2C-GPIO/")
+		(sheetname "/USB-I2C-GPIO (PORT C)/")
 		(sheetfile "usb_i2c_gpio.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -34679,7 +34706,7 @@
 			)
 		)
 		(path "/3ea1cb28-642d-4660-9969-da53543e5d21/46618b52-6e7b-4c25-82d4-3c66b9338c40")
-		(sheetname "/USB UART 1/")
+		(sheetname "/USB UART 1 (PORT A)/")
 		(sheetfile "usb_uart_1.kicad_sch")
 		(clearance 0.1778)
 		(attr smd)
