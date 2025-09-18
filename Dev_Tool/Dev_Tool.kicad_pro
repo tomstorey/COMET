@@ -616,6 +616,46 @@
       {
         "netclass": "USB",
         "pattern": "/USB hub/USBU_H_N"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "USBD1_H_P"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "USBD1_H_N"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "USBU_H_N"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "USBU_H_P"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/USB ports/USBU_S_P"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/USB ports/USBU_S_N"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/USB ports/USBD1_S_P"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/USB ports/USBD1_S_N"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "USBD*"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "USBU_*"
       }
     ]
   },
@@ -758,6 +798,10 @@
     [
       "403536b9-4c12-4248-9509-32fc05dc8151",
       "USB hub"
+    ],
+    [
+      "ec152034-479b-4987-9226-4ae778d50831",
+      "USB ports"
     ],
     [
       "b4fc2b01-933f-4ccf-b6d4-7f874139b255",
