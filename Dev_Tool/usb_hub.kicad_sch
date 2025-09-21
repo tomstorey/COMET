@@ -12,6 +12,296 @@
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
 	)
 	(lib_symbols
+		(symbol "COMET_symbols:74x1G07"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "74x1G07"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "COMET_footprints:Package_SOT23-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Buffer with open-drain output"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "74x1G07_1_0"
+				(polyline
+					(pts
+						(xy -2.54 3.81) (xy -2.54 -3.81) (xy 5.08 0) (xy -2.54 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "74x1G07_1_1"
+				(polyline
+					(pts
+						(xy 0.762 -1.016) (xy 1.778 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.016) (xy 0.635 0) (xy 1.27 -1.016) (xy 1.905 0) (xy 1.27 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 0 -2.54 0)
+					(length 2.54)
+					(hide yes)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "74x1G07_1_2"
+				(polyline
+					(pts
+						(xy 0.762 -1.016) (xy 1.778 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.016) (xy 0.635 0) (xy 1.27 -1.016) (xy 1.905 0) (xy 1.27 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input inverted
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector inverted
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "74x1G07_2_1"
+				(pin power_in line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "74x1G07_2_2"
+				(pin power_in line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "COMET_symbols:BSS138"
 			(pin_names
 				(offset 0)
@@ -2181,7 +2471,7 @@
 	)
 	(text "CONFIGURATION OPTIONS\n\nCFG_SEL1	CFG_SEL0	MODE\n0			0			STRAP OPTIONS\n0			1			CONFIG VIA SMBUS\n1			0			DEFAULT CONFIG\n1			1			CONFIG VIA I2C EEPROM"
 		(exclude_from_sim no)
-		(at 218.44 99.06 0)
+		(at 226.06 147.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2192,7 +2482,7 @@
 	)
 	(text "HUB_ACT"
 		(exclude_from_sim no)
-		(at 241.3 137.16 0)
+		(at 237.49 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2283,6 +2573,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e4964576-8289-4013-a6cf-de5743dfb42d")
+	)
+	(junction
+		(at 245.11 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa77c06d-35ca-475c-a201-c5dc094c1960")
 	)
 	(no_connect
 		(at 147.32 78.74)
@@ -2426,6 +2722,16 @@
 	)
 	(wire
 		(pts
+			(xy 245.11 96.52) (xy 245.11 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28be3a91-0f60-455f-adf4-ec489d4e40d6")
+	)
+	(wire
+		(pts
 			(xy 81.28 93.98) (xy 93.98 93.98)
 		)
 		(stroke
@@ -2536,7 +2842,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 149.86) (xy 261.62 152.4)
+			(xy 257.81 93.98) (xy 257.81 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2596,7 +2902,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 132.08) (xy 233.68 132.08)
+			(xy 232.41 76.2) (xy 229.87 76.2)
 		)
 		(stroke
 			(width 0)
@@ -2656,7 +2962,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 132.08) (xy 261.62 139.7)
+			(xy 257.81 76.2) (xy 257.81 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2786,7 +3092,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 132.08) (xy 233.68 129.54)
+			(xy 229.87 76.2) (xy 229.87 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2816,7 +3122,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 144.78) (xy 256.54 144.78)
+			(xy 229.87 88.9) (xy 245.11 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2843,6 +3149,16 @@
 			(type default)
 		)
 		(uuid "9de19273-1046-4a07-8b7f-22ba5ee9c794")
+	)
+	(wire
+		(pts
+			(xy 252.73 114.3) (xy 260.35 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e7a373d-a177-4a99-bd9c-febea78977dc")
 	)
 	(wire
 		(pts
@@ -2916,7 +3232,7 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 132.08) (xy 248.92 132.08)
+			(xy 242.57 76.2) (xy 245.11 76.2)
 		)
 		(stroke
 			(width 0)
@@ -2966,7 +3282,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 132.08) (xy 261.62 132.08)
+			(xy 255.27 76.2) (xy 257.81 76.2)
 		)
 		(stroke
 			(width 0)
@@ -2986,6 +3302,16 @@
 	)
 	(wire
 		(pts
+			(xy 245.11 88.9) (xy 252.73 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf1c7478-ba7f-4d44-89a4-78c56fc85d9d")
+	)
+	(wire
+		(pts
 			(xy 177.8 147.32) (xy 177.8 149.86)
 		)
 		(stroke
@@ -2993,6 +3319,16 @@
 			(type default)
 		)
 		(uuid "bff86d35-cc29-4a6a-8988-4a80b3939994")
+	)
+	(wire
+		(pts
+			(xy 240.03 114.3) (xy 232.41 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c25fd5dc-ea0b-4eff-beaf-404764cf8bd6")
 	)
 	(wire
 		(pts
@@ -3106,6 +3442,16 @@
 	)
 	(wire
 		(pts
+			(xy 232.41 114.3) (xy 232.41 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e32df1c7-7d7e-4fec-9435-5a2ef8328afb")
+	)
+	(wire
+		(pts
 			(xy 43.18 60.96) (xy 88.9 60.96)
 		)
 		(stroke
@@ -3123,6 +3469,16 @@
 			(type default)
 		)
 		(uuid "e8a67f9f-be86-406e-aa02-3be77be062ab")
+	)
+	(wire
+		(pts
+			(xy 232.41 96.52) (xy 245.11 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebae9b27-0c33-42bb-bd2b-d92a8fdabd0e")
 	)
 	(wire
 		(pts
@@ -3195,7 +3551,7 @@
 		(uuid "fffb1c53-5f8e-49bf-80c0-0ff7bb912fd9")
 	)
 	(label "SUSP_IND"
-		(at 233.68 144.78 0)
+		(at 229.87 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3269,6 +3625,28 @@
 		(uuid "1f01a376-51ef-461d-8016-835eeb203606")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 213.2836 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "~{RESET5}"
+		(shape output)
+		(at 260.35 114.3 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "23bd5753-fb06-40d6-a9d1-f104cbdda9fc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 270.2898 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3750,7 +4128,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 261.62 152.4 0)
+		(at 257.81 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3759,7 +4137,7 @@
 		(fields_autoplaced yes)
 		(uuid "1a4d1e5c-2d7b-427a-9e01-e99f6077fe4a")
 		(property "Reference" "#PWR086"
-			(at 261.62 158.75 0)
+			(at 257.81 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3768,7 +4146,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 261.62 157.48 0)
+			(at 257.81 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3776,7 +4154,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 261.62 152.4 0)
+			(at 257.81 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3785,7 +4163,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 261.62 152.4 0)
+			(at 257.81 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3794,7 +4172,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 261.62 152.4 0)
+			(at 257.81 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3962,7 +4340,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 233.68 129.54 0)
+		(at 229.87 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3971,7 +4349,7 @@
 		(fields_autoplaced yes)
 		(uuid "50adcb0f-83fc-4fc0-95dc-9e6f1a3a214d")
 		(property "Reference" "#PWR058"
-			(at 233.68 133.35 0)
+			(at 229.87 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3980,7 +4358,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 233.68 124.46 0)
+			(at 229.87 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3988,7 +4366,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 233.68 129.54 0)
+			(at 229.87 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3997,7 +4375,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 129.54 0)
+			(at 229.87 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4006,7 +4384,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 233.68 129.54 0)
+			(at 229.87 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4302,7 +4680,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:LED")
-		(at 241.3 132.08 0)
+		(at 237.49 76.2 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4312,7 +4690,7 @@
 		(fields_autoplaced yes)
 		(uuid "782b78f0-4cac-4f5b-8af7-0a6275345104")
 		(property "Reference" "D1"
-			(at 242.8875 125.73 0)
+			(at 239.0775 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4320,7 +4698,7 @@
 			)
 		)
 		(property "Value" "GREEN"
-			(at 242.8875 128.27 0)
+			(at 239.0775 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4328,7 +4706,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:LED_SMD0805"
-			(at 241.3 132.08 0)
+			(at 237.49 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4337,7 +4715,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 132.08 0)
+			(at 237.49 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4346,7 +4724,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 241.3 132.08 0)
+			(at 237.49 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4430,6 +4808,81 @@
 			(project ""
 				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b/403536b9-4c12-4248-9509-32fc05dc8151"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "COMET_symbols:74x1G07")
+		(at 245.11 114.3 0)
+		(unit 1)
+		(convert 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7c2d67d4-7fc6-4d7b-ad71-9927b0cb9115")
+		(property "Reference" "U28"
+			(at 246.38 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SN74LVC1G07DBV"
+			(at 246.38 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "COMET_footprints:Package_SOT23-5"
+			(at 245.11 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245.11 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Buffer with open-drain output"
+			(at 245.11 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "27db3b04-196d-44af-b9e4-a61d3554e7f5")
+		)
+		(pin "3"
+			(uuid "15d84379-469d-4431-b5e1-701fc76cd684")
+		)
+		(pin "5"
+			(uuid "bc1289c2-8f0d-42cc-8a8e-8720ba69ebde")
+		)
+		(pin "2"
+			(uuid "6a25c302-ae3d-4afa-9053-777b7dc46f1e")
+		)
+		(instances
+			(project ""
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b/403536b9-4c12-4248-9509-32fc05dc8151"
+					(reference "U28")
 					(unit 1)
 				)
 			)
@@ -5681,7 +6134,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:R")
-		(at 254 132.08 90)
+		(at 250.19 76.2 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5690,7 +6143,7 @@
 		(dnp no)
 		(uuid "edddff87-6c5c-4e9a-86c8-1bef702b3827")
 		(property "Reference" "R12"
-			(at 254 125.73 90)
+			(at 250.19 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5698,7 +6151,7 @@
 			)
 		)
 		(property "Value" "560R"
-			(at 254 128.27 90)
+			(at 250.19 72.39 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5706,7 +6159,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:R_SMD0805"
-			(at 254 132.08 0)
+			(at 250.19 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5715,7 +6168,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 132.08 0)
+			(at 250.19 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5724,7 +6177,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 254 132.08 0)
+			(at 250.19 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5885,7 +6338,7 @@
 	)
 	(symbol
 		(lib_id "COMET_symbols:BSS138")
-		(at 259.08 144.78 0)
+		(at 255.27 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5894,7 +6347,7 @@
 		(fields_autoplaced yes)
 		(uuid "f7fcd8a8-3097-4b55-bc20-8430569194ed")
 		(property "Reference" "Q1"
-			(at 264.16 143.5099 0)
+			(at 260.35 87.6299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5903,7 +6356,7 @@
 			)
 		)
 		(property "Value" "BSS138"
-			(at 264.16 146.0499 0)
+			(at 260.35 90.1699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5912,7 +6365,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_SOT-23"
-			(at 264.16 142.24 0)
+			(at 260.35 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5921,7 +6374,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 144.78 0)
+			(at 255.27 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5930,7 +6383,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 259.08 144.78 0)
+			(at 255.27 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
