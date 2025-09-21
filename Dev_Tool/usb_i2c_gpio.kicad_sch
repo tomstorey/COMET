@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "USB-I2C CONVERTER AND I2C GPIO EXPANDER (PORT C)")
-		(date "2025-09-18")
+		(date "2025-09-21")
 		(rev "2")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -3022,6 +3022,12 @@
 		(uuid "895c0971-d44d-4ead-a021-3048093f6eda")
 	)
 	(junction
+		(at 215.9 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a64e6a2a-cdcc-44dc-bd4e-0560a51a050d")
+	)
+	(junction
 		(at 200.66 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3587,16 +3593,6 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 68.58) (xy 213.36 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53963ad3-8943-4f60-a7e4-81404c3bbef8")
-	)
-	(wire
-		(pts
 			(xy 198.12 38.1) (xy 200.66 38.1)
 		)
 		(stroke
@@ -3644,6 +3640,16 @@
 			(type default)
 		)
 		(uuid "5ef92efd-90b7-4a05-b778-33219e3a8029")
+	)
+	(wire
+		(pts
+			(xy 218.44 68.58) (xy 215.9 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60261a23-c047-47be-a911-6c975d9b877a")
 	)
 	(bus
 		(pts
@@ -3997,7 +4003,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 71.12) (xy 213.36 71.12)
+			(xy 175.26 71.12) (xy 215.9 71.12)
 		)
 		(stroke
 			(width 0)
@@ -4137,6 +4143,16 @@
 	)
 	(wire
 		(pts
+			(xy 215.9 68.58) (xy 215.9 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7afeada-d283-48a7-94c3-af25e8e9de5a")
+	)
+	(wire
+		(pts
 			(xy 187.96 53.34) (xy 264.16 53.34)
 		)
 		(stroke
@@ -4154,16 +4170,6 @@
 			(type default)
 		)
 		(uuid "b994ce14-c68e-4007-9db9-14b88d41e415")
-	)
-	(wire
-		(pts
-			(xy 213.36 68.58) (xy 215.9 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb28cafc-3c18-4240-ad59-08a510e503b8")
 	)
 	(wire
 		(pts
@@ -4274,6 +4280,16 @@
 			(type default)
 		)
 		(uuid "d83c6df4-7901-488a-a1d0-037c81430698")
+	)
+	(wire
+		(pts
+			(xy 215.9 71.12) (xy 264.16 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db2ea730-97a2-40bb-99ac-b5175dcf11ed")
 	)
 	(wire
 		(pts
@@ -4641,6 +4657,28 @@
 			)
 		)
 	)
+	(global_label "~{SYSRESET}"
+		(shape input)
+		(at 264.16 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5d4ce730-f7e1-4deb-9b02-d3f4d5e77c12")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 276.3979 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "~{BUSRESET}"
 		(shape output)
 		(at 264.16 142.24 0)
@@ -4894,6 +4932,72 @@
 			(project ""
 				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b/b4fc2b01-933f-4ccf-b6d4-7f874139b255"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 218.44 68.58 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0e629441-30e4-4e3f-90d1-03eb8174f30b")
+		(property "Reference" "TP5"
+			(at 223.52 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 228.6 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 218.44 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 218.44 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 218.44 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aa65cb66-40ba-4a3d-8d0a-eb7b0fa15beb")
+		)
+		(instances
+			(project "Dev_Tool"
+				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b/b4fc2b01-933f-4ccf-b6d4-7f874139b255"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -5175,73 +5279,6 @@
 			(project "Dev_Tool"
 				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b/b4fc2b01-933f-4ccf-b6d4-7f874139b255"
 					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 215.9 68.58 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2427e60c-0799-48aa-be91-b4c4e55487b2")
-		(property "Reference" "TP5"
-			(at 220.98 67.3099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 220.98 69.8499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 215.9 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 215.9 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 215.9 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e2535f9a-138b-4172-bf28-4d9c470b83ea")
-		)
-		(instances
-			(project "Dev_Tool"
-				(path "/a5cc9727-587c-40e3-bd55-82381bb9520b/b4fc2b01-933f-4ccf-b6d4-7f874139b255"
-					(reference "TP5")
 					(unit 1)
 				)
 			)
