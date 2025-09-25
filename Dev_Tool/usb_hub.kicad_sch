@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "ON-BOARD 4 PORT USB HUB")
-		(date "2025-09-21")
+		(date "2025-09-25")
 		(rev "2")
 		(company "(C) TOM STOREY")
 		(comment 1 "FREE FOR NON-COMMERCIAL USE")
@@ -1145,7 +1145,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Dev_Tool:24C02C-I/P"
+		(symbol "Dev_Tool:24LC02B-I/P"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1157,7 +1157,7 @@
 					)
 				)
 			)
-			(property "Value" "24C02C-I/P"
+			(property "Value" "24LC02B-I/P"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1192,7 +1192,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "24C02C-I/P_1_1"
+			(symbol "24LC02B-I/P_1_1"
 				(rectangle
 					(start -7.62 10.16)
 					(end 7.62 -10.16)
@@ -5261,7 +5261,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Dev_Tool:24C02C-I/P")
+		(lib_id "Dev_Tool:24LC02B-I/P")
 		(at 193.04 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5278,7 +5278,7 @@
 				)
 			)
 		)
-		(property "Value" "24C02C-I/P"
+		(property "Value" "24LC02B-I/P"
 			(at 193.04 127 0)
 			(effects
 				(font
