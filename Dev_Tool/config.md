@@ -1,10 +1,10 @@
 # COMETbus Development Tool - Configuration
 ## Summary
-This document covers the steps required to configure a newly built Dev Tool. Configuration requires two utilitiy applications, one supplied by Microchip and the other by FTDI, to apply appropriate default settings that will be recalled by the MCP2221A and FT232R chips on the Dev Tool board. Finally, a I2C EEPROM must be programmed with an included file that contains settings that will be loaded by the USB hub.
+This document covers the steps required to configure a newly built Dev Tool. Configuration requires two utilitiy applications, one supplied by Microchip and the other by FTDI, to apply appropriate default settings that will be recalled by the MCP2221A and FT232R chips on the Dev Tool board. Crucially, a I2C EEPROM must be programmed with an included file that contains settings that will be loaded by the USB hub.
 
 **Note:** this configuration process requires access to a Windows computer to run the above mentioned utilities. At the time of writing I havent yet documented or developed a method to perform the configuration from a *nix based OS, but it can certainly be done.
 
-** IMPORTANT:** Follow this configuration guide in the order of the sections below. Do not connect the board to your computer until instructed to do so.
+**IMPORTANT:** Follow this configuration guide in the order of the sections below. Do not connect the board to your computer until instructed to do so.
 
 ## USB Hub Configuration EEPROM
 The USB hub is configured via strapping resistors to load its configuration from an I2C EEPROM. The I2C interface of the USB hub is limited in its capability, so the EEPROM should be 256 bytes in size, and must require only a single address byte to access its contents. The USB hub starts at address 0 and reads 256 bytes of data into its internal memory to apply its run-time configuration.
