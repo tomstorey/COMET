@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from enum import IntEnum
 import argparse
 import struct
@@ -869,7 +871,7 @@ def main():
     parser.set_defaults(voltage_flag=False)
     
 
-    subparsers = parser.add_subparsers()
+    subparsers = parser.add_subparsers(required=True)
 
     ####################################################################################################################
     init_parser = subparsers.add_parser(
