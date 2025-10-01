@@ -562,7 +562,7 @@ def reset(out_ep, in_ep, assert_flag, negate_flag, errors=False):
             separator = ", "
 
             # Delay
-            time.sleep(0.5)
+            time.sleep(0.25)
 
     if negate_flag is True:
         # Negate BUSRESET
