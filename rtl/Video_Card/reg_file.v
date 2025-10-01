@@ -156,28 +156,23 @@ module reg_file(
 	defparam reg_file_dec.LPM_WIDTH = 4;
 	defparam reg_file_dec.LPM_DECODES = 16;
 	
-	wire dtack;
-	
-	dff dtack_ff(
-		.d(|reg_selects[14:0] & write & uds & lds | |reg_selects[1:0] & !write & uds & lds),
-		.clk(sysclk),
-		.clrn(select),
-		.q(dtack)
-	);
-	
 	wire reg_write = dtack & write & uds & lds;
 	
 	wire csr0_read = select & reg_selects[0] & !write & uds & lds;
 	wire csr1_read = select & reg_selects[1] & !write & uds & lds;
 	
-	wire berr;
+	/* DTACK is asserted immediately for the following conditions:
+	 *
+	 * 	- writes to any register
+	 * 	- reads from registers 0 and 1 (the two CSRs) */
+	assign dtack = |reg_selects[14:2] & write & uds & lds | |reg_selects[1:0] & uds & lds;
 	
-	dff berr_ff(
-		.d(reg_selects[15] | |reg_selects & (uds & !lds | !uds & lds) | |reg_selects[14:2] & !write),
-		.clk(sysclk),
-		.clrn(select),
-		.q(berr)
-	);
+	/* BERR is asserted immediately for the following conditions:
+	 *
+	 * 	- access to register 15 (unimplemented)
+	 * 	- byte-wise access to any register (read or write)
+	 * 	- attempts to read from registers 2-14 */
+	assign berr = reg_selects[15] | |reg_selects & (uds & !lds | !uds & lds) | |reg_selects[14:2] & !write;
 	
 	/* Register instances *************************************************************************/
 	
