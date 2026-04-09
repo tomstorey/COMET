@@ -1,0 +1,144 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 132 02/25/2009 SJ Web Edition
+# Date created = 18:25:47  April 02, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		COMET68k_CPLD_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX7000S
+set_global_assignment -name DEVICE "EPM7128SQC100-15"
+set_global_assignment -name TOP_LEVEL_ENTITY COMET68k_CPLD
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:25:47  APRIL 02, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name DEVICE_FILTER_PACKAGE PQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name BDF_FILE COMET68k_CPLD.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE clock_divider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE one_shot_reset.sv
+set_global_assignment -name SYSTEMVERILOG_FILE bus_watchdog.sv
+set_global_assignment -name SYSTEMVERILOG_FILE xbus_machine.sv
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE xbus_machine.vwf
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_89 -to osc_40mhz
+set_location_assignment PIN_91 -to n_reset
+set_location_assignment PIN_71 -to addr[23]
+set_location_assignment PIN_70 -to addr[22]
+set_location_assignment PIN_69 -to addr[21]
+set_location_assignment PIN_67 -to addr[20]
+set_location_assignment PIN_66 -to addr[19]
+set_location_assignment PIN_65 -to addr[18]
+set_location_assignment PIN_63 -to addr[17]
+set_location_assignment PIN_62 -to addr[16]
+set_location_assignment PIN_56 -to fc[0]
+set_location_assignment PIN_54 -to fc[1]
+set_location_assignment PIN_51 -to fc[2]
+set_location_assignment PIN_57 -to n_as
+set_location_assignment PIN_50 -to n_write
+set_location_assignment PIN_55 -to n_uds
+set_location_assignment PIN_52 -to n_lds
+set_location_assignment PIN_32 -to n_dtack_drv
+set_location_assignment PIN_44 -to n_berr_drv
+set_location_assignment PIN_11 -to n_xd_lreg_le
+set_location_assignment PIN_12 -to n_xd_lreg_oe
+set_location_assignment PIN_15 -to n_xd_ubuf_oe
+set_location_assignment PIN_14 -to n_xd_lbuf_oe
+set_location_assignment PIN_21 -to n_rom0_cs
+set_location_assignment PIN_22 -to n_rom1_cs
+set_location_assignment PIN_33 -to n_io_cs
+set_location_assignment PIN_35 -to n_uart_cs
+set_location_assignment PIN_2 -to n_timer_cs
+set_location_assignment PIN_46 -to cpu_clk
+set_location_assignment PIN_4 -to eth_clk
+set_location_assignment PIN_1 -to timer_clk
+set_location_assignment PIN_34 -to xa0
+set_global_assignment -name SYSTEMVERILOG_FILE dram_machine.sv
+set_location_assignment PIN_98 -to n_ras0
+set_location_assignment PIN_96 -to n_ras1
+set_location_assignment PIN_95 -to n_ucas
+set_location_assignment PIN_94 -to n_lcas
+set_location_assignment PIN_99 -to masel
+set_location_assignment PIN_26 -to ddir
+set_location_assignment PIN_27 -to own
+set_location_assignment PIN_25 -to n_dben
+set_location_assignment PIN_8 -to n_eth_cs
+set_location_assignment PIN_10 -to n_eth_das
+set_location_assignment PIN_38 -to n_br
+set_location_assignment PIN_7 -to n_eth_bg
+set_location_assignment PIN_86 -to n_bg1
+set_location_assignment PIN_87 -to n_bg0
+set_location_assignment PIN_43 -to n_vpa
+set_location_assignment PIN_81 -to n_iack_out
+set_location_assignment PIN_42 -to n_dtack_in
+set_location_assignment PIN_29 -to cpld_func1
+set_location_assignment PIN_82 -to n_autovec
+set_location_assignment PIN_39 -to n_bg
+set_location_assignment PIN_85 -to n_br0
+set_location_assignment PIN_83 -to n_br1
+set_location_assignment PIN_9 -to n_eth_br
+set_location_assignment PIN_3 -to n_eth_irq
+set_location_assignment PIN_16 -to n_eth_ready
+set_location_assignment PIN_72 -to n_irq1
+set_location_assignment PIN_73 -to n_irq2
+set_location_assignment PIN_74 -to n_irq3
+set_location_assignment PIN_77 -to n_irq4
+set_location_assignment PIN_78 -to n_irq5
+set_location_assignment PIN_79 -to n_irq6
+set_location_assignment PIN_80 -to n_irq7
+set_location_assignment PIN_100 -to n_timer_irq
+set_location_assignment PIN_23 -to nmi
+set_location_assignment PIN_24 -to soft_irq
+set_location_assignment PIN_37 -to uart_irq
+set_location_assignment PIN_30 -to debug1
+set_location_assignment PIN_31 -to debug2
+set_location_assignment PIN_60 -to a3
+set_location_assignment PIN_58 -to a1
+set_location_assignment PIN_59 -to a2
+set_global_assignment -name SDC_FILE COMET68k_CPLD.sdc
+set_global_assignment -name VECTOR_COMPARE_TRIGGER_MODE SELECTED_EDGE
+set_global_assignment -name MAX7000_OPTIMIZATION_TECHNIQUE AREA
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name SYSTEMVERILOG_FILE bus_arbiter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE interrupt_controller.sv
+set_location_assignment PIN_47 -to n_ipl[2]
+set_location_assignment PIN_48 -to n_ipl[1]
+set_location_assignment PIN_49 -to n_ipl[0]
+set_global_assignment -name SYSTEMVERILOG_FILE am7990_interface.sv
+set_global_assignment -name RTLV_GROUP_RELATED_NODES ON
