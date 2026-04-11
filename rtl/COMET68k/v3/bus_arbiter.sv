@@ -101,8 +101,12 @@ module bus_arbiter(
 						 * bus to determine when the CPU has vacated it */
 						state_next = M_REQUEST_NEGATE;
 						
-						bg0_next = br0;
-						bg1_next = !br0 & br1;
+						if (br0) begin
+							bg0_next = '1;
+						end
+						else begin
+							bg1_next = '1;
+						end
 					end
 				end
 			end
