@@ -44,14 +44,14 @@ module interrupt_controller(
 	wire iack = as && (addr[19:16] == 4'b1111) && (fc == 3'b111);
 	wire [2:0] iack_level = {a3, a2, a1};
 	
-	/* Synchronise certain interrupt requests */
-	logic nmi_s, uart_irq_s, eth_irq_s, irq1_s, timer_irq_s, soft_irq_s;
+	/* Synchronise these interrupt inputs as they are used in the state machine to determine
+	 * whether an on-board or external interrupt is being acknowledged */
+	logic nmi_s, uart_irq_s, eth_irq_s, timer_irq_s, soft_irq_s;
 	
-	always_ff @(posedge clk) begin
+	always @(posedge clk) begin
 		nmi_s <= nmi;
 		uart_irq_s <= uart_irq;
 		eth_irq_s <= eth_irq;
-		irq1_s <= irq1;
 		timer_irq_s <= timer_irq;
 		soft_irq_s <= soft_irq;
 	end
@@ -68,33 +68,27 @@ module interrupt_controller(
 	);
 	
 	/* IPLx priority encoder */
-	wire irq7_sources = |{(nmi & !nmi_ack), irq7};
-	wire irq5_sources = |{uart_irq, irq5};
-	wire irq4_sources = |{eth_irq, irq4};
-	wire irq1_sources = |{irq1, timer_irq, soft_irq};
-	wire [6:0] irqs = {irq7_sources, irq6, irq5_sources, irq4_sources, irq3, irq2, irq1_sources};
-	
 	always_comb begin
 		if (boot_ff) begin
-			if      (irqs[6])                 ipl = ~3'd7;
-			else if (irqs[6:5] == 2'b01)      ipl = ~3'd6;
-			else if (irqs[6:4] == 3'b001)     ipl = ~3'd5;
-			else if (irqs[6:3] == 4'b0001)    ipl = ~3'd4;
-			else if (irqs[6:2] == 5'b00001)   ipl = ~3'd3;
-			else if (irqs[6:1] == 6'b000001)  ipl = ~3'd2;
-			else if (irqs      == 7'b0000001) ipl = ~3'd1;
-			else                              ipl = ~3'd0;
+			if      ((nmi & !nmi_ack) || irq7)      ipl = 3'd7;
+			else if (irq6)                          ipl = 3'd6;
+			else if (uart_irq || irq5)              ipl = 3'd5;
+			else if (eth_irq || irq4)               ipl = 3'd4;
+			else if (irq3)                          ipl = 3'd3;
+			else if (irq2)                          ipl = 3'd2;
+			else if (irq1 || timer_irq || soft_irq) ipl = 3'd1;
+			else                                    ipl = 3'd0;
 		end
 		else begin
-			ipl = ~3'd0;
+			ipl = 3'd0;
 		end
 	end
 	
 	/* State machine */
 	typedef enum logic [1:0] {
 		M_IDLE,
-		M_EXTERNAL,
 		M_ONBOARD,
+		M_EXTERNAL,
 		XXXX
 	} state_e;
 	
@@ -114,6 +108,12 @@ module interrupt_controller(
 		end
 	end
 	
+	wire onboard_irq = nmi_s & !nmi_ack & (iack_level == 3'd7) |
+					   uart_irq_s & (iack_level == 3'd5) |
+					   eth_irq_s & (iack_level == 3'd4) |
+					   timer_irq_s & !irq1 & (iack_level == 3'd1) |
+					   soft_irq_s & !timer_irq_s & !irq1 & (iack_level == 3'd1);
+	
 	always_comb begin
 		state_next = state;
 		vpa_next = vpa;
@@ -122,7 +122,8 @@ module interrupt_controller(
 		case (state)
 			M_IDLE: begin
 				if (iack) begin
-					if (nmi_s || uart_irq_s || eth_irq_s || timer_irq_s && !irq1_s || soft_irq_s && !irq1_s) begin
+					if (onboard_irq) begin
+						/* All on-board interrupts are autovectored */
 						state_next = M_ONBOARD;
 						vpa_next = '1;
 					end
@@ -133,21 +134,25 @@ module interrupt_controller(
 				end
 			end
 			
+			M_ONBOARD: begin
+				/* Wait for the IACK cycle to complete then negate VPA */
+				if (!as) begin
+					state_next = M_IDLE;
+					vpa_next = '0;
+				end
+			end
+			
 			M_EXTERNAL: begin
-				if (!iack) begin
+				/* Wait for the IACK cycle to complete then negate VPA to end the autovector cycle.
+				 * Otherwise, while waiting for that to happen, relay the AUTOVEC signal to VPA to
+				 * enable external peripherals to autovector interrupts. */
+				if (!as) begin
 					state_next = M_IDLE;
 					vpa_next = '0;
 					iack_out_next = '0;
 				end
 				else begin
 					vpa_next = autovec;
-				end
-			end
-			
-			M_ONBOARD: begin
-				if (!iack) begin
-					state_next = M_IDLE;
-					vpa_next = '0;
 				end
 			end
 			

@@ -142,3 +142,4 @@ set_location_assignment PIN_48 -to n_ipl[1]
 set_location_assignment PIN_49 -to n_ipl[0]
 set_global_assignment -name SYSTEMVERILOG_FILE am7990_interface.sv
 set_global_assignment -name RTLV_GROUP_RELATED_NODES ON
+set_global_assignment -name MISC_FILE "C:/Projects/git/COMET/rtl/COMET68k/v3/COMET68k_CPLD.dpf"
