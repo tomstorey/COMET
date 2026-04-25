@@ -95,7 +95,7 @@ module interrupt_controller(
 	state_e state, state_next;
 	logic vpa_next, iack_out_next;
 	
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk or posedge reset) begin
 		if (reset) begin
 			state <= M_IDLE;
 			vpa <= '0;

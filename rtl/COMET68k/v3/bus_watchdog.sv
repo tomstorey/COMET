@@ -49,6 +49,6 @@ module bus_watchdog
 	
 	always_comb begin
 		/* Assert BERR once the terminal count is reached */
-		berr = (&counter);
+		berr = &counter;
 	end
 endmodule /* bus_watchdog */

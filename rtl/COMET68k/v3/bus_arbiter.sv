@@ -50,7 +50,7 @@ module bus_arbiter(
 	/* State machine logic */
 	logic br_next, eth_bg_next, bg0_next, bg1_next;
 	
-	always_ff @(posedge cpu_clk) begin
+	always_ff @(posedge cpu_clk or posedge reset) begin
 		if (reset) begin
 			state <= M_IDLE;
 			

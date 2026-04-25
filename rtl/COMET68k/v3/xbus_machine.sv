@@ -88,7 +88,7 @@ module xbus_machine
 	logic [ROM_WAIT_STATES-2:0] rom_timer;
 	logic [ROM_WAIT_STATES-2:0] rom_timer_next;
 	
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk or posedge reset) begin
 		if (reset) begin
 			rom_timer <= '0;
 		end
@@ -108,22 +108,19 @@ module xbus_machine
 	/* State machine logic */
 	logic xa0_next;
 	
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk or posedge reset) begin
 		if (reset) begin
 			state <= M_IDLE;
-			
 			xa0 <= '0;
 		end
 		else begin
 			state <= state_next;
-			
 			xa0 <= xa0_next;
 		end
 	end
 	
 	always_comb begin
 		state_next = state;
-		
 		xa0_next = xa0;
 		
 		case (state)

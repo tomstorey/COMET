@@ -1961,7 +1961,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 312 104 376 184)
+	(rect 376 104 440 184)
 	(text "DFF" (rect 1 0 23 12)(font "Arial" (font_size 6)))
 	(text "inst5" (rect 3 68 28 81)(font "Arial" ))
 	(port
@@ -2011,7 +2011,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 416 104 480 184)
+	(rect 480 104 544 184)
 	(text "DFF" (rect 1 0 23 12)(font "Arial" (font_size 6)))
 	(text "inst6" (rect 3 68 28 81)(font "Arial" ))
 	(port
@@ -3074,66 +3074,6 @@ applicable agreement for further details.
 	(pt 176 1960)
 )
 (connector
-	(pt 176 128)
-	(pt 312 128)
-)
-(connector
-	(pt 416 128)
-	(pt 376 128)
-)
-(connector
-	(pt 480 128)
-	(pt 512 128)
-)
-(connector
-	(pt 416 144)
-	(pt 400 144)
-)
-(connector
-	(pt 312 144)
-	(pt 296 144)
-)
-(connector
-	(pt 400 144)
-	(pt 400 200)
-)
-(connector
-	(pt 296 144)
-	(pt 296 200)
-)
-(connector
-	(pt 216 0)
-	(pt 216 200)
-)
-(connector
-	(pt 216 200)
-	(pt 216 336)
-)
-(connector
-	(pt 216 200)
-	(pt 296 200)
-)
-(connector
-	(pt 296 200)
-	(pt 400 200)
-)
-(connector
-	(pt 232 232)
-	(pt 512 232)
-)
-(connector
-	(pt 512 128)
-	(pt 512 232)
-)
-(connector
-	(pt 232 232)
-	(pt 232 352)
-)
-(connector
-	(pt 232 352)
-	(pt 232 768)
-)
-(connector
 	(pt 216 816)
 	(pt 216 1624)
 )
@@ -3317,10 +3257,6 @@ applicable agreement for further details.
 	(pt 1704 16)
 )
 (connector
-	(pt 648 16)
-	(pt 648 144)
-)
-(connector
 	(pt 648 144)
 	(pt 648 1016)
 )
@@ -3447,6 +3383,70 @@ applicable agreement for further details.
 	(pt 960 1656)
 	(bus)
 )
+(connector
+	(pt 544 128)
+	(pt 576 128)
+)
+(connector
+	(pt 480 144)
+	(pt 464 144)
+)
+(connector
+	(pt 464 144)
+	(pt 464 200)
+)
+(connector
+	(pt 576 128)
+	(pt 576 232)
+)
+(connector
+	(pt 232 232)
+	(pt 232 352)
+)
+(connector
+	(pt 232 352)
+	(pt 232 768)
+)
+(connector
+	(pt 176 128)
+	(pt 376 128)
+)
+(connector
+	(pt 440 128)
+	(pt 480 128)
+)
+(connector
+	(pt 232 232)
+	(pt 576 232)
+)
+(connector
+	(pt 360 144)
+	(pt 360 200)
+)
+(connector
+	(pt 648 16)
+	(pt 648 144)
+)
+(connector
+	(pt 360 144)
+	(pt 376 144)
+)
+(connector
+	(pt 216 200)
+	(pt 216 336)
+)
+(connector
+	(pt 216 200)
+	(pt 360 200)
+)
+(connector
+	(pt 360 200)
+	(pt 464 200)
+)
+(connector
+	(pt 216 0)
+	(pt 216 200)
+)
 (junction (pt 696 384))
 (junction (pt 312 432))
 (junction (pt 216 336))
@@ -3475,8 +3475,6 @@ applicable agreement for further details.
 (junction (pt 328 448))
 (junction (pt 1320 1328))
 (junction (pt 232 352))
-(junction (pt 296 200))
-(junction (pt 216 200))
 (junction (pt 248 1312))
 (junction (pt 264 1328))
 (junction (pt 664 784))
@@ -3488,6 +3486,8 @@ applicable agreement for further details.
 (junction (pt 1368 1048))
 (junction (pt 1368 1272))
 (junction (pt 680 1232))
+(junction (pt 216 200))
+(junction (pt 360 200))
 (text "DDIR IS A FUNCTION OF THE WRITE SIGNAL, INVERTED BY WHETHER THE BUS IS OWNED BY THE CPU BOARD." (rect 1248 1480 2003 1495)(font "Arial" (font_size 8)))
 (text "WHEN THE CPU BOARD DOES NOT OWN THE BUS, THE DIRECTION OF THE DATA BUS FOR READS AND WRITES" (rect 1248 1496 2009 1511)(font "Arial" (font_size 8)))
 (text "IS REVERSED FOR EXTERNAL MASTERS." (rect 1248 1512 1525 1527)(font "Arial" (font_size 8)))

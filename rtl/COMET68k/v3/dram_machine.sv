@@ -50,7 +50,7 @@ module dram_machine
 	logic [REFRESH_TIMER_BITS-1:0] refresh_timer;
 	logic [REFRESH_TIMER_BITS-1:0] refresh_timer_next;
 	
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk or posedge reset) begin
 		if (reset) begin
 			refresh_timer <= '0;
 		end
@@ -78,8 +78,11 @@ module dram_machine
 	 * access cycle. */
 	logic refresh_due;
 	
-	always_ff @(posedge clk) begin
-		if (reset || (state == M_REFRESH)) begin
+	always_ff @(posedge clk or posedge reset) begin
+		if (reset) begin
+			refresh_due <= '0;
+		end
+		else if (state == M_REFRESH) begin
 			refresh_due <= '0;
 		end
 		else if (refresh_timer == REFRESH_TIMER_COUNT-1) begin
@@ -119,7 +122,7 @@ module dram_machine
 		decoded = as & (addr[23:22] == 2'b00) & (fc != 3'b111) & boot_ff;
 	end
 	
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk or posedge reset) begin
 		if (reset) begin
 			state <= M_IDLE;
 			ras0 <= '0;
