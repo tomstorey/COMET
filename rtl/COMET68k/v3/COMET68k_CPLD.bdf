@@ -1944,106 +1944,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 376 104 440 184)
-	(text "DFF" (rect 1 0 23 12)(font "Arial" (font_size 6)))
-	(text "inst5" (rect 3 68 28 81)(font "Arial" ))
-	(port
-		(pt 32 80)
-		(input)
-		(text "CLRN" (rect 21 59 49 72)(font "Courier New" (bold)))
-		(text "CLRN" (rect 21 58 49 71)(font "Courier New" (bold)))
-		(line (pt 32 80)(pt 32 76)(line_width 1))
-	)
-	(port
-		(pt 0 40)
-		(input)
-		(text "CLK" (rect 3 29 24 42)(font "Courier New" (bold))(invisible))
-		(text "CLK" (rect 3 29 24 42)(font "Courier New" (bold))(invisible))
-		(line (pt 0 40)(pt 12 40)(line_width 1))
-	)
-	(port
-		(pt 0 24)
-		(input)
-		(text "D" (rect 14 20 21 33)(font "Courier New" (bold)))
-		(text "D" (rect 14 20 21 33)(font "Courier New" (bold)))
-		(line (pt 0 24)(pt 12 24)(line_width 1))
-	)
-	(port
-		(pt 32 0)
-		(input)
-		(text "PRN" (rect 24 13 45 26)(font "Courier New" (bold)))
-		(text "PRN" (rect 24 11 45 24)(font "Courier New" (bold)))
-		(line (pt 32 4)(pt 32 0)(line_width 1))
-	)
-	(port
-		(pt 64 24)
-		(output)
-		(text "Q" (rect 45 20 52 33)(font "Courier New" (bold)))
-		(text "Q" (rect 45 20 52 33)(font "Courier New" (bold)))
-		(line (pt 52 24)(pt 64 24)(line_width 1))
-	)
-	(drawing
-		(line (pt 12 12)(pt 52 12)(line_width 1))
-		(line (pt 12 68)(pt 52 68)(line_width 1))
-		(line (pt 52 68)(pt 52 12)(line_width 1))
-		(line (pt 12 68)(pt 12 12)(line_width 1))
-		(line (pt 19 40)(pt 12 47)(line_width 1))
-		(line (pt 12 32)(pt 20 40)(line_width 1))
-		(circle (rect 28 4 36 12)(line_width 1))
-		(circle (rect 28 68 36 76)(line_width 1))
-	)
-)
-(symbol
-	(rect 480 104 544 184)
-	(text "DFF" (rect 1 0 23 12)(font "Arial" (font_size 6)))
-	(text "inst6" (rect 3 68 28 81)(font "Arial" ))
-	(port
-		(pt 32 80)
-		(input)
-		(text "CLRN" (rect 21 59 49 72)(font "Courier New" (bold)))
-		(text "CLRN" (rect 21 58 49 71)(font "Courier New" (bold)))
-		(line (pt 32 80)(pt 32 76)(line_width 1))
-	)
-	(port
-		(pt 0 40)
-		(input)
-		(text "CLK" (rect 3 29 24 42)(font "Courier New" (bold))(invisible))
-		(text "CLK" (rect 3 29 24 42)(font "Courier New" (bold))(invisible))
-		(line (pt 0 40)(pt 12 40)(line_width 1))
-	)
-	(port
-		(pt 0 24)
-		(input)
-		(text "D" (rect 14 20 21 33)(font "Courier New" (bold)))
-		(text "D" (rect 14 20 21 33)(font "Courier New" (bold)))
-		(line (pt 0 24)(pt 12 24)(line_width 1))
-	)
-	(port
-		(pt 32 0)
-		(input)
-		(text "PRN" (rect 24 13 45 26)(font "Courier New" (bold)))
-		(text "PRN" (rect 24 11 45 24)(font "Courier New" (bold)))
-		(line (pt 32 4)(pt 32 0)(line_width 1))
-	)
-	(port
-		(pt 64 24)
-		(output)
-		(text "Q" (rect 45 20 52 33)(font "Courier New" (bold)))
-		(text "Q" (rect 45 20 52 33)(font "Courier New" (bold)))
-		(line (pt 52 24)(pt 64 24)(line_width 1))
-	)
-	(drawing
-		(line (pt 12 12)(pt 52 12)(line_width 1))
-		(line (pt 12 68)(pt 52 68)(line_width 1))
-		(line (pt 52 68)(pt 52 12)(line_width 1))
-		(line (pt 12 68)(pt 12 12)(line_width 1))
-		(line (pt 19 40)(pt 12 47)(line_width 1))
-		(line (pt 12 32)(pt 20 40)(line_width 1))
-		(circle (rect 28 4 36 12)(line_width 1))
-		(circle (rect 28 68 36 76)(line_width 1))
-	)
-)
-(symbol
 	(rect 712 1280 896 1472)
 	(text "am7990_interface" (rect 5 0 106 13)(font "Arial" ))
 	(text "inst8" (rect 8 175 33 188)(font "Arial" ))
@@ -2735,11 +2635,6 @@ applicable agreement for further details.
 	(pt 1264 624)
 )
 (connector
-	(pt 248 264)
-	(pt 176 264)
-	(bus)
-)
-(connector
 	(pt 896 784)
 	(pt 1704 784)
 )
@@ -2838,11 +2733,6 @@ applicable agreement for further details.
 (connector
 	(pt 264 384)
 	(pt 264 848)
-)
-(connector
-	(pt 248 264)
-	(pt 248 368)
-	(bus)
 )
 (connector
 	(pt 176 448)
@@ -2959,11 +2849,6 @@ applicable agreement for further details.
 (connector
 	(pt 264 848)
 	(pt 264 1048)
-)
-(connector
-	(pt 248 368)
-	(pt 248 832)
-	(bus)
 )
 (connector
 	(pt 232 768)
@@ -3362,52 +3247,8 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 544 128)
-	(pt 576 128)
-)
-(connector
-	(pt 480 144)
-	(pt 464 144)
-)
-(connector
-	(pt 464 144)
-	(pt 464 200)
-)
-(connector
-	(pt 576 128)
-	(pt 576 232)
-)
-(connector
-	(pt 440 128)
-	(pt 480 128)
-)
-(connector
-	(pt 360 144)
-	(pt 360 200)
-)
-(connector
 	(pt 648 16)
 	(pt 648 144)
-)
-(connector
-	(pt 360 144)
-	(pt 376 144)
-)
-(connector
-	(pt 216 200)
-	(pt 216 336)
-)
-(connector
-	(pt 216 200)
-	(pt 360 200)
-)
-(connector
-	(pt 360 200)
-	(pt 464 200)
-)
-(connector
-	(pt 216 0)
-	(pt 216 200)
 )
 (connector
 	(pt 232 352)
@@ -3430,16 +3271,31 @@ applicable agreement for further details.
 	(pt 1488 592)
 )
 (connector
-	(pt 232 232)
-	(pt 576 232)
+	(pt 248 264)
+	(pt 176 264)
+	(bus)
 )
 (connector
-	(pt 232 232)
+	(pt 248 264)
+	(pt 248 368)
+	(bus)
+)
+(connector
+	(pt 248 368)
+	(pt 248 832)
+	(bus)
+)
+(connector
+	(pt 232 128)
 	(pt 232 352)
 )
 (connector
 	(pt 176 128)
-	(pt 376 128)
+	(pt 232 128)
+)
+(connector
+	(pt 216 0)
+	(pt 216 336)
 )
 (junction (pt 696 384))
 (junction (pt 312 432))
@@ -3480,8 +3336,6 @@ applicable agreement for further details.
 (junction (pt 1368 1048))
 (junction (pt 1368 1272))
 (junction (pt 680 1232))
-(junction (pt 216 200))
-(junction (pt 360 200))
 (text "DDIR IS A FUNCTION OF THE WRITE SIGNAL, INVERTED BY WHETHER THE BUS IS OWNED BY THE CPU BOARD." (rect 1248 1480 2003 1495)(font "Arial" (font_size 8)))
 (text "WHEN THE CPU BOARD DOES NOT OWN THE BUS, THE DIRECTION OF THE DATA BUS FOR READS AND WRITES" (rect 1248 1496 2009 1511)(font "Arial" (font_size 8)))
 (text "IS REVERSED FOR EXTERNAL MASTERS." (rect 1248 1512 1525 1527)(font "Arial" (font_size 8)))
