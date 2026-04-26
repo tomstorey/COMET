@@ -30,7 +30,10 @@
 `default_nettype none
 
 module xbus_machine
-#(parameter ROM_WAIT_STATES=3 // Min 3
+#(parameter ROM_WAIT_STATES=3,	// Min 3
+			ROM_WRITE_TAS=1,	// Address setup for writes
+			ROM_WRITE_TWP=2,	// Write pulse length
+			ROM_TIMER_BITS=3
 )
 (
 	input clk, reset,
@@ -47,7 +50,7 @@ module xbus_machine
 	output logic boot_ff
 );
 	/* Decoders for various peripherals/ROMs */
-	wire rom0_decoded = as & (addr[23:19] == 5'b11110) & (fc != 3'b111);
+	wire rom0_f_decoded = as & (addr[23:19] == 5'b11110) & (fc != 3'b111);
 	wire rom1_0_decoded = as & (addr[23:19] == 5'b00000) & (fc != 3'b111) & !boot_ff;
 	wire rom1_f_decoded = as & (addr[23:19] == 5'b11111) & (fc != 3'b111);
 	wire debug_decoded = as & (addr[23:16] == 8'hC0) & (fc != 3'b111);
@@ -56,7 +59,7 @@ module xbus_machine
 	wire timer_decoded = as & (addr[23:16] == 8'hC3) & (fc != 3'b111);
 	
 	always_comb begin
-		decoded = rom0_decoded | rom1_0_decoded | rom1_f_decoded | io_decoded | uart_decoded | timer_decoded;
+		decoded = rom0_f_decoded | rom1_0_decoded | rom1_f_decoded | io_decoded | uart_decoded | timer_decoded;
 	end
 	
 	/* Boot flip-flop
@@ -76,6 +79,7 @@ module xbus_machine
 	typedef enum logic [2:0] {
 		M_IDLE,
 		M_ROM_LATCH_LOWER,
+		M_ROM_WRITE,
 		M_ROM_CYCLE_END,
 		M_XA0_SETUP,
 		M_PERIPH_CYCLE_END,
@@ -85,8 +89,8 @@ module xbus_machine
 	state_e state, state_next;
 	
 	/* ROM wait state timer */
-	logic [ROM_WAIT_STATES-2:0] rom_timer;
-	logic [ROM_WAIT_STATES-2:0] rom_timer_next;
+	logic [ROM_TIMER_BITS-1:0] rom_timer;
+	logic [ROM_TIMER_BITS-1:0] rom_timer_next;
 	
 	always_ff @(posedge clk or posedge reset) begin
 		if (reset) begin
@@ -100,8 +104,8 @@ module xbus_machine
 	always_comb begin
 		rom_timer_next = '0;
 		
-		if (state == M_ROM_LATCH_LOWER) begin
-			rom_timer_next = {rom_timer[ROM_WAIT_STATES-3:0], '1};
+		if ((state == M_ROM_LATCH_LOWER) || (state == M_ROM_WRITE)) begin
+			rom_timer_next = {rom_timer[ROM_TIMER_BITS-2:0], '1};
 		end
 	end
 	
@@ -125,13 +129,22 @@ module xbus_machine
 		
 		case (state)
 			M_IDLE: begin
-				if ((rom0_decoded || rom1_0_decoded || rom1_f_decoded) && (uds || lds) && !write) begin
+				if (rom0_f_decoded || rom1_0_decoded || rom1_f_decoded) begin
 					/* One of the ROMs is decoded, set up for latching the lower byte. We always
 					 * do word reads from the ROMs regardless of what the CPU is asking for, it will
 					 * take what it needs from the data bus at the end of the cycle. */
-					state_next = M_ROM_LATCH_LOWER;
-					
-					xa0_next = '1;
+					if (!write && (uds || lds)) begin
+						/* Reading from ROM */
+						state_next = M_ROM_LATCH_LOWER;
+						
+						xa0_next = '1;
+					end
+					else if (write && (uds ^ lds)) begin
+						/* Writing to ROM */
+						state_next = M_ROM_WRITE;
+						
+						xa0_next = lds;
+					end
 				end
 				else if (debug_decoded || (io_decoded || uart_decoded || timer_decoded) && (uds ^ lds)) begin
 					/* Some X-bus peripherals, such as the TL16C2552, seem to be sensitive to
@@ -149,6 +162,13 @@ module xbus_machine
 					state_next = M_ROM_CYCLE_END;
 					
 					xa0_next = '0;
+				end
+			end
+			
+			M_ROM_WRITE: begin
+				/* Wait for the final bit of the write pulse timer to be set */
+				if (rom_timer[ROM_WRITE_TWP+ROM_WRITE_TAS-1]) begin
+					state_next = M_ROM_CYCLE_END;
 				end
 			end
 			
@@ -185,15 +205,21 @@ module xbus_machine
 				  (state == M_PERIPH_CYCLE_END) & !write;
 				  
 		ubuf_oe = (state == M_ROM_LATCH_LOWER) |
-				  (state == M_ROM_CYCLE_END) |
+				  (state == M_ROM_WRITE) & uds |
+				  (state == M_ROM_CYCLE_END) & !write |
+				  (state == M_ROM_CYCLE_END) & write & uds |
 				  (state == M_PERIPH_CYCLE_END) & !write |
 				  (state == M_PERIPH_CYCLE_END) & write & uds;
 				  
-		lbuf_oe = (state == M_PERIPH_CYCLE_END) & write & lds;
+		lbuf_oe = (state == M_ROM_WRITE) & lds |
+				  (state == M_ROM_CYCLE_END) & write & lds |
+				  (state == M_PERIPH_CYCLE_END) & write & lds;
+				
+		rom0_cs = rom0_f_decoded & !write |
+				  rom0_f_decoded &  write & rom_timer[ROM_WRITE_TAS-1] & !rom_timer[ROM_WRITE_TWP+ROM_WRITE_TAS-1];
 		
-		rom0_cs = rom0_decoded;
-		
-		rom1_cs = rom1_0_decoded | rom1_f_decoded;
+		rom1_cs = (rom1_0_decoded | rom1_f_decoded) & !write |
+				  (rom1_0_decoded | rom1_f_decoded) &  write & rom_timer[ROM_WRITE_TAS-1] & !rom_timer[ROM_WRITE_TWP+ROM_WRITE_TAS-1];
 		
 		debug_cs = debug_decoded & (state == M_PERIPH_CYCLE_END);
 		
