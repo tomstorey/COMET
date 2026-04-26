@@ -93,21 +93,17 @@ module interrupt_controller(
 	} state_e;
 	
 	state_e state, state_next;
-	logic vpa_next, iack_out_next;
 	
 	always_ff @(posedge clk or posedge reset) begin
 		if (reset) begin
 			state <= M_IDLE;
-			vpa <= '0;
-			iack_out <= '0;
 		end
 		else begin
 			state <= state_next;
-			vpa <= vpa_next;
-			iack_out <= iack_out_next;
 		end
 	end
 	
+	/* These are all of the on-board interrupt sources */
 	wire onboard_irq = nmi_s & !nmi_ack & (iack_level == 3'd7) |
 					   uart_irq_s & (iack_level == 3'd5) |
 					   eth_irq_s & (iack_level == 3'd4) |
@@ -116,8 +112,6 @@ module interrupt_controller(
 	
 	always_comb begin
 		state_next = state;
-		vpa_next = vpa;
-		iack_out_next = iack_out;
 		
 		case (state)
 			M_IDLE: begin
@@ -125,38 +119,39 @@ module interrupt_controller(
 					if (onboard_irq) begin
 						/* All on-board interrupts are autovectored */
 						state_next = M_ONBOARD;
-						vpa_next = '1;
 					end
 					else begin
 						state_next = M_EXTERNAL;
-						iack_out_next = '1;
 					end
 				end
 			end
 			
 			M_ONBOARD: begin
-				/* Wait for the IACK cycle to complete then negate VPA */
+				/* Wait for the IACK cycle to complete */
 				if (!as) begin
 					state_next = M_IDLE;
-					vpa_next = '0;
 				end
 			end
 			
 			M_EXTERNAL: begin
-				/* Wait for the IACK cycle to complete then negate VPA to end the autovector cycle.
-				 * Otherwise, while waiting for that to happen, relay the AUTOVEC signal to VPA to
-				 * enable external peripherals to autovector interrupts. */
+				/* Wait for the IACK cycle to complete */
 				if (!as) begin
 					state_next = M_IDLE;
-					vpa_next = '0;
-					iack_out_next = '0;
-				end
-				else begin
-					vpa_next = autovec;
 				end
 			end
 			
 			default: state_next = XXXX;
 		endcase
+	end
+	
+	always_comb begin
+		/* VPA is asserted for all on-board interrupt sources to autovector them. When servicing
+		 * an external interrupt, relay the autovec signal to allow external peripherals to
+		 * autovector as well. */
+		vpa = (state == M_ONBOARD) |
+			  (state == M_EXTERNAL) & autovec;
+		
+		/* Assert IACK out to the system but whenever servicing an external interrupt source */
+		iack_out = (state == M_EXTERNAL);
 	end
 endmodule /* interrupt_controller */

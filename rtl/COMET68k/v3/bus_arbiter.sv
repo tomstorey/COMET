@@ -48,13 +48,12 @@ module bus_arbiter(
 	
 	
 	/* State machine logic */
-	logic br_next, eth_bg_next, bg0_next, bg1_next;
+	logic eth_bg_next, bg0_next, bg1_next;
 	
 	always_ff @(posedge cpu_clk or posedge reset) begin
 		if (reset) begin
 			state <= M_IDLE;
 			
-			br <= '0;
 			eth_bg <= '0;
 			bg0 <= '0;
 			bg1 <= '0;
@@ -62,7 +61,6 @@ module bus_arbiter(
 		else begin
 			state <= state_next;
 			
-			br <= br_next;
 			eth_bg <= eth_bg_next;
 			bg0 <= bg0_next;
 			bg1 <= bg1_next;
@@ -72,7 +70,6 @@ module bus_arbiter(
 	always_comb begin
 		state_next = state;
 		
-		br_next = br;
 		eth_bg_next = eth_bg;
 		bg0_next = bg0;
 		bg1_next = bg1;
@@ -81,8 +78,6 @@ module bus_arbiter(
 			M_IDLE: begin
 				if (eth_br || br0 || br1) begin
 					state_next = M_CPU_GRANT;
-					
-					br_next = '1;
 				end
 			end
 			
@@ -131,7 +126,6 @@ module bus_arbiter(
 					/* The currently granted requestor has stopped requesting */
 					state_next = M_CPU_NEGATE;
 					
-					br_next = '0;
 					eth_bg_next = '0;
 					bg0_next = '0;
 					bg1_next = '0;
@@ -151,5 +145,8 @@ module bus_arbiter(
 	always_comb begin
 		/* The CPU board owns the bus when it hasnt granted it to either external request level */
 		own = !bg0 & !bg1;
+		
+		/* Assert bus request towards the CPU any time we aren't in the idle state */
+		br = !(state == M_IDLE);
 	end
 endmodule /* bus_arbiter */
