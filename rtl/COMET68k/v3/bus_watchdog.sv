@@ -4,14 +4,15 @@
  * that timer reaches its terminal count while AS is still asserted, the watchdog will assert
  * BERR to end the current bus cycle.
  *
- * BG can be used to disable the watchdog during bus grants to peripherals which do not support
- * bus errors for cycle termination.
+ * The BG input can be used to disable the bus error output during bus grants to peripherals which
+ * don't support bus error cycle termination. Instead, a DTACK is generated.
  *
  * The following bus cycle types are covered by this watchdog:
  *
  * Cycle type               Normal termination method               Timeout side effect
  * ----------------------   -------------------------------------   --------------------------------
- * Memory or peripheral     DTACK asserted                          Bus error exception
+ * Memory (BG negated)      DTACK asserted                          Bus error exception
+ * Memory (BG asserted)     DTACK asserted                          DTACK asserted
  * Vectored interrupt       DTACK asserted by interruptor           Spurious interrupt exception
  * Autovectored interrupt   VPA asserted by interrupt controller    Spurious interrupt exception
  *                          (internally asserted, or externally
@@ -29,7 +30,8 @@ module bus_watchdog
 	input as,
 	input bg,
 	
-	output logic berr
+	output logic berr,
+	output logic dtack
 );
 	logic [BITS-1:0] counter;
 	
@@ -48,7 +50,10 @@ module bus_watchdog
 	end
 	
 	always_comb begin
-		/* Assert BERR once the terminal count is reached */
-		berr = &counter;
+		/* Assert BERR once the terminal count is reached, as long as BG is negated */
+		berr = !bg & &counter;
+		
+		/* If BG is asserted, generate a DTACK on terminal count instead */
+		dtack = bg & &counter;
 	end
 endmodule /* bus_watchdog */

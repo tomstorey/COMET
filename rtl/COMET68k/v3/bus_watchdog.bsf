@@ -51,9 +51,16 @@ applicable agreement for further details.
 		(text "berr" (rect 78 27 99 40)(font "Arial" ))
 		(line (pt 120 32)(pt 104 32)(line_width 1))
 	)
+	(port
+		(pt 120 48)
+		(output)
+		(text "dtack" (rect 0 0 28 13)(font "Arial" ))
+		(text "dtack" (rect 71 43 99 56)(font "Arial" ))
+		(line (pt 120 48)(pt 104 48)(line_width 1))
+	)
 	(parameter
 		"BITS"
-		"5"
+		"6"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
