@@ -282,9 +282,9 @@ flash_id(const struct flags flags, void *address)
         /* Identify a flash memory that operates in 8-bit bus mode */
 
         /* Execute AUTO SELECT command */
-        *(cmd8 + offset1) = 0xAA;
-        *(cmd8 + offset2) = 0x55;
-        *(cmd8 + offset1) = 0x90;
+        *(cmd8 + offset2) = 0xAA;
+        *(cmd8 + offset1) = 0x55;
+        *(cmd8 + offset2) = 0x90;
 
         /* Read the electronic signature and send it back to the host */
         UATHR = *cmd8;               /* Manufacturer ID */
@@ -352,12 +352,12 @@ flash_chip_erase(const struct flags flags, void *address)
         /* Erase a flash memory that operates in 8-bit bus mode */
 
         /* Execute CHIP ERASE command */
-        *(cmd8 + offset1) = 0xAA;
-        *(cmd8 + offset2) = 0x55;
-        *(cmd8 + offset1) = 0x80;
-        *(cmd8 + offset1) = 0xAA;
-        *(cmd8 + offset2) = 0x55;
-        *(cmd8 + offset1) = 0x10;
+        *(cmd8 + offset2) = 0xAA;
+        *(cmd8 + offset1) = 0x55;
+        *(cmd8 + offset2) = 0x80;
+        *(cmd8 + offset2) = 0xAA;
+        *(cmd8 + offset1) = 0x55;
+        *(cmd8 + offset2) = 0x10;
 
         /* Monitor the operation until the end using the Toggle Bit method */
         if (flash_8bit_toggle_bit((void *)cmd8, (void *)cmd8, 0xFF) == true) {
@@ -427,11 +427,10 @@ flash_program(const struct flags flags, void *address, uint32_t length)
 
                 const uint16_t data = buf[i] << 8 | buf[i + 1];
 
-                // *(volatile uint16_t *)address = data;
                 *addr16 = data;
 
                 /* Monitor the operation until the end using the Toggle Bit method */
-                if (flash_16bit_toggle_bit((void *)cmd16, address, data) == false) {
+                if (flash_16bit_toggle_bit((void *)cmd16, (void *)addr16, data) == false) {
                     /* Program operation failed */
                     uart_send_char(RESPONSE_NAK);
 
@@ -441,22 +440,20 @@ flash_program(const struct flags flags, void *address, uint32_t length)
                 }
 
                 /* Increment to next address */
-                // address += 2;
                 addr16++;
             }
         } else {
             /* Program a flash memory that operates in 8-bit bus mode */
             for (i = 0; i < counter; i++) {
                 /* Execute PROGRAM command */
-                *(cmd8 + offset1) = 0xAA;
-                *(cmd8 + offset2) = 0x55;
-                *(cmd8 + offset1) = 0xA0;
+                *(cmd8 + offset2) = 0xAA;
+                *(cmd8 + offset1) = 0x55;
+                *(cmd8 + offset2) = 0xA0;
 
-                // *(volatile uint8_t *)address = buf[i];
                 *addr8 = buf[i];
 
                 /* Monitor the operation until the end using the Toggle Bit method */
-                if (flash_8bit_toggle_bit((void *)cmd8, address, buf[i]) == false) {
+                if (flash_8bit_toggle_bit((void *)cmd8, (void *)addr8, buf[i]) == false) {
                     /* Program operation failed */
                     uart_send_char(RESPONSE_NAK);
 
@@ -466,7 +463,6 @@ flash_program(const struct flags flags, void *address, uint32_t length)
                 }
 
                 /* Increment to next address */
-                // address++;
                 addr8++;
             }
         }
@@ -474,7 +470,7 @@ flash_program(const struct flags flags, void *address, uint32_t length)
         /* Adjust how much data is left to receive */
         length -= counter;
 
-        /* Programming of this chunk of 16 bytes succeeded, send ACK to receive next chunk */
+        /* Programming of this chunk of n bytes succeeded, send ACK to receive next chunk */
         uart_send_char(RESPONSE_ACK);
     }
 }
@@ -806,14 +802,14 @@ main(void)
                  *
                  * The format of the initial packet is:
                  *
-                 * FF AAAAAAAA LLLLLLLL DD[16]
+                 * FF AAAAAAAA LLLLLLLL DD[FLASH_PROGRAM_CHUNK]
                  *
                  * FF are the flags
                  *      .... ...A   even/odd mode
                  *      .... .S..   16-bit interface mode
                  * AAAAAAAA is an address within the address space of the flash memory to program
                  * LLLLLLLL is the total length of the data to write in bytes
-                 * DD is upto 16 initial bytes of data to program
+                 * DD is upto FLASH_PROGRAM_CHUNK initial bytes of data to program
                  *
                  * Where the length of the data to program is 16 bytes or less, no further packets will be sent. If the
                  * length of the data is greater than 16 bytes, the data continues to follow in 16 byte chunks until all

@@ -40,8 +40,8 @@ LD=$(PREFIX)-ld
 OBJCOPY=$(PREFIX)-objcopy
 OBJDUMP=$(PREFIX)-objdump
 
-CFLAGS=-m$(CPU) -Wpedantic -Wextra -g -static -I../include -I. -msoft-float -MMD -MP -O2
-LFLAGS=--script=platform.ld -L../libmetal -lmetal-$(CPU)
+CFLAGS=-m$(CPU) -Wpedantic -Wextra -g -static -I../../../m68k_bare_metal/include -I. -msoft-float -MMD -MP -O2
+LFLAGS=--script=platform.ld -L../../../m68k_bare_metal/libmetal -lmetal-$(CPU)
 
 OBJS=$(patsubst %.c,$(BUILDDIR)/%.c.o,$(SRCS))
 OBJS:=$(patsubst %.S,$(BUILDDIR)/%.S.o,$(OBJS))

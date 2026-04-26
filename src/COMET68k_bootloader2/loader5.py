@@ -41,43 +41,57 @@ class Flags(IntEnum):
     SIXTEEN = 0x4
 
 FLASH_CHIPS = [
+    # Each dict represents one manufacturer
+    {
+        # Define the manufacturer ID and name
+        "mfg": (0x20, "STMicroelectronics"),
+        "devices": [
+            # devices is an array of dicts that defines the ID, part number, size (KB), and block structure
+            {
+                "model": (0xE2, "M29F040B"), "size": 512,
+                # erase_blocks is an array of tuples which defines the size of a block (KB) and the number of those
+                # blocks. Multiple blocks can be specified to describe the block structure of the device.
+                "erase_blocks": [(64 * 1024, 8)]
+            },
+        ]
+    },
     {
         "mfg": (0x01, "AMD"),
         "devices": [
             {
                 "model": (0x51, "Am29F200xT"), "size": 256,
-                "erase_blocks": [(64 * 1024, 3), (32 * 1024, 1), (8 * 1024, 2), (16 * 1024, 1), ]
+                "erase_blocks": [(64 * 1024, 3), (32 * 1024, 1), (8 * 1024, 2), (16 * 1024, 1)]
             },
             {
                 "model": (0x57, "Am29F200xB"), "size": 256,
-                "erase_blocks": [(16 * 1024, 1), (8 * 1024, 2), (32 * 1024, 1), (64 * 1024, 3), ]
+                "erase_blocks": [(16 * 1024, 1), (8 * 1024, 2), (32 * 1024, 1), (64 * 1024, 3)]
             },
             {
                 "model": (0x23, "Am29F400xT"), "size": 512,
-                "erase_blocks": [(64 * 1024, 7), (32 * 1024, 1), (8 * 1024, 2), (16 * 1024, 1), ]
+                "erase_blocks": [(64 * 1024, 7), (32 * 1024, 1), (8 * 1024, 2), (16 * 1024, 1)]
             },
             {
                 "model": (0xAB, "Am29F400xB"), "size": 512,
-                "erase_blocks": [(16 * 1024, 1), (8 * 1024, 2), (32 * 1024, 1), (64 * 1024, 7), ]
+                "erase_blocks": [(16 * 1024, 1), (8 * 1024, 2), (32 * 1024, 1), (64 * 1024, 7)]
             },
             {
                 "model": (0xD6, "Am29F800xT"), "size": 1024,
-                "erase_blocks": [(64 * 1024, 15), (32 * 1024, 1), (8 * 1024, 2), (16 * 1024, 1), ]
+                "erase_blocks": [(64 * 1024, 15), (32 * 1024, 1), (8 * 1024, 2), (16 * 1024, 1)]
             },
             {
                 "model": (0x58, "Am29F800xB"), "size": 1024,
-                "erase_blocks": [(16 * 1024, 1), (8 * 1024, 2), (32 * 1024, 1), (64 * 1024, 15), ]
+                "erase_blocks": [(16 * 1024, 1), (8 * 1024, 2), (32 * 1024, 1), (64 * 1024, 15)]
             },
             {
                 "model": (0xD6, "Am29F160xT"), "size": 2048,
-                "erase_blocks": [(64 * 1024, 31), (32 * 1024, 1), (8 * 1024, 2), (16 * 1024, 1), ]
+                "erase_blocks": [(64 * 1024, 31), (32 * 1024, 1), (8 * 1024, 2), (16 * 1024, 1)]
             },
             {
                 "model": (0x58, "Am29F160xB"), "size": 2048,
-                "erase_blocks": [(16 * 1024, 1), (8 * 1024, 2), (32 * 1024, 1), (64 * 1024, 31), ]
+                "erase_blocks": [(16 * 1024, 1), (8 * 1024, 2), (32 * 1024, 1), (64 * 1024, 31)]
             },
         ]
-    }
+    },
 ]
 
 def send_command(ser, cmd):
@@ -97,25 +111,45 @@ def await_response(ser, retries, timeout_char=".") -> int:
         except TypeError:
             tries += 1
 
-            print(timeout_char, end="", flush=True)
+            if timeout_char != "":
+                print(timeout_char, end="", flush=True)
 
             if tries >= retries:
                 break
 
     return response
 
-def check_bootloader_available(ser) -> bool:
+def check_bootloader_available(ser, verbose=False) -> bool:
     retries = 0
+    wait_printed = False
+
+    if verbose:
+        print("Waiting for bootloader availability: ", end="", flush=True)
+        wait_printed = True
 
     while True:
         send_command(ser, Command.PING)
 
-        if await_response(ser, 1) == Response.ACK:
+        if retries > 1:
+            if wait_printed is False:
+                print("Waiting for bootloader availability: ", end="", flush=True)
+                wait_printed = True
+
+        if await_response(ser, 1, timeout_char="") == Response.ACK:
+            if wait_printed:
+                print("OK")
+
             return True
         else:
+            if wait_printed:
+                print(".", end="", flush=True)
+
             retries += 1
 
             if retries == RETRIES:
+                if wait_printed:
+                    print("Bootloader did not respond")
+
                 return False
 
 def hexdump(data, addr, flags):
@@ -1008,13 +1042,7 @@ def main():
         ser.read(size=ser.in_waiting)
 
     if args.which in ("peek", "poke", "flash") or args.which == "run" and args.boot is False and args.jump is False and args.exec is False:
-        print("Waiting for bootloader availability: ", end="", flush=True)
-
-        if check_bootloader_available(ser) is True:
-            print("OK")
-        else:
-            print("Bootloader did not respond")
-
+        if check_bootloader_available(ser) is False:
             return
 
     if args.which is None:
@@ -1043,11 +1071,6 @@ def main():
         elif args.prog_op is True:
             flash_program(ser, flags, args.address, data_wr)
 
-        if args.boot is not None or args.jump is not None or args.exec is not None:
-            # Morph into a run command
-            flash_parser.set_defaults(which="run")
-            args = parser.parse_args()
-
     if args.which == "run":
         if args.boot is not None:
             boot(ser, args.boot)
@@ -1058,7 +1081,7 @@ def main():
 
     duration = time.time() - start
 
-    print("Done in %.3fs" % duration)
+    print("Done in %.3fs\n" % duration)
 
     if args.which == "run":
         if args.console_flag is True:
