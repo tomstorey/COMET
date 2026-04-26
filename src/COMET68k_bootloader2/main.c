@@ -218,7 +218,6 @@ flash_8bit_toggle_bit(void *cmd, void *compare_address, const uint8_t compare_da
                     /* DQ6 is not toggling, operation succeeded */
                     break;
                 }
-
             }
         } else {
             /* DQ6 is not toggling, operation succeeded */
@@ -809,13 +808,12 @@ main(void)
                  *      .... .S..   16-bit interface mode
                  * AAAAAAAA is an address within the address space of the flash memory to program
                  * LLLLLLLL is the total length of the data to write in bytes
-                 * DD is upto FLASH_PROGRAM_CHUNK initial bytes of data to program
+                 * DD is upto FLASH_PROGRAM_CHUNK (n) initial bytes of data to program
                  *
-                 * Where the length of the data to program is 16 bytes or less, no further packets will be sent. If the
-                 * length of the data is greater than 16 bytes, the data continues to follow in 16 byte chunks until all
-                 * data has been transferred and programmed. At the successful completion of programming a 16 byte
-                 * chunk, an ACK is sent to the host. If programming fails a NAK is sent, followed by the address at
-                 * which programming failed.
+                 * Where the length of the data to program is n bytes or less, no further packets will be sent. If the
+                 * length of the data is greater than n bytes, the data continues to follow in n byte chunks until all
+                 * data has been transferred and programmed. At the successful completion of programming a n byte
+                 * chunk, an ACK is sent to the host. If programming fails a NAK is sent.
                  */
 
                 /* Receive the various fields */
