@@ -6,6 +6,11 @@
  * The DRAM machine decodes address 0-0x3FFFFF as long as boot_ff, which indicates that the CPU
  * has begun executing code from ROM after fetching the ISP and IPC values, is set. Otherwise it
  * lays dormant and does not perform any function other than refresh.
+ *
+ * The machine implements a thin layer of synchronisation for three critical signals: AS, UDS, LDS
+ *
+ * The idea being that the DRAM should be able to be accessed by external masters that do not
+ * operate in the same clock domain as the CPU board.
  */
 `default_nettype none
 
@@ -29,6 +34,15 @@ module dram_machine
 	output logic dtack,
 	output logic decoded
 );
+	/* Synchronisers */
+	logic as_s, uds_s, lds_s;
+	
+	always @(posedge clk) begin
+		as_s <= as;
+		uds_s <= uds;
+		lds_s <= lds;
+	end
+	
 	/* State machine variables */
 	typedef enum bit [2:0] {
 		M_IDLE,
@@ -117,9 +131,14 @@ module dram_machine
 	
 	/* State machine logic */
 	logic ras0_next, ras1_next, ucas_next, lcas_next, masel_next;
+	logic decoded_s;
 	
 	always_comb begin
 		decoded = as & (addr[23:22] == 2'b00) & (fc != 3'b111) & boot_ff;
+		
+		/* Also produce a decoded signal based on the synchronised AS. This is to help permit
+		 * asynchronous clock domain operation with external masters. */
+		decoded_s = as_s & (addr[23:22] == 2'b00) & (fc != 3'b111) & boot_ff;
 	end
 	
 	always_ff @(posedge clk or posedge reset) begin
@@ -160,7 +179,7 @@ module dram_machine
 					ucas_next = '1;
 					lcas_next = '1;
 				end
-				else if (decoded && (uds || lds)) begin
+				else if (decoded_s) begin
 					state_next = M_MUX;
 					
 					/* Assert one of the RAS's based on address 21 */
@@ -204,7 +223,7 @@ module dram_machine
 				lcas_next = lds;
 				
 				if (timer[ACCESS_CAS_WAIT_STATES-1]) begin
-					if (!uds && !lds && as) begin
+					if (!uds_s && !lds_s && as_s) begin
 						/* If the data strobes are negated, but AS is still asserted, this indicates
 						 * that a read-modify-write cycle is in progress. Negate CAS's while keeping
 						 * RAS asserted. */
@@ -213,7 +232,7 @@ module dram_machine
 						ucas_next = '0;
 						lcas_next = '0;
 					end
-					else if (!as) begin
+					else if (!as_s) begin
 						/* Ending the current cycle, negate all and return to the idle state */
 						ras0_next = '0;
 						ras1_next = '0;
@@ -234,7 +253,7 @@ module dram_machine
 			M_RMW: begin
 				/* Wait for the data strobes to be re-asserted and move back to the CAS state to
 				 * complete the write portion of the cycle */
-				if (uds || lds) begin
+				if (uds_s || lds_s) begin
 					state_next = M_CAS;
 				end
 			end
