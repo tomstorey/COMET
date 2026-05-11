@@ -276,6 +276,6 @@ module dram_machine
 	
 	always_comb begin
 		/* Assert DTACK */
-		dtack = (state == M_MUX) | (state == M_CAS);
+		dtack = state == M_CAS;
 	end
 endmodule /* dram_machine */
